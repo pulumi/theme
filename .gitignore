@@ -1,5 +1,8 @@
 .DS_Store
 /node_modules
 /resources
+<<<<<<< HEAD
 /assets/css/bundle.css
 /assets/js/bundle.js
+=======
+>>>>>>> 50e3d36 (Make it work)
