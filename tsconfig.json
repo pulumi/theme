@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "sourceRoot": "/",
+        "experimentalDecorators": true
+    },
+    "files": [
+        "src/ts/main.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

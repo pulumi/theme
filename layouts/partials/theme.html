@@ -1,0 +1,11 @@
+<!-- Use this partial to pull the JS and CSS bundles into your project. -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+{{ $js := resources.Get "js/bundle.js" }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
+{{ $css := resources.Get "css/bundle.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
