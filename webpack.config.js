@@ -5,14 +5,13 @@ const webpack = require("webpack");
 module.exports = function(env, { mode }) {
     return {
         mode: mode || "production",
-        devtool: "inline-source-map",
         entry: {
             bundle: "./src/ts/main.ts",
         },
         output: {
             filename: "[name].js",
             chunkFilename: "chunk-[id].js",
-            path: `${process.cwd()}/assets/js`
+            path: `${process.cwd()}/assets/js`,
         },
         resolve: {
             extensions: [".ts", ".js"],
@@ -39,7 +38,7 @@ module.exports = function(env, { mode }) {
                         {
                             loader: "css-loader",
                             options: {
-                                sourceMap: true,
+                                sourceMap: false,
                                 url: false,
                             },
                         },
@@ -49,7 +48,7 @@ module.exports = function(env, { mode }) {
                         {
                             loader: "sass-loader",
                             options: {
-                                sourceMap: true,
+                                sourceMap: false,
                                 sassOptions: {
                                     outputStyle: "compressed",
                                 },
@@ -71,6 +70,11 @@ module.exports = function(env, { mode }) {
             minimize: true,
             minimizer: [
                 new TerserPlugin({
+                    terserOptions: {
+                        format: {
+                            comments: false,
+                        },
+                    },
                     extractComments: false,
                 }),
             ],

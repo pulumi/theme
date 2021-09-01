@@ -1,4 +1,4 @@
-import { initDesignSystem } from "@pulumi/facet";
+import { initDesignSystem, disclosure } from "@pulumi/facet";
 import { defineCustomElements } from "@pulumi/facet/dist/components/stencil";
 
 import "../scss/main.scss";
@@ -136,13 +136,12 @@ import "./copybutton";
 import "./code-tabbed";
 import "./resources";
 import "./search";
-// import "clipboard-polyfill/dist/clipboard-polyfill.js";
 
 // Initialize the design system.
 initDesignSystem({
     prefix: "pulumi",
     components: [
-
+        disclosure(),
     ],
 });
 

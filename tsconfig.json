@@ -2,8 +2,6 @@
     "compilerOptions": {
         "esModuleInterop": true,
         "removeComments": true,
-        "sourceMap": true,
-        "sourceRoot": "/",
         "experimentalDecorators": true
     },
     "files": [

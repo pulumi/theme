@@ -4,8 +4,8 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 
-{{ $js := resources.Get "js/bundle.js" }}
+{{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
-{{ $css := resources.Get "css/bundle.css" }}
+{{ $css := resources.Get "css/bundle.css" | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
