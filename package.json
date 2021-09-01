@@ -25,6 +25,6 @@
     },
     "scripts": {
         "build": "yarn run webpack",
-        "serve": "yarn run webpack --watch"
+        "start": "yarn run webpack --watch"
     }
 }
