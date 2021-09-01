@@ -1,0 +1,29 @@
+name: Build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Check out branch
+        uses: actions/checkout@v2
+
+      - name: Build assets
+        run: |
+          yarn
+          yarn build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit artifacts
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: assets/js/bundle.js assets/css/bundle.css
