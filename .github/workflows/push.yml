@@ -18,8 +18,7 @@ jobs:
 
       - name: Build assets
         run: |
-          yarn
-          yarn build
+          make ensure build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
