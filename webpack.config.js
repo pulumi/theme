@@ -1,10 +1,11 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 const webpack = require("webpack");
 
 module.exports = function(env, { mode }) {
     return {
-        mode: mode || "production",
+        mode: mode || "development",
         entry: {
             bundle: "./src/ts/main.ts",
         },
@@ -64,6 +65,15 @@ module.exports = function(env, { mode }) {
             }),
             new webpack.optimize.LimitChunkCountPlugin({
                 maxChunks: 1,
+            }),
+            new WebpackShellPluginNext({
+                onBuildStart:{
+                    blocking: true,
+                    parallel: false,
+                    scripts: [
+                        "yarn --cwd stencil run build",
+                    ],
+                },
             }),
         ],
         optimization: {
