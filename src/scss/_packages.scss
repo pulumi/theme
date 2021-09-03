@@ -9,7 +9,7 @@
   }
 
   .r-tile {
-    @apply block rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
+    @apply rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
 
     width: 525px;
     max-width: 525px;

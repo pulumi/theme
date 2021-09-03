@@ -16,6 +16,7 @@ import "./copybutton";
 import "./code-tabbed";
 import "./resources";
 import "./search";
+import "./packages";
 
 // Initialize the Facet design system and components.
 initDesignSystem({

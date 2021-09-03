@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
 import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
+import { PackageFilter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface PulumiAudio {
@@ -58,6 +59,14 @@ export namespace Components {
     interface PulumiExample {
     }
     interface PulumiExamples {
+    }
+    interface PulumiFilterSelect {
+    }
+    interface PulumiFilterSelectOption {
+        "kind": keyof PackageFilter;
+        "value": string;
+    }
+    interface PulumiFilterSelectOptionGroup {
     }
     interface PulumiGreenhouseJobsList {
     }
@@ -173,6 +182,24 @@ declare global {
         prototype: HTMLPulumiExamplesElement;
         new (): HTMLPulumiExamplesElement;
     };
+    interface HTMLPulumiFilterSelectElement extends Components.PulumiFilterSelect, HTMLStencilElement {
+    }
+    var HTMLPulumiFilterSelectElement: {
+        prototype: HTMLPulumiFilterSelectElement;
+        new (): HTMLPulumiFilterSelectElement;
+    };
+    interface HTMLPulumiFilterSelectOptionElement extends Components.PulumiFilterSelectOption, HTMLStencilElement {
+    }
+    var HTMLPulumiFilterSelectOptionElement: {
+        prototype: HTMLPulumiFilterSelectOptionElement;
+        new (): HTMLPulumiFilterSelectOptionElement;
+    };
+    interface HTMLPulumiFilterSelectOptionGroupElement extends Components.PulumiFilterSelectOptionGroup, HTMLStencilElement {
+    }
+    var HTMLPulumiFilterSelectOptionGroupElement: {
+        prototype: HTMLPulumiFilterSelectOptionGroupElement;
+        new (): HTMLPulumiFilterSelectOptionGroupElement;
+    };
     interface HTMLPulumiGreenhouseJobsListElement extends Components.PulumiGreenhouseJobsList, HTMLStencilElement {
     }
     var HTMLPulumiGreenhouseJobsListElement: {
@@ -250,6 +277,9 @@ declare global {
         "pulumi-datetime": HTMLPulumiDatetimeElement;
         "pulumi-example": HTMLPulumiExampleElement;
         "pulumi-examples": HTMLPulumiExamplesElement;
+        "pulumi-filter-select": HTMLPulumiFilterSelectElement;
+        "pulumi-filter-select-option": HTMLPulumiFilterSelectOptionElement;
+        "pulumi-filter-select-option-group": HTMLPulumiFilterSelectOptionGroupElement;
         "pulumi-greenhouse-jobs-list": HTMLPulumiGreenhouseJobsListElement;
         "pulumi-hubspot-form": HTMLPulumiHubspotFormElement;
         "pulumi-install": HTMLPulumiInstallElement;
@@ -313,6 +343,15 @@ declare namespace LocalJSX {
     }
     interface PulumiExamples {
     }
+    interface PulumiFilterSelect {
+        "onFilter"?: (event: CustomEvent<any[]>) => void;
+    }
+    interface PulumiFilterSelectOption {
+        "kind"?: keyof PackageFilter;
+        "value"?: string;
+    }
+    interface PulumiFilterSelectOptionGroup {
+    }
     interface PulumiGreenhouseJobsList {
     }
     interface PulumiHubspotForm {
@@ -373,6 +412,9 @@ declare namespace LocalJSX {
         "pulumi-datetime": PulumiDatetime;
         "pulumi-example": PulumiExample;
         "pulumi-examples": PulumiExamples;
+        "pulumi-filter-select": PulumiFilterSelect;
+        "pulumi-filter-select-option": PulumiFilterSelectOption;
+        "pulumi-filter-select-option-group": PulumiFilterSelectOptionGroup;
         "pulumi-greenhouse-jobs-list": PulumiGreenhouseJobsList;
         "pulumi-hubspot-form": PulumiHubspotForm;
         "pulumi-install": PulumiInstall;
@@ -400,6 +442,9 @@ declare module "@stencil/core" {
             "pulumi-datetime": LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
             "pulumi-example": LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
             "pulumi-examples": LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
+            "pulumi-filter-select": LocalJSX.PulumiFilterSelect & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectElement>;
+            "pulumi-filter-select-option": LocalJSX.PulumiFilterSelectOption & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionElement>;
+            "pulumi-filter-select-option-group": LocalJSX.PulumiFilterSelectOptionGroup & JSXBase.HTMLAttributes<HTMLPulumiFilterSelectOptionGroupElement>;
             "pulumi-greenhouse-jobs-list": LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
             "pulumi-hubspot-form": LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
             "pulumi-install": LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
