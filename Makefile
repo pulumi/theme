@@ -6,8 +6,8 @@ clean:
 ensure:
 	yarn && yarn --cwd stencil
 
-.PHONY: serve
-serve:
+.PHONY: start
+start:
 	yarn start
 
 .PHONY: build
