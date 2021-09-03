@@ -111,20 +111,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pulumi/facet@^0.0.22":
-  version "0.0.22"
-  resolved "https://npm.pkg.github.com/download/@pulumi/facet/0.0.22/3bc948a0822b3b8fc1e1a79a927d5abe3343efb4da64fdb04a5e4cfef222a1b0#e9614da9e14d2cf1ef0f6e09805bf1303bd5e92f"
-  integrity sha512-RcW+M4H4OcwNaYPXe36fsn93K54ZrlVp1yTkGMp6nBoPKXC3yY8uNeAu9mv6pGLzT9+xfch85+LzqSbayVFQsg==
+"@pulumi/facet@^0.0.23":
+  version "0.0.23"
+  resolved "https://npm.pkg.github.com/download/@pulumi/facet/0.0.23/f6cb7f63101f07a89c5c580ee761313e1f8d1527c00b3a03a460a8efd302d669#65876cf5c49151d4b7832ac005205d496fd1d734"
+  integrity sha512-1M8wDXCOA8bAIk0fPS48bH1ZPkpVLxzeI2dySyxGA5lGxNeRzsjiIclQ5vMqmMmp0ao4FjvLHFWS7KITM2ZyxQ==
   dependencies:
     "@microsoft/fast-components" "^2.6.2"
     "@microsoft/fast-element" "^1.4.1"
-    "@stencil/core" "^2.7.1"
     lodash-es "^4.17.21"
-
-"@stencil/core@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.7.1.tgz#1bffff72dbe762d27b477da4ea06c647e84472fa"
-  integrity sha512-kpeqCyfoWyqyiqn32xQGx5bpVwH1UtcZEpYPx42MpoxHZNlpmjV+852/PGFFWsMTqrLiP8Z1NU5rT7yXUCsG6Q==
 
 "@trysound/sax@0.1.1":
   version "0.1.1"

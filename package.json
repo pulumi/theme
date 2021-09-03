@@ -6,7 +6,7 @@
     "license": "MIT",
     "dependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
-        "@pulumi/facet": "^0.0.22",
+        "@pulumi/facet": "^0.0.23",
         "@types/jquery": "^3.5.6",
         "autoprefixer": "^10.3.3",
         "clipboard-polyfill": "^3.0.3",
