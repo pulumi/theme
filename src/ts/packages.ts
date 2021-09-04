@@ -1,4 +1,4 @@
-$(".section-registry").on("filter", (event) => {
+$(".section-registry").on("filterSelect", (event) => {
     const detail: unknown = event.detail;
     const filters = detail as any[];
 
@@ -10,22 +10,20 @@ $(".section-registry").on("filter", (event) => {
         $(packages).each((i, package) => {
             const el = $(package).find(".r-tile");
 
-            const category = el.attr("data-category");
-            const status = el.attr("data-status");
+            const packageType = el.attr("data-component") === "true" ? "component" : "provider";
+            const packageIsNative = packageType === "provider" && el.attr("data-native") === "true";
+            const packageCategory = el.attr("data-category");
+            const packageStatus = el.attr("data-status");
 
-            let kind;
-            const native = el.attr("data-native") === "true";
-            if (native) {
-                kind = "native";
-            } else {
-                kind = el.attr("data-component") === "true" ? "component" : "provider";
-            }
+            const packageHasSelectedType = !!filters.find(f => f.group === "type" && f.value === packageType);
+            const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
+            const packageHasSelectedStatus = !!filters.find(f => f.kind === "status" && f.value === packageStatus);
 
-            const hasKind = !!filters.find(f => f.kind === "type" && f.value === kind);
-            const hasCategory = !!filters.find(f => f.kind === "category" && f.value === category);
-            const hasStatus = !!filters.find(f => f.kind === "status" && f.value === status);
-
-            if (hasKind || hasCategory || hasStatus) {
+            // Show the package if it matches *any* filter, period. I suspect this logic may not be what we want, though;
+            // Instead, we may want to apply inclusivity within a group, but exclusivity without -- for example, to allow
+            // you to filter for packages that are providers *and* generally available *and either* monitoring
+            // *or* network related. But for now, if it matches anything, we show it.
+            if (packageHasSelectedType || packageHasSelectedCategory || packageHasSelectedStatus) {
                 $(package).removeClass("hidden");
             }
         });

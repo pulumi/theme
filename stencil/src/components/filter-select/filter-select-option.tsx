@@ -1,27 +1,43 @@
-import { Component, h, Prop } from "@stencil/core";
+import { Component, h, Prop, Event, EventEmitter } from "@stencil/core";
 
-export interface PackageFilter {
-    bucket: "type" | "status" | "category";
+export interface Filter {
     label: string;
     value: string;
 }
 
 @Component({
     tag: "pulumi-filter-select-option",
-    shadow: false,
+    shadow: true,
+    styles: `
+        label {
+            white-space: nowrap;
+        }
+    `,
 })
 export class FilterSelectOption {
 
     @Prop()
-    kind: keyof PackageFilter;
+    value: string;
 
     @Prop()
-    value: string;
+    selected: boolean;
+
+    @Event({ composed: true, bubbles: true, cancelable: true })
+    optionChange: EventEmitter<any>;
+
+    onChange(event: CustomEvent) {
+        this.selected = (event.target as HTMLInputElement).checked;
+        this.optionChange.emit({ option: { value: this.value, selected: this.selected } });
+    }
 
     render() {
         return <div>
            <label>
-                <input data-kind={this.kind} type="checkbox" value={this.value} />
+                <input
+                    type="checkbox"
+                    value={this.value}
+                    onChange={ this.onChange.bind(this) }
+                />
                 <slot />
             </label>
         </div>;

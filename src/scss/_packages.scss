@@ -2,80 +2,80 @@
 @import "mixins";
 
 .r-tiles {
-  @apply items-center;
+    @apply items-center;
 
-  @screen md {
-    @apply flex;
-  }
-
-  .r-tile {
-    @apply rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
-
-    width: 525px;
-    max-width: 525px;
-
-    .logo {
-      @apply mr-4;
-
-      width: 48px;
-      height: 48px
+    @screen md {
+        @apply flex;
     }
 
-    &.featured {
-      @apply cursor-default;
+    .r-tile {
+        @apply rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
 
-      max-height: 350px;
-      height: 350px;
+        width: 525px;
+        max-width: 525px;
 
-      .description {
-        @apply overflow-ellipsis overflow-hidden;
-      }
+        .logo {
+            @apply mr-4;
 
-      .featured-ex-container {
-        @apply overflow-auto;
-
-        height: 64px;
-        max-height: 64px;
-
-        ul {
-          li {
-            @apply text-sm truncate overflow-ellipsis;
-
-            width: 300px;
-          }
+            width: 48px;
+            height: 48px
         }
-      }
-    }
 
-    @include transition;
+        &.featured {
+            @apply cursor-default;
 
-    &:hover {
-      @apply shadow-md;
-      transform: scale(1.03);
-    }
+            max-height: 350px;
+            height: 350px;
 
-    .package-tags {
-      .package-tag:not(last-child) {
-        @apply mr-4 p-2;
-      }
+            .description {
+                @apply overflow-ellipsis overflow-hidden;
+            }
 
-      .package-category {
-        background-color: map-get($blue, 200);
+            .featured-ex-container {
+                @apply overflow-auto;
 
-        &.network {
-          background-color: map-get($yellow, 200);
+                height: 64px;
+                max-height: 64px;
+
+                ul {
+                    li {
+                        @apply text-sm truncate overflow-ellipsis;
+
+                        width: 300px;
+                    }
+                }
+            }
         }
-      }
 
-      .native-package {
-        background-color: map-get($purple, 400);
-      }
+        @include transition;
 
-      .package-status {
-        &.ga, &.public-preview {
-          background-color: map-get($fuchsia, 200);
+        &:hover {
+            @apply shadow-md;
+            transform: scale(1.03);
         }
-      }
+
+        .package-tags {
+            .package-tag:not(last-child) {
+                @apply mr-4 p-2;
+            }
+
+            .package-category {
+                background-color: map-get($blue, 200);
+
+                &.network {
+                    background-color: map-get($yellow, 200);
+                }
+            }
+
+            .native-package {
+                background-color: map-get($purple, 400);
+            }
+
+            .package-status {
+                &.ga, &.public-preview {
+                    background-color: map-get($fuchsia, 200);
+                }
+            }
+        }
     }
-  }
 }

@@ -8,7 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
 import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
-import { PackageFilter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface PulumiAudio {
@@ -63,10 +62,12 @@ export namespace Components {
     interface PulumiFilterSelect {
     }
     interface PulumiFilterSelectOption {
-        "kind": keyof PackageFilter;
+        "selected": boolean;
         "value": string;
     }
     interface PulumiFilterSelectOptionGroup {
+        "expanded": boolean;
+        "name": string;
     }
     interface PulumiGreenhouseJobsList {
     }
@@ -344,13 +345,16 @@ declare namespace LocalJSX {
     interface PulumiExamples {
     }
     interface PulumiFilterSelect {
-        "onFilter"?: (event: CustomEvent<any[]>) => void;
+        "onFilterSelect"?: (event: CustomEvent<any[]>) => void;
     }
     interface PulumiFilterSelectOption {
-        "kind"?: keyof PackageFilter;
+        "onOptionChange"?: (event: CustomEvent<any>) => void;
+        "selected"?: boolean;
         "value"?: string;
     }
     interface PulumiFilterSelectOptionGroup {
+        "expanded"?: boolean;
+        "name"?: string;
     }
     interface PulumiGreenhouseJobsList {
     }
