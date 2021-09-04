@@ -17,7 +17,7 @@ $(".section-registry").on("filterSelect", (event) => {
 
             const packageHasSelectedType = !!filters.find(f => f.group === "type" && f.value === packageType);
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
-            const packageHasSelectedStatus = !!filters.find(f => f.kind === "status" && f.value === packageStatus);
+            const packageHasSelectedStatus = !!filters.find(f => f.group === "status" && f.value === packageStatus);
 
             // Show the package if it matches *any* filter, period. I suspect this logic may not be what we want, though;
             // Instead, we may want to apply inclusivity within a group, but exclusivity without -- for example, to allow
