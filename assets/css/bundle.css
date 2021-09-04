@@ -12677,8 +12677,7 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
 }
 
 .r-tiles .r-tile{
-  cursor: pointer;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgba(229, 229, 233, var(--tw-border-opacity));
@@ -12686,68 +12685,114 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  display: flex;
+  flex-direction: column;
   width:525px;
-  max-width:525px;
-  transition:all 120ms linear
+  max-width:525px
 }
 
-.r-tiles .r-tile .logo{
-  margin-right: 1rem;
-  width:48px;
-  height:48px
+.r-tiles .r-tile .r-tile-header{
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center
 }
 
-.r-tiles .r-tile.featured{
-  cursor: default;
+.r-tiles .r-tile .r-tile-header .logo{
+  max-width:20%;
+  height:32px
+}
+
+.r-tiles .r-tile .r-tile-header .header-link{
+  border-radius: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(77, 91, 217, var(--tw-text-opacity));
+  padding:8px 16px 8px 16px
+}
+
+.r-tiles .r-tile .r-tile-header .header-link:hover{
+  --tw-text-opacity: 1;
+  color: rgba(62, 73, 174, var(--tw-text-opacity));
+  box-shadow:0 4px 4px rgba(0,0,0,.2),0 4px 4px rgba(0,0,0,.14),0 1px 5px rgba(0,0,0,.12)
+}
+
+.r-tiles .r-tile .r-tile-header .header-link:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(62, 73, 174, var(--tw-ring-opacity))
+}
+
+.r-tiles .r-tile .r-tile-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly
+}
+
+.r-tiles .r-tile .r-tile-content .title-link{
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.r-tiles .r-tile .r-tile-content .title-link:hover{
+  --tw-text-opacity: 1;
+  color: rgba(62, 73, 174, var(--tw-text-opacity));
+  text-decoration: underline
+}
+
+.r-tiles .r-tile .r-tile-content.featured{
   max-height:350px;
   height:350px
 }
 
-.r-tiles .r-tile.featured .description{
+.r-tiles .r-tile .r-tile-content.featured .description{
   overflow: hidden;
   text-overflow: ellipsis
 }
 
-.r-tiles .r-tile.featured .featured-ex-container{
-  overflow: auto;
-  height:64px;
-  max-height:64px
-}
-
-.r-tiles .r-tile.featured .featured-ex-container ul li{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  width:300px
-}
-
-.r-tiles .r-tile:hover{
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transform:scale(1.03)
-}
-
-.r-tiles .r-tile .package-tags .package-tag:not(last-child){
+.r-tiles .r-tile .r-tile-footer.package-tags .package-tag:not(last-child){
   margin-right: 1rem;
   padding: 0.5rem
 }
 
-.r-tiles .r-tile .package-tags .package-category{
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category{
   background-color:#dbdef7
 }
 
-.r-tiles .r-tile .package-tags .package-category.network{
-  background-color:#fdf2d4
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.cloud{
+  background-color:#bfcbad
 }
 
-.r-tiles .r-tile .package-tags .native-package{
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.database{
+  background-color:#e2f4ac
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.infrastructure{
+  background-color:#e2f4ac
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.monitoring{
+  background-color:#c4fee5
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.network{
+  background-color:#aae8df
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.utility{
+  background-color:#ffc482
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-category.version-control-system{
+  background-color:#fce5aa
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .native-package{
   background-color:#b985bd
 }
 
-.r-tiles .r-tile .package-tags .package-status.ga,.r-tiles .r-tile .package-tags .package-status.public-preview{
+.r-tiles .r-tile .r-tile-footer.package-tags .package-status.ga,.r-tiles .r-tile .r-tile-footer.package-tags .package-status.public-preview{
   background-color:#f2dbe7
 }
 

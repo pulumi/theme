@@ -9,71 +9,109 @@
     }
 
     .r-tile {
-        @apply rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
+        @apply rounded-xl shadow border border-gray-300 p-4 font-display;
+        @apply flex flex-col;
 
         width: 525px;
         max-width: 525px;
 
-        .logo {
-            @apply mr-4;
+        .r-tile-header {
+            @apply flex flex-row items-center mb-4;
 
-            width: 48px;
-            height: 48px
-        }
-
-        &.featured {
-            @apply cursor-default;
-
-            max-height: 350px;
-            height: 350px;
-
-            .description {
-                @apply overflow-ellipsis overflow-hidden;
+            .logo {
+                max-width: 20%;
+                height: 32px;
             }
 
-            .featured-ex-container {
-                @apply overflow-auto;
+            .header-link {
+                @apply text-blue-600 rounded;
 
-                height: 64px;
-                max-height: 64px;
+                padding: 8px 16px 8px 16px;
 
-                ul {
-                    li {
-                        @apply text-sm truncate overflow-ellipsis;
+                &:hover {
+                    @apply text-blue-700;
 
-                        width: 300px;
+                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.14), 0 1px 5px rgba(0, 0, 0, 0.12);
+                }
+
+                // Because of the custom box-shadow rule, the tailwind helper for applying
+                // a focus ring wasn't working well. That is, focus:ring-2 wasn't working.
+                // That's why the ring rules are being applied manually to the :focus
+                // pseudo-selector.
+                &:focus {
+                    @apply ring-2 ring-blue-700;
+                }
+            }
+        }
+
+        .r-tile-content {
+            @apply flex flex-col justify-evenly;
+
+            .title-link {
+                @apply text-lg;
+
+                &:hover {
+                    @apply text-blue-700 underline;
+                }
+            }
+
+            &.featured {
+                max-height: 350px;
+                height: 350px;
+
+                .description {
+                    @apply overflow-ellipsis overflow-hidden;
+                }
+            }
+        }
+
+        .r-tile-footer {
+
+            &.package-tags {
+                .package-tag:not(last-child) {
+                    @apply mr-4 p-2;
+                }
+
+                .package-category {
+                    background-color: map-get($blue, 200);
+
+                    &.cloud {
+                        background-color: #BFCBAD;
+                    }
+
+                    &.database {
+                        background-color: #E2F4AC;
+                    }
+
+                    &.infrastructure {
+                        background-color: #E2F4AC;
+                    }
+
+                    &.monitoring {
+                        background-color: #C4FEE5;
+                    }
+
+                    &.network {
+                        background-color: #AAE8DF;
+                    }
+
+                    &.utility {
+                        background-color: #FFC482;
+                    }
+
+                    &.version-control-system {
+                        background-color: #FCE5AA;
                     }
                 }
-            }
-        }
 
-        @include transition;
-
-        &:hover {
-            @apply shadow-md;
-            transform: scale(1.03);
-        }
-
-        .package-tags {
-            .package-tag:not(last-child) {
-                @apply mr-4 p-2;
-            }
-
-            .package-category {
-                background-color: map-get($blue, 200);
-
-                &.network {
-                    background-color: map-get($yellow, 200);
+                .native-package {
+                    background-color: map-get($purple, 400);
                 }
-            }
 
-            .native-package {
-                background-color: map-get($purple, 400);
-            }
-
-            .package-status {
-                &.ga, &.public-preview {
-                    background-color: map-get($fuchsia, 200);
+                .package-status {
+                    &.ga, &.public-preview {
+                        background-color: map-get($fuchsia, 200);
+                    }
                 }
             }
         }
