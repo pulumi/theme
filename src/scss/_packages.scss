@@ -55,19 +55,66 @@
                 }
             }
 
-            &.featured {
-                max-height: 350px;
-                height: 350px;
+            pulumi-accordion {
+                $svgDefaultStrokeColor: #000000;
 
-                .description {
-                    @apply overflow-ellipsis overflow-hidden;
+                pulumi-accordion-item {
+                    @apply rounded;
+
+                    border: 2px solid #131314;
+
+                    &:hover {
+                        @apply bg-black;
+
+                        .heading {
+                            @apply text-white;
+                        }
+
+                        svg {
+                            stroke: #FFFFFF;
+                        }
+                    }
+
+                    // Reset the background of the accordion item
+                    // when it is expanded.
+                    &.expanded {
+                        @apply bg-transparent;
+
+                        .heading {
+                            color: inherit;
+                        }
+
+                        svg {
+                            stroke: $svgDefaultStrokeColor;
+                        }
+                    }
+
+                    .heading, ul {
+                        @apply text-base;
+                    }
+
+                    ul {
+                        @apply list-none;
+                    }
+
+                    svg {
+                        stroke: $svgDefaultStrokeColor;
+                    }
                 }
+            }
+
+            .description {
+                @apply overflow-ellipsis overflow-hidden;
             }
         }
 
         .r-tile-footer {
 
             &.package-tags {
+                .package-tag {
+                    @apply rounded;
+                }
+
                 .package-tag:not(last-child) {
                     @apply mr-4 p-2;
                 }
