@@ -2,18 +2,15 @@
 @import "mixins";
 
 .r-tiles {
-    @apply items-center;
-
     @screen md {
-        @apply flex;
+        @apply grid grid-flow-row grid-cols-2 grid-rows-2 gap-2;
     }
 
     .r-tile {
         @apply rounded-xl shadow border border-gray-300 p-4 font-display;
         @apply flex flex-col;
 
-        width: 525px;
-        max-width: 525px;
+        width: 100%;
 
         .r-tile-header {
             @apply flex flex-row items-center mb-4;
