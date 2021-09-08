@@ -1,4 +1,4 @@
-import { initDesignSystem, disclosure } from "@pulumi/facet";
+import { initDesignSystem, accordion, accordionItem, disclosure } from "@pulumi/facet";
 import { defineCustomElements } from "../../stencil/dist";
 
 import "../scss/main.scss";
@@ -22,6 +22,8 @@ import "./packages";
 initDesignSystem({
     prefix: "pulumi",
     components: [
+        accordion(),
+        accordionItem(),
         disclosure(),
     ],
 });
