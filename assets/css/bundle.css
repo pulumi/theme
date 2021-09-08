@@ -1,14 +1,5 @@
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
-  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.9 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -12750,14 +12741,61 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   text-decoration: underline
 }
 
-.r-tiles .r-tile .r-tile-content.featured{
-  max-height:350px;
-  height:350px
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item{
+  border-radius: 0.25rem;
+  border:2px solid #131314
 }
 
-.r-tiles .r-tile .r-tile-content.featured .description{
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity))
+}
+
+body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
+  color:#fff
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover svg{
+  stroke:#fff
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded{
+  background-color: transparent
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded .heading{
+  color:inherit
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded svg{
+  stroke:#000
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item .heading, .r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
+  list-style-type: none
+}
+
+.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item svg{
+  stroke:#000
+}
+
+.r-tiles .r-tile .r-tile-content .description{
   overflow: hidden;
   text-overflow: ellipsis
+}
+
+.r-tiles .r-tile .r-tile-footer.package-tags .package-tag{
+  border-radius: 0.25rem
 }
 
 .r-tiles .r-tile .r-tile-footer.package-tags .package-tag:not(last-child){
