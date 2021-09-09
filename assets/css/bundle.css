@@ -12666,17 +12666,16 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   color: rgba(153, 61, 41, var(--tw-text-opacity))
 }
 
-.r-tiles{
-  align-items: center
-}
-
 @media (min-width: 768px){
   .r-tiles{
-    display: flex
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem
   }
 }
 
-.r-tiles .r-tile{
+.r-tiles .package .r-tile{
   border-radius: 0.75rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -12687,36 +12686,35 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   display: flex;
   flex-direction: column;
-  width:525px;
-  max-width:525px
+  width:100%
 }
 
-.r-tiles .r-tile .r-tile-header{
+.r-tiles .package .r-tile .r-tile-header{
   margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center
 }
 
-.r-tiles .r-tile .r-tile-header .logo{
+.r-tiles .package .r-tile .r-tile-header .logo{
   max-width:20%;
   height:32px
 }
 
-.r-tiles .r-tile .r-tile-header .header-link{
+.r-tiles .package .r-tile .r-tile-header .header-link{
   border-radius: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(77, 91, 217, var(--tw-text-opacity));
   padding:8px 16px 8px 16px
 }
 
-.r-tiles .r-tile .r-tile-header .header-link:hover{
+.r-tiles .package .r-tile .r-tile-header .header-link:hover{
   --tw-text-opacity: 1;
   color: rgba(62, 73, 174, var(--tw-text-opacity));
   box-shadow:0 4px 4px rgba(0,0,0,.2),0 4px 4px rgba(0,0,0,.14),0 1px 5px rgba(0,0,0,.12)
 }
 
-.r-tiles .r-tile .r-tile-header .header-link:focus{
+.r-tiles .package .r-tile .r-tile-header .header-link:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
@@ -12724,122 +12722,126 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   --tw-ring-color: rgba(62, 73, 174, var(--tw-ring-opacity))
 }
 
-.r-tiles .r-tile .r-tile-content{
+.r-tiles .package .r-tile .r-tile-content{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  height:100%
 }
 
-.r-tiles .r-tile .r-tile-content .title-link{
+.r-tiles .package .r-tile .r-tile-content .title-link{
   font-size: 1.125rem;
   line-height: 1.75rem
 }
 
-.r-tiles .r-tile .r-tile-content .title-link:hover{
+.r-tiles .package .r-tile .r-tile-content .title-link:hover{
   --tw-text-opacity: 1;
   color: rgba(62, 73, 174, var(--tw-text-opacity));
   text-decoration: underline
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item{
   border-radius: 0.25rem;
   border:2px solid #131314
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity))
 }
 
-body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
+body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
   color:#fff
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover .heading{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover svg{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item:hover svg{
   stroke:#fff
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded{
   background-color: transparent
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded .heading{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded .heading{
   color:inherit
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded svg{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item.expanded svg{
   stroke:#000
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item .heading, .r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item .heading, .r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item ul{
   list-style-type: none
 }
 
-.r-tiles .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item svg{
+.r-tiles .package .r-tile .r-tile-content pulumi-accordion pulumi-accordion-item svg{
   stroke:#000
 }
 
-.r-tiles .r-tile .r-tile-content .description{
+.r-tiles .package .r-tile .r-tile-content .description{
   overflow: hidden;
-  text-overflow: ellipsis
+  text-overflow: ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-tag{
+.r-package-tags .package-tag{
   border-radius: 0.25rem
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-tag:not(last-child){
+.r-package-tags .package-tag:not(last-child){
   margin-right: 1rem;
   padding: 0.5rem
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category{
+.r-package-tags .package-category{
   background-color:#dbdef7
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.cloud{
+.r-package-tags .package-category.cloud{
   background-color:#bfcbad
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.database{
+.r-package-tags .package-category.database{
   background-color:#e2f4ac
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.infrastructure{
+.r-package-tags .package-category.infrastructure{
   background-color:#e2f4ac
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.monitoring{
+.r-package-tags .package-category.monitoring{
   background-color:#c4fee5
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.network{
+.r-package-tags .package-category.network{
   background-color:#aae8df
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.utility{
+.r-package-tags .package-category.utility{
   background-color:#ffc482
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-category.version-control-system{
+.r-package-tags .package-category.version-control-system{
   background-color:#fce5aa
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .native-package{
+.r-package-tags .native-package{
   background-color:#b985bd
 }
 
-.r-tiles .r-tile .r-tile-footer.package-tags .package-status.ga,.r-tiles .r-tile .r-tile-footer.package-tags .package-status.public-preview{
+.r-package-tags .package-status.ga,.r-package-tags .package-status.public-preview{
   background-color:#f2dbe7
 }
 
