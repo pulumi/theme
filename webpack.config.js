@@ -16,7 +16,7 @@ module.exports = function(env, { mode }) {
         },
         resolve: {
             extensions: [".ts", ".js"],
-            modules: ["src", "node_modules"]
+            modules: ["src", "node_modules"],
         },
         devServer: {
             writeToDisk: true,

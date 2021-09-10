@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
+        "target": "es6",
+        "module": "es6",
+        "moduleResolution": "node",
         "esModuleInterop": true,
+        "importHelpers": true,
         "removeComments": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
     },
     "files": [
         "src/ts/main.ts"
     ],
-    "exclude": [
-        "node_modules"
-    ]
 }

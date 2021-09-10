@@ -1,4 +1,3 @@
-
 // Tailwind configuration. Changes to this file require a dev-server restart.
 //
 // Configuration docs:
@@ -7,31 +6,19 @@
 // Default configuration:
 // https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 
-// This doesn't work for some reason, but should:
-//
-// const { color } = require("@pulumi/facet");
-// const defaultTheme = require("tailwindcss/defaultTheme");
-
-// const brand = {
-//     yellow: color.brand.yellow,
-//     salmon: color.brand.salmon,
-//     fuchsia: color.brand.fuchsia,
-//     purple: color.brand.purple,
-//     violet: color.brand.violet,
-//     blue: color.brand.blue,
-// };
-
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { color } = require("@pulumi/facet/dist/tokens/cjs");
 
 const brand = {
-    yellow: "#f7bf2a",
-    salmon: "#f26e7e",
-    fuchsia: "#bd4c85",
-    purple: "#8a3391",
-    violet: "#805ac3",
-    blue: "#4d5bd9",
+    yellow: color.black.base.hex.value,
+    salmon: color.salmon.base.hex.value,
+    fuchsia: color.fuchsia.base.hex.value,
+    purple: color.purple.base.hex.value,
+    violet: color.violet.base.hex.value,
+    blue: color.blue.base.hex.value,
 };
 
+// Old hard-coded values.
+const defaultTheme = require("tailwindcss/defaultTheme");
 const white = defaultTheme.colors.white;
 const black = defaultTheme.colors.black;
 const transparent = defaultTheme.colors.transparent;

@@ -4,11 +4,16 @@
  * at the end to do more transformations.
  */
 
+// https://gitlab.botogames.com/Ossi/gamingforgood-dashboard-panel/-/blob/master/postcss.config.cjs
+const tailwindcss = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+
 module.exports = {
     plugins: [
 
         // TailwindCSS
-        require("tailwindcss")("./tailwind.config.js"),
+        tailwindcss("./tailwind.config.js"),
 
         // Apply vendor prefixes for CSS features that aren't
         // fully supported yet.
