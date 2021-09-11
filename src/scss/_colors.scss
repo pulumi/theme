@@ -1,21 +1,12 @@
-$black: #000;
-$white: #fff;
-
-$brand: (
-    "yellow": #f7bf2a,
-    "salmon": #f26e7e,
-    "fuchsia": #bd4c85,
-    "purple": #8a3391,
-    "violet": #805ac3,
-    "blue": #4d5bd9,
-);
-
-$brand-yellow: map-get($brand, "yellow");
-$brand-salmon: map-get($brand, "salmon");
-$brand-fuchsia: map-get($brand, "fuchsia");
-$brand-purple: map-get($brand, "purple");
-$brand-violet: map-get($brand, "violet");
-$brand-blue: map-get($brand, "blue");
+// Use token-derived Facet colors!
+$black: $color-black;
+$white: $color-white;
+$brand-yellow: $color-brand-yellow;
+$brand-salmon: $color-brand-salmon;
+$brand-fuchsia: $color-brand-fuchsia;
+$brand-purple: $color-brand-purple;
+$brand-violet: $color-brand-violet;
+$brand-blue: $color-brand-blue;
 
 $gray: (
     100: #f9f9fa,

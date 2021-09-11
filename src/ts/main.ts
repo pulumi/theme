@@ -21,7 +21,8 @@ import "./packages";
 // Initialize the Facet design system and components.
 initDesignSystem({
     prefix: "pulumi",
-    theme: "dark",
+    theme: "web",
+    mode: "dark",
     components: [
         disclosure(),
         accordion(),
@@ -30,22 +31,22 @@ initDesignSystem({
     ],
 });
 
-// import { fuchsiaPalette, bluePalette, redPalette, greenPalette } from "@pulumi/facet";
+import { fuchsiaPalette, bluePalette, redPalette, greenPalette } from "@pulumi/facet";
 
-// [ fuchsiaPalette, bluePalette, redPalette, greenPalette ].forEach(p => {
-//     const ul = document.createElement("ul");
+[ fuchsiaPalette, bluePalette, redPalette, greenPalette ].forEach(p => {
+    const ul = document.createElement("ul");
 
-//     p.swatches.map(s => {
-//         const li = document.createElement("li");
-//         li.style.backgroundColor = s.toColorString();
-//         li.style.height = "100px";
-//         li.style.margin = "1px";
-//         li.style.width = "100px";
-//         ul.appendChild(li);
-//     });
+    p.swatches.map(s => {
+        const li = document.createElement("li");
+        li.style.backgroundColor = s.toColorString();
+        li.style.height = "100px";
+        li.style.margin = "1px";
+        li.style.width = "100px";
+        ul.appendChild(li);
+    });
 
-//     document.body.appendChild(ul);
-// });
+    document.body.appendChild(ul);
+});
 
 // Register all Stencil components.
 defineCustomElements();

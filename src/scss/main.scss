@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 
+// Import Sass variables from Facet!
+@import "@pulumi/facet/dist/tokens/scss/variables";
+
 @import "colors";
 @import "mixins";
 
