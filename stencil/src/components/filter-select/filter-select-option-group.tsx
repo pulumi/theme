@@ -1,4 +1,4 @@
-import { Component, h, Element, Prop, Method } from "@stencil/core";
+import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
 @Component({
     tag: "pulumi-filter-select-option-group",
     shadow: true,
@@ -65,6 +65,14 @@ export class FilterSelectOptionGroup {
     onToggle() {
         this.expanded = !this.expanded;
     }
+
+    @Listen("click", { target: "document" })
+    onDocumentClick(event: Event) {
+        if (!this.el.contains(event.target as HTMLElement) && this.expanded) {
+            this.close();
+        }
+    }
+
 
     @Method()
     close() {
