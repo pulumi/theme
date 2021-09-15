@@ -23,7 +23,20 @@ $(".section-registry").on("filterSelect", (event) => {
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
             const packageHasSelectedStatus = !!filters.find(f => f.group === "status" && f.value === packageStatus);
 
-            // Show the package if it matches any filter.
+            /**
+                Show the package if it matches any of the selected filters. For example:
+
+                * If type Component and type Provider are selected, show packages that are
+                  tagged as either "component" OR "provider", since those two filters belong
+                  to the same option group.
+
+                * If type Component and use-case Cloud are selected, show packages that
+                  are tagged as both "component" AND "cloud", since those two filters
+                  belong to different options groups.
+
+                * If nothing is selected from a given group, assume the intent is to see
+                  everything in that group (so don't apply any of the filters within it).
+             */
             if ((packageHasSelectedType || noSelectedType) &&
                 (packageHasSelectedCategory || noSelectedCategory) &&
                 (packageHasSelectedStatus || noSelectedStatus)) {
@@ -37,7 +50,7 @@ $(".section-registry").on("filterSelect", (event) => {
 });
 
 $(".section-registry .no-results .reset").on("click", (event) => {
-    event.stopImmediatePropagation();
+    event.stopPropagation();
     const fs = $("pulumi-filter-select").get(0) as any;
     fs.reset();
 });
