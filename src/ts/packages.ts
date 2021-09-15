@@ -15,14 +15,11 @@ $(".section-registry").on("filterSelect", (event) => {
             const packageCategory = el.attr("data-category");
             const packageStatus = el.attr("data-status");
 
-            const packageHasSelectedType = !!filters.find(f => f.group === "type" && f.value === packageType);
+            const packageHasSelectedType = !!(filters.find(f => f.group === "type" && f.value === packageType)) || (filters.find(f => f.group === "type" && f.value === "native") && packageIsNative);
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
             const packageHasSelectedStatus = !!filters.find(f => f.group === "status" && f.value === packageStatus);
 
-            // Show the package if it matches *any* filter, period. I suspect this logic may not be what we want, though;
-            // Instead, we may want to apply inclusivity within a group, but exclusivity without -- for example, to allow
-            // you to filter for packages that are providers *and* generally available *and either* monitoring
-            // *or* network related. But for now, if it matches anything, we show it.
+            // Show the package if it matches any filter.
             if (packageHasSelectedType || packageHasSelectedCategory || packageHasSelectedStatus) {
                 $(package).removeClass("hidden");
             }
@@ -30,4 +27,10 @@ $(".section-registry").on("filterSelect", (event) => {
     } else {
         $(packages).removeClass("hidden");
     }
+});
+
+$(".section-registry .no-results .reset").on("click", (event) => {
+    event.stopImmediatePropagation();
+    const fs = $("pulumi-filter-select").get(0) as any;
+    fs.reset();
 });

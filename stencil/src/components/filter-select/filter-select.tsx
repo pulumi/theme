@@ -1,4 +1,4 @@
-import { Component, h, Element, Event, EventEmitter, Listen } from "@stencil/core";
+import { Component, h, Element, Event, EventEmitter, Listen, Method } from "@stencil/core";
 
 export interface PackageFilter {
     kind: "type" | "category" | "status";
@@ -23,12 +23,20 @@ export class FilterSelect {
     @Event({ composed: true, bubbles: true })
     filterSelect: EventEmitter<any[]>; // Momentary laziness -- will come back to this.
 
+    @Method()
+    reset() {
+        this.options.forEach(option => option.selected = false);
+        this.groups.forEach(group => group.close());
+        this.filterSelect.emit([]);
+
+        return Promise.resolve(null);
+    }
+
     @Listen("optionChange")
     onOptionChange(event: Event) {
         event.stopPropagation();
-        const options = Array.from(this.el.querySelectorAll("pulumi-filter-select-option"));
 
-        const filters = options
+        const filters = this.options
             .filter(option => option.selected)
             .map(option => {
                 const group = option.closest("pulumi-filter-select-option-group");
@@ -39,6 +47,14 @@ export class FilterSelect {
             });
 
         this.filterSelect.emit(filters);
+    }
+
+    private get groups() {
+        return Array.from(this.el.querySelectorAll("pulumi-filter-select-option-group"));
+    }
+
+    private get options() {
+        return Array.from(this.el.querySelectorAll("pulumi-filter-select-option"));
     }
 
     render() {

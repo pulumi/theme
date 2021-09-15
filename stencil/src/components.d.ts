@@ -60,12 +60,14 @@ export namespace Components {
     interface PulumiExamples {
     }
     interface PulumiFilterSelect {
+        "reset": () => Promise<any>;
     }
     interface PulumiFilterSelectOption {
         "selected": boolean;
         "value": string;
     }
     interface PulumiFilterSelectOptionGroup {
+        "close": () => Promise<any>;
         "expanded": boolean;
         "name": string;
     }
