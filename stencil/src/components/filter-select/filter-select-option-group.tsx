@@ -73,7 +73,6 @@ export class FilterSelectOptionGroup {
         }
     }
 
-
     @Method()
     close() {
         this.expanded = false;
