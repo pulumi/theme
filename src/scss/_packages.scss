@@ -79,3 +79,15 @@
         }
     }
 }
+
+.featured-providers, .resource-providers {
+    .package {
+        ~ .no-results {
+            @apply block;
+        }
+
+        &:not([class*="hidden"]) ~ .no-results {
+            @apply hidden;
+        }
+    }
+}

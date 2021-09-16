@@ -12,6 +12,10 @@ export interface Filter {
         label {
             white-space: nowrap;
         }
+
+        input {
+            margin-right: 0.5em;
+        }
     `,
 })
 export class FilterSelectOption {
@@ -37,6 +41,7 @@ export class FilterSelectOption {
                     type="checkbox"
                     value={this.value}
                     onChange={ this.onChange.bind(this) }
+                    checked={this.selected}
                 />
                 <slot />
             </label>
