@@ -2,7 +2,7 @@ $(".section-registry").on("filterSelect", (event) => {
     const detail: unknown = event.detail;
     const filters = detail as any[];
 
-    const packages = $(".resource-providers, .featured-providers").find(".package");
+    const packages = $(".all-packages, .featured-packages").find(".package");
 
     const noSelectedType = filters.find(f => f.group === "type") === undefined;
     const noSelectedCategory = filters.find(f => f.group === "category") === undefined;
@@ -12,7 +12,7 @@ $(".section-registry").on("filterSelect", (event) => {
         $(packages).addClass("hidden");
 
         $(packages).each((i, package) => {
-            const el = $(package).find(".r-tile");
+            const el = $(package).find("[data-category]");
 
             const packageType = el.attr("data-component") === "true" ? "component" : "provider";
             const packageCategory = el.attr("data-category");
@@ -47,6 +47,12 @@ $(".section-registry").on("filterSelect", (event) => {
     } else {
         $(packages).removeClass("hidden");
     }
+
+    // Apply selections on the DOM, so cards and tags can use them as well.
+    $(".packages")
+        .attr("data-selected-types", filters.filter(f => f.group === "type").map(t => t.value).join(","))
+        .attr("data-selected-categories", filters.filter(f => f.group === "category").map(t => t.value).join(","))
+        .attr("data-selected-statuses", filters.filter(f => f.group === "status").map(t => t.value).join(","));
 });
 
 $(".section-registry .no-results .reset").on("click", (event) => {

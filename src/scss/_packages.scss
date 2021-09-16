@@ -1,86 +1,5 @@
-@import "colors";
-@import "mixins";
+.all-packages, .featured-packages {
 
-.r-tiles {
-    @apply items-center;
-
-    @screen md {
-        @apply flex;
-    }
-
-    .r-tile {
-        @apply rounded shadow border border-gray-300 cursor-pointer p-4 font-display;
-
-        width: 525px;
-        max-width: 525px;
-
-        .logo {
-            @apply mr-4;
-
-            width: 48px;
-            height: 48px
-        }
-
-        &.featured {
-            @apply cursor-default;
-
-            max-height: 350px;
-            height: 350px;
-
-            .description {
-                @apply overflow-ellipsis overflow-hidden;
-            }
-
-            .featured-ex-container {
-                @apply overflow-auto;
-
-                height: 64px;
-                max-height: 64px;
-
-                ul {
-                    li {
-                        @apply text-sm truncate overflow-ellipsis;
-
-                        width: 300px;
-                    }
-                }
-            }
-        }
-
-        @include transition;
-
-        &:hover {
-            @apply shadow-md;
-            transform: scale(1.03);
-        }
-
-        .package-tags {
-            .package-tag:not(last-child) {
-                @apply mr-4 p-2;
-            }
-
-            .package-category {
-                background-color: map-get($blue, 200);
-
-                &.network {
-                    background-color: map-get($yellow, 200);
-                }
-            }
-
-            .native-package {
-                background-color: map-get($purple, 400);
-            }
-
-            .package-status {
-                &.ga, &.public-preview {
-                    background-color: map-get($fuchsia, 200);
-                }
-            }
-        }
-    }
-}
-
-.featured-providers, .resource-providers {
     .package {
         ~ .no-results {
             @apply block;
@@ -88,6 +7,162 @@
 
         &:not([class*="hidden"]) ~ .no-results {
             @apply hidden;
+        }
+
+        .package-tags {
+            @apply inline-flex flex-wrap list-none p-0;
+
+            li {
+                @apply mr-2 my-1 py-2 px-3 border rounded text-xs border-gray-200;
+
+                @screen md {
+                    @apply text-sm mr-4 px-3;
+                }
+            }
+        }
+
+        [data-provider="true"]:not([data-native="true"]) {
+            .package-tag-type {
+                @apply border-blue-300;
+
+                .packages[data-selected-types*="provider"] & {
+                    @apply bg-blue-300;
+                }
+            }
+        }
+
+        [data-native="true"] {
+            .package-tag-type {
+                @apply border-violet-300;
+
+                .packages[data-selected-types*="native"] & {
+                    @apply bg-violet-300;
+                }
+            }
+        }
+
+        [data-component="true"] {
+            .package-tag-type {
+                @apply border-purple-300;
+
+                .packages[data-selected-types*="component"] & {
+                    @apply bg-purple-300;
+                }
+            }
+        }
+
+        [data-category="cloud"] {
+            .package-tag-category {
+                @apply border-green-300;
+
+                .packages[data-selected-categories*="cloud"] & {
+                    @apply bg-green-300;
+                }
+            }
+        }
+
+        [data-category="database"] {
+            .package-tag-category {
+                border-color: #cdd96c; // TODO: Add to palette.
+
+                .packages[data-selected-categories*="database"] & {
+                    background-color: #cdd96c;
+                }
+            }
+        }
+
+         [data-category="infrastructure"] {
+            .package-tag-category {
+                border-color: #e2f4ac; // TODO: Add to palette.
+
+                .packages[data-selected-categories*="infrastructure"] & {
+                    background-color: #e2f4ac;
+                }
+            }
+        }
+
+         [data-category="monitoring"] {
+            .package-tag-category {
+                border-color: #c4fee5; // TODO: Add to palette.
+
+                .packages[data-selected-categories*="monitoring"] & {
+                    background-color: #c4fee5;
+                }
+            }
+        }
+
+         [data-category="network"] {
+            .package-tag-category {
+                border-color: #aae8df; // TODO: Add to palette.
+
+                .packages[data-selected-categories*="network"] & {
+                    background-color: #aae8df;
+                }
+            }
+        }
+
+         [data-category="utility"] {
+            .package-tag-category {
+                border-color: #ffc482;
+
+                .packages[data-selected-categories*="utility"] & {
+                    background-color: #ffc482;
+                }
+            }
+        }
+
+         [data-category="version control system"] {
+            .package-tag-category {
+                @apply border-yellow-300;
+
+                .packages[data-selected-categories*="version control system"] & {
+                    @apply bg-yellow-300;
+                }
+            }
+        }
+
+        [data-status="ga"] {
+            .package-tag-status {
+                @apply border-gray-500;
+
+                .packages[data-selected-statuses*="ga"] & {
+                    @apply bg-gray-500;
+                }
+            }
+        }
+
+        [data-status="preview"] {
+            .package-tag-status {
+                @apply border-gray-300;
+
+                .packages[data-selected-statuses*="preview"] & {
+                    @apply bg-gray-300;
+                }
+            }
+        }
+
+        [data-status="deprecated"] {
+            .package-tag-status {
+                @apply border-gray-200;
+
+                .packages[data-selected-statuses*="deprecated"] & {
+                    @apply bg-gray-200;
+                }
+            }
+        }
+
+        pulumi-accordion-item {
+            @apply text-base;
+
+            [slot="heading"] {
+                @apply text-base;
+
+                ~ ul {
+                    li {
+                        @apply mt-0;
+                    }
+                }
+            }
         }
     }
 }
