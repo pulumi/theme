@@ -9,6 +9,10 @@ export const config: Config = {
             type: "dist-custom-elements-bundle",
             dir: "./dist",
         },
+        {
+            type: "www",
+            buildDir: "./build",
+        }
     ],
     plugins: [
         sass(),
