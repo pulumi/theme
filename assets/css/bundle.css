@@ -12666,97 +12666,179 @@ body:not(.section-docs):not(.section-blog):not(.section-learn):not(.section-auth
   color: rgba(153, 61, 41, var(--tw-text-opacity))
 }
 
-.r-tiles{
-  align-items: center
-}
-
-@media (min-width: 768px){
-  .r-tiles{
-    display: flex
-  }
-}
-
-.r-tiles .r-tile{
-  cursor: pointer;
-  border-radius: 0.25rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(229, 229, 233, var(--tw-border-opacity));
-  padding: 1rem;
-  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  width:525px;
-  max-width:525px;
-  transition:all 120ms linear
-}
-
-.r-tiles .r-tile .logo{
-  margin-right: 1rem;
-  width:48px;
-  height:48px
-}
-
-.r-tiles .r-tile.featured{
-  cursor: default;
-  max-height:350px;
-  height:350px
-}
-
-.r-tiles .r-tile.featured .description{
-  overflow: hidden;
-  text-overflow: ellipsis
-}
-
-.r-tiles .r-tile.featured .featured-ex-container{
-  overflow: auto;
-  height:64px;
-  max-height:64px
-}
-
-.r-tiles .r-tile.featured .featured-ex-container ul li{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  width:300px
-}
-
-.r-tiles .r-tile:hover{
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transform:scale(1.03)
-}
-
-.r-tiles .r-tile .package-tags .package-tag:not(last-child){
-  margin-right: 1rem;
-  padding: 0.5rem
-}
-
-.r-tiles .r-tile .package-tags .package-category{
-  background-color:#dbdef7
-}
-
-.r-tiles .r-tile .package-tags .package-category.network{
-  background-color:#fdf2d4
-}
-
-.r-tiles .r-tile .package-tags .native-package{
-  background-color:#b985bd
-}
-
-.r-tiles .r-tile .package-tags .package-status.ga,.r-tiles .r-tile .package-tags .package-status.public-preview{
-  background-color:#f2dbe7
-}
-
-.featured-providers .package~.no-results, .resource-providers .package~.no-results{
+.all-packages .package~.no-results, .featured-packages .package~.no-results{
   display: block;
 }
 
-.featured-providers .package:not([class*=hidden])~.no-results, .resource-providers .package:not([class*=hidden])~.no-results{
+.all-packages .package:not([class*=hidden])~.no-results, .featured-packages .package:not([class*=hidden])~.no-results{
   display: none;
+}
+
+.all-packages .package .package-tags, .featured-packages .package .package-tags{
+  display: inline-flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+.all-packages .package .package-tags li, .featured-packages .package .package-tags li{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(242, 242, 244, var(--tw-border-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 768px){
+  .all-packages .package .package-tags li, .featured-packages .package .package-tags li{
+    margin-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type, .featured-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+  --tw-border-opacity: 1;
+  border-color: rgba(184, 189, 240, var(--tw-border-opacity));
+}
+
+.packages[data-selected-types*=provider] .all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type, .packages[data-selected-types*=provider] .featured-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+  --tw-bg-opacity: 1;
+  background-color: rgba(184, 189, 240, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-native=true] .package-tag-type, .featured-packages .package [data-native=true] .package-tag-type{
+  --tw-border-opacity: 1;
+  border-color: rgba(204, 189, 231, var(--tw-border-opacity));
+}
+
+.packages[data-selected-types*=native] .all-packages .package [data-native=true] .package-tag-type, .packages[data-selected-types*=native] .featured-packages .package [data-native=true] .package-tag-type{
+  --tw-bg-opacity: 1;
+  background-color: rgba(204, 189, 231, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-component=true] .package-tag-type, .featured-packages .package [data-component=true] .package-tag-type{
+  --tw-border-opacity: 1;
+  border-color: rgba(208, 173, 211, var(--tw-border-opacity));
+}
+
+.packages[data-selected-types*=component] .all-packages .package [data-component=true] .package-tag-type, .packages[data-selected-types*=component] .featured-packages .package [data-component=true] .package-tag-type{
+  --tw-bg-opacity: 1;
+  background-color: rgba(208, 173, 211, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-category=cloud] .package-tag-category, .featured-packages .package [data-category=cloud] .package-tag-category{
+  --tw-border-opacity: 1;
+  border-color: rgba(129, 238, 202, var(--tw-border-opacity));
+}
+
+.packages[data-selected-categories*=cloud] .all-packages .package [data-category=cloud] .package-tag-category, .packages[data-selected-categories*=cloud] .featured-packages .package [data-category=cloud] .package-tag-category{
+  --tw-bg-opacity: 1;
+  background-color: rgba(129, 238, 202, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-category=database] .package-tag-category,.featured-packages .package [data-category=database] .package-tag-category{
+  border-color:#cdd96c
+}
+
+.packages[data-selected-categories*=database] .all-packages .package [data-category=database] .package-tag-category,.packages[data-selected-categories*=database] .featured-packages .package [data-category=database] .package-tag-category{
+  background-color:#cdd96c
+}
+
+.all-packages .package [data-category=infrastructure] .package-tag-category,.featured-packages .package [data-category=infrastructure] .package-tag-category{
+  border-color:#e2f4ac
+}
+
+.packages[data-selected-categories*=infrastructure] .all-packages .package [data-category=infrastructure] .package-tag-category,.packages[data-selected-categories*=infrastructure] .featured-packages .package [data-category=infrastructure] .package-tag-category{
+  background-color:#e2f4ac
+}
+
+.all-packages .package [data-category=monitoring] .package-tag-category,.featured-packages .package [data-category=monitoring] .package-tag-category{
+  border-color:#c4fee5
+}
+
+.packages[data-selected-categories*=monitoring] .all-packages .package [data-category=monitoring] .package-tag-category,.packages[data-selected-categories*=monitoring] .featured-packages .package [data-category=monitoring] .package-tag-category{
+  background-color:#c4fee5
+}
+
+.all-packages .package [data-category=network] .package-tag-category,.featured-packages .package [data-category=network] .package-tag-category{
+  border-color:#aae8df
+}
+
+.packages[data-selected-categories*=network] .all-packages .package [data-category=network] .package-tag-category,.packages[data-selected-categories*=network] .featured-packages .package [data-category=network] .package-tag-category{
+  background-color:#aae8df
+}
+
+.all-packages .package [data-category=utility] .package-tag-category,.featured-packages .package [data-category=utility] .package-tag-category{
+  border-color:#ffc482
+}
+
+.packages[data-selected-categories*=utility] .all-packages .package [data-category=utility] .package-tag-category,.packages[data-selected-categories*=utility] .featured-packages .package [data-category=utility] .package-tag-category{
+  background-color:#ffc482
+}
+
+.all-packages .package [data-category="version control system"] .package-tag-category, .featured-packages .package [data-category="version control system"] .package-tag-category{
+  --tw-border-opacity: 1;
+  border-color: rgba(252, 229, 170, var(--tw-border-opacity));
+}
+
+.packages[data-selected-categories*="version control system"] .all-packages .package [data-category="version control system"] .package-tag-category, .packages[data-selected-categories*="version control system"] .featured-packages .package [data-category="version control system"] .package-tag-category{
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 229, 170, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-status=ga] .package-tag-status, .featured-packages .package [data-status=ga] .package-tag-status{
+  --tw-border-opacity: 1;
+  border-color: rgba(190, 191, 201, var(--tw-border-opacity));
+}
+
+.packages[data-selected-statuses*=ga] .all-packages .package [data-status=ga] .package-tag-status, .packages[data-selected-statuses*=ga] .featured-packages .package [data-status=ga] .package-tag-status{
+  --tw-bg-opacity: 1;
+  background-color: rgba(190, 191, 201, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-status=preview] .package-tag-status, .featured-packages .package [data-status=preview] .package-tag-status{
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 229, 233, var(--tw-border-opacity));
+}
+
+.packages[data-selected-statuses*=preview] .all-packages .package [data-status=preview] .package-tag-status, .packages[data-selected-statuses*=preview] .featured-packages .package [data-status=preview] .package-tag-status{
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 229, 233, var(--tw-bg-opacity));
+}
+
+.all-packages .package [data-status=deprecated] .package-tag-status, .featured-packages .package [data-status=deprecated] .package-tag-status{
+  --tw-border-opacity: 1;
+  border-color: rgba(242, 242, 244, var(--tw-border-opacity));
+}
+
+.packages[data-selected-statuses*=deprecated] .all-packages .package [data-status=deprecated] .package-tag-status, .packages[data-selected-statuses*=deprecated] .featured-packages .package [data-status=deprecated] .package-tag-status{
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 242, 244, var(--tw-bg-opacity));
+}
+
+.all-packages .package pulumi-accordion-item, .featured-packages .package pulumi-accordion-item{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.all-packages .package pulumi-accordion-item [slot=heading], .featured-packages .package pulumi-accordion-item [slot=heading]{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.all-packages .package pulumi-accordion-item [slot=heading]~ul li, .featured-packages .package pulumi-accordion-item [slot=heading]~ul li{
+  margin-top: 0px;
 }
 
 .pagination{
@@ -15947,7 +16029,6 @@ pulumi-convert #editors .editor .diagnostics .details{
 }
 
 pulumi-filter-select pulumi-filter-select-option-group .toggle{
-  width: 12rem;
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -15962,6 +16043,12 @@ pulumi-filter-select pulumi-filter-select-option-group .toggle{
   line-height: 1.25rem
 }
 
+@media (min-width: 768px){
+  pulumi-filter-select pulumi-filter-select-option-group .toggle{
+    width: 12rem
+  }
+}
+
 pulumi-filter-select pulumi-filter-select-option-group .options{
   z-index: 50;
   margin-top: 0.25rem;
@@ -15973,13 +16060,19 @@ pulumi-filter-select pulumi-filter-select-option-group .options{
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
   padding-left: 0.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   line-height: 2;
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+@media (min-width: 768px){
+  pulumi-filter-select pulumi-filter-select-option-group .options{
+    padding-right: 2rem
+  }
 }
 
 pulumi-greenhouse-jobs-list{
