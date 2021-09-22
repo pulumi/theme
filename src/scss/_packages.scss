@@ -13,7 +13,7 @@
             @apply inline-flex flex-wrap list-none p-0;
 
             li {
-                @apply mr-2 my-1 py-2 px-3 border rounded text-xs border-gray-200;
+                @apply mr-2 my-1 py-2 px-3 border-2 rounded text-xs border-gray-200;
 
                 @screen md {
                     @apply text-sm mr-4 px-3;
@@ -121,45 +121,31 @@
             }
         }
 
-        [data-status="ga"] {
-            .package-tag-status {
-                @apply border-gray-500;
-
-                .packages[data-selected-statuses*="ga"] & {
-                    @apply bg-gray-500;
-                }
-            }
-        }
-
-        [data-status="preview"] {
-            .package-tag-status {
-                @apply border-gray-300;
-
-                .packages[data-selected-statuses*="preview"] & {
-                    @apply bg-gray-300;
-                }
-            }
-        }
-
-        [data-status="deprecated"] {
-            .package-tag-status {
-                @apply border-gray-200;
-
-                .packages[data-selected-statuses*="deprecated"] & {
-                    @apply bg-gray-200;
-                }
-            }
-        }
-
         pulumi-accordion-item {
-            @apply text-base;
+            @apply text-base bg-transparent transition-all;
 
             [slot="heading"] {
-                @apply text-base;
+                @apply text-base transition-all;
 
                 ~ ul {
                     li {
                         @apply mt-0;
+                    }
+                }
+            }
+
+            &[expanded] {
+                @apply bg-gray-900 text-white;
+
+                [slot="heading"] {
+                    @apply text-white;
+
+                    ~ ul {
+                        li {
+                            a {
+                                @apply text-white;
+                            }
+                        }
                     }
                 }
             }
