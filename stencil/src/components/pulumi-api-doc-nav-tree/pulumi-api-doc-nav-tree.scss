@@ -1,0 +1,72 @@
+@import "../../../../src/scss/colors";
+
+.symbol {
+    height: 14px;
+    width: 14px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 6px;
+
+    &.module, &.function, &.resource {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    &.module {
+      border-color: map-get($green, 700);
+
+        &:before {
+            content: "M";
+            color: map-get($green, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.function {
+      border-color: map-get($purple, 700);
+
+        &:before {
+            content: "F";
+            color: map-get($purple, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.resource {
+      border-color: map-get($blue, 700);
+
+        &:before {
+            content: "R";
+            color: map-get($blue, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+}
+
+.nav-tree-item a {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
+
+  text-decoration: none;
+  color: black;
+}
+
+[selected] {
+  background-color: red;
+
+  a {
+    font-weight: 700;
+
+  }
+}
+
+
