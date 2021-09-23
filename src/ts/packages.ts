@@ -6,7 +6,6 @@ $(".section-registry").on("filterSelect", (event) => {
 
     const noSelectedType = filters.find(f => f.group === "type") === undefined;
     const noSelectedCategory = filters.find(f => f.group === "category") === undefined;
-    const noSelectedStatus = filters.find(f => f.group === "status") === undefined;
 
     if (filters.length > 0) {
         $(packages).addClass("hidden");
@@ -16,12 +15,10 @@ $(".section-registry").on("filterSelect", (event) => {
 
             const packageType = el.attr("data-component") === "true" ? "component" : "provider";
             const packageCategory = el.attr("data-category");
-            const packageStatus = el.attr("data-status");
             const packageIsNative = packageType === "provider" && el.attr("data-native") === "true";
 
             const packageHasSelectedType = !!(filters.find(f => f.group === "type" && f.value === packageType)) || (filters.find(f => f.group === "type" && f.value === "native") && packageIsNative);
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
-            const packageHasSelectedStatus = !!filters.find(f => f.group === "status" && f.value === packageStatus);
 
             /**
                 Show the package if it matches any of the selected filters. For example:
@@ -38,8 +35,7 @@ $(".section-registry").on("filterSelect", (event) => {
                   everything in that group (so don't apply any of the filters within it).
              */
             if ((packageHasSelectedType || noSelectedType) &&
-                (packageHasSelectedCategory || noSelectedCategory) &&
-                (packageHasSelectedStatus || noSelectedStatus)) {
+                (packageHasSelectedCategory || noSelectedCategory)) {
 
                 $(package).removeClass("hidden");
             }
@@ -51,8 +47,19 @@ $(".section-registry").on("filterSelect", (event) => {
     // Apply selections on the DOM, so cards and tags can use them as well.
     $(".packages")
         .attr("data-selected-types", filters.filter(f => f.group === "type").map(t => t.value).join(","))
-        .attr("data-selected-categories", filters.filter(f => f.group === "category").map(t => t.value).join(","))
-        .attr("data-selected-statuses", filters.filter(f => f.group === "status").map(t => t.value).join(","));
+        .attr("data-selected-categories", filters.filter(f => f.group === "category").map(t => t.value).join(","));
+
+    // Update the count-badge values.
+    const featuredCount = $(".featured-packages .package:not(.hidden)").length;
+    const allCount = $(".all-packages .package:not(.hidden)").length;
+    $(".featured-count").text(featuredCount);
+    $(".all-count").text(allCount);
+
+    // If there isn't anything to show in Featured, just hide that section entirely.
+    $(".featured-packages").toggleClass("hidden", featuredCount === 0);
+
+    // Close the menu.
+    $("pulumi-filter-select-option-group").each((i, el: any) => el.close());
 });
 
 $(".section-registry .no-results .reset").on("click", (event) => {

@@ -82,7 +82,7 @@ export class FilterSelectOptionGroup {
     render() {
         return <div>
             <div class="button" role="button" onClick={ this.onToggle.bind(this) }>
-                <span class="toggle">
+                <span class="toggle" part="toggle">
                     <slot name="toggle" />
                 </span>
             </div>
