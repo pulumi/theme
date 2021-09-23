@@ -4,12 +4,15 @@
     "description": "The Hugo theme of the Pulumi website.",
     "private": true,
     "license": "Apache-2.0",
+    "dependencies": {
+        "@pulumi/facet": "^0.0.35",
+        "clipboard-polyfill": "^3.0.3",
+        "tailwindcss": "^2.2.9"
+    },
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
-        "@pulumi/facet": "^0.0.35",
         "@types/jquery": "^3.5.6",
         "autoprefixer": "^10.3.3",
-        "clipboard-polyfill": "^3.0.3",
         "concurrently": "^6.2.1",
         "css-loader": "^6.2.0",
         "cssnano": "^5.0.8",
@@ -18,7 +21,6 @@
         "postcss-loader": "^6.1.1",
         "sass": "^1.38.2",
         "sass-loader": "^12.1.0",
-        "tailwindcss": "^2.2.9",
         "terser-webpack-plugin": "^5.2.0",
         "ts-loader": "^9.2.5",
         "typescript": "^3.9.0",
