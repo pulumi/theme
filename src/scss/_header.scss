@@ -42,6 +42,10 @@
     }
 
     &.registry {
+        $bgColor: #2b2b2c;
+
+        background-color: $bgColor;
+
         @screen xs {
             @apply p-4;
         }
@@ -49,12 +53,14 @@
         .logo-nav-menu {
             @apply w-full;
 
+            background-color: $bgColor;
+
             @screen xs {
                 @apply pt-2 -ml-2;
             }
 
             @screen md {
-                @apply w-auto p-4 absolute z-50 rounded rounded-t-none py-0;
+                @apply w-auto absolute z-50 rounded rounded-t-none pb-2;
                 top: 4.25rem;
             }
 
@@ -63,6 +69,10 @@
 
                 &:hover {
                     @apply underline;
+                }
+
+                a {
+                    @apply block w-full;
                 }
             }
         }
