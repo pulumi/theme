@@ -2733,6 +2733,10 @@ ul.glossary{
   color:#4d5bd9
 }
 
+.top-nav-bar.registry{
+  background-color:#2b2b2c
+}
+
 @media (max-width: 639px){
   .top-nav-bar.registry{
     padding: 1rem
@@ -2740,7 +2744,8 @@ ul.glossary{
 }
 
 .top-nav-bar.registry .logo-nav-menu{
-  width: 100%
+  width: 100%;
+  background-color:#2b2b2c
 }
 
 @media (max-width: 639px){
@@ -2758,9 +2763,7 @@ ul.glossary{
     border-radius: 0.25rem;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    padding: 1rem;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 0.5rem;
     top:4.25rem
   }
 }
@@ -2779,6 +2782,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .top-nav-bar.registry .logo-nav-menu li:hover{
   text-decoration: underline
+}
+
+.top-nav-bar.registry .logo-nav-menu li a{
+  display: block;
+  width: 100%
 }
 
 .header-container{
