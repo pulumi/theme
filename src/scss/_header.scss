@@ -40,6 +40,33 @@
             }
         }
     }
+
+    &.registry {
+        @screen xs {
+            @apply p-4;
+        }
+
+        .logo-nav-menu {
+            @apply w-full;
+
+            @screen xs {
+                @apply pt-2 -ml-2;
+            }
+
+            @screen md {
+                @apply w-auto p-4 absolute z-50 rounded rounded-t-none py-0;
+                top: 4.25rem;
+            }
+
+            li {
+                @apply text-lg text-white p-2;
+
+                &:hover {
+                    @apply underline;
+                }
+            }
+        }
+    }
 }
 
 .header-container {
