@@ -2737,12 +2737,6 @@ ul.glossary{
   background-color:#2b2b2c
 }
 
-@media (max-width: 639px){
-  .top-nav-bar.registry{
-    padding: 1rem
-  }
-}
-
 .top-nav-bar.registry .logo-nav-menu{
   width: 100%;
   background-color:#2b2b2c
