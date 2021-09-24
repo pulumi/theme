@@ -46,10 +46,6 @@
 
         background-color: $bgColor;
 
-        @screen xs {
-            @apply p-4;
-        }
-
         .logo-nav-menu {
             @apply w-full;
 
