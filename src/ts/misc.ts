@@ -78,8 +78,12 @@ function generateOnThisPage() {
 
     const headerContainerEl = document.querySelector(".header-container");
     // The header-container won't be available in the registry.
+    // If the registry's top nav bar is available attach the observer to that.
     if (!headerContainerEl) {
-        observer.observe(document.querySelector(".top-nav-bar.registry"));
+        const registryNavBar = document.querySelector(".top-nav-bar.registry");
+        if (registryNavBar) {
+            observer.observe(registryNavBar);
+        }
     } else {
         observer.observe(headerContainerEl);
     }

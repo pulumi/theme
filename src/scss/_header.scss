@@ -62,12 +62,10 @@
         }
 
         .logo-nav-menu {
-            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display;
-
-            z-index: 100;
+            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
 
             @screen md {
-                @apply w-auto absolute z-50 rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
+                @apply w-auto absolute rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
             }
 
             li {
@@ -86,7 +84,7 @@
 }
 
 .logo-nav-bg-mask {
-    @apply bg-transparent z-50 absolute w-full h-full;
+    @apply bg-transparent z-40 absolute w-full h-full;
 }
 
 .header-container {
