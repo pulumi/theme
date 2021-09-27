@@ -42,22 +42,17 @@
     }
 
     &.registry {
-        $bgColor: #2b2b2c;
-
-        background-color: $bgColor;
+        @apply bg-gray-850;
 
         .logo-nav-menu {
-            @apply w-full;
-
-            background-color: $bgColor;
+            @apply w-full bg-gray-850;
 
             @screen xs {
                 @apply pt-2 -ml-2;
             }
 
             @screen md {
-                @apply w-auto absolute z-50 rounded rounded-t-none pb-2;
-                top: 4rem;
+                @apply w-auto absolute z-50 rounded rounded-t-none pb-2 top-16;
             }
 
             li {
