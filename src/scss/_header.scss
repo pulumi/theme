@@ -56,14 +56,14 @@
             }
 
             li {
-                @apply text-lg text-white p-2;
-
-                &:hover {
-                    @apply underline;
-                }
+                @apply text-lg text-white;
 
                 a {
-                    @apply block w-full;
+                    @apply block px-4 py-2;
+
+                    &:hover {
+                        @apply underline;
+                    }
                 }
             }
         }
