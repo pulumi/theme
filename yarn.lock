@@ -111,10 +111,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pulumi/facet@^0.0.35":
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/@pulumi/facet/-/facet-0.0.35.tgz#9efc56683582396f850ff005557b66d41a229e22"
-  integrity sha512-AMV+nynibqMvMmso1PsLR65vjN/p2ggNZfn7tZuR3kFWaVLXdgQ9lgGVudzVSOjNWdiAR7yqnXl+96QnAPePFw==
+"@pulumi/facet@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@pulumi/facet/-/facet-0.1.0.tgz#f049384488bcd11e9c8ba038eb62668fa3613a62"
+  integrity sha512-7yi5j8Uc5rDhcV1v7HVrH2zavPbx2b0/Oh1RYJSwDI8gGRsRn+1hbRXmEMecjUqWou6F+onaISmc3oeLGS1Xrg==
   dependencies:
     "@microsoft/fast-components" "^2.11.0"
     "@microsoft/fast-element" "^1.5.1"
