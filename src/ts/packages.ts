@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const bgMask = $(".logo-nav-bg-mask");
 
     function toggleMenu() {
-        console.log("clicked");
         const logoNavMenu = $("#logo-nav-menu");
         logoNavMenu.toggleClass("hidden");
         const navMenuVisible = logoNavMenu.is(":visible");

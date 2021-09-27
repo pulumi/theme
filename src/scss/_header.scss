@@ -43,8 +43,7 @@
 
     // The nav bar will be pinned on mobile but not on desktop.
     &.registry {
-        @apply sticky z-50 bg-gray-850;
-        top: -1px;
+        @apply sticky z-50 bg-gray-850 -top-px;
 
         @screen md {
             @apply relative z-auto;
