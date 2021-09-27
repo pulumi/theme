@@ -40,6 +40,51 @@
             }
         }
     }
+
+    // The nav bar will be pinned on mobile but not on desktop.
+    &.registry {
+        @apply sticky z-50 bg-gray-850 -top-px;
+
+        @screen md {
+            @apply relative z-auto;
+        }
+
+        &.is-pinned {
+            @apply shadow;
+
+            @screen md {
+                @apply shadow-none;
+            }
+        }
+
+        .logo-nav-button {
+            @apply flex flex-row block cursor-pointer items-center;
+        }
+
+        .logo-nav-menu {
+            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+
+            @screen md {
+                @apply w-auto absolute rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
+            }
+
+            li {
+                @apply text-lg text-white;
+
+                a {
+                    @apply block px-4 py-2;
+
+                    &:hover {
+                        @apply underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logo-nav-bg-mask {
+    @apply bg-transparent z-40 absolute w-full h-full;
 }
 
 .header-container {
