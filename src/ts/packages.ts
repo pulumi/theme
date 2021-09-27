@@ -67,3 +67,21 @@ $(".section-registry .no-results .reset").on("click", (event) => {
     const fs = $("pulumi-filter-select").get(0) as any;
     fs.reset();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const logoNavMenuButton = $(".logo-nav-button");
+    const bgMask = $(".logo-nav-bg-mask");
+
+    function toggleMenu() {
+        console.log("clicked");
+        const logoNavMenu = $("#logo-nav-menu");
+        logoNavMenu.toggleClass("hidden");
+        const navMenuVisible = logoNavMenu.is(":visible");
+        logoNavMenuButton.attr("aria-expanded", `${navMenuVisible}`);
+        $(".logo-nav-button .mobile-menu-toggle-icon").toggleClass("hidden");
+        bgMask.toggleClass("hidden");
+    }
+
+    logoNavMenuButton.on("click", toggleMenu);
+    bgMask.on("click", toggleMenu);
+});

@@ -2734,8 +2734,28 @@ ul.glossary{
 }
 
 .top-nav-bar.registry{
+  position: sticky;
+  z-index: 50;
   --tw-bg-opacity: 1;
-  background-color: rgba(43, 43, 44, var(--tw-bg-opacity))
+  background-color: rgba(43, 43, 44, var(--tw-bg-opacity));
+  top:-1px
+}
+
+.top-nav-bar.registry.is-pinned{
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.top-nav-bar.registry .logo-nav-button{
+  display: block;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.top-nav-bar.registry .logo-nav-menu{
+  color:#fff
 }
 
 .top-nav-bar.registry .logo-nav-menu{
@@ -2743,7 +2763,11 @@ ul.glossary{
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgba(43, 43, 44, var(--tw-bg-opacity));
-  padding-top: 0.5rem
+  padding-top: 0.5rem;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  z-index:100;
 }
 
 @media (min-width: 768px){
@@ -2782,6 +2806,14 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .top-nav-bar.registry .logo-nav-menu li a:hover{
   text-decoration: underline
+}
+
+.logo-nav-bg-mask{
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  background-color: transparent
 }
 
 .header-container{

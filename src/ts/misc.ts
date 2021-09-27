@@ -72,13 +72,17 @@ function generateOnThisPage() {
 }
 
 (function ($) {
-    const el = document.querySelector(".header-container");
-
     const observer = new IntersectionObserver(([e]) => {
         e.target.classList.toggle("is-pinned", e.intersectionRatio < 1)
     }, { threshold: [1] });
 
-    observer.observe(el);
+    const headerContainerEl = document.querySelector(".header-container");
+    // The header-container won't be available in the registry.
+    if (!headerContainerEl) {
+        observer.observe(document.querySelector(".top-nav-bar.registry"));
+    } else {
+        observer.observe(headerContainerEl);
+    }
 
     // Set up toggle functionality.
     bindToggles(".toggle");

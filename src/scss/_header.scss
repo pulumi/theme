@@ -42,10 +42,21 @@
     }
 
     &.registry {
-        @apply bg-gray-850;
+        @apply sticky z-50 bg-gray-850;
+        top: -1px;
+
+        &.is-pinned {
+            @apply shadow;
+        }
+
+        .logo-nav-button {
+            @apply flex flex-row block cursor-pointer items-center;
+        }
 
         .logo-nav-menu {
-            @apply w-full bg-gray-850 pt-2 -ml-2;
+            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display;
+
+            z-index: 100;
 
             @screen md {
                 @apply w-auto absolute z-50 rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
@@ -64,6 +75,10 @@
             }
         }
     }
+}
+
+.logo-nav-bg-mask {
+    @apply bg-transparent z-50 absolute w-full h-full;
 }
 
 .header-container {
