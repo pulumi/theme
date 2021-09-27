@@ -45,14 +45,10 @@
         @apply bg-gray-850;
 
         .logo-nav-menu {
-            @apply w-full bg-gray-850;
-
-            @screen xs {
-                @apply pt-2 -ml-2;
-            }
+            @apply w-full bg-gray-850 pt-2 -ml-2;
 
             @screen md {
-                @apply w-auto absolute z-50 rounded rounded-t-none pb-2 top-16;
+                @apply w-auto absolute z-50 rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
             }
 
             li {
