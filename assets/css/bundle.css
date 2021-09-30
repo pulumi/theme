@@ -2791,12 +2791,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+  top:44px;
 }
 
 @media (min-width: 768px){
   .top-nav-bar.registry .logo-nav-menu{
     position: absolute;
-    top: 4rem;
     margin-left: 0px;
     width: auto;
     border-radius: 0.25rem;
@@ -2804,6 +2804,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
     border-top-right-radius: 0px;
     padding-top: 0px;
     padding-bottom: 0.5rem
+  }
+}
+
+@media (min-width: 1024px){
+  .top-nav-bar.registry .logo-nav-menu{
+    top:53px
   }
 }
 

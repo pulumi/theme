@@ -63,9 +63,14 @@
 
         .logo-nav-menu {
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+            top: 44px; // Height of the nav bar at screens below large.
 
             @screen md {
-                @apply w-auto absolute rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
+                @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
+            }
+
+            @screen lg {
+                top: 53px; // Height of the nav bar at screens large+.
             }
 
             li {
