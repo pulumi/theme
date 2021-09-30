@@ -167,9 +167,9 @@ export class PulumiApiDocFilterableNav {
         directParentNode?: node
     ) {
         nodesToSearch.map((node) => {
-            const isNodeDuplicate = nodesToRender.find((nodeToRender) => nodeToRender.name === node.name);
-            const isRootDuplicate = nodesToRender.find((nodeToRender) => nodeToRender.name === rootNode?.name);
-            const isParentDuplicate = nodesToRender.find(
+            const isNodeDuplicate = !!nodesToRender.find((nodeToRender) => nodeToRender.name === node.name);
+            const isRootDuplicate = !!nodesToRender.find((nodeToRender) => nodeToRender.name === rootNode?.name);
+            const isParentDuplicate = !!nodesToRender.find(
                 (nodeToRender) => nodeToRender.name === directParentNode?.name
             );
 
@@ -243,8 +243,8 @@ export class PulumiApiDocFilterableNav {
         this.currentlyRenderedNodes = [...reconstructedTreeOfMatches];
     }
 
-    onChange(event) {
-        this.filterContent = event.target.value.toLowerCase();
+    onChange(event: KeyboardEvent) {
+        this.filterContent = (event.target as HTMLInputElement).value.trim().toLowerCase();
         this.filterTree();
     }
 
