@@ -12762,22 +12762,22 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   color: rgba(153, 61, 41, var(--tw-text-opacity))
 }
 
-.all-packages .package~.no-results, .featured-packages .package~.no-results{
-  display: block;
+.all-packages .package~.no-results{
+  display: block
 }
 
-.all-packages .package:not([class*=hidden])~.no-results, .featured-packages .package:not([class*=hidden])~.no-results{
-  display: none;
+.all-packages .package:not([class*=hidden])~.no-results{
+  display: none
 }
 
-.all-packages .package .package-tags, .featured-packages .package .package-tags{
+.all-packages .package .package-tags{
   display: inline-flex;
   list-style-type: none;
   flex-wrap: wrap;
-  padding: 0px;
+  padding: 0px
 }
 
-.all-packages .package .package-tags li, .featured-packages .package .package-tags li{
+.all-packages .package .package-tags li{
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   margin-right: 0.5rem;
@@ -12790,165 +12790,107 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.75rem;
-  line-height: 1rem;
+  line-height: 1rem
 }
 
 @media (min-width: 768px){
-  .all-packages .package .package-tags li, .featured-packages .package .package-tags li{
+  .all-packages .package .package-tags li{
     margin-right: 1rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.25rem
   }
 }
 
-.all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type, .featured-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+.all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
   --tw-border-opacity: 1;
-  border-color: rgba(184, 189, 240, var(--tw-border-opacity));
+  border-color: rgba(184, 189, 240, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=provider] .all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type, .packages[data-selected-types*=provider] .featured-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+.packages[data-selected-types*=provider] .all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
   --tw-bg-opacity: 1;
-  background-color: rgba(184, 189, 240, var(--tw-bg-opacity));
+  background-color: rgba(184, 189, 240, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-native=true] .package-tag-type, .featured-packages .package [data-native=true] .package-tag-type{
+.all-packages .package [data-native=true] .package-tag-type{
   --tw-border-opacity: 1;
-  border-color: rgba(204, 189, 231, var(--tw-border-opacity));
+  border-color: rgba(204, 189, 231, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=native] .all-packages .package [data-native=true] .package-tag-type, .packages[data-selected-types*=native] .featured-packages .package [data-native=true] .package-tag-type{
+.packages[data-selected-types*=native] .all-packages .package [data-native=true] .package-tag-type{
   --tw-bg-opacity: 1;
-  background-color: rgba(204, 189, 231, var(--tw-bg-opacity));
+  background-color: rgba(204, 189, 231, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-component=true] .package-tag-type, .featured-packages .package [data-component=true] .package-tag-type{
+.all-packages .package [data-component=true] .package-tag-type{
   --tw-border-opacity: 1;
-  border-color: rgba(208, 173, 211, var(--tw-border-opacity));
+  border-color: rgba(208, 173, 211, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=component] .all-packages .package [data-component=true] .package-tag-type, .packages[data-selected-types*=component] .featured-packages .package [data-component=true] .package-tag-type{
+.packages[data-selected-types*=component] .all-packages .package [data-component=true] .package-tag-type{
   --tw-bg-opacity: 1;
-  background-color: rgba(208, 173, 211, var(--tw-bg-opacity));
+  background-color: rgba(208, 173, 211, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-category=cloud] .package-tag-category, .featured-packages .package [data-category=cloud] .package-tag-category{
+.all-packages .package [data-category=cloud] .package-tag-category{
   --tw-border-opacity: 1;
-  border-color: rgba(129, 238, 202, var(--tw-border-opacity));
+  border-color: rgba(129, 238, 202, var(--tw-border-opacity))
 }
 
-.packages[data-selected-categories*=cloud] .all-packages .package [data-category=cloud] .package-tag-category, .packages[data-selected-categories*=cloud] .featured-packages .package [data-category=cloud] .package-tag-category{
+.packages[data-selected-categories*=cloud] .all-packages .package [data-category=cloud] .package-tag-category{
   --tw-bg-opacity: 1;
-  background-color: rgba(129, 238, 202, var(--tw-bg-opacity));
+  background-color: rgba(129, 238, 202, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-category=database] .package-tag-category,.featured-packages .package [data-category=database] .package-tag-category{
+.all-packages .package [data-category=database] .package-tag-category{
   border-color:#cdd96c
 }
 
-.packages[data-selected-categories*=database] .all-packages .package [data-category=database] .package-tag-category,.packages[data-selected-categories*=database] .featured-packages .package [data-category=database] .package-tag-category{
+.packages[data-selected-categories*=database] .all-packages .package [data-category=database] .package-tag-category{
   background-color:#cdd96c
 }
 
-.all-packages .package [data-category=infrastructure] .package-tag-category,.featured-packages .package [data-category=infrastructure] .package-tag-category{
+.all-packages .package [data-category=infrastructure] .package-tag-category{
   border-color:#e2f4ac
 }
 
-.packages[data-selected-categories*=infrastructure] .all-packages .package [data-category=infrastructure] .package-tag-category,.packages[data-selected-categories*=infrastructure] .featured-packages .package [data-category=infrastructure] .package-tag-category{
+.packages[data-selected-categories*=infrastructure] .all-packages .package [data-category=infrastructure] .package-tag-category{
   background-color:#e2f4ac
 }
 
-.all-packages .package [data-category=monitoring] .package-tag-category,.featured-packages .package [data-category=monitoring] .package-tag-category{
+.all-packages .package [data-category=monitoring] .package-tag-category{
   border-color:#c4fee5
 }
 
-.packages[data-selected-categories*=monitoring] .all-packages .package [data-category=monitoring] .package-tag-category,.packages[data-selected-categories*=monitoring] .featured-packages .package [data-category=monitoring] .package-tag-category{
+.packages[data-selected-categories*=monitoring] .all-packages .package [data-category=monitoring] .package-tag-category{
   background-color:#c4fee5
 }
 
-.all-packages .package [data-category=network] .package-tag-category,.featured-packages .package [data-category=network] .package-tag-category{
+.all-packages .package [data-category=network] .package-tag-category{
   border-color:#aae8df
 }
 
-.packages[data-selected-categories*=network] .all-packages .package [data-category=network] .package-tag-category,.packages[data-selected-categories*=network] .featured-packages .package [data-category=network] .package-tag-category{
+.packages[data-selected-categories*=network] .all-packages .package [data-category=network] .package-tag-category{
   background-color:#aae8df
 }
 
-.all-packages .package [data-category=utility] .package-tag-category,.featured-packages .package [data-category=utility] .package-tag-category{
+.all-packages .package [data-category=utility] .package-tag-category{
   border-color:#ffc482
 }
 
-.packages[data-selected-categories*=utility] .all-packages .package [data-category=utility] .package-tag-category,.packages[data-selected-categories*=utility] .featured-packages .package [data-category=utility] .package-tag-category{
+.packages[data-selected-categories*=utility] .all-packages .package [data-category=utility] .package-tag-category{
   background-color:#ffc482
 }
 
-.all-packages .package [data-category="version control system"] .package-tag-category, .featured-packages .package [data-category="version control system"] .package-tag-category{
+.all-packages .package [data-category="version control system"] .package-tag-category{
   --tw-border-opacity: 1;
-  border-color: rgba(252, 229, 170, var(--tw-border-opacity));
+  border-color: rgba(252, 229, 170, var(--tw-border-opacity))
 }
 
-.packages[data-selected-categories*="version control system"] .all-packages .package [data-category="version control system"] .package-tag-category, .packages[data-selected-categories*="version control system"] .featured-packages .package [data-category="version control system"] .package-tag-category{
+.packages[data-selected-categories*="version control system"] .all-packages .package [data-category="version control system"] .package-tag-category{
   --tw-bg-opacity: 1;
-  background-color: rgba(252, 229, 170, var(--tw-bg-opacity));
-}
-
-.all-packages .package pulumi-accordion-item,.featured-packages .package pulumi-accordion-item{
-  transition:all 120ms linear
-}
-
-.all-packages .package pulumi-accordion-item, .featured-packages .package pulumi-accordion-item{
-  background-color: transparent;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.all-packages .package pulumi-accordion-item [slot=heading],.featured-packages .package pulumi-accordion-item [slot=heading]{
-  transition:all 120ms linear
-}
-
-.all-packages .package pulumi-accordion-item [slot=heading], .featured-packages .package pulumi-accordion-item [slot=heading]{
-  font-size: 1rem;
-  line-height: 1.5rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.all-packages .package pulumi-accordion-item [slot=heading]~ul li, .featured-packages .package pulumi-accordion-item [slot=heading]~ul li{
-  margin-top: 0px;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.all-packages .package pulumi-accordion-item[expanded],body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.featured-packages .package pulumi-accordion-item[expanded]{
-  color:#fff
-}
-
-.all-packages .package pulumi-accordion-item[expanded], .featured-packages .package pulumi-accordion-item[expanded]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(19, 19, 20, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.all-packages .package pulumi-accordion-item[expanded] [slot=heading],body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.featured-packages .package pulumi-accordion-item[expanded] [slot=heading]{
-  color:#fff
-}
-
-.all-packages .package pulumi-accordion-item[expanded] [slot=heading], .featured-packages .package pulumi-accordion-item[expanded] [slot=heading]{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.all-packages .package pulumi-accordion-item[expanded] [slot=heading]~ul li a,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.featured-packages .package pulumi-accordion-item[expanded] [slot=heading]~ul li a{
-  color:#fff
-}
-
-.all-packages .package pulumi-accordion-item[expanded] [slot=heading]~ul li a, .featured-packages .package pulumi-accordion-item[expanded] [slot=heading]~ul li a{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  background-color: rgba(252, 229, 170, var(--tw-bg-opacity))
 }
 
 .pagination{

@@ -2,7 +2,7 @@ $(".section-registry").on("filterSelect", (event) => {
     const detail: unknown = event.detail;
     const filters = detail as any[];
 
-    const packages = $(".all-packages, .featured-packages").find(".package");
+    const packages = $(".all-packages").find(".package");
 
     const noSelectedType = filters.find(f => f.group === "type") === undefined;
     const noSelectedCategory = filters.find(f => f.group === "category") === undefined;
@@ -49,14 +49,9 @@ $(".section-registry").on("filterSelect", (event) => {
         .attr("data-selected-types", filters.filter(f => f.group === "type").map(t => t.value).join(","))
         .attr("data-selected-categories", filters.filter(f => f.group === "category").map(t => t.value).join(","));
 
-    // Update the count-badge values.
-    const featuredCount = $(".featured-packages .package:not(.hidden)").length;
+    // Update the count-badge value.
     const allCount = $(".all-packages .package:not(.hidden)").length;
-    $(".featured-count").text(featuredCount);
     $(".all-count").text(allCount);
-
-    // If there isn't anything to show in Featured, just hide that section entirely.
-    $(".featured-packages").toggleClass("hidden", featuredCount === 0);
 
     // Close the menu.
     $("pulumi-filter-select-option-group").each((i, el: any) => el.close());

@@ -1,4 +1,4 @@
-.all-packages, .featured-packages {
+.all-packages {
 
     .package {
         ~ .no-results {
@@ -117,36 +117,6 @@
 
                 .packages[data-selected-categories*="version control system"] & {
                     @apply bg-yellow-300;
-                }
-            }
-        }
-
-        pulumi-accordion-item {
-            @apply text-base bg-transparent transition-all;
-
-            [slot="heading"] {
-                @apply text-base transition-all;
-
-                ~ ul {
-                    li {
-                        @apply mt-0;
-                    }
-                }
-            }
-
-            &[expanded] {
-                @apply bg-gray-900 text-white;
-
-                [slot="heading"] {
-                    @apply text-white;
-
-                    ~ ul {
-                        li {
-                            a {
-                                @apply text-white;
-                            }
-                        }
-                    }
                 }
             }
         }
