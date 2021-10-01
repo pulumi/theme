@@ -2791,12 +2791,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+  top:44px;
 }
 
 @media (min-width: 768px){
   .top-nav-bar.registry .logo-nav-menu{
     position: absolute;
-    top: 4rem;
     margin-left: 0px;
     width: auto;
     border-radius: 0.25rem;
@@ -2804,6 +2804,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
     border-top-right-radius: 0px;
     padding-top: 0px;
     padding-bottom: 0.5rem
+  }
+}
+
+@media (min-width: 1024px){
+  .top-nav-bar.registry .logo-nav-menu{
+    top:53px
   }
 }
 
@@ -2828,6 +2834,54 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .top-nav-bar.registry .logo-nav-menu li a:hover{
   text-decoration: underline
+}
+
+.top-nav-bar.registry .get-started-header-button{
+  display: none
+}
+
+@media (min-width: 1024px){
+  .top-nav-bar.registry .get-started-header-button{
+    display: flex;
+    align-items: center;
+    margin-left:30px;
+    width:112px;
+    height:33px;
+    padding:8px 16px;
+    border:1px solid #805ac3;
+    border-radius:20px;
+    box-shadow:0px 3px 1px -2px rgba(0,0,0,.2),0px 2px 2px rgba(0,0,0,.14),0px 1px 5px rgba(0,0,0,.12)
+  }
+
+  .top-nav-bar.registry .get-started-header-button:hover,.top-nav-bar.registry .get-started-header-button:active{
+    background:linear-gradient(90deg, #BE5188 0%, #805AC3 100%) border-box;
+    border-color:transparent;
+    border-radius:20px
+  }
+}
+
+.top-nav-bar.registry .get-started-header-button{
+  display: none
+}
+
+@media (min-width: 1024px){
+  .top-nav-bar.registry .get-started-header-button{
+    display: flex;
+    align-items: center;
+    margin-left:30px;
+    width:112px;
+    height:33px;
+    padding:8px 16px;
+    border:1px solid #805ac3;
+    border-radius:20px;
+    box-shadow:0px 3px 1px -2px rgba(0,0,0,.2),0px 2px 2px rgba(0,0,0,.14),0px 1px 5px rgba(0,0,0,.12)
+  }
+
+  .top-nav-bar.registry .get-started-header-button:hover,.top-nav-bar.registry .get-started-header-button:active{
+    background:linear-gradient(90deg, #BE5188 0%, #805AC3 100%) border-box;
+    border-color:transparent;
+    border-radius:20px
+  }
 }
 
 .logo-nav-bg-mask{
@@ -3147,6 +3201,110 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .header-container .mobile-menu-icon label{
   cursor: pointer
+}
+
+.registry-hero{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  height:70px
+}
+
+@media (min-width: 768px){
+  .registry-hero{
+    height:100px
+  }
+}
+
+.registry-hero .dot-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index:-1;
+  background:linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551992) 100%)
+}
+
+.registry-hero .registry-hero-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700
+}
+
+.registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
+  font-size:18px
+}
+
+@media (min-width: 768px){
+  .registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
+    font-size:24px;
+    background-color:rgba(255,255,255,.7)
+  }
+}
+
+.registry-hero .registry-hero-title .title-icon{
+  display: flex;
+  align-items: center;
+  padding-right:16px;
+  height:40px
+}
+
+.registry-hero .registry-hero-title .title-text-content{
+  margin:0px !important
+}
+
+.registry-hero{
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  height:70px
+}
+
+@media (min-width: 768px){
+  .registry-hero{
+    height:100px
+  }
+}
+
+.registry-hero .dot-overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index:-1;
+  background:linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551992) 100%)
+}
+
+.registry-hero .registry-hero-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700
+}
+
+.registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
+  font-size:18px
+}
+
+@media (min-width: 768px){
+  .registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
+    font-size:24px;
+    background-color:rgba(255,255,255,.7)
+  }
+}
+
+.registry-hero .registry-hero-title .title-icon{
+  display: flex;
+  align-items: center;
+  padding-right:16px;
+  height:40px
+}
+
+.registry-hero .registry-hero-title .title-text-content{
+  margin:0px !important
 }
 
 .dot-background-container{

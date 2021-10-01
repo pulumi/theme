@@ -63,9 +63,14 @@
 
         .logo-nav-menu {
             @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+            top: 44px; // Height of the nav bar at screens below large.
 
             @screen md {
-                @apply w-auto absolute rounded rounded-t-none pb-2 top-16 ml-0 pt-0;
+                @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
+            }
+
+            @screen lg {
+                top: 53px; // Height of the nav bar at screens large+.
             }
 
             li {
@@ -77,6 +82,50 @@
                     &:hover {
                         @apply underline;
                     }
+                }
+            }
+        }
+
+        .get-started-header-button {
+            @apply hidden;
+
+            @screen lg {
+                @apply flex items-center;
+                margin-left: 30px;
+                width: 112px;
+                height: 33px;
+                padding: 8px 16px;
+
+                border: 1px solid theme("colors.violet.600");
+                border-radius: 20px;
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+                &:hover, &:active {
+                    background: linear-gradient(90deg, #BE5188 0%, #805AC3 100%) border-box;
+                    border-color: transparent;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .get-started-header-button {
+            @apply hidden;
+
+            @screen lg {
+                @apply flex items-center;
+                margin-left: 30px;
+                width: 112px;
+                height: 33px;
+                padding: 8px 16px;
+
+                border: 1px solid theme("colors.violet.600");
+                border-radius: 20px;
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+                &:hover, &:active {
+                    background: linear-gradient(90deg, #BE5188 0%, #805AC3 100%) border-box;
+                    border-color: transparent;
+                    border-radius: 20px;
                 }
             }
         }
@@ -262,6 +311,82 @@
 
         label {
             @apply cursor-pointer;
+        }
+    }
+}
+
+.registry-hero {
+    @apply w-full flex relative flex-col justify-center;
+    
+    height: 70px;
+    @screen md {
+        height: 100px;
+    }
+
+    .dot-overlay {
+        @apply w-full h-full absolute;
+        z-index: -1;
+        background: linear-gradient(to top, rgba(255,255,255, 0.9) 0%, rgba(255,255,255, 0.8) 10%, rgba(255,255,255,0.5004551991695115) 100%);
+    }
+
+    .registry-hero-title {
+        @apply flex flex-row items-center font-bold;
+
+        .title-icon, .title-text-content {
+            font-size: 18px;
+
+            @screen md {
+                font-size: 24px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        .title-icon {
+            @apply flex items-center;
+            padding-right: 16px;
+            height: 40px;
+        }
+
+        .title-text-content {
+            margin: 0px !important;
+        }
+    }
+}
+
+.registry-hero {
+    @apply w-full flex relative flex-col justify-center;
+    
+    height: 70px;
+    @screen md {
+        height: 100px;
+    }
+
+    .dot-overlay {
+        @apply w-full h-full absolute;
+        z-index: -1;
+        background: linear-gradient(to top, rgba(255,255,255, 0.9) 0%, rgba(255,255,255, 0.8) 10%, rgba(255,255,255,0.5004551991695115) 100%);
+    }
+
+    .registry-hero-title {
+        @apply flex flex-row items-center font-bold;
+
+        .title-icon, .title-text-content {
+            font-size: 18px;
+
+            @screen md {
+                font-size: 24px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        .title-icon {
+            @apply flex items-center;
+            padding-right: 16px;
+            height: 40px;
+        }
+
+        .title-text-content {
+            margin: 0px !important;
         }
     }
 }
