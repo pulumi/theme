@@ -4,6 +4,7 @@ export interface node {
     // The below properties come from the JSON data.
     name: string;
     type: "module" | "function" | "resource";
+    // Relative path to the relevant page.
     link: string;
     children?: node[];
     // The below properties are added during the filtering search process
@@ -147,6 +148,11 @@ const testNodes: node[] = [
 })
 export class PulumiApiDocFilterableNav {
     constructor() {
+        // We debounce the filter tree call so that we are not performing unnecessary work while 
+        // a user is in the middle of typing their filter criteria.  Eg, if a user is typing
+        // "cats", debouncing helps keep us from invoking the tree filtering function
+        // with "c", then with "ca", then "cat", then "cats," and instead lets us wait until enough
+        // time has passed that a user is likely done typing, and we only invoke with "cats."
         this.filterTree = debounce(this.filterTree, 300);
     }
 
@@ -160,6 +166,10 @@ export class PulumiApiDocFilterableNav {
 
     filterContent: string = "";
 
+    // By default, this component renders the full navigation tree, which includes all of the nodes represented in the
+    // `nodes` prop.  However, when a user interacts with the text input that is a part of this component, the expectation
+    // is that the tree will update to only render nodes that match the text input (and their parents/root nodes, where applicable).
+    // This function filters the full tree to find the matches to render, and then reconstructs the tree.
     filterTreeToMatchingContent(
         nodesToRender: node[],
         nodesToSearch: node[],
@@ -167,6 +177,7 @@ export class PulumiApiDocFilterableNav {
         directParentNode?: node
     ) {
         nodesToSearch.map((node) => {
+            // Check if the nodes we're currently working with are already represented in the array of nodes to render.
             const isNodeDuplicate = !!nodesToRender.find((nodeToRender) => nodeToRender.name === node.name);
             const isRootDuplicate = !!nodesToRender.find((nodeToRender) => nodeToRender.name === rootNode?.name);
             const isParentDuplicate = !!nodesToRender.find(
