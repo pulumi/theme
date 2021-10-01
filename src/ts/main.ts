@@ -1,4 +1,4 @@
-import { initDesignSystem, button, accordion, accordionItem } from "@pulumi/facet";
+import { initDesignSystem, button, accordion, accordionItem, disclosure, treeItem, treeView } from "@pulumi/facet";
 import { defineCustomElements } from "../../stencil/dist";
 
 import "../scss/main.scss";
@@ -25,6 +25,9 @@ initDesignSystem({
         accordion(),
         accordionItem(),
         button(),
+        disclosure(),
+        treeItem(),
+        treeView()
     ],
 });
 

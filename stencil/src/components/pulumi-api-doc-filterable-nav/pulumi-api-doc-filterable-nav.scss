@@ -1,0 +1,43 @@
+@import "../../../../src/scss/colors";
+
+.api-doc-nav {
+    width: 100%;
+    max-width: 375px;
+
+    .navigation-header {
+        font-weight: 400;
+        font-size: 18px;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+
+    .navigation-filter-input {
+        height: 20px;
+        width: 85%;
+        border-radius: 4px;
+        border: 1px solid $black;
+        padding: 10px;
+        margin-top: 0;
+        box-sizing: content-box;
+
+        margin-bottom: 20px;
+        font-family: "Gilroy";
+        font-size: 16px;
+    }
+
+    .navigation-filter-input,
+    .nav-tree {
+        width: 85%;
+        min-width: 85%;
+        max-width: 85%;
+    }
+
+    .nav-tree {
+        display: block;
+    }
+
+    .filter-and-nav-tree {
+        border-right: 1px solid $black;
+    }
+}

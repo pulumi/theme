@@ -1,0 +1,68 @@
+@import "../../../../src/scss/colors";
+
+.symbol {
+    height: 14px;
+    width: 14px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 6px;
+
+    &.module,
+    &.function,
+    &.resource {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    &.module {
+        border-color: map-get($green, 700);
+
+        &:before {
+            content: "M";
+            color: map-get($green, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.function {
+        border-color: red;
+
+        &:before {
+            content: "F";
+            color: red;
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+
+    &.resource {
+        border-color: map-get($blue, 700);
+
+        &:before {
+            content: "R";
+            color: map-get($blue, 700);
+            font-size: 9px;
+            font-weight: 700;
+        }
+    }
+}
+
+.nav-tree-item {
+    overflow: hidden;
+}
+
+.nav-tree-item a {
+    // 40px is the size of the expand/collapse button.
+    max-width: calc(100% - 40px);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-decoration: none;
+    color: black;
+}
