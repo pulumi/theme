@@ -6,14 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { node } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
-import { node as node1 } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
 import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
 import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface PulumiApiDocFilterableNav {
-        "nodes": node[];
+        "nodes": string;
     }
     interface PulumiApiDocNavTree {
         "nodes": node[];
@@ -320,7 +319,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PulumiApiDocFilterableNav {
-        "nodes"?: node[];
+        "nodes"?: string;
     }
     interface PulumiApiDocNavTree {
         "nodes"?: node[];
