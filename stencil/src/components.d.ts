@@ -9,6 +9,7 @@ import { node } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-
 import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
 import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
+import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface PulumiApiDocFilterableNav {
@@ -67,9 +68,14 @@ export namespace Components {
     interface PulumiExamples {
     }
     interface PulumiFilterSelect {
+        "deselect": (filter: Filter) => Promise<void>;
         "reset": () => Promise<any>;
+        "select": (filter: Filter) => Promise<void>;
     }
     interface PulumiFilterSelectOption {
+        "deselect": () => Promise<void>;
+        "label"?: string;
+        "select": () => Promise<void>;
         "selected": boolean;
         "value": string;
     }
@@ -377,6 +383,7 @@ declare namespace LocalJSX {
         "onFilterSelect"?: (event: CustomEvent<any[]>) => void;
     }
     interface PulumiFilterSelectOption {
+        "label"?: string;
         "onOptionChange"?: (event: CustomEvent<any>) => void;
         "selected"?: boolean;
         "value"?: string;

@@ -1,4 +1,5 @@
 $(".section-registry").on("filterSelect", (event) => {
+    const source: any = event.target;
     const detail: unknown = event.detail;
     const filters = detail as any[];
 
@@ -13,11 +14,11 @@ $(".section-registry").on("filterSelect", (event) => {
         $(packages).each((i, package) => {
             const el = $(package).find("[data-category]");
 
-            const packageType = el.attr("data-component") === "true" ? "component" : "provider";
+            const packageType = el.attr("data-type");
             const packageCategory = el.attr("data-category");
-            const packageIsNative = packageType === "provider" && el.attr("data-native") === "true";
+            const packageIsNative = packageType === "native-provider";
 
-            const packageHasSelectedType = !!(filters.find(f => f.group === "type" && f.value === packageType)) || (filters.find(f => f.group === "type" && f.value === "native") && packageIsNative);
+            const packageHasSelectedType = !!(filters.find(f => f.group === "type" && f.value === packageType)) || (filters.find(f => f.group === "type" && f.value === "provider") && packageIsNative);
             const packageHasSelectedCategory = !!filters.find(f => f.group === "category" && f.value === packageCategory);
 
             /**
@@ -29,7 +30,7 @@ $(".section-registry").on("filterSelect", (event) => {
 
                 * If type Component and use-case Cloud are selected, show packages that
                   are tagged as both "component" AND "cloud", since those two filters
-                  belong to different options groups.
+                  belong to different option groups.
 
                 * If nothing is selected from a given group, assume the intent is to see
                   everything in that group (so don't apply any of the filters within it).
@@ -44,8 +45,23 @@ $(".section-registry").on("filterSelect", (event) => {
         $(packages).removeClass("hidden");
     }
 
+    // Update the list of active filters.
+    const activeTags = $("ul.active-tags");
+    activeTags.empty();
+
+    filters.forEach(filter => {
+        const tag = $($("#active-tag-template").html());
+        tag.appendTo(activeTags);
+        tag.attr("data-filter-group", filter.group)
+            .attr("data-filter-value", filter.value);
+        tag.find("span")
+            .text(filter.label);
+        tag.find("button")
+            .on("click", () => source.deselect(filter));
+    });
+
     // Apply selections on the DOM, so cards and tags can use them as well.
-    $(".packages")
+    $(".packages, .active-tags")
         .attr("data-selected-types", filters.filter(f => f.group === "type").map(t => t.value).join(","))
         .attr("data-selected-categories", filters.filter(f => f.group === "category").map(t => t.value).join(","));
 
