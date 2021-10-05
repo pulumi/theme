@@ -18,14 +18,14 @@ export class PulumiApiDocNavTree {
         );
     }
 
-    getChildNodes(nodes: node[] = this.nodes) {
+    getChildNodes(nodes: node[] = this.nodes, depth: number = 0) {
         return nodes.map((node) => (
-            <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item">
+            <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item" title={node.name}>
                 {this.getIcon(node.type)}
                 <slot name="content">
-                    <a href={`${node.link}`}>{node.name}</a>
+                    <a class={`depth-${depth}`} href={`${node.link}`}>{node.name}</a>
                 </slot>
-                {node.children && this.getChildNodes(node.children)}
+                {node.children && this.getChildNodes(node.children, depth + 1)}
             </pulumi-tree-item>
         ));
     }
