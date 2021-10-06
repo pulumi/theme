@@ -15420,8 +15420,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 pulumi-banner{
   display: none;
-  --tw-bg-opacity: 1;
-  background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.75rem;
@@ -15434,6 +15432,7 @@ pulumi-banner{
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-image:linear-gradient(77.95deg, #F6BF28 0.06%, #F2707E 48.58%, #BF4E86 95.36%);
 }
 
 pulumi-banner[visible]{
@@ -15487,7 +15486,8 @@ pulumi-banner .content{
 
 pulumi-banner .summary{
   margin-left: 1rem;
-  margin-right: 1rem
+  margin-right: 1rem;
+  font-weight: 700
 }
 
 @media (min-width: 768px){
