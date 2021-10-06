@@ -52,13 +52,68 @@
     }
 }
 
-.nav-tree-item {
-    overflow: hidden;
-}
+$base-ch-width-xl: 18ch;
+$base-ch-width-l: 14ch;
+$base-ch-width-md: 27ch;
+$base-ch-width-sm: 22ch;
 
 .nav-tree-item a {
-    // 40px is the size of the expand/collapse button.
-    max-width: calc(100% - 40px);
+    // Because of many CSS subtleties with the base Microsoft FAST component used
+    // for the nav tree, using percentage or inherited width does not work accurately
+    // here.  Instead, we need to set the width specifically to the number of characters
+    // that can be shown.  This number is based on the depth of the tree item (since deeper items
+    // are indented more), and the screen size (which changes the overall space available to the nav).
+    @media (min-width: 1280px) {
+        &.depth-0 {
+            max-width: $base-ch-width-xl;
+        }
+        &.depth-1 {
+            max-width: $base-ch-width-xl - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-xl - 4;
+        }
+    }
+    @media (max-width: 1279px) {
+        &.depth-0 {
+            max-width: $base-ch-width-l;
+        }
+        &.depth-1 {
+            max-width: $base-ch-width-l - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-l - 4;
+        }
+    }
+    @media (max-width: 1023px) {
+        &.depth-0 {
+            max-width: $base-ch-width-md;
+        }
+
+        &.depth-1 {
+            max-width: $base-ch-width-md - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-md - 4;
+        }
+    }
+    @media (max-width: 639px) {
+        &.depth-0 {
+            max-width: $base-ch-width-sm;
+        }
+
+        &.depth-1 {
+            max-width: $base-ch-width-sm - 2;
+        }
+
+        &.depth-2 {
+            max-width: $base-ch-width-sm - 4;
+        }
+    }
+
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;

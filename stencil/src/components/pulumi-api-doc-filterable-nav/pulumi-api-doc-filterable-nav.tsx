@@ -13,134 +13,6 @@ export interface node {
     parentName?: string;
 }
 
-// This is temporary.  Tracking removing this and replacing it with the real data here:
-// https://github.com/pulumi/registry/issues/32.
-const testNodes: node[] = [
-    {
-        name: "sometoplevelmodule",
-        type: "module",
-        link: "sometoplevelmodule",
-        children: [
-            {
-                name: "v1",
-                type: "module",
-                link: "v1",
-                children: [
-                    {
-                        name: "Provider",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceACLEntriesv1",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceCompute",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceDictionaryItemsv1",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceDynamicSnippetContentv1",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "TlsSubscriptionValidation",
-                        type: "resource",
-                        link: "temp",
-                    },
-                ],
-            },
-            {
-                name: "v2",
-                type: "module",
-                link: "v2",
-                children: [
-                    {
-                        name: "Provider",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceACLEntriesv2",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceComputev2",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceDictionaryItemsv2",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "ServiceDynamicSnippetContentv2",
-                        type: "resource",
-                        link: "temp",
-                    },
-                    {
-                        name: "TlsSubscriptionValidationv2",
-                        type: "resource",
-                        link: "temp",
-                    },
-                ],
-            },
-        ],
-    },
-    {
-        name: "anothertoplevelmodule",
-        type: "module",
-        link: "pulumi.com",
-        children: [
-            {
-                name: "GetTlsPlatformCertificate",
-                type: "function",
-                link: "temp",
-            },
-            {
-                name: "GetTlsPlatformCertificateIds",
-                type: "function",
-                link: "temp",
-            },
-        ],
-    },
-    {
-        name: "Userv1",
-        type: "resource",
-        link: "temp",
-    },
-    {
-        name: "GetTlsSubscriptionIds",
-        type: "function",
-        link: "temp",
-    },
-    {
-        name: "GetTlsPrivateKey",
-        type: "function",
-        link: "temp",
-    },
-    {
-        name: "GetTlsPrivateKeyIds",
-        type: "function",
-        link: "temp",
-    },
-    {
-        name: "GetTlsSubscription",
-        type: "function",
-        link: "temp",
-    },
-];
-
 @Component({
     tag: "pulumi-api-doc-filterable-nav",
     styleUrl: "pulumi-api-doc-filterable-nav.scss",
@@ -156,13 +28,21 @@ export class PulumiApiDocFilterableNav {
         this.filterTree = debounce(this.filterTree, 300);
     }
 
+    componentWillLoad(){
+        // Parse the JSON that's passed through as a prop.
+        this.parsedNodes = JSON.parse(this.nodes);
+        // Before the user interacts with the filter, the nodes to render should be the full nav tree.
+        this.currentlyRenderedNodes = this.parsedNodes;
+    }
+
     @Prop()
-    // This default assignment is temporary.  Tracking removing this here:
-    // https://github.com/pulumi/registry/issues/32.
-    nodes: node[] = testNodes;
+    nodes: string;
 
     @State()
-    currentlyRenderedNodes: node[] = testNodes;
+    parsedNodes: node[]; 
+
+    @State()
+    currentlyRenderedNodes: node[];
 
     filterContent: string = "";
 
@@ -262,12 +142,12 @@ export class PulumiApiDocFilterableNav {
     filterTree() {
         // If the user deletes the filter content, we should revert back to showing the full navigation tree.
         if (this.filterContent === "") {
-            this.currentlyRenderedNodes = this.nodes;
+            this.currentlyRenderedNodes = this.parsedNodes;
             return;
         }
 
         // Otherwise, find the nodes that match the filter content.
-        this.filterTreeToMatchingContent([], this.nodes);
+        this.filterTreeToMatchingContent([], this.parsedNodes);
     }
 
     render() {

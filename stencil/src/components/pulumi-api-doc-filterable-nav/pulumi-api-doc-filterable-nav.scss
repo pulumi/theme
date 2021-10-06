@@ -14,7 +14,7 @@
 
     .navigation-filter-input {
         height: 20px;
-        width: 85%;
+        width: 90%;
         border-radius: 4px;
         border: 1px solid $black;
         padding: 10px;
@@ -26,11 +26,10 @@
         font-size: 16px;
     }
 
-    .navigation-filter-input,
     .nav-tree {
-        width: 85%;
-        min-width: 85%;
-        max-width: 85%;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
 
     .nav-tree {
@@ -38,6 +37,6 @@
     }
 
     .filter-and-nav-tree {
-        border-right: 1px solid $black;
+        margin-right: 8px;
     }
 }
