@@ -2,6 +2,7 @@ import { Component, Prop, State, Element, h } from "@stencil/core";
 
 export interface MultiSelectFormItem {
     key: string | Date;
+    label?: string;
     hubspotFormId: string;
 }
 
@@ -97,7 +98,9 @@ export class PulumiMultiSelectForm {
                         <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
                             {this.items.map((item) => {
                                 const isSelected = item.hubspotFormId === selectedFormId;
-                                return <option value={item.hubspotFormId} selected={isSelected}>{item.key}</option>;
+                                return <option value={item.hubspotFormId} selected={isSelected}>
+                                    { item.label ? item.label : item.key }
+                                </option>;
                             })}
                         </select>
                     </span>
