@@ -38,6 +38,13 @@
         }
     }
 
+    $cloud-color: #bfcbad;
+    $database-color: #cdd96c;
+    $infrastructure-color: #e2f4ac;
+    $monitoring-color: #c4fee5;
+    $network-color: #aae8df;
+    $utility-color: #ffc482;
+
     [data-filter-group="type"] {
         &[data-filter-value="provider"] {
             @apply border-blue-300;
@@ -64,73 +71,52 @@
         }
     }
 
-    [data-filter-group="type"] {
-        &[data-filter-value="provider"] {
-            @apply border-blue-300;
-
-            [data-selected-categories*="provider"] & {
-                @apply bg-blue-300;
-            }
-        }
-    }
-
     [data-filter-group="category"] {
         &[data-filter-value="cloud"] {
-            @apply border-green-300;
+            border-color: $cloud-color; // TODO: Add to palette.
 
             [data-selected-categories*="cloud"] & {
-                @apply bg-green-300;
-            }
-        }
-    }
-
-    [data-filter-group="category"] {
-
-        &[data-filter-value="cloud"] {
-            border-color: #bfcbad; // TODO: Add to palette.
-
-            [data-selected-categories*="cloud"] & {
-                background-color: #bfcbad;
+                background-color: $cloud-color;
             }
         }
 
         &[data-filter-value="database"] {
-            border-color: #cdd96c; // TODO: Add to palette.
+            border-color: $database-color; // TODO: Add to palette.
 
             [data-selected-categories*="database"] & {
-                background-color: #cdd96c;
+                background-color: $database-color;
             }
         }
 
         &[data-filter-value="infrastructure"] {
-            border-color: #e2f4ac; // TODO: Add to palette.
+            border-color: $infrastructure-color; // TODO: Add to palette.
 
             [data-selected-categories*="infrastructure"] & {
-                background-color: #e2f4ac;
+                background-color: $infrastructure-color;
             }
         }
 
         &[data-filter-value="monitoring"] {
-            border-color: #c4fee5; // TODO: Add to palette.
+            border-color: $monitoring-color; // TODO: Add to palette.
 
             [data-selected-categories*="monitoring"] & {
-                background-color: #c4fee5;
+                background-color: $monitoring-color;
             }
         }
 
         &[data-filter-value="network"] {
-            border-color: #aae8df; // TODO: Add to palette.
+            border-color: $network-color; // TODO: Add to palette.
 
             [data-selected-categories*="network"] & {
-                background-color: #aae8df;
+                background-color: $network-color;
             }
         }
 
         &[data-filter-value="utility"] {
-            border-color: #ffc482; // TODO: Add to palette.
+            border-color: $utility-color; // TODO: Add to palette.
 
             [data-selected-categories*="utility"] & {
-                background-color: #ffc482;
+                background-color: $utility-color;
             }
         }
 

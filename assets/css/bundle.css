@@ -13013,26 +13013,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(208, 173, 211, var(--tw-bg-opacity))
 }
 
-.all-packages [data-filter-group=type][data-filter-value=provider]{
-  --tw-border-opacity: 1;
-  border-color: rgba(184, 189, 240, var(--tw-border-opacity))
-}
-
-[data-selected-categories*=provider] .all-packages [data-filter-group=type][data-filter-value=provider]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(184, 189, 240, var(--tw-bg-opacity))
-}
-
-.all-packages [data-filter-group=category][data-filter-value=cloud]{
-  --tw-border-opacity: 1;
-  border-color: rgba(129, 238, 202, var(--tw-border-opacity))
-}
-
-[data-selected-categories*=cloud] .all-packages [data-filter-group=category][data-filter-value=cloud]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(129, 238, 202, var(--tw-bg-opacity))
-}
-
 .all-packages [data-filter-group=category][data-filter-value=cloud]{
   border-color:#bfcbad
 }
