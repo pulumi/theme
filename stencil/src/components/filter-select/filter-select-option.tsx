@@ -1,4 +1,4 @@
-import { Component, h, Prop, Event, EventEmitter } from "@stencil/core";
+import { Component, h, Prop, Element, Event, EventEmitter, Method } from "@stencil/core";
 
 export interface Filter {
     label: string;
@@ -20,6 +20,12 @@ export interface Filter {
 })
 export class FilterSelectOption {
 
+    @Element()
+    el: HTMLElement;
+
+    @Prop()
+    label?: string;
+
     @Prop()
     value: string;
 
@@ -29,9 +35,27 @@ export class FilterSelectOption {
     @Event({ composed: true, bubbles: true, cancelable: true })
     optionChange: EventEmitter<any>;
 
+    @Method()
+    select() {
+        this.selected = true;
+        this.emit();
+        return Promise.resolve();
+    }
+
+    @Method()
+    deselect() {
+        this.selected = false;
+        this.emit();
+        return Promise.resolve();
+    }
+
     onChange(event: CustomEvent) {
         this.selected = (event.target as HTMLInputElement).checked;
-        this.optionChange.emit({ option: { value: this.value, selected: this.selected } });
+        this.emit();
+    }
+
+    private emit() {
+        this.optionChange.emit({ option: { value: this.value, selected: this.selected, label: this.label } });
     }
 
     render() {

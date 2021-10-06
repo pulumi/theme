@@ -12928,14 +12928,14 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   display: none
 }
 
-.all-packages .package .package-tags{
+.all-packages .package-tags{
   display: inline-flex;
   list-style-type: none;
   flex-wrap: wrap;
   padding: 0px
 }
 
-.all-packages .package .package-tags li{
+.all-packages .package-tags li{
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   margin-right: 0.5rem;
@@ -12947,106 +12947,126 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-right: 0.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 0.75rem;
-  line-height: 1rem
+  font-size: 0.875rem;
+  line-height: 1.25rem
 }
 
 @media (min-width: 768px){
-  .all-packages .package .package-tags li{
+  .all-packages .package-tags li{
     margin-right: 1rem;
     padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem
+    padding-right: 0.75rem
   }
 }
 
-.all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+.all-packages .package-tags.active-tags{
+  margin-top: 0.5rem
+}
+
+@media (min-width: 768px){
+  .all-packages .package-tags.active-tags{
+    margin-top: 0px
+  }
+}
+
+.all-packages .package-tags.active-tags li{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+@media (min-width: 768px){
+  .all-packages .package-tags.active-tags li{
+    margin-right: 0.5rem
+  }
+}
+
+.all-packages [data-filter-group=type][data-filter-value=provider]{
   --tw-border-opacity: 1;
   border-color: rgba(184, 189, 240, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=provider] .all-packages .package [data-provider=true]:not([data-native=true]) .package-tag-type{
+[data-selected-types*=provider] .all-packages [data-filter-group=type][data-filter-value=provider]{
   --tw-bg-opacity: 1;
   background-color: rgba(184, 189, 240, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-native=true] .package-tag-type{
+.all-packages [data-filter-group=type][data-filter-value=native-provider]{
   --tw-border-opacity: 1;
   border-color: rgba(204, 189, 231, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=native] .all-packages .package [data-native=true] .package-tag-type{
+[data-selected-types*=native-provider] .all-packages [data-filter-group=type][data-filter-value=native-provider]{
   --tw-bg-opacity: 1;
   background-color: rgba(204, 189, 231, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-component=true] .package-tag-type{
+.all-packages [data-filter-group=type][data-filter-value=component]{
   --tw-border-opacity: 1;
   border-color: rgba(208, 173, 211, var(--tw-border-opacity))
 }
 
-.packages[data-selected-types*=component] .all-packages .package [data-component=true] .package-tag-type{
+[data-selected-types*=component] .all-packages [data-filter-group=type][data-filter-value=component]{
   --tw-bg-opacity: 1;
   background-color: rgba(208, 173, 211, var(--tw-bg-opacity))
 }
 
-.all-packages .package [data-category=cloud] .package-tag-category{
-  --tw-border-opacity: 1;
-  border-color: rgba(129, 238, 202, var(--tw-border-opacity))
+.all-packages [data-filter-group=category][data-filter-value=cloud]{
+  border-color:#bfcbad
 }
 
-.packages[data-selected-categories*=cloud] .all-packages .package [data-category=cloud] .package-tag-category{
-  --tw-bg-opacity: 1;
-  background-color: rgba(129, 238, 202, var(--tw-bg-opacity))
+[data-selected-categories*=cloud] .all-packages [data-filter-group=category][data-filter-value=cloud]{
+  background-color:#bfcbad
 }
 
-.all-packages .package [data-category=database] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value=database]{
   border-color:#cdd96c
 }
 
-.packages[data-selected-categories*=database] .all-packages .package [data-category=database] .package-tag-category{
+[data-selected-categories*=database] .all-packages [data-filter-group=category][data-filter-value=database]{
   background-color:#cdd96c
 }
 
-.all-packages .package [data-category=infrastructure] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value=infrastructure]{
   border-color:#e2f4ac
 }
 
-.packages[data-selected-categories*=infrastructure] .all-packages .package [data-category=infrastructure] .package-tag-category{
+[data-selected-categories*=infrastructure] .all-packages [data-filter-group=category][data-filter-value=infrastructure]{
   background-color:#e2f4ac
 }
 
-.all-packages .package [data-category=monitoring] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value=monitoring]{
   border-color:#c4fee5
 }
 
-.packages[data-selected-categories*=monitoring] .all-packages .package [data-category=monitoring] .package-tag-category{
+[data-selected-categories*=monitoring] .all-packages [data-filter-group=category][data-filter-value=monitoring]{
   background-color:#c4fee5
 }
 
-.all-packages .package [data-category=network] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value=network]{
   border-color:#aae8df
 }
 
-.packages[data-selected-categories*=network] .all-packages .package [data-category=network] .package-tag-category{
+[data-selected-categories*=network] .all-packages [data-filter-group=category][data-filter-value=network]{
   background-color:#aae8df
 }
 
-.all-packages .package [data-category=utility] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value=utility]{
   border-color:#ffc482
 }
 
-.packages[data-selected-categories*=utility] .all-packages .package [data-category=utility] .package-tag-category{
+[data-selected-categories*=utility] .all-packages [data-filter-group=category][data-filter-value=utility]{
   background-color:#ffc482
 }
 
-.all-packages .package [data-category="version control system"] .package-tag-category{
+.all-packages [data-filter-group=category][data-filter-value="version control system"]{
   --tw-border-opacity: 1;
   border-color: rgba(252, 229, 170, var(--tw-border-opacity))
 }
 
-.packages[data-selected-categories*="version control system"] .all-packages .package [data-category="version control system"] .package-tag-category{
+[data-selected-categories*="version control system"] .all-packages [data-filter-group=category][data-filter-value="version control system"]{
   --tw-bg-opacity: 1;
   background-color: rgba(252, 229, 170, var(--tw-bg-opacity))
 }
