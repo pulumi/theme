@@ -29,7 +29,7 @@ export class PulumiApiDocFilterableNav {
     }
 
     componentWillLoad(){
-        // Parse the JSON that's passed through as a prop
+        // Parse the JSON that's passed through as a prop.
         this.parsedNodes = JSON.parse(this.nodes);
         // Before the user interacts with the filter, the nodes to render should be the full nav tree.
         this.currentlyRenderedNodes = this.parsedNodes;
