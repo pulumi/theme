@@ -4,6 +4,7 @@ import { getQueryVariable } from "../../util/util";
 
 interface ContactUsItem {
     key: string;
+    label?: string;
     hubspot_form_id: string;
 }
 
@@ -35,7 +36,8 @@ export class ContactUsForm {
     componentWillLoad() {
         this.parsedItems = JSON.parse(this.items).map((item: ContactUsItem) => {
             return {
-                key: item.key.charAt(0).toUpperCase() + item.key.slice(1),
+                key: item.key,
+                label: item.label ? item.label : item.key.charAt(0).toUpperCase() + item.key.slice(1),
                 hubspotFormId: item.hubspot_form_id
             };
         });
