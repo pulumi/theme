@@ -168,7 +168,7 @@ export class PulumiApiDocFilterableNav {
                             class="navigation-filter-input"
                             placeholder="Filter"
                             onInput={this.onChange.bind(this)}
-                            ref={(el) => (this.textInput = el as HTMLInputElement)}
+                            ref={(el: HTMLInputElement) => (this.textInput = el)}
                         ></input>
                         <div class="clear-container">
                             <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
