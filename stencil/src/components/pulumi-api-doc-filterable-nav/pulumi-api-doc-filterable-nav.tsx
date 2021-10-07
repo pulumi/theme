@@ -25,7 +25,7 @@ export class PulumiApiDocFilterableNav {
         // "cats", debouncing helps keep us from invoking the tree filtering function
         // with "c", then with "ca", then "cat", then "cats," and instead lets us wait until enough
         // time has passed that a user is likely done typing, and we only invoke with "cats."
-        this.filterTree = debounce(this.filterTree, 300);
+        this.filterTree = debounce(this.filterTree, 150);
     }
 
     componentWillLoad(){
