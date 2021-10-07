@@ -20,7 +20,7 @@ export interface node {
 })
 export class PulumiApiDocFilterableNav {
     constructor() {
-        // We debounce the filter tree call so that we are not performing unnecessary work while 
+        // We debounce the filter tree call so that we are not performing unnecessary work while
         // a user is in the middle of typing their filter criteria.  Eg, if a user is typing
         // "cats", debouncing helps keep us from invoking the tree filtering function
         // with "c", then with "ca", then "cat", then "cats," and instead lets us wait until enough
@@ -28,18 +28,20 @@ export class PulumiApiDocFilterableNav {
         this.filterTree = debounce(this.filterTree, 300);
     }
 
-    componentWillLoad(){
+    componentWillLoad() {
         // Parse the JSON that's passed through as a prop.
         this.parsedNodes = JSON.parse(this.nodes);
         // Before the user interacts with the filter, the nodes to render should be the full nav tree.
         this.currentlyRenderedNodes = this.parsedNodes;
     }
 
+    private textInput?: HTMLInputElement;
+
     @Prop()
     nodes: string;
 
     @State()
-    parsedNodes: node[]; 
+    parsedNodes: node[];
 
     @State()
     currentlyRenderedNodes: node[];
@@ -139,6 +141,12 @@ export class PulumiApiDocFilterableNav {
         this.filterTree();
     }
 
+    onClearFilter() {
+        this.currentlyRenderedNodes = this.parsedNodes;
+        this.filterContent = "";
+        this.textInput.value = this.filterContent;
+    }
+
     filterTree() {
         // If the user deletes the filter content, we should revert back to showing the full navigation tree.
         if (this.filterContent === "") {
@@ -155,12 +163,22 @@ export class PulumiApiDocFilterableNav {
             <section class="api-doc-nav">
                 <h3 class="navigation-header">API Navigation</h3>
                 <div class="filter-and-nav-tree">
-                    <input
-                        class="navigation-filter-input"
-                        type="text"
-                        placeholder="Filter"
-                        onInput={this.onChange.bind(this)}
-                    ></input>
+                    <div class="input-container">
+                        <input
+                            class="navigation-filter-input"
+                            placeholder="Filter"
+                            onInput={this.onChange.bind(this)}
+                            ref={(el: HTMLInputElement) => (this.textInput = el)}
+                        ></input>
+                        <div class="clear-container">
+                            <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
+                                X
+                            </button>
+                        </div>
+                    </div>
+                    {this.currentlyRenderedNodes.length < 1 && (
+                        <div class="no-results">No results found. Try a different filter.</div>
+                    )}
                     <pulumi-api-doc-nav-tree
                         class="nav-tree"
                         nodes={this.currentlyRenderedNodes}
