@@ -25,7 +25,7 @@ export class PulumiApiDocFilterableNav {
         // "cats", debouncing helps keep us from invoking the tree filtering function
         // with "c", then with "ca", then "cat", then "cats," and instead lets us wait until enough
         // time has passed that a user is likely done typing, and we only invoke with "cats."
-        this.filterTree = debounce(this.filterTree, 150);
+        this.filterTree = debounce(this.filterTree, 300);
     }
 
     componentWillLoad() {
@@ -141,9 +141,9 @@ export class PulumiApiDocFilterableNav {
         this.filterTree();
     }
 
-    onClearFilter(){
+    onClearFilter() {
         this.currentlyRenderedNodes = this.parsedNodes;
-        this.filterContent = '';
+        this.filterContent = "";
         this.textInput.value = this.filterContent;
     }
 
@@ -168,12 +168,17 @@ export class PulumiApiDocFilterableNav {
                             class="navigation-filter-input"
                             placeholder="Filter"
                             onInput={this.onChange.bind(this)}
-                            ref={el => this.textInput = el as HTMLInputElement}
-                        >
-                        </input>
-                        <div class="clear-container"><button onClick={this.onClearFilter.bind(this)}class="clear-filter-button">X</button></div>
+                            ref={(el) => (this.textInput = el as HTMLInputElement)}
+                        ></input>
+                        <div class="clear-container">
+                            <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
+                                X
+                            </button>
+                        </div>
                     </div>
-                    {this.currentlyRenderedNodes.length < 1 && <div class="no-results">No results found. Try a different filter.</div>}
+                    {this.currentlyRenderedNodes.length < 1 && (
+                        <div class="no-results">No results found. Try a different filter.</div>
+                    )}
                     <pulumi-api-doc-nav-tree
                         class="nav-tree"
                         nodes={this.currentlyRenderedNodes}
