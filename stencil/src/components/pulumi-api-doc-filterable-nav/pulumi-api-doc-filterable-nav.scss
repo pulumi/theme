@@ -24,6 +24,10 @@
         margin-bottom: 20px;
         font-family: "Gilroy";
         font-size: 16px;
+
+        &:focus {
+            outline-color: $brand-blue;
+        }
     }
 
     .nav-tree {
