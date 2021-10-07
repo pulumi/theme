@@ -1199,7 +1199,14 @@ is-color-stop@^1.1.0:
     rgb-regex "^1.0.1"
     rgba-regex "^1.0.0"
 
-is-core-module@^2.1.0, is-core-module@^2.2.0:
+is-core-module@^2.1.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.7.0.tgz#3c0ef7d31b4acfc574f80c58409d568a836848e3"
+  integrity sha512-ByY+tjCciCr+9nLryBYcSD50EOGWt95c7tIsKTG1J2ixKKXPvF7Ej3AVd+UfDydAJom3biBGDBALaO79ktwgEQ==
+  dependencies:
+    has "^1.0.3"
+
+is-core-module@^2.2.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.6.0.tgz#d7553b2526fe59b92ba3e40c8df757ec8a709e19"
   integrity sha512-wShG8vs60jKfPWpF2KZRaAtvt3a20OAn7+IJ6hLPECpSABLcKtFKTTI4ZtH5QcBruBHlq+WsdHWyz0BCZW7svQ==
@@ -2390,9 +2397,9 @@ vendors@^1.0.3:
   integrity sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==
 
 vscode-html-languageservice@^4.0.3:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/vscode-html-languageservice/-/vscode-html-languageservice-4.0.8.tgz#9429bacce3244dcfcb3a7172903f33b6f418db3b"
-  integrity sha512-VJ4boG3uOD5Ls0pCvml7ZkHY+f1uDuxr+wR39XrerPr7qQFAu91DRTBuOzBsp6lV3x5Vz2S835AS2ZzLNmezbg==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/vscode-html-languageservice/-/vscode-html-languageservice-4.1.0.tgz#e1662f1ff3b623b910c54d3f4a2aad8f397e53d7"
+  integrity sha512-QQrEKfpfbeglD8Jcai4fQDQ7vOJrN6LyiOs47Y6qAxnhve+ervw1kP2UCt9ohHe/6teNWJDYTGxLDgs5iAvitw==
   dependencies:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-languageserver-types "^3.16.0"
