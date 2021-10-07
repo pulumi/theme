@@ -5,7 +5,7 @@
     "private": true,
     "license": "Apache-2.0",
     "dependencies": {
-        "@pulumi/facet": "^0.1.0",
+        "@pulumi/facet": "^0.1.1",
         "clipboard-polyfill": "^3.0.3",
         "tailwindcss": "^2.2.9"
     },
