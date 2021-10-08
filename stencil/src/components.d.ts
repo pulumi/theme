@@ -13,13 +13,11 @@ import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
     interface PulumiApiDocFilterableNav {
-        "baseUrl": string;
+        "baseDirectory": string;
         "nodes": string;
-        "packageName": string;
     }
     interface PulumiApiDocNavTree {
-        "baseUrl": string;
-        "docsDir": string;
+        "baseDirectory": string;
         "nodes": node[];
     }
     interface PulumiAudio {
@@ -329,13 +327,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PulumiApiDocFilterableNav {
-        "baseUrl"?: string;
+        "baseDirectory"?: string;
         "nodes"?: string;
-        "packageName"?: string;
     }
     interface PulumiApiDocNavTree {
-        "baseUrl"?: string;
-        "docsDir"?: string;
+        "baseDirectory"?: string;
         "nodes"?: node[];
     }
     interface PulumiAudio {
