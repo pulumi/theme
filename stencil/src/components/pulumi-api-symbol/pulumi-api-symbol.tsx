@@ -15,7 +15,7 @@ export class ApiSymbol {
         const color = "rgb(62, 73, 174)";
 
         return (
-            <span>{ icon }</span>
+            <span style={{ color }}>{ icon }</span>
         );
     }
 }
