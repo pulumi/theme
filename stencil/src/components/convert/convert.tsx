@@ -1,6 +1,6 @@
 import { Component, Element, h, Prop, State } from '@stencil/core';
 
-export type SourceKind = "tf" | "kube" | "arm";
+export type SourceKind = "tf" | "kube" | "arm" | "cf";
 export type InputEditorMode = "ruby" | "javascript" | "yaml";
 export type OutputEditorLanguage = "typescript" | "python" | "go" | "csharp";
 export type OutputEditorFilename = "index.ts" | "index.js" | "__main__.py" | "main.go" | "MyStack.cs";
@@ -68,6 +68,9 @@ export class Convert {
     @State()
     convertible: boolean = false;
 
+    @State()
+    alertDismissed: boolean = false;
+
     inputEditor: CodeMirror.EditorFromTextArea;
     selectedSourceFile: SourceFile;
     customSourceFile: SourceFile;
@@ -111,6 +114,7 @@ export class Convert {
             case "tf":
                 return "ruby";
             case "kube":
+            case "cf":
                 return "yaml";
             case "arm":
                 return "javascript";
@@ -131,6 +135,8 @@ export class Convert {
                 return "kube.yaml";
             case "arm":
                 return "azuredeploy.json";
+            case "cf":
+                return "aws.yaml";
         }
     }
 
@@ -143,6 +149,8 @@ export class Convert {
                 return "Kubernetes YAML";
             case "arm":
                 return "ARM";
+            case "cf":
+                return "CloudFormation";
         }
     }
 
@@ -155,6 +163,8 @@ export class Convert {
                 return "convertARM";
             case "kube":
                 return "convertKube";
+            case "cf":
+                return "convertCFN";
         }
     }
 
@@ -175,6 +185,11 @@ export class Convert {
                 return {
                     name: "arm2pulumi",
                     githubURL: "https://github.com/pulumi/arm2pulumi",
+                };
+            case "cf":
+                return {
+                    name: "cf2pulumi",
+                    githubURL: "https://github.com/pulumi/pulumi-aws-native",
                 };
             default:
                 return {
@@ -205,7 +220,7 @@ export class Convert {
     private validateProps() {
         const errors: string[] = [];
 
-        if (!this.from || !["tf", "kube", "arm"].includes(this.from)) {
+        if (!this.from || !["tf", "kube", "arm", "cf"].includes(this.from)) {
             errors.push("A valid `from` attribute is required.");
         }
 
@@ -240,7 +255,7 @@ export class Convert {
 
         this.inputEditor = CodeMirror.fromTextArea(this.inputEditorEl, {
             ...config,
-            indentUnit: this.from === "kube" ? 2 : 4,
+            indentUnit: ["kube", "cf"].includes(this.from) ? 2 : 4,
             mode: this.inputEditorMode,
         });
 
@@ -327,6 +342,11 @@ export class Convert {
             });
     }
 
+    // Hide the warning/error message box.
+    private dismissAlert() {
+        this.alertDismissed = true;
+    }
+
     // Convert the code provided.
     private async convert() {
         this.setOutputResult(null);
@@ -339,6 +359,7 @@ export class Convert {
         }
 
         this.converting = true;
+        this.alertDismissed = false;
 
         try {
             const response = await fetch([ this.endpointURL, this.endpointPath].join("/"), {
@@ -472,6 +493,12 @@ export class Convert {
         </pulumi-tooltip>
     }
 
+    private renderDismissAlertButton() {
+        return <button class="toggle" title="Dismiss this message" onClick={ this.dismissAlert.bind(this) }>
+            <span class="icon"></span>
+        </button>;
+    }
+
     // Render an editor status bar.
     private renderStatusBar(type: "input" | "output") {
         switch (type) {
@@ -483,40 +510,30 @@ export class Convert {
                     </span>
                 </div>;
             case "output":
-                const issueURL = this.conversionTool.githubURL + "/issues"
                 return <div class={ this.statusBarClasses }>
                     <span class="icon"></span>
                     <span class="message">{ this.outputResult?.status?.message }</span>
-                    <div class="alert alert-error">
+                    <div class={ this.combineClasses("alert", "alert-error", this.alertDismissed ? "dismissed" : undefined) }>
+                        { this.renderDismissAlertButton() }
                         <p>
                             <strong>Sorry, we were unable to convert your code.</strong>
                         </p>
                         <p>
                             There could be a problem with the code you submitted, or it might use a
-                            feature { this.conversionTool.name } doesn't yet support. See below for details.
-                            Please also check the <a href={issueURL}>known issues</a> or
-                            report a <a href={issueURL}>new issue</a> if you believe this
-                            might be a bug or missing feature in { this.conversionTool.name }.
-
-                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
-                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
-                            We're here to help!
+                            feature { this.conversionTool.name } doesn't support. Join us
+                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
                         </p>
                     </div>
-                    <div class="alert alert-warn">
+                    <div class={ this.combineClasses("alert", "alert-warn", this.alertDismissed ? "dismissed" : undefined) }>
+                        { this.renderDismissAlertButton() }
                         <p>
                             <strong>Sorry, we were unable to convert your code completely.</strong>
                         </p>
                         <p>
-                            The code you submitted was valid, but { this.conversionTool.name } was unable to
-                            convert it completely, so a partial conversion has been provided for you. See below
-                            for details. Please also check the <a href={issueURL}>known issues</a> or
-                            report a <a href={issueURL}>new issue</a> if you believe this
-                            might be a bug or missing feature in { this.conversionTool.name }.
-
-                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
-                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
-                            We're here to help!
+                            The code was valid, but { this.conversionTool.name } was unable to convert it completely.
+                            There could be a problem with the code you submitted, or it might use a
+                            feature { this.conversionTool.name } doesn't support. Join us
+                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
                         </p>
                     </div>
                 </div>;
@@ -557,7 +574,7 @@ export class Convert {
                             We've included a few examples for reference &mdash; feel free to edit them as you like,
                             or replace them with your own code. (And don't worry, we send your code over SSL
                             and don't store anything on our servers.) When you're ready to transform
-                            your { this.sourceLanguageName } code to Pulumi, click <strong>Convert</strong>.
+                            your { this.sourceLanguageName } code to Pulumi, select <strong>Convert</strong>.
                         </p>
                     </div>
                     <div class="editor-container">
