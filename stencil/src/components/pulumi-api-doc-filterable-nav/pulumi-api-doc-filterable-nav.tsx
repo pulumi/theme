@@ -33,9 +33,16 @@ export class PulumiApiDocFilterableNav {
         this.parsedNodes = JSON.parse(this.nodes);
         // Before the user interacts with the filter, the nodes to render should be the full nav tree.
         this.currentlyRenderedNodes = this.parsedNodes;
+        this.docsDir = `registry/packages/${this.packageName}/api-docs/`;
     }
 
     private textInput?: HTMLInputElement;
+
+    @Prop()
+    baseUrl: string;
+
+    @Prop()
+    packageName: string;
 
     @Prop()
     nodes: string;
@@ -47,6 +54,7 @@ export class PulumiApiDocFilterableNav {
     currentlyRenderedNodes: node[];
 
     filterContent: string = "";
+    docsDir: string;
 
     // By default, this component renders the full navigation tree, which includes all of the nodes represented in the
     // `nodes` prop.  However, when a user interacts with the text input that is a part of this component, the expectation
@@ -181,6 +189,8 @@ export class PulumiApiDocFilterableNav {
                     )}
                     <pulumi-api-doc-nav-tree
                         class="nav-tree"
+                        baseUrl={this.baseUrl}
+                        docsDir={this.docsDir}
                         nodes={this.currentlyRenderedNodes}
                     ></pulumi-api-doc-nav-tree>
                 </div>
