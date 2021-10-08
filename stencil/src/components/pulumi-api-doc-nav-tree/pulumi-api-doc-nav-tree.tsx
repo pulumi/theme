@@ -28,7 +28,7 @@ export class PulumiApiDocNavTree {
         return currentPath.includes(`/${nodeName}/`);
     }
 
-    // If a node is an exact match fpr the page a user is currently on
+    // If a node is an exact match for the page a user is currently on
     // (not just in the path), it should be selected,
     // even if it has not been clicked by the user.
     shouldNodeBeSelected(nodeHref) {
