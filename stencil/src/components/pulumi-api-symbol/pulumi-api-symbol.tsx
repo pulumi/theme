@@ -9,13 +9,19 @@ export type ApiSymbolType = "resource" | "function" | "module";
 export class ApiSymbol {
     @Prop()
     type: ApiSymbolType;
+    
+    @Prop()
+    size?: "small" | "large";
 
     render() {
         const icon = this.type === "resource" ? "R" : this.type === "function" ? "F" : "M";
-        const color = "rgb(62, 73, 174)";
+        const color = this.type === "resource" ? "blue" : this.type === "function" ? "red" : "green";
+        const sizeClass = this.size ? `symbol-${this.size}` : "";
 
         return (
-            <span style={{ color }}>{ icon }</span>
+            <span class={`symbol ${sizeClass} symbol-${this.size} text-${color}-700 border-${color}-700`}>
+                { icon }
+            </span>
         );
     }
 }

@@ -20,6 +20,7 @@ export namespace Components {
         "nodes": node[];
     }
     interface PulumiApiSymbol {
+        "size"?: "small" | "large";
         "type": ApiSymbolType;
     }
     interface PulumiAudio {
@@ -342,6 +343,7 @@ declare namespace LocalJSX {
         "nodes"?: node[];
     }
     interface PulumiApiSymbol {
+        "size"?: "small" | "large";
         "type"?: ApiSymbolType;
     }
     interface PulumiAudio {
