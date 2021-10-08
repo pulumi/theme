@@ -50,7 +50,6 @@ export class PulumiApiDocFilterableNav {
     currentlyRenderedNodes: node[];
 
     filterContent: string = "";
-    docsDir: string;
 
     // By default, this component renders the full navigation tree, which includes all of the nodes represented in the
     // `nodes` prop.  However, when a user interacts with the text input that is a part of this component, the expectation
