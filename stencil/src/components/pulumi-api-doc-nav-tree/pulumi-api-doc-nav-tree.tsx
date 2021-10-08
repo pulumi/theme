@@ -11,10 +11,7 @@ export class PulumiApiDocNavTree {
     nodes: node[];
 
     @Prop()
-    baseUrl: string;
-
-    @Prop()
-    docsDir: string;
+    baseDirectory: string;
 
     getIcon(nodeType) {
         return (
@@ -34,20 +31,20 @@ export class PulumiApiDocNavTree {
     // If a node is an exact match fpr the page a user is currently on
     // (not just in the path), it should be selected,
     // even if it has not been clicked by the user.
-    shouldNodeBeSelected(nodePath) {
+    shouldNodeBeSelected(nodeHref) {
         const currentPath = window.location.pathname;
-        return currentPath === `/${nodePath}/`;
+        return currentPath === `/${nodeHref}/`;
     }
 
     getChildNodes(nodes: node[] = this.nodes, depth: number = 0, linkBase = "") {
         return nodes.map((node) => {
-            const nodePath = `${this.docsDir}${linkBase}${node.link}`;
-            const nodeHref = `//${this.baseUrl}${nodePath}`;
+            const nodePath = `${linkBase}${node.link}`;
+            const nodeHref = `${this.baseDirectory}${nodePath}`;
 
             return (
                 <pulumi-tree-item
                     slot="item"
-                    selected={!!this.shouldNodeBeSelected(nodePath)}
+                    selected={!!this.shouldNodeBeSelected(nodeHref)}
                     expanded={!!node.isExpanded || this.isNodeInPathForCurrentlyVisiblePage(node.name)}
                     class="nav-tree-item"
                     title={node.name}

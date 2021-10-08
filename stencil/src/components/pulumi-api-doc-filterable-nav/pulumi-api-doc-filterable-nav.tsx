@@ -33,16 +33,12 @@ export class PulumiApiDocFilterableNav {
         this.parsedNodes = JSON.parse(this.nodes);
         // Before the user interacts with the filter, the nodes to render should be the full nav tree.
         this.currentlyRenderedNodes = this.parsedNodes;
-        this.docsDir = `registry/packages/${this.packageName}/api-docs/`;
     }
 
     private textInput?: HTMLInputElement;
 
     @Prop()
-    baseUrl: string;
-
-    @Prop()
-    packageName: string;
+    baseDirectory: string;
 
     @Prop()
     nodes: string;
@@ -189,8 +185,7 @@ export class PulumiApiDocFilterableNav {
                     )}
                     <pulumi-api-doc-nav-tree
                         class="nav-tree"
-                        baseUrl={this.baseUrl}
-                        docsDir={this.docsDir}
+                        baseDirectory={this.baseDirectory}
                         nodes={this.currentlyRenderedNodes}
                     ></pulumi-api-doc-nav-tree>
                 </div>
