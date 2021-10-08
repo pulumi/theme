@@ -13,7 +13,8 @@ export class PulumiApiDocNavTree {
     getIcon(nodeType) {
         return (
             <slot name="before-content">
-                <span class={`symbol ${nodeType}`}></span>
+                Cats
+                {/* <span class={`symbol ${nodeType}`}></span> */}
             </slot>
         );
     }
@@ -21,7 +22,8 @@ export class PulumiApiDocNavTree {
     getChildNodes(nodes: node[] = this.nodes, depth: number = 0, linkBase = '') {
         return nodes.map((node) => (
             <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item" title={node.name}>
-                {this.getIcon(node.type)}
+                {/* {this.getIcon(node.type)} */}
+                wow this is something
                 <slot name="content">
                     <a class={`depth-${depth}`} href={`${linkBase}${node.link}`}>{node.name}</a>
                 </slot>
