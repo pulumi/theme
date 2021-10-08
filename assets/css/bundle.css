@@ -2212,7 +2212,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 @media(min-width: 1536px){
-  .section-docs .container,.section-docs .top-nav-bar .top-nav-container,.section-docs .header-container nav{
+  .section-docs .container,.section-docs .top-nav-bar .top-nav-container,.section-docs .header-container nav,.section-registry .container,.section-registry .top-nav-bar .top-nav-container,.section-registry .header-container nav{
     max-width:1536px
   }
 }
