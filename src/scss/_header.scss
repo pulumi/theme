@@ -137,7 +137,7 @@
 }
 
 .header-container {
-    @apply sticky z-50 bg-white py-6;
+    @apply z-50 bg-white py-6;
     top: -1px;
 
     @screen lg {
@@ -145,7 +145,7 @@
     }
 
     &.is-pinned {
-        @apply shadow;
+        @apply sticky shadow;
     }
 
     .logo-container {
@@ -317,7 +317,7 @@
 
 .registry-hero {
     @apply w-full flex relative flex-col justify-center;
-    
+
     height: 70px;
     @screen md {
         height: 100px;
@@ -355,7 +355,7 @@
 
 .registry-hero {
     @apply w-full flex relative flex-col justify-center;
-    
+
     height: 70px;
     @screen md {
         height: 100px;
