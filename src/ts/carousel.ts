@@ -147,6 +147,7 @@
                     chars.map(char => {
                         return "<span class='char'>" + char + "</span>";
                     })
+                    .join("")
                     .toString(),
                 );
         });
