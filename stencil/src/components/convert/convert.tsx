@@ -1,4 +1,5 @@
-import { Component, Element, h, Prop, State } from '@stencil/core';
+import { Component, Element, h, Prop, State } from "@stencil/core";
+import * as clipboard from "clipboard-polyfill";
 
 export type SourceKind = "tf" | "kube" | "arm" | "cf";
 export type InputEditorMode = "ruby" | "javascript" | "yaml";
@@ -205,12 +206,11 @@ export class Convert {
             typeof CodeMirror,
             typeof JSZip,
             typeof saveAs,
-            typeof clipboard,
         ].filter(result => result === "undefined");
 
         if (missingGlobals.length > 0) {
             throw new Error(
-                "The pulumi-convert component requires CodeMirror, JZSip, FileSaver, and clipboard-polyfill. " +
+                "The pulumi-convert component requires CodeMirror, JZSip, and FileSaver. " +
                 "Please ensure each of these scripts has been loaded into global before using it."
             );
         }
@@ -327,7 +327,7 @@ export class Convert {
         this.outputEditor.setValue(result ? result.code : "");
     }
 
-    // clipboard is declared as a global and exposed by clipboard-polyfill.
+    // Copy the code in the output editor to the clipboard.
     private copyToClipboard() {
         clipboard.writeText(this.outputEditor.getValue());
     }
