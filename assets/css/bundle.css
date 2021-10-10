@@ -3118,6 +3118,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu{
     position: absolute;
     top: 0px;
+    z-index: 10;
     display: none;
     width: 100%;
     min-width: max-content;
