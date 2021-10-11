@@ -15,11 +15,10 @@ export class ApiSymbol {
 
     render() {
         const icon = this.type === "resource" ? "R" : this.type === "function" ? "F" : "M";
-        const color = this.type === "resource" ? "blue" : this.type === "function" ? "red" : "green";
         const sizeClass = this.size ? `symbol-${this.size}` : "";
 
         return (
-            <span class={`symbol ${sizeClass} symbol-${this.size} text-${color}-700 border-${color}-700`}>
+            <span class={`symbol ${sizeClass} symbol-${this.size} symbol-${this.type}`}>
                 { icon }
             </span>
         );
