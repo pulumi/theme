@@ -10,18 +10,12 @@ export class PulumiApiDocNavTree {
     @Prop()
     nodes: node[];
 
-    getIcon(nodeType) {
-        return (
-            <slot name="before-content">
-                <pulumi-api-symbol type={nodeType}></pulumi-api-symbol>
-            </slot>
-        );
-    }
-
     getChildNodes(nodes: node[] = this.nodes, depth: number = 0, linkBase = '') {
         return nodes.map((node) => (
             <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item" title={node.name}>
-                {this.getIcon(node.type)}
+                <slot name="before-content">
+                    <pulumi-api-symbol type={node.type} size="small"></pulumi-api-symbol>
+                 </slot>
                 <slot name="content">
                     <a class={`depth-${depth}`} href={`${linkBase}${node.link}`}>{node.name}</a>
                 </slot>
