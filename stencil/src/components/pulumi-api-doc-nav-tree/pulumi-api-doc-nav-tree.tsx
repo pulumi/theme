@@ -16,7 +16,7 @@ export class PulumiApiDocNavTree {
     getIcon(nodeType: APINavNodeType) {
         return (
             <slot name="before-content">
-                <span class={`api-symbol api-symbol--small api-symbol--${nodeType}`}></span>
+                <span class={`symbol ${nodeType}`}></span>
             </slot>
         );
     }
