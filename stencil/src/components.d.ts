@@ -14,7 +14,7 @@ import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulum
 export namespace Components {
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
-        "nodes": string;
+        "packageName": string;
     }
     interface PulumiApiDocNavTree {
         "baseDirectory": string;
@@ -328,7 +328,7 @@ declare global {
 declare namespace LocalJSX {
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
-        "nodes"?: string;
+        "packageName"?: string;
     }
     interface PulumiApiDocNavTree {
         "baseDirectory"?: string;
