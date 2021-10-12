@@ -14038,7 +14038,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .st-default-search-input.registry:focus{
-  border-color:#a15ca7 !important
+  border-color:#ca709d !important
 }
 
 @media (min-width: 768px){
