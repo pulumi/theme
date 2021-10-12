@@ -1,7 +1,11 @@
+$size-small: 9px;
+$size-medium: 16px;
+$size-large: 24px;
+
 .api-symbol {
-    height: 24px;
-    width: 24px;
-    font-size: 16px;
+    height: calc($size-medium + 8px);
+    width: calc($size-medium + 8px);
+    font-size: $size-medium;
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
@@ -14,15 +18,15 @@
 }
 
 .api-symbol--small {
-    height: 14px;
-    width: 14px;
-    font-size: 9px;
+    height: calc($size-small + 8px);
+    width: calc($size-small + 8px);
+    font-size: $size-small;
 }
   
 .api-symbol--large {
-    height: 32px;
-    width: 32px;
-    font-size: 24px;
+    height: calc($size-large + 8px);
+    width: calc($size-large + 8px);
+    font-size: $size-large;
 }
 
 .api-symbol--module {
