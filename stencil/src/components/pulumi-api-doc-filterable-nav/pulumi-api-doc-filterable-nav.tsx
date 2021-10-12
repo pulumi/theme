@@ -1,17 +1,19 @@
 import { Component, h, Prop, State } from "@stencil/core";
 import { debounce } from "lodash";
-export interface node {
+export interface APINavNode {
     // The below properties come from the JSON data.
     name: string;
-    type: "module" | "function" | "resource";
+    type: APINavNodeType;
     // Relative path to the relevant page.
     link: string;
-    children?: node[];
+    children?: APINavNode[];
     // The below properties are added during the filtering search process
     // to allow for accurate rendering of the rebuilt tree after search.
     isExpanded?: boolean;
     parentName?: string;
 }
+
+export type APINavNodeType = "module" | "function" | "resource";
 
 @Component({
     tag: "pulumi-api-doc-filterable-nav",
@@ -44,10 +46,10 @@ export class PulumiApiDocFilterableNav {
     nodes: string;
 
     @State()
-    parsedNodes: node[];
+    parsedNodes: APINavNode[];
 
     @State()
-    currentlyRenderedNodes: node[];
+    currentlyRenderedNodes: APINavNode[];
 
     filterContent: string = "";
 
@@ -56,10 +58,10 @@ export class PulumiApiDocFilterableNav {
     // is that the tree will update to only render nodes that match the text input (and their parents/root nodes, where applicable).
     // This function filters the full tree to find the matches to render, and then reconstructs the tree.
     filterTreeToMatchingContent(
-        nodesToRender: node[],
-        nodesToSearch: node[],
-        rootNode?: node,
-        directParentNode?: node
+        nodesToRender: APINavNode[],
+        nodesToSearch: APINavNode[],
+        rootNode?: APINavNode,
+        directParentNode?: APINavNode
     ) {
         nodesToSearch.map((node) => {
             // Check if the nodes we're currently working with are already represented in the array of nodes to render.
