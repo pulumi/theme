@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { node } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
+import { APINavNode } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
 import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
 import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
@@ -18,7 +18,7 @@ export namespace Components {
     }
     interface PulumiApiDocNavTree {
         "baseDirectory": string;
-        "nodes": node[];
+        "nodes": APINavNode[];
     }
     interface PulumiAudio {
         "pausedText": string;
@@ -332,7 +332,7 @@ declare namespace LocalJSX {
     }
     interface PulumiApiDocNavTree {
         "baseDirectory"?: string;
-        "nodes"?: node[];
+        "nodes"?: APINavNode[];
     }
     interface PulumiAudio {
         "pausedText"?: string;

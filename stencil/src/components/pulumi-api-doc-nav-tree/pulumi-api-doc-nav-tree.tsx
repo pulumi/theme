@@ -1,5 +1,5 @@
 import { Component, h, Prop } from "@stencil/core";
-import { node } from "../pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
+import { APINavNode, APINavNodeType } from "../pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
 
 @Component({
     tag: "pulumi-api-doc-nav-tree",
@@ -8,12 +8,12 @@ import { node } from "../pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable
 })
 export class PulumiApiDocNavTree {
     @Prop()
-    nodes: node[];
+    nodes: APINavNode[];
 
     @Prop()
     baseDirectory: string;
 
-    getIcon(nodeType) {
+    getIcon(nodeType: APINavNodeType) {
         return (
             <slot name="before-content">
                 <span class={`api-symbol api-symbol--small api-symbol--${nodeType}`}></span>
@@ -36,7 +36,7 @@ export class PulumiApiDocNavTree {
         return currentPath === `/${nodeHref}/`;
     }
 
-    getChildNodes(nodes: node[] = this.nodes, depth: number = 0, linkBase = "") {
+    getChildNodes(nodes: APINavNode[] = this.nodes, depth: number = 0, linkBase = "") {
         return nodes.map((node) => {
             const nodePath = `${linkBase}${node.link}`;
             const nodeHref = `${this.baseDirectory}${nodePath}`;
