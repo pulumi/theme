@@ -11,17 +11,21 @@ export class PulumiApiDocNavTree {
     nodes: node[];
 
     getChildNodes(nodes: node[] = this.nodes, depth: number = 0, linkBase = '') {
-        return nodes.map((node) => (
-            <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item" title={node.name}>
-                <slot name="before-content">
-                    <pulumi-api-symbol type={node.type} size="small"></pulumi-api-symbol>
-                 </slot>
-                <slot name="content">
-                    <a class={`depth-${depth}`} href={`${linkBase}${node.link}`}>{node.name}</a>
-                </slot>
-                {node.children && this.getChildNodes(node.children, depth + 1, linkBase + node.link)}
-            </pulumi-tree-item>
-        ));
+        return nodes.map((node) => {
+            const className = `api-symbol api-symbol--small api-symbol--${node.type}`;
+            
+            return (
+                <pulumi-tree-item slot="item" expanded={!!node.isExpanded} class="nav-tree-item" title={node.name}>
+                    <slot name="before-content">
+                        <span class={className}></span>
+                    </slot>
+                    <slot name="content">
+                        <a class={`depth-${depth}`} href={`${linkBase}${node.link}`}>{node.name}</a>
+                    </slot>
+                    {node.children && this.getChildNodes(node.children, depth + 1, linkBase + node.link)}
+                </pulumi-tree-item>
+            );
+        });
     }
 
     render() {
