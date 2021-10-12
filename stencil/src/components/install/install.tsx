@@ -1,4 +1,6 @@
-import { Component, Element, h, Prop, State } from '@stencil/core';
+import { Component, Element, h, Prop, State } from "@stencil/core";
+import * as clipboard from "clipboard-polyfill";
+
 import { OSKey } from "../chooser/chooser";
 
 @Component({

@@ -1505,6 +1505,32 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
+.cloud-engineering-summit-speaker-wall .sessionize-loader{
+  display: none
+}
+
+.cloud-engineering-summit-speaker-wall .sz-speakers--wall{
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap
+}
+
+.cloud-engineering-summit-speaker-wall .sz-speakers--wall li{
+  width: 33.333333%
+}
+
+.cloud-engineering-summit-speaker-wall .sz-speakers--wall li img{
+  border-radius: 9999px
+}
+
+#sessionize.sessionize-wrapper .sz-speakers--wall{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-flow:row wrap
+}
+
 .highlight .lntd{
   vertical-align:top;
   padding:0;
@@ -2493,6 +2519,32 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   display: block
 }
 
+.pulumi-event-list-container #whitepaper:target~.event-list-filter li[data-filter-name=all] a{
+  --tw-text-opacity: 1;
+  color: rgba(142, 143, 151, var(--tw-text-opacity))
+}
+
+.pulumi-event-list-container #whitepaper:target~h3[data-filter-title=all]{
+  display: none
+}
+
+.pulumi-event-list-container #whitepaper:target~.event-list-filter li[data-filter-name=whitepaper] a{
+  --tw-text-opacity: 1;
+  color: rgba(128, 90, 195, var(--tw-text-opacity))
+}
+
+.pulumi-event-list-container #whitepaper:target~h3[data-filter-title=whitepaper]{
+  display: block
+}
+
+.pulumi-event-list-container #whitepaper:target~ul li{
+  display: none
+}
+
+.pulumi-event-list-container #whitepaper:target~ul li[data-filters~=whitepaper]{
+  display: block
+}
+
 .event-list-item article{
   height:320px
 }
@@ -2833,7 +2885,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .header-container{
-  position: sticky;
   z-index: 50;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -2851,6 +2902,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .header-container.is-pinned{
+  position: sticky;
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
@@ -2871,6 +2923,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .header-container .cta-container{
+  z-index: 10;
   display: none
 }
 
@@ -3014,6 +3067,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu{
     position: absolute;
     top: 0px;
+    z-index: 10;
     display: none;
     width: 100%;
     min-width: max-content;
@@ -3861,7 +3915,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
-.fa,pulumi-greenhouse-jobs-list .loading-spinner,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .btn-convert.converting .icon,.fas,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .btn-convert .icon,.far,.fal,.fab{
+.fa,pulumi-greenhouse-jobs-list .loading-spinner,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .btn-convert.converting .icon,.fas,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar .alert .toggle .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .btn-convert .icon,.far,.fal,.fab{
   -moz-osx-font-smoothing:grayscale;
   -webkit-font-smoothing:antialiased;
   display:inline-block;
@@ -3962,11 +4016,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   float:right
 }
 
-.fa.fa-pull-left,pulumi-greenhouse-jobs-list .fa-pull-left.loading-spinner,pulumi-convert #editors .editor.editor-output .fa-pull-left.editor-spinner,pulumi-convert #editors .editor .status-bar.converting .fa-pull-left.icon,.fas.fa-pull-left,pulumi-convert #editors .editor .status-bar.warn .fa-pull-left.icon,pulumi-convert #editors .editor .status-bar.error .fa-pull-left.icon,pulumi-convert #editors .editor .status-bar.success .fa-pull-left.icon,pulumi-convert #editors .editor .tabs .actions .fa-pull-left.btn-copy,pulumi-convert #editors .editor .tabs .actions .fa-pull-left.btn-download,pulumi-convert #editors .btn-convert .fa-pull-left.icon,.far.fa-pull-left,.fal.fa-pull-left,.fab.fa-pull-left{
+.fa.fa-pull-left,pulumi-greenhouse-jobs-list .fa-pull-left.loading-spinner,pulumi-convert #editors .editor.editor-output .fa-pull-left.editor-spinner,pulumi-convert #editors .editor .status-bar.converting .fa-pull-left.icon,.fas.fa-pull-left,pulumi-convert #editors .editor .status-bar.warn .fa-pull-left.icon,pulumi-convert #editors .editor .status-bar.error .fa-pull-left.icon,pulumi-convert #editors .editor .status-bar .alert .toggle .fa-pull-left.icon,pulumi-convert #editors .editor .status-bar.success .fa-pull-left.icon,pulumi-convert #editors .editor .tabs .actions .fa-pull-left.btn-copy,pulumi-convert #editors .editor .tabs .actions .fa-pull-left.btn-download,pulumi-convert #editors .btn-convert .fa-pull-left.icon,.far.fa-pull-left,.fal.fa-pull-left,.fab.fa-pull-left{
   margin-right:.3em
 }
 
-.fa.fa-pull-right,pulumi-greenhouse-jobs-list .fa-pull-right.loading-spinner,pulumi-convert #editors .editor.editor-output .fa-pull-right.editor-spinner,pulumi-convert #editors .editor .status-bar.converting .fa-pull-right.icon,.fas.fa-pull-right,pulumi-convert #editors .editor .status-bar.warn .fa-pull-right.icon,pulumi-convert #editors .editor .status-bar.error .fa-pull-right.icon,pulumi-convert #editors .editor .status-bar.success .fa-pull-right.icon,pulumi-convert #editors .editor .tabs .actions .fa-pull-right.btn-copy,pulumi-convert #editors .editor .tabs .actions .fa-pull-right.btn-download,pulumi-convert #editors .btn-convert .fa-pull-right.icon,.far.fa-pull-right,.fal.fa-pull-right,.fab.fa-pull-right{
+.fa.fa-pull-right,pulumi-greenhouse-jobs-list .fa-pull-right.loading-spinner,pulumi-convert #editors .editor.editor-output .fa-pull-right.editor-spinner,pulumi-convert #editors .editor .status-bar.converting .fa-pull-right.icon,.fas.fa-pull-right,pulumi-convert #editors .editor .status-bar.warn .fa-pull-right.icon,pulumi-convert #editors .editor .status-bar.error .fa-pull-right.icon,pulumi-convert #editors .editor .status-bar .alert .toggle .fa-pull-right.icon,pulumi-convert #editors .editor .status-bar.success .fa-pull-right.icon,pulumi-convert #editors .editor .tabs .actions .fa-pull-right.btn-copy,pulumi-convert #editors .editor .tabs .actions .fa-pull-right.btn-download,pulumi-convert #editors .btn-convert .fa-pull-right.icon,.far.fa-pull-right,.fal.fa-pull-right,.fab.fa-pull-right{
   margin-left:.3em
 }
 
@@ -8806,7 +8860,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   content:""
 }
 
-.fa-times:before,pulumi-convert #editors .editor .status-bar.error .icon:before{
+.fa-times:before,pulumi-convert #editors .editor .status-bar.error .icon:before,pulumi-convert #editors .editor .status-bar .alert .toggle .icon:before{
   content:""
 }
 
@@ -9541,7 +9595,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   src:url("/fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"),url("/fonts/fontawesome/fa-solid-900.woff2") format("woff2"),url("/fonts/fontawesome/fa-solid-900.woff") format("woff"),url("/fonts/fontawesome/fa-solid-900.ttf") format("truetype"),url("/fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg")
 }
 
-.fa,pulumi-greenhouse-jobs-list .loading-spinner,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .btn-convert.converting .icon,.fas,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .btn-convert .icon{
+.fa,pulumi-greenhouse-jobs-list .loading-spinner,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .btn-convert.converting .icon,.fas,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar .alert .toggle .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .btn-convert .icon{
   font-family:"Font Awesome 5 Free";
   font-weight:900
 }
@@ -12835,38 +12889,50 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .note.note-info{
   --tw-border-opacity: 1;
-  border-color: rgba(237, 239, 251, var(--tw-border-opacity))
+  border-color: rgba(77, 91, 217, var(--tw-border-opacity))
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-info .note-heading{
+  color:#fff
 }
 
 .note.note-info .note-heading{
   --tw-bg-opacity: 1;
-  background-color: rgba(237, 239, 251, var(--tw-bg-opacity));
+  background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(31, 36, 87, var(--tw-text-opacity))
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .note.note-warning{
   --tw-border-opacity: 1;
-  border-color: rgba(255, 247, 235, var(--tw-border-opacity))
+  border-color: rgba(189, 76, 133, var(--tw-border-opacity))
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-warning .note-heading{
+  color:#fff
 }
 
 .note.note-warning .note-heading{
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 247, 235, var(--tw-bg-opacity));
+  background-color: rgba(189, 76, 133, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(153, 61, 41, var(--tw-text-opacity))
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .note.note-deprecated{
   --tw-border-opacity: 1;
-  border-color: rgba(255, 247, 235, var(--tw-border-opacity))
+  border-color: rgba(189, 76, 133, var(--tw-border-opacity))
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-deprecated .note-heading{
+  color:#fff
 }
 
 .note.note-deprecated .note-heading{
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 247, 235, var(--tw-bg-opacity));
+  background-color: rgba(189, 76, 133, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(153, 61, 41, var(--tw-text-opacity))
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .all-packages .package~.no-results{
@@ -16114,6 +16180,10 @@ pulumi-convert #editors .editor .status-bar .alert{
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
   bottom:100%
 }
 
@@ -16125,6 +16195,30 @@ pulumi-convert #editors .editor .status-bar .alert p{
 
 pulumi-convert #editors .editor .status-bar .alert p a{
   text-decoration: underline
+}
+
+pulumi-convert #editors .editor .status-bar .alert .toggle{
+  position: absolute;
+  top: 1rem;
+  right: 1rem
+}
+
+pulumi-convert #editors .editor .status-bar .alert .toggle .icon{
+  margin-right: 0px;
+  --tw-text-opacity: 1;
+  color: rgba(95, 96, 101, var(--tw-text-opacity));
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+pulumi-convert #editors .editor .status-bar .alert .toggle .icon:hover{
+  --tw-text-opacity: 1;
+  color: rgba(47, 48, 50, var(--tw-text-opacity))
+}
+
+pulumi-convert #editors .editor .status-bar .alert.dismissed{
+  opacity: 0
 }
 
 pulumi-convert #editors .editor .status-bar.error .alert-error{

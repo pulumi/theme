@@ -38,6 +38,9 @@ export class PulumiApiDocFilterableNav {
     private textInput?: HTMLInputElement;
 
     @Prop()
+    baseDirectory: string;
+
+    @Prop()
     nodes: string;
 
     @State()
@@ -181,6 +184,7 @@ export class PulumiApiDocFilterableNav {
                     )}
                     <pulumi-api-doc-nav-tree
                         class="nav-tree"
+                        baseDirectory={this.baseDirectory}
                         nodes={this.currentlyRenderedNodes}
                     ></pulumi-api-doc-nav-tree>
                 </div>

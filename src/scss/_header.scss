@@ -137,7 +137,7 @@
 }
 
 .header-container {
-    @apply sticky z-50 bg-white py-6;
+    @apply z-50 bg-white py-6;
     top: -1px;
 
     @screen lg {
@@ -145,7 +145,7 @@
     }
 
     &.is-pinned {
-        @apply shadow;
+        @apply sticky shadow;
     }
 
     .logo-container {
@@ -157,7 +157,7 @@
     }
 
     .cta-container {
-        @apply hidden;
+        @apply hidden z-10;
 
         @screen lg {
             @apply flex items-center justify-end;
@@ -206,7 +206,7 @@
                     @apply relative cursor-pointer;
 
                     .header-nav-drop-down-menu {
-                        @apply w-full absolute hidden min-w-max pt-6 top-0;
+                        @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
 
                         ul {
                             @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
@@ -317,7 +317,7 @@
 
 .registry-hero {
     @apply w-full flex relative flex-col justify-center;
-    
+
     height: 70px;
     @screen md {
         height: 100px;
@@ -355,7 +355,7 @@
 
 .registry-hero {
     @apply w-full flex relative flex-col justify-center;
-    
+
     height: 70px;
     @screen md {
         height: 100px;
