@@ -910,6 +910,66 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
   word-break:break-word;
 }
 
+.api-symbol{
+  height:24px;
+  width:24px;
+  font-size:16px;
+  border-width:1px;
+  border-style:solid;
+  box-sizing:border-box;
+  border-radius:50%;
+  margin-right:6px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700
+}
+
+.api-symbol--small{
+  height:14px;
+  width:14px;
+  font-size:9px
+}
+
+.api-symbol--large{
+  height:32px;
+  width:32px;
+  font-size:24px
+}
+
+.api-symbol--module{
+  --tw-text-opacity: 1;
+  color: rgba(29, 134, 115, var(--tw-text-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(29, 134, 115, var(--tw-border-opacity))
+}
+
+.api-symbol--module:before{
+  content:"M"
+}
+
+.api-symbol--function{
+  --tw-text-opacity: 1;
+  color: rgba(197, 48, 48, var(--tw-text-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(197, 48, 48, var(--tw-border-opacity))
+}
+
+.api-symbol--function:before{
+  content:"F"
+}
+
+.api-symbol--resource{
+  --tw-text-opacity: 1;
+  color: rgba(62, 73, 174, var(--tw-text-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(62, 73, 174, var(--tw-border-opacity))
+}
+
+.api-symbol--resource:before{
+  content:"R"
+}
+
 .automation-scenarios-carousel-items{
   width: 100%
 }
