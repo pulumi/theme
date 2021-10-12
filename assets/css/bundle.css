@@ -791,6 +791,57 @@ ul.api li a:hover{
   text-decoration: underline
 }
 
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pul.api li .symbol:before{
+  color:#fff
+}
+
+ul.api li .symbol:before{
+  margin-right: 0.5rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  width:19px;
+}
+
+ul.api li .symbol.module:before{
+  content:"M";
+  --tw-bg-opacity: 1;
+  background-color: rgba(29, 134, 115, var(--tw-bg-opacity))
+}
+
+ul.api li .symbol.package:before{
+  content:"P";
+  --tw-bg-opacity: 1;
+  background-color: rgba(110, 41, 116, var(--tw-bg-opacity))
+}
+
+ul.api li .symbol.resource:before{
+  content:"R";
+  --tw-bg-opacity: 1;
+  background-color: rgba(62, 73, 174, var(--tw-bg-opacity))
+}
+
+ul.api li .symbol.datasource:before,ul.api li .symbol.function:before{
+  content:"F"
+}
+
+ul.api li .symbol.datasource:before, ul.api li .symbol.function:before{
+  --tw-bg-opacity: 1;
+  background-color: rgba(197, 48, 48, var(--tw-bg-opacity));
+}
+
+ul.api li .symbol.api:before{
+  content:"A";
+  --tw-bg-opacity: 1;
+  background-color: rgba(95, 96, 101, var(--tw-bg-opacity))
+}
+
 div.section[id^=pulumi] a.headerlink{
   visibility: hidden
 }
@@ -926,8 +977,8 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
 }
 
 .api-symbol--small{
-  height:14px;
-  width:14px;
+  height:17px;
+  width:17px;
   font-size:9px
 }
 
