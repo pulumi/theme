@@ -1,3 +1,5 @@
+// need to ignore PurgeCSS here because PurgeCSS runs before the API Docs files get bundled into
+//  pulumi/docs/public/, so it looks like these CSS classes are unused and they get pruned
 /* purgecss start ignore */
 $size-small: 9px;
 $size-medium: 16px;
