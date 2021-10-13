@@ -32,12 +32,15 @@ export class PulumiApiDocNavTree {
     // (not just in the path), it should be selected,
     // even if it has not been clicked by the user.
     shouldNodeBeSelected(nodeHref) {
-        const currentPath = window.location.pathname;
-        return currentPath === `/${nodeHref}/`;
+        // To compare the current path to the href, we strip the starting and ending slashes.
+        const formattedCurrentPath = window.location.pathname.split("/").filter(item => item !== "").join("/");
+        const formattedNodeHref = nodeHref.split("/").filter(item => item !== "").join("/");
+
+        return formattedCurrentPath === formattedNodeHref;
     }
 
     getChildNodes(nodes: APINavNode[] = this.nodes, depth: number = 0, linkBase = "") {
-        return nodes.map((node) => {
+        return nodes?.map((node) => {
             const nodePath = `${linkBase}${node.link}`;
             const nodeHref = `${this.baseDirectory}${nodePath}`;
 

@@ -18,7 +18,7 @@ export type APINavNodeType = "module" | "function" | "resource";
 @Component({
     tag: "pulumi-api-doc-filterable-nav",
     styleUrl: "pulumi-api-doc-filterable-nav.scss",
-    shadow: true,
+    shadow: false,
 })
 export class PulumiApiDocFilterableNav {
     constructor() {
@@ -31,19 +31,34 @@ export class PulumiApiDocFilterableNav {
     }
 
     componentWillLoad() {
-        // Parse the JSON that's passed through as a prop.
-        this.parsedNodes = JSON.parse(this.nodes);
-        // Before the user interacts with the filter, the nodes to render should be the full nav tree.
-        this.currentlyRenderedNodes = this.parsedNodes;
+        this.loadNavigationData().then(() => {});
     }
 
-    private textInput?: HTMLInputElement;
+    async loadNavigationData() {
+        this.isLoading = true;
+
+        try {
+            const response = await fetch(`/registry/packages/navs/${this.packageName}.json`);
+            const data = await response.json();
+            this.parsedNodes = data;
+
+            // Before the user interacts with the filter, the nodes to render should be the full nav tree.
+            this.currentlyRenderedNodes = this.parsedNodes;
+        } catch (error) {
+            return;
+        }
+
+        this.isLoading = false;
+    }
 
     @Prop()
     baseDirectory: string;
 
     @Prop()
-    nodes: string;
+    packageName: string;
+
+    @State()
+    isLoading: boolean;
 
     @State()
     parsedNodes: APINavNode[];
@@ -149,7 +164,6 @@ export class PulumiApiDocFilterableNav {
     onClearFilter() {
         this.currentlyRenderedNodes = this.parsedNodes;
         this.filterContent = "";
-        this.textInput.value = this.filterContent;
     }
 
     filterTree() {
@@ -163,33 +177,48 @@ export class PulumiApiDocFilterableNav {
         this.filterTreeToMatchingContent([], this.parsedNodes);
     }
 
+    getFilterAndNavTree() {
+        return (
+            <div class="filter-and-nav-tree">
+                <div class="input-container">
+                    <input
+                        class="navigation-filter-input"
+                        placeholder="Filter"
+                        onInput={this.onChange.bind(this)}
+                        value={this.filterContent}
+                    ></input>
+                    <div class="clear-container">
+                        <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
+                            X
+                        </button>
+                    </div>
+                </div>
+                {this.currentlyRenderedNodes?.length < 1 && (
+                    <div class="no-results">No results found. Try a different filter.</div>
+                )}
+                <pulumi-api-doc-nav-tree
+                    class="nav-tree"
+                    baseDirectory={this.baseDirectory}
+                    nodes={this.currentlyRenderedNodes}
+                ></pulumi-api-doc-nav-tree>
+            </div>
+        );
+    }
+
+    getLoadingState() {
+        return (
+            <div class="loading">
+                <i class="loading-icon fas fa-spinner"></i>
+                <span class="loading-text">Loading...</span>
+            </div>
+        );
+    }
+
     render() {
         return (
             <section class="api-doc-nav">
                 <h3 class="navigation-header">API Navigation</h3>
-                <div class="filter-and-nav-tree">
-                    <div class="input-container">
-                        <input
-                            class="navigation-filter-input"
-                            placeholder="Filter"
-                            onInput={this.onChange.bind(this)}
-                            ref={(el: HTMLInputElement) => (this.textInput = el)}
-                        ></input>
-                        <div class="clear-container">
-                            <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
-                                X
-                            </button>
-                        </div>
-                    </div>
-                    {this.currentlyRenderedNodes.length < 1 && (
-                        <div class="no-results">No results found. Try a different filter.</div>
-                    )}
-                    <pulumi-api-doc-nav-tree
-                        class="nav-tree"
-                        baseDirectory={this.baseDirectory}
-                        nodes={this.currentlyRenderedNodes}
-                    ></pulumi-api-doc-nav-tree>
-                </div>
+                {this.isLoading ? this.getLoadingState() : this.getFilterAndNavTree()}
             </section>
         );
     }

@@ -114,7 +114,9 @@ $base-ch-width-sm: 22ch;
         }
     }
 
-    display: block;
+    display: flex;
+    height: 100%;
+    align-items: center;
     overflow: hidden;
     text-overflow: ellipsis;
 
