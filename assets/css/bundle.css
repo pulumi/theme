@@ -12686,9 +12686,8 @@ dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span{
 }
 
 .on-this-page{
-  margin-top: 1rem;
   display: none;
-  padding-top: 1rem;
+  padding-top: 0.25rem;
   padding-bottom: 1rem
 }
 
@@ -17125,7 +17124,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
     align-self: flex-start;
     overflow-y: auto;
     max-height:90vh;
-    top:112px
+    top:106px
+  }
+
+  .section-registry .sticky-sidebar{
+    top: 2rem
   }
 }
 

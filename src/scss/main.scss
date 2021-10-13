@@ -229,6 +229,11 @@ main {
     }
 }
 
+$sitenav-height: 90px;
+
+// A 16px offset makes it easier to position elements below the nav when it's pinned.
+$sitenav-offset: calc($sitenav-height + 16px);
+
 // This little trick prepends anchor targets with a pseudoelement that the browser picks
 // up as the anchor target, allowing us to position the actual target below the fixed
 // navbar. Only necessary at medium and up.
@@ -237,10 +242,8 @@ main {
         &::before {
             content: " ";
             display: block;
-
-            // 106px is the navbar height (90px) plus a 16px offset for some vertical padding.
-            height: 106px;
-            margin-top: -106px;
+            height: $sitenav-offset;
+            margin-top: -$sitenav-offset;
         }
     }
 }
@@ -249,7 +252,12 @@ main {
     @screen lg {
         @apply sticky self-start overflow-y-auto;
         max-height: 90vh;
-        top: 112px;
+        top: $sitenav-offset;
+
+        // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
+        .section-registry & {
+            @apply top-8;
+        }
     }
 }
 
