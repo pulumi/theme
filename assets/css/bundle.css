@@ -14021,18 +14021,27 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding:.75rem !important;
   padding-left:2.5rem !important;
   border-radius:.25rem !important;
-  border-color:#cbd5e0 !important;
+  border-color:#d8d9df !important;
   font-family:"Inter" !important;
   background:none !important;
   transition:all 120ms linear
 }
 
-.st-default-search-input:focus{
-  border-color:#52a6da !important
+.st-default-search-input:focus:not(.registry){
+  border-color:#4d5bd9 !important
+}
+
+.st-default-search-input.registry{
+  border-top-right-radius:0 !important;
+  border-bottom-right-radius:0 !important
+}
+
+.st-default-search-input.registry:focus{
+  border-color:#805ac3 !important
 }
 
 @media (min-width: 768px){
-  .st-default-search-input{
+  .st-default-search-input:not(.registry){
     margin-right:1em !important
   }
 }
