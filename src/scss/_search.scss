@@ -8,14 +8,14 @@
     padding: .75rem !important;
     padding-left: 2.5rem !important;
     border-radius: .25rem !important;
-    border-color: map-get($gray, 400) !important; /* border-gray-400 */
+    border-color: map-get($gray, 400) !important;
     font-family: "Inter" !important;
     background: none !important;
 
     @include transition;
 
     &:focus:not(.registry) {
-        border-color: map-get($blue, 500) !important; /* border-blue-500 */
+        border-color: map-get($blue, 600) !important;
     }
 
     &.registry {
@@ -23,7 +23,7 @@
         border-bottom-right-radius: 0 !important;
 
         &:focus {
-            border-color: map-get($fuchsia, 500) !important;
+            border-color: map-get($violet, 600) !important;
         }
     }
 

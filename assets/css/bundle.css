@@ -14029,7 +14029,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .st-default-search-input:focus:not(.registry){
-  border-color:#717ce1 !important
+  border-color:#4d5bd9 !important
 }
 
 .st-default-search-input.registry{
@@ -14038,7 +14038,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .st-default-search-input.registry:focus{
-  border-color:#ca709d !important
+  border-color:#805ac3 !important
 }
 
 @media (min-width: 768px){
