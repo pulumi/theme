@@ -38,14 +38,14 @@ export class PulumiApiDocFilterableNav {
         this.isLoading = true;
 
         try {
-            const response = await fetch(`http://localhost:8080/registry/packages/navs/${this.packageName}.json`);
+            const response = await fetch(`/registry/packages/navs/${this.packageName}.json`);
             const data = await response.json();
             this.parsedNodes = data;
 
             // Before the user interacts with the filter, the nodes to render should be the full nav tree.
             this.currentlyRenderedNodes = this.parsedNodes;
         } catch (error) {
-            console.error(error);
+            return;
         }
 
         this.isLoading = false;
