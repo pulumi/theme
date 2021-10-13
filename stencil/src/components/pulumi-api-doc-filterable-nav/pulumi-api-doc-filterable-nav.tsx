@@ -31,7 +31,7 @@ export class PulumiApiDocFilterableNav {
     }
 
     componentWillLoad() {
-        this.loadNavigationData();
+        this.loadNavigationData().then(() => {});
     }
 
     async loadNavigationData() {
