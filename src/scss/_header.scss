@@ -318,10 +318,7 @@
 .registry-hero {
     @apply w-full flex relative flex-col justify-center;
 
-    height: 70px;
-    @screen md {
-        height: 100px;
-    }
+    height: 100px;
 
     .dot-overlay {
         @apply w-full h-full absolute;
@@ -330,7 +327,11 @@
     }
 
     .registry-hero-title {
-        @apply flex flex-row items-center font-bold;
+        @apply flex flex-row flex-wrap items-center font-bold;
+
+        @screen md {
+            @apply flex-nowrap;
+        }
 
         .title-icon, .title-text-content {
             font-size: 18px;
@@ -348,45 +349,7 @@
         }
 
         .title-text-content {
-            margin: 0px !important;
-        }
-    }
-}
-
-.registry-hero {
-    @apply w-full flex relative flex-col justify-center;
-
-    height: 70px;
-    @screen md {
-        height: 100px;
-    }
-
-    .dot-overlay {
-        @apply w-full h-full absolute;
-        z-index: -1;
-        background: linear-gradient(to top, rgba(255,255,255, 0.9) 0%, rgba(255,255,255, 0.8) 10%, rgba(255,255,255,0.5004551991695115) 100%);
-    }
-
-    .registry-hero-title {
-        @apply flex flex-row items-center font-bold;
-
-        .title-icon, .title-text-content {
-            font-size: 18px;
-
-            @screen md {
-                font-size: 24px;
-                background-color: rgba(255, 255, 255, 0.7);
-            }
-        }
-
-        .title-icon {
-            @apply flex items-center;
-            padding-right: 16px;
-            height: 40px;
-        }
-
-        .title-text-content {
-            margin: 0px !important;
+            margin: 0 !important;
         }
     }
 }

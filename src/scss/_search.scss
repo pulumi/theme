@@ -19,8 +19,10 @@
     }
 
     &.registry {
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
+        @screen md {
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
 
         &:focus {
             border-color: map-get($violet, 600) !important;

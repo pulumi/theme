@@ -3314,13 +3314,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  height:70px
-}
-
-@media (min-width: 768px){
-  .registry-hero{
-    height:100px
-  }
+  height:100px
 }
 
 .registry-hero .dot-overlay{
@@ -3334,8 +3328,15 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .registry-hero .registry-hero-title{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   font-weight: 700
+}
+
+@media (min-width: 768px){
+  .registry-hero .registry-hero-title{
+    flex-wrap: nowrap
+  }
 }
 
 .registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
@@ -3357,59 +3358,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .registry-hero .registry-hero-title .title-text-content{
-  margin:0px !important
-}
-
-.registry-hero{
-  position: relative;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  height:70px
-}
-
-@media (min-width: 768px){
-  .registry-hero{
-    height:100px
-  }
-}
-
-.registry-hero .dot-overlay{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index:-1;
-  background:linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551992) 100%)
-}
-
-.registry-hero .registry-hero-title{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 700
-}
-
-.registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
-  font-size:18px
-}
-
-@media (min-width: 768px){
-  .registry-hero .registry-hero-title .title-icon,.registry-hero .registry-hero-title .title-text-content{
-    font-size:24px;
-    background-color:rgba(255,255,255,.7)
-  }
-}
-
-.registry-hero .registry-hero-title .title-icon{
-  display: flex;
-  align-items: center;
-  padding-right:16px;
-  height:40px
-}
-
-.registry-hero .registry-hero-title .title-text-content{
-  margin:0px !important
+  margin:0 !important
 }
 
 .dot-background-container{
@@ -14031,9 +13980,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-color:#4d5bd9 !important
 }
 
-.st-default-search-input.registry{
-  border-top-right-radius:0 !important;
-  border-bottom-right-radius:0 !important
+@media (min-width: 768px){
+  .st-default-search-input.registry{
+    border-top-right-radius:0 !important;
+    border-bottom-right-radius:0 !important
+  }
 }
 
 .st-default-search-input.registry:focus{
