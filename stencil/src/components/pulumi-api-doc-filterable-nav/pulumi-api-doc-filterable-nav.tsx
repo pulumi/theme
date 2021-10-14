@@ -187,11 +187,13 @@ export class PulumiApiDocFilterableNav {
                         onInput={this.onChange.bind(this)}
                         value={this.filterContent}
                     ></input>
-                    <div class="clear-container">
-                        <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
-                            X
-                        </button>
-                    </div>
+                    {this.filterContent && (
+                        <div class="clear-container">
+                            <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
+                                X
+                            </button>
+                        </div>
+                    )}
                 </div>
                 {this.currentlyRenderedNodes?.length < 1 && (
                     <div class="no-results">No results found. Try a different filter.</div>
