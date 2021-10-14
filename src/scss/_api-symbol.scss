@@ -6,18 +6,28 @@ $size-medium: 16px;
 $size-large: 24px;
 
 .api-symbol {
-    height: calc($size-small + 6px);
-    width: calc($size-small + 6px);
+    height: calc($size-small + 5px);
+    width: calc($size-small + 5px);
     font-size: $size-small;
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
     border-radius: 50%;
     margin-right: 6px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     font-weight: 700;
+    text-decoration: none;
+}
+
+.api-symbol {
+    &:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // Ensure height and width match the parent, with accounting for the border.
+        height: calc($size-small + 5px - 2px);
+        width: calc($size-small + 5px - 2px);
+    }
 }
 
 .api-symbol--small {
