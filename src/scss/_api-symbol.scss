@@ -6,9 +6,9 @@ $size-medium: 16px;
 $size-large: 24px;
 
 .api-symbol {
-    height: calc($size-medium + 8px);
-    width: calc($size-medium + 8px);
-    font-size: $size-medium;
+    height: calc($size-small + 6px);
+    width: calc($size-small + 6px);
+    font-size: $size-small;
     border-width: 1px;
     border-style: solid;
     box-sizing: border-box;
