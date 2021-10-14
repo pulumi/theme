@@ -17,9 +17,7 @@ $size-large: 24px;
     display: inline-block;
     font-weight: 700;
     text-decoration: none;
-}
 
-.api-symbol {
     &:before {
         display: flex;
         align-items: center;
