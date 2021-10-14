@@ -15,9 +15,11 @@ export class PulumiApiDocNavTree {
 
     getIcon(nodeType: APINavNodeType) {
         return (
-            <slot name="before-content">
-                <span class={`symbol ${nodeType}`}></span>
-            </slot>
+            <div class="symbol-container">
+                <slot name="before-content">
+                    <span class={`symbol ${nodeType}`}></span>
+                </slot>
+            </div>
         );
     }
 
@@ -33,8 +35,14 @@ export class PulumiApiDocNavTree {
     // even if it has not been clicked by the user.
     shouldNodeBeSelected(nodeHref) {
         // To compare the current path to the href, we strip the starting and ending slashes.
-        const formattedCurrentPath = window.location.pathname.split("/").filter(item => item !== "").join("/");
-        const formattedNodeHref = nodeHref.split("/").filter(item => item !== "").join("/");
+        const formattedCurrentPath = window.location.pathname
+            .split("/")
+            .filter((item) => item !== "")
+            .join("/");
+        const formattedNodeHref = nodeHref
+            .split("/")
+            .filter((item) => item !== "")
+            .join("/");
 
         return formattedCurrentPath === formattedNodeHref;
     }
@@ -52,11 +60,13 @@ export class PulumiApiDocNavTree {
                     class="nav-tree-item"
                     title={node.name}
                 >
-                    {this.getIcon(node.type)}
                     <slot name="content">
-                        <a class={`depth-${depth}`} href={nodeHref}>
-                            {node.name}
-                        </a>
+                        <div class="content-container">
+                            {this.getIcon(node.type)}
+                            <a class={`depth-${depth}`} href={nodeHref}>
+                                <span class="link-container">{node.name}</span>
+                            </a>
+                        </div>
                     </slot>
                     {node.children && this.getChildNodes(node.children, depth + 1, linkBase + node.link)}
                 </pulumi-tree-item>
