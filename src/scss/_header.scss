@@ -307,7 +307,9 @@
     }
 
     .registry-hero-title {
-        @apply flex items-center;
+        @screen md {
+            @apply flex items-center;
+        }
 
         .title-icon, .title-text-content {
             @apply text-lg text-gray-800 bg-white bg-opacity-70;
