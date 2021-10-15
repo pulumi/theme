@@ -3309,15 +3309,10 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background:linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551992) 100%)
 }
 
-.registry-hero .registry-hero-title{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center
-}
-
 @media (min-width: 768px){
   .registry-hero .registry-hero-title{
-    flex-wrap: nowrap
+    display: flex;
+    align-items: center
   }
 }
 
