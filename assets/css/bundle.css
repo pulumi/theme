@@ -3311,7 +3311,14 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .registry-hero .registry-hero-title{
   display: flex;
+  flex-wrap: wrap;
   align-items: center
+}
+
+@media (min-width: 768px){
+  .registry-hero .registry-hero-title{
+    flex-wrap: nowrap
+  }
 }
 
 .registry-hero .registry-hero-title .title-icon, .registry-hero .registry-hero-title .title-text-content{
