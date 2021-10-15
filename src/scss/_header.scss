@@ -307,13 +307,8 @@
     }
 
     .registry-hero-title {
-        @apply flex items-center flex-wrap;
-
-        // We apply flex-wrap by default so that the search box
-        // wraps to the next line with full-width.
-        // We don't need that for medium+ screens.
         @screen md {
-            @apply flex-nowrap;
+            @apply flex items-center;
         }
 
         .title-icon, .title-text-content {
