@@ -27,3 +27,4 @@ jobs:
         with:
           file_pattern: assets/js/bundle.js assets/css/bundle.css
           commit_message: Commit asset bundles
+          branch: release
