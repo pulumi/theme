@@ -27,3 +27,11 @@ jobs:
         with:
           file_pattern: assets/js/bundle.js assets/css/bundle.css
           commit_message: Commit asset bundles
+
+      - name: Merge into release
+        uses: everlytic/branch-merge@1.1.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_ref: ${{ github.ref }}
+          target_branch: release
+          commit_message_template: "[Automated] Merge {source_ref} into {target_branch}"
