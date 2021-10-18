@@ -48,13 +48,15 @@ export class HubspotForm {
     // The handler for HubSpot window messages.
     messageHandler: (event: MessageEvent) => void;
 
-    componentDidLoad() {
-
+    componentWillLoad() {
         if (!this.formId) {
             throw new Error("The required attribute `form-id` was not provided.");
         }
 
         this.hubspotFormTargetId = `hubspotForm_${this.formId}`;
+    }
+
+    componentDidLoad() {
 
         // Check for an existing HubSpot global. If there isn't one already, load
         // the HubSpot form script dynamically.
