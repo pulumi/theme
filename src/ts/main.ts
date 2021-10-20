@@ -33,3 +33,5 @@ initDesignSystem({
 
 // Register all Stencil components.
 defineCustomElements();
+
+console.log("some-words");
