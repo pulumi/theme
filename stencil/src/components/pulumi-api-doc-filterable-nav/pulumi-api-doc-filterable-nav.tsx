@@ -66,6 +66,7 @@ export class PulumiApiDocFilterableNav {
     @State()
     currentlyRenderedNodes: APINavNode[];
 
+    @State()
     filterContent: string = "";
 
     filterTreeToMatchingContent(
@@ -230,6 +231,9 @@ export class PulumiApiDocFilterableNav {
                         </div>
                     )}
                 </div>
+                {this.filterContent?.length === 1 && (
+                    <div class="filter-help-text">Provide at least two characters to filter.</div>
+                )}
                 {this.currentlyRenderedNodes?.length < 1 && (
                     <div class="no-results">No results found. Try a different filter.</div>
                 )}
