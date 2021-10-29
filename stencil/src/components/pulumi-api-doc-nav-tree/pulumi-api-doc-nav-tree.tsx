@@ -49,6 +49,25 @@ export class PulumiApiDocNavTree {
 
     getChildNodes(nodes: APINavNode[] = this.nodes, depth: number = 0, linkBase = "") {
         return nodes?.map((node) => {
+            const dummyNode = (
+                <pulumi-tree-item
+                    slot="item"
+                    selected={false}
+                    expanded={false}
+                    title="dummy"
+                >
+                </pulumi-tree-item>
+            );
+
+            // todo: what we need to do is create a ChildItem component and bind node.isExpanded to state
+
+            let childrenNodes = null;
+            if (!node.isExpanded && node.children) {
+                childrenNodes = dummyNode;
+            } else if (!!node.isExpanded && !!node.children) {
+                childrenNodes = this.getChildNodes(node.children, depth + 1, linkBase + node.link);
+            }
+
             const nodePath = `${linkBase}${node.link}`;
             const nodeHref = `${this.baseDirectory}${nodePath}`;
 
@@ -68,7 +87,7 @@ export class PulumiApiDocNavTree {
                             </a>
                         </div>
                     </slot>
-                    {node.children && this.getChildNodes(node.children, depth + 1, linkBase + node.link)}
+                    {childrenNodes}
                 </pulumi-tree-item>
             );
         });
