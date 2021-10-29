@@ -13,11 +13,11 @@ if (document.querySelector("#search-container")) {
             const [ newNode ] = Array.from(mutation.addedNodes) as HTMLElement[];
 
             if (newNode && (typeof newNode.getAttribute === "function") && newNode.getAttribute("id") === "st-injected-content") {
-
+                console.log("here");
                 // Find our results container and reparent the Swiftype container with it.
                 var resultsContainer = document.querySelector("#search-results");
                 if (resultsContainer) {
-                    resultsContainer.appendChild(newNode);
+                    resultsContainer.appendChild(document.querySelector(".st-default-autocomplete"));
                 }
 
                 // Stop listening.
