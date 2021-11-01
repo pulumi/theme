@@ -11,12 +11,14 @@ if (document.querySelector("#search-container")) {
         // Only bother when nodes are added.
         if (mutation && mutation.addedNodes && mutation.addedNodes.length > 0) {
             const [ newNode ] = Array.from(mutation.addedNodes) as HTMLElement[];
+            const hasLoadedSwiftype = newNode && (typeof newNode.getAttribute === "function") && newNode.getAttribute("id") === "st-injected-content";
 
-            if (newNode && (typeof newNode.getAttribute === "function") && newNode.getAttribute("id") === "st-injected-content") {
+            if (hasLoadedSwiftype) {
                 // Find our results container and reparent the Swiftype container with it.
                 var resultsContainer = document.querySelector("#search-results");
                 if (resultsContainer) {
-                    resultsContainer.appendChild(document.querySelector(".st-default-autocomplete"));
+                    const autocompleteSuggestionBox = document.querySelector(".st-default-autocomplete");
+                    resultsContainer.appendChild(autocompleteSuggestionBox);
                 }
 
                 // Stop listening.
