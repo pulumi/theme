@@ -75,18 +75,17 @@ export class PulumiApiDocNavNode {
     }
 
     getChildNodes(nodes: APINavNode[], isRootExpanded: boolean, depth: number = 1, linkBase = this.href) {
+        const dummyNode = (
+            <pulumi-tree-item slot="item" selected={false} expanded={false} title="dummy"></pulumi-tree-item>
+        );
+        // By defauly, we render all of the root nodes.  Whether we use a "dummy" node or not
+        // depends on if the root is expanded.  If it is expanded, we need to show its children.
+        // If not, we don't need to render those children until the root is expanded.
+        if (!isRootExpanded) {
+            return dummyNode
+        }
+
         return nodes?.map((node) => {
-            const dummyNode = (
-                <pulumi-tree-item slot="item" selected={false} expanded={false} title="dummy"></pulumi-tree-item>
-            );
-
-            // By defauly, we render all of the root nodes.  Whether we use a "dummy" node or not
-            // depends on if the root is expanded.  If it is expanded, we need to show its children.
-            // If not, we don't need to render those children until the root is expanded.
-            if (!isRootExpanded) {
-                return dummyNode;
-            }
-
             const nodeHref = `${linkBase}${node.link}`;
 
             return (
