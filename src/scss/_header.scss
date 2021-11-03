@@ -126,6 +126,10 @@
 
     &.is-pinned {
         @apply sticky shadow;
+
+        nav header div {
+            @apply overflow-y-scroll h-screen pb-6;
+        }
     }
 
     .logo-container {
