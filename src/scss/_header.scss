@@ -241,7 +241,9 @@
     }
 
     .mobile-menu {
-        @apply hidden w-full;
+        // The 'pb-16' is used to pad the bottom of the container so
+        // the CTA button does not get cut off.
+        @apply hidden w-full h-screen overflow-y-auto pb-16;
 
         @screen lg {
             @apply hidden;
