@@ -126,10 +126,6 @@
 
     &.is-pinned {
         @apply sticky shadow;
-
-        nav header div {
-            @apply overflow-y-scroll h-screen pb-6;
-        }
     }
 
     .logo-container {
@@ -245,7 +241,7 @@
     }
 
     .mobile-menu {
-        @apply hidden w-full;
+        @apply hidden w-full h-screen overflow-y-auto pb-16;
 
         @screen lg {
             @apply hidden;
