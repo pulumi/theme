@@ -2,14 +2,14 @@
  * Function for registering tracking to a link. To add tracking to a link you
  * need to have an "id" attritube on the <a> element and the "track-click" attribute.
  *
- *   - ex. <a data-tracking-id="get-started-no-yaml" class="btn" href="/docs/get-started">GET STARTED</a>
+ *   - ex. <a data-track="get-started-no-yaml" class="btn" href="/docs/get-started">GET STARTED</a>
  */
 $(document).ready(function() {
     // Check if the analytics object and track function are available. If they are
     // not we do not even want to attempt to track anything.
     if (window && window["analytics"] && typeof window["analytics"].track === "function") {
 
-        // Find all the links with a "data-tracking-id" attribute.
+        // Find all the links with a "data-track" attribute.
         const links = $("a");
 
         // Get the current date/time so we can track time from page load to user click.
