@@ -3,7 +3,6 @@ import { APINavNode, APINavNodeType } from "../pulumi-api-doc-filterable-nav/pul
 
 @Component({
     tag: "pulumi-api-doc-nav-node",
-    styleUrl: "pulumi-api-doc-nav-node.scss",
     shadow: false,
 })
 export class PulumiApiDocNavNode {
@@ -31,6 +30,9 @@ export class PulumiApiDocNavNode {
     }
 
     componentShouldUpdate(newVal, oldVal, propName) {
+        // When the node is expanded, we render child nodes.
+        // When we collapse that same node, we want to avoid throwing out
+        // the rendered nodes. (Helps with toggling nodes open/close repeatedly)
         if (propName === "isExpanded"){
             if (oldVal === true && newVal === false){
                 return false
@@ -78,10 +80,10 @@ export class PulumiApiDocNavNode {
         const dummyNode = (
             <pulumi-tree-item slot="item" selected={false} expanded={false} title="dummy"></pulumi-tree-item>
         );
-        // By defauly, we render all of the root nodes.  Whether we use a "dummy" node or not
+        // By default, we render all of the root nodes.  Whether we use a "dummy" node or not
         // depends on if the root is expanded.  If it is expanded, we need to show its children.
         // If not, we don't need to render those children until the root is expanded.
-        if (!isRootExpanded && nodes && nodes.length) {
+        if (!isRootExpanded && nodes?.length) {
             return dummyNode;
         }
 
