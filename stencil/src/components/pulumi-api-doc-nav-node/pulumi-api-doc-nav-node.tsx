@@ -98,14 +98,12 @@ export class PulumiApiDocNavNode {
                     class="nav-tree-item nested"
                     title={node.name}
                 >
-                    <slot name="content">
                         <div class="content-container">
                             {this.getIcon(node.type)}
                             <a class={`depth-${depth}`} href={nodeHref}>
                                 <span class="link-container">{node.name}</span>
                             </a>
                         </div>
-                    </slot>
                     {this.getChildNodes(node.children, this.isExpanded, depth + 1, nodeHref)}
                 </pulumi-tree-item>
             );
@@ -122,14 +120,12 @@ export class PulumiApiDocNavNode {
                 id={this.node.name}
                 title={this.node.name}
             >
-                <slot name="content">
                     <div class="content-container">
                         {this.getIcon(this.node.type)}
                         <a class={`depth-${this.depth}`} href={this.href}>
                             <span class="link-container">{this.node.name}</span>
                         </a>
                     </div>
-                </slot>
                 {this.getChildNodes(this.node.children, this.isExpanded)}
             </pulumi-tree-item>
         );
