@@ -6,6 +6,50 @@
     align-items: center;
 }
 
+details {
+    padding: 0.25rem 0.5rem;
+
+    // Hide the open/close markers by default.
+    summary {
+        list-style: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &[data-expandable] {
+        > summary::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0da";
+            display: inline-block;
+            cursor: none;
+            visibility: hidden;
+        }
+    }
+
+    &[data-expandable="true"] {
+        > summary::before {
+            margin-right: 0.5rem;
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        &[open] {
+            > summary::before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
 .symbol {
     height: 14px;
     width: 14px;

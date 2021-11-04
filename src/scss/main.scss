@@ -63,6 +63,10 @@
 @import "components/swiper";
 @import "components/slot-machine";
 
+:root {
+    --heading-font: "Gilroy";
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply font-display text-gray-800 mb-2;
 

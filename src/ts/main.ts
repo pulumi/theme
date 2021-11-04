@@ -1,4 +1,3 @@
-import { initDesignSystem, button, accordion, accordionItem, disclosure, treeItem, treeView } from "@pulumi/facet";
 import { defineCustomElements } from "../../stencil/dist";
 
 import "../scss/main.scss";
@@ -17,19 +16,6 @@ import "./code-tabbed";
 import "./resources";
 import "./search";
 import "./packages";
-
-// Initialize the Facet design system and components.
-initDesignSystem({
-    prefix: "pulumi",
-    components: [
-        accordion(),
-        accordionItem(),
-        button(),
-        disclosure(),
-        treeItem(),
-        treeView()
-    ],
-});
 
 // Register all Stencil components.
 defineCustomElements();

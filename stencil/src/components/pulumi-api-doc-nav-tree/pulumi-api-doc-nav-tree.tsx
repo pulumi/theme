@@ -15,19 +15,27 @@ export class PulumiApiDocNavTree {
 
     getNodes(nodes: APINavNode[] = this.nodes) {
         return nodes?.map((node) => {
-            const nodeHref = `${this.baseDirectory}${node.link}`;
-
             return (
-                <pulumi-api-doc-nav-node
-                    node={node}
-                    isExpanded={node.isExpanded}
-                    href={nodeHref}
-                ></pulumi-api-doc-nav-node>
+                <details
+                    open={node.isExpanded}
+                    data-expandable={
+                        node.children && node.children.length > 0
+                            ? "true"
+                            : "false"
+                    }
+                >
+                    <summary>
+                        <a href={`${this.baseDirectory}${node.link}`}>
+                            {node.name}
+                        </a>
+                    </summary>
+                    {node.children && this.getNodes(node.children)}
+                </details>
             );
         });
     }
 
     render() {
-        return <pulumi-tree-view>{this.getNodes()}</pulumi-tree-view>;
+        return <div>{this.getNodes()}</div>;
     }
 }
