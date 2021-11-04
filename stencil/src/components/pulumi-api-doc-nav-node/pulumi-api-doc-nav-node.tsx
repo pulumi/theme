@@ -93,7 +93,7 @@ export class PulumiApiDocNavNode {
                     slot="item"
                     selected={!!this.shouldNodeBeSelected(nodeHref)}
                     expanded={this.isExpanded}
-                    class="nav-tree-item"
+                    class="nav-tree-item nested"
                     title={node.name}
                 >
                     <slot name="content">
@@ -116,7 +116,7 @@ export class PulumiApiDocNavNode {
                 slot="item"
                 selected={!!this.shouldNodeBeSelected(this.href)}
                 expanded={this.isExpanded}
-                class="nav-tree-item"
+                class="nav-tree-item nested"
                 id={this.node.name}
                 title={this.node.name}
             >
