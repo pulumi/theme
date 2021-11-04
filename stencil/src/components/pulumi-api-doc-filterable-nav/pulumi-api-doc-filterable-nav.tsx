@@ -27,7 +27,7 @@ export class PulumiApiDocFilterableNav {
         // "cats", debouncing helps keep us from invoking the tree filtering function
         // with "c", then with "ca", then "cat", then "cats," and instead lets us wait until enough
         // time has passed that a user is likely done typing, and we only invoke with "cats."
-        this.filterTree = debounce(this.filterTree, 300);
+        this.debouncedFilterTree = debounce(this.debouncedFilterTree, 300);
     }
 
     componentWillLoad() {
@@ -187,6 +187,17 @@ export class PulumiApiDocFilterableNav {
     }
 
     onChange(event: KeyboardEvent) {
+
+        this.debouncedFilterTree(event);
+    }
+
+    onClearFilter() {
+        this.filterContent = "";
+        this.currentlyRenderedNodes = this.parsedNodes;
+        return;
+    }
+
+    debouncedFilterTree(event: KeyboardEvent) {
         this.filterContent = (event.target as HTMLInputElement).value.trim().toLowerCase();
         // performance for large packages like azure-native is too slow for filtering on single characters.
         // instead, we will skip filtering for single character queries so the UI doesn't hang.
@@ -194,21 +205,6 @@ export class PulumiApiDocFilterableNav {
             this.currentlyRenderedNodes = this.parsedNodes;
             return
         }
-        this.filterTree();
-    }
-
-    onClearFilter() {
-        this.currentlyRenderedNodes = this.parsedNodes;
-        this.filterContent = "";
-    }
-
-    filterTree() {
-        // If the user deletes the filter content, we should revert back to showing the full navigation tree.
-        if (this.filterContent === "") {
-            this.currentlyRenderedNodes = this.parsedNodes;
-            return;
-        }
-
         // Otherwise, find the nodes that match the filter content.
         this.filterTreeToMatchingContent([], this.parsedNodes);
     }

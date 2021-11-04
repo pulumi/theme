@@ -16,6 +16,12 @@ export namespace Components {
         "baseDirectory": string;
         "packageName": string;
     }
+    interface PulumiApiDocNavNode {
+        "depth": number;
+        "href": string;
+        "isExpanded": boolean;
+        "node": APINavNode;
+    }
     interface PulumiApiDocNavTree {
         "baseDirectory": string;
         "nodes": APINavNode[];
@@ -145,6 +151,12 @@ declare global {
     var HTMLPulumiApiDocFilterableNavElement: {
         prototype: HTMLPulumiApiDocFilterableNavElement;
         new (): HTMLPulumiApiDocFilterableNavElement;
+    };
+    interface HTMLPulumiApiDocNavNodeElement extends Components.PulumiApiDocNavNode, HTMLStencilElement {
+    }
+    var HTMLPulumiApiDocNavNodeElement: {
+        prototype: HTMLPulumiApiDocNavNodeElement;
+        new (): HTMLPulumiApiDocNavNodeElement;
     };
     interface HTMLPulumiApiDocNavTreeElement extends Components.PulumiApiDocNavTree, HTMLStencilElement {
     }
@@ -298,6 +310,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "pulumi-api-doc-filterable-nav": HTMLPulumiApiDocFilterableNavElement;
+        "pulumi-api-doc-nav-node": HTMLPulumiApiDocNavNodeElement;
         "pulumi-api-doc-nav-tree": HTMLPulumiApiDocNavTreeElement;
         "pulumi-audio": HTMLPulumiAudioElement;
         "pulumi-banner": HTMLPulumiBannerElement;
@@ -329,6 +342,12 @@ declare namespace LocalJSX {
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
         "packageName"?: string;
+    }
+    interface PulumiApiDocNavNode {
+        "depth"?: number;
+        "href"?: string;
+        "isExpanded"?: boolean;
+        "node"?: APINavNode;
     }
     interface PulumiApiDocNavTree {
         "baseDirectory"?: string;
@@ -447,6 +466,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
+        "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
         "pulumi-api-doc-nav-tree": PulumiApiDocNavTree;
         "pulumi-audio": PulumiAudio;
         "pulumi-banner": PulumiBanner;
@@ -479,6 +499,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
+            "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
             "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
             "pulumi-audio": LocalJSX.PulumiAudio & JSXBase.HTMLAttributes<HTMLPulumiAudioElement>;
             "pulumi-banner": LocalJSX.PulumiBanner & JSXBase.HTMLAttributes<HTMLPulumiBannerElement>;
