@@ -99,8 +99,8 @@ export class PulumiApiDocNavNode {
                     title={node.name}
                 >
                         <div class="content-container">
-                            {this.getIcon(node.type)}
                             <a class={`depth-${depth}`} href={nodeHref}>
+                                {this.getIcon(node.type)}
                                 <span class="link-container">{node.name}</span>
                             </a>
                         </div>
@@ -121,8 +121,8 @@ export class PulumiApiDocNavNode {
                 title={this.node.name}
             >
                     <div class="content-container">
-                        {this.getIcon(this.node.type)}
                         <a class={`depth-${this.depth}`} href={this.href}>
+                            {this.getIcon(this.node.type)}
                             <span class="link-container">{this.node.name}</span>
                         </a>
                     </div>
