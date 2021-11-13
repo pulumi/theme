@@ -88,7 +88,9 @@ export class PulumiApiDocNavNode {
         }
 
         return nodes?.map((node) => {
-            const nodeHref = `${linkBase}${node.link}`;
+
+            // We add a trailing slash to these links to prevent the browser from being redirected unnecessarily.
+            const nodeHref = `${linkBase}${node.link}/`;
 
             return (
                 <pulumi-tree-item
