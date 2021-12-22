@@ -14791,6 +14791,83 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:-4rem
 }
 
+.shape-background.pulumi-service-screenshot .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:20rem;
+  height:20rem;
+  left:-10rem;
+  top:5rem
+}
+
+.shape-background.pulumi-service-screenshot .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:16rem;
+  height:16rem;
+  right:-8rem;
+  bottom:6rem
+}
+
+.shape-background.pulumi-service-case-studies .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  right:-9.5rem;
+  top:50%
+}
+
+.shape-background.pulumi-service-capabilities .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:13rem;
+  height:13rem;
+  left:-6.5rem;
+  top:0
+}
+
+.shape-background.pulumi-service-capabilities .circle-middle{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  right:-9.5rem;
+  top:50%
+}
+
+.shape-background.pulumi-service-capabilities .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  left:-9.5rem;
+  bottom:0
+}
+
+.shape-background.pulumi-service-security .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:20rem;
+  height:20rem;
+  right:-10rem;
+  top:5rem
+}
+
 .slot-machine{
   position: relative;
   width: 100%;
