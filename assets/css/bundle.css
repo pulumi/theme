@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -14789,6 +14798,83 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   height:8rem;
   right:-4rem;
   top:-4rem
+}
+
+.shape-background.pulumi-service-screenshot .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:20rem;
+  height:20rem;
+  left:-10rem;
+  top:5rem
+}
+
+.shape-background.pulumi-service-screenshot .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:16rem;
+  height:16rem;
+  right:-8rem;
+  bottom:6rem
+}
+
+.shape-background.pulumi-service-case-studies .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  right:-9.5rem;
+  top:50%
+}
+
+.shape-background.pulumi-service-capabilities .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:13rem;
+  height:13rem;
+  left:-6.5rem;
+  top:0
+}
+
+.shape-background.pulumi-service-capabilities .circle-middle{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  right:-9.5rem;
+  top:50%
+}
+
+.shape-background.pulumi-service-capabilities .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:19rem;
+  height:19rem;
+  left:-9.5rem;
+  bottom:0
+}
+
+.shape-background.pulumi-service-security .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:20rem;
+  height:20rem;
+  right:-10rem;
+  top:5rem
 }
 
 .slot-machine{
