@@ -592,47 +592,47 @@
 
     &.pulumi-service-case-studies {
         .circle-right {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-salmon-600;
             width: 19rem;
             height: 19rem;
             right: -9.5rem;
-            top: 50%;
+            top: 40%;
         }
     }
 
     &.pulumi-service-capabilities {
         .circle-top {
-            @apply rounded-full absolute bg-salmon-600;
-            width: 13rem;
-            height: 13rem;
-            left: -6.5rem;
+            @apply rounded-full absolute bg-purple-600;
+            width: 19rem;
+            height: 19rem;
+            right: -9.5rem;
             top: 0;
         }
 
         .circle-middle {
-            @apply rounded-full absolute bg-yellow-600;
-            width: 19rem;
-            height: 19rem;
-            right: -9.5rem;
+            @apply rounded-full absolute bg-salmon-600;
+            width: 13rem;
+            height: 13rem;
+            left: -6.5rem;
             top: 50%;
         }
 
         .circle-bottom {
-            @apply rounded-full absolute bg-purple-600;
+            @apply rounded-full absolute bg-yellow-600;
             width: 19rem;
             height: 19rem;
-            left: -9.5rem;
+            right: -9.5rem;
             bottom: 0;
         }
     }
 
     &.pulumi-service-security {
         .circle-right {
-            @apply rounded-full absolute bg-salmon-600;
+            @apply rounded-full absolute bg-purple-600;
             width: 20rem;
             height: 20rem;
-            right: -10rem;
-            top: 5rem;
+            left: -10rem;
+            top: -10rem;
         }
     }
 }
