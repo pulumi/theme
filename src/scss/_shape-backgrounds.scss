@@ -635,4 +635,32 @@
             top: -10rem;
         }
     }
+
+    &.self-hosted-images {
+        .circle-right {
+            @apply rounded-full absolute bg-purple-600;
+            width: 19rem;
+            height: 19rem;
+            right: -12rem;
+            top: 75rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 12.75rem;
+            height: 12.75rem;
+            left: -8rem;
+            top: 115rem;
+        }
+    }
+
+    &.self-hosted-pricing {
+        .circle-right {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 19rem;
+            height: 19rem;
+            right: -12rem;
+            top: 165rem;
+        }
+    }
 }
