@@ -160,3 +160,26 @@
 .pricing-checkmark {
     color: #5e7d31;
 }
+
+.trialed-editions {
+    .edition > div {
+        @apply rounded-xl;
+        box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
+    } 
+
+    .gradient {
+        border-radius: 12px 12px 0px 0px;
+        height: 8px;
+        background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    }
+
+    @screen lg {
+        @apply rounded-xl;
+        box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
+
+        .edition > div {
+        border-radius: none;
+        box-shadow: none;
+    } 
+    }
+}
