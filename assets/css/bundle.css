@@ -13445,6 +13445,29 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   color:#5e7d31
 }
 
+.trialed-editions .edition>div{
+  border-radius: 0.75rem;
+  box-shadow:0px 6px 36px rgba(0,0,0,.1)
+}
+
+.trialed-editions .gradient{
+  border-radius:12px 12px 0px 0px;
+  height:8px;
+  background:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+}
+
+@media (min-width: 1024px){
+  .trialed-editions{
+    border-radius: 0.75rem;
+    box-shadow:0px 6px 36px rgba(0,0,0,.1)
+  }
+
+  .trialed-editions .edition>div{
+    border-radius:none;
+    box-shadow:none
+  }
+}
+
 .key-feature-description a{
   --tw-text-opacity: 1;
   color: rgba(95, 96, 101, var(--tw-text-opacity));
