@@ -178,8 +178,14 @@
         box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
 
         .edition > div {
-        border-radius: none;
-        box-shadow: none;
-    } 
+            border-radius: none;
+            box-shadow: none;
+        } 
+    }
+}
+
+.edition, .trialed-editions {
+    p, span {
+        color: map-get($gray,800) !important;
     }
 }

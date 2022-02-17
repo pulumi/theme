@@ -419,7 +419,7 @@
     }
 
     &.pricing-compare {
-        .circle-right {
+        .circle-center {
             @apply rounded-full absolute bg-salmon-600;
             width: 12.5rem;
             height: 12.5rem;
@@ -427,12 +427,20 @@
             top: 6.25rem;
         }
 
-        .circle-left {
+        .circle-right {
             @apply rounded-full absolute bg-purple-600;
             width: 12.5rem;
             height: 12.5rem;
-            left: -6.25rem;
+            right: -6.25rem;
             bottom: 25rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 18.5rem;
+            height: 18.5rem;
+            left: -11.25rem;
+            top: 65rem;
         }
     }
 
