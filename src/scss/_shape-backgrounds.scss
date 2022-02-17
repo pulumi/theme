@@ -419,6 +419,24 @@
     }
 
     &.pricing-compare {
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            right: -6.25rem;
+            top: 6.25rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12.5rem;
+            height: 12.5rem;
+            left: -6.25rem;
+            bottom: 25rem;
+        }
+    }
+
+    &.pricing-compare-updated {
         .circle-center {
             @apply rounded-full absolute bg-salmon-600;
             width: 12.5rem;

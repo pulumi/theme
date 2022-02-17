@@ -14630,7 +14630,7 @@ nav.nav-section-sticky ul li>a:hover{
   top:-9.5rem
 }
 
-.shape-background.pricing-compare .circle-center{
+.shape-background.pricing-compare .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -14641,7 +14641,29 @@ nav.nav-section-sticky ul li>a:hover{
   top:6.25rem
 }
 
-.shape-background.pricing-compare .circle-right{
+.shape-background.pricing-compare .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:12.5rem;
+  height:12.5rem;
+  left:-6.25rem;
+  bottom:25rem
+}
+
+.shape-background.pricing-compare-updated .circle-center{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:12.5rem;
+  height:12.5rem;
+  right:-6.25rem;
+  top:6.25rem
+}
+
+.shape-background.pricing-compare-updated .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -14652,7 +14674,7 @@ nav.nav-section-sticky ul li>a:hover{
   bottom:25rem
 }
 
-.shape-background.pricing-compare .circle-left{
+.shape-background.pricing-compare-updated .circle-left{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
