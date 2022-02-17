@@ -13468,6 +13468,10 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
+.edition p,.edition span,.trialed-editions p,.trialed-editions span{
+  color:#2f3032 !important
+}
+
 .key-feature-description a{
   --tw-text-opacity: 1;
   color: rgba(95, 96, 101, var(--tw-text-opacity));
@@ -14637,6 +14641,39 @@ nav.nav-section-sticky ul li>a:hover{
   height:12.5rem;
   left:-6.25rem;
   bottom:25rem
+}
+
+.shape-background.pricing-compare-updated .circle-center{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:12.5rem;
+  height:12.5rem;
+  right:-6.25rem;
+  top:6.25rem
+}
+
+.shape-background.pricing-compare-updated .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:12.5rem;
+  height:12.5rem;
+  right:-6.25rem;
+  bottom:25rem
+}
+
+.shape-background.pricing-compare-updated .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:18.5rem;
+  height:18.5rem;
+  left:-11.25rem;
+  top:65rem
 }
 
 .shape-background.cloud-engineering-summit-big-dots .circle-right{
