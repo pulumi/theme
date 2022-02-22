@@ -189,3 +189,9 @@
         color: map-get($gray,800) !important;
     }
 }
+
+.ready-cta {
+    &.gradient {
+        background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    }
+}

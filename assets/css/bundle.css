@@ -13472,6 +13472,10 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   color:#2f3032 !important
 }
 
+.ready-cta.gradient{
+  background:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+}
+
 .key-feature-description a{
   --tw-text-opacity: 1;
   color: rgba(95, 96, 101, var(--tw-text-opacity));
