@@ -13468,7 +13468,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
-.edition p,.edition span,.trialed-editions p,.trialed-editions span{
+.edition p,.edition span,.trialed-editions p,.trialed-editions span,.ready-cta p,.ready-cta span{
   color:#2f3032 !important
 }
 

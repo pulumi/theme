@@ -1,6 +1,10 @@
 $(function () {
-    // If the button is selected, open the dialog.
+    // If the button is selected from either entry point, open the dialog.
     $("#pricingStartTrial").on("click", function () {
+        $("#pricingTrialOptionsDialog").removeClass("hidden");
+    });
+
+    $("#pricingStartTrialBottomCTA").on("click", function () {
         $("#pricingTrialOptionsDialog").removeClass("hidden");
     });
 
