@@ -184,7 +184,7 @@
     }
 }
 
-.edition, .trialed-editions {
+.edition, .trialed-editions, .ready-cta {
     p, span {
         color: map-get($gray,800) !important;
     }
