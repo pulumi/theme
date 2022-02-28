@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -12982,6 +12991,25 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
 .all-packages .package:not([class*=hidden])~.no-results{
   display: none
+}
+
+.all-packages .maintainer{
+  width:calc(100% - 4rem)
+}
+
+@media(max-width: 475px){
+  .all-packages .maintainer{
+    position: relative;
+    justify-content: flex-start
+  }
+}
+
+@media(max-width: 475px){
+  .all-packages .spacer{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    height: 0px
+  }
 }
 
 .all-packages .package-tags{
