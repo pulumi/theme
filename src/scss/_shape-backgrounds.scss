@@ -662,31 +662,49 @@
         }
     }
 
-    &.self-hosted-images {
+    &.self-hosted-overview {
         .circle-right {
             @apply rounded-full absolute bg-purple-600;
-            width: 19rem;
-            height: 19rem;
-            right: -12rem;
-            top: 75rem;
-        }
-
-        .circle-left {
-            @apply rounded-full absolute bg-salmon-600;
-            width: 12.75rem;
-            height: 12.75rem;
-            left: -8rem;
-            top: 115rem;
+            width: 12rem;
+            height: 12rem;
+            right: -7rem;
+            top: 5rem;
         }
     }
 
-    &.self-hosted-pricing {
+    &.self-hosted-capabilities {
+        .circle-right {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 20rem;
+            height: 20rem;
+            right: 2rem;
+            top: 45rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 12.75rem;
+            height: 12.75rem;
+            left: 7rem;
+            top: 2rem;
+        }
+    }
+
+    &.self-hosted-trial {
         .circle-right {
             @apply rounded-full absolute bg-yellow-600;
-            width: 19rem;
-            height: 19rem;
-            right: -12rem;
-            top: 165rem;
+            width: 12.75rem;
+            height: 12.75rem;
+            right: -6rem;
+            top: 32rem;
+        }
+
+        .circle-left {
+            @apply rounded-full absolute bg-purple-600;
+            width: 12.75rem;
+            height: 12.75rem;
+            left: -6rem;
+            top: -15rem;
         }
     }
 }
