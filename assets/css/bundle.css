@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -14090,6 +14099,18 @@ nav.nav-section-sticky ul li>a:hover{
   text-decoration: underline
 }
 
+#self-hosted-overview a:not(.btn-secondary,.btn-primary),#self-hosted-deployment a:not(.btn-secondary,.btn-primary){
+  text-decoration:underline
+}
+
+#self-hosted-questions .btn-primary{
+  border-color:#fff
+}
+
+#self-hosted-capabilities .card:nth-child(even){
+  margin-right:0px
+}
+
 .shape-background{
   pointer-events: none;
   position: absolute;
@@ -14932,37 +14953,59 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:-10rem
 }
 
-.shape-background.self-hosted-images .circle-right{
+.shape-background.self-hosted-overview .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
-  width:19rem;
-  height:19rem;
-  right:-12rem;
-  top:75rem
+  width:12rem;
+  height:12rem;
+  right:-7rem;
+  top:5rem
 }
 
-.shape-background.self-hosted-images .circle-left{
+.shape-background.self-hosted-capabilities .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
-  width:12.75rem;
-  height:12.75rem;
-  left:-8rem;
-  top:115rem
+  width:20rem;
+  height:20rem;
+  right:2rem;
+  top:45rem
 }
 
-.shape-background.self-hosted-pricing .circle-right{
+.shape-background.self-hosted-capabilities .circle-left{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
-  width:19rem;
-  height:19rem;
-  right:-12rem;
-  top:165rem
+  width:12.75rem;
+  height:12.75rem;
+  left:7rem;
+  top:2rem
+}
+
+.shape-background.self-hosted-trial .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:12.75rem;
+  height:12.75rem;
+  right:-6rem;
+  top:32rem
+}
+
+.shape-background.self-hosted-trial .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:12.75rem;
+  height:12.75rem;
+  left:-6rem;
+  top:-15rem
 }
 
 .slot-machine{
