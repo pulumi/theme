@@ -14090,6 +14090,18 @@ nav.nav-section-sticky ul li>a:hover{
   text-decoration: underline
 }
 
+#self-hosted-overview a:not(.btn-secondary,.btn-primary),#self-hosted-deployment a:not(.btn-secondary,.btn-primary){
+  text-decoration:underline
+}
+
+#self-hosted-questions .btn-primary{
+  border-color:#fff
+}
+
+#self-hosted-capabilities .card:nth-child(even){
+  margin-right:0px
+}
+
 .shape-background{
   pointer-events: none;
   position: absolute;
@@ -14932,37 +14944,59 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:-10rem
 }
 
-.shape-background.self-hosted-images .circle-right{
+.shape-background.self-hosted-overview .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
-  width:19rem;
-  height:19rem;
-  right:-12rem;
-  top:75rem
+  width:12rem;
+  height:12rem;
+  right:-7rem;
+  top:5rem
 }
 
-.shape-background.self-hosted-images .circle-left{
+.shape-background.self-hosted-capabilities .circle-right{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
-  width:12.75rem;
-  height:12.75rem;
-  left:-8rem;
-  top:115rem
+  width:20rem;
+  height:20rem;
+  right:2rem;
+  top:45rem
 }
 
-.shape-background.self-hosted-pricing .circle-right{
+.shape-background.self-hosted-capabilities .circle-left{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
-  width:19rem;
-  height:19rem;
-  right:-12rem;
-  top:165rem
+  width:12.75rem;
+  height:12.75rem;
+  left:7rem;
+  top:2rem
+}
+
+.shape-background.self-hosted-trial .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:12.75rem;
+  height:12.75rem;
+  right:-6rem;
+  top:32rem
+}
+
+.shape-background.self-hosted-trial .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:12.75rem;
+  height:12.75rem;
+  left:-6rem;
+  top:-15rem
 }
 
 .slot-machine{
