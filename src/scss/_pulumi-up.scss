@@ -30,7 +30,6 @@ body.section-pulumi-up {
     background: radial-gradient(circle at left, #1f0b20 0, black 100%);
 
     main, .top-nav-bar, .header-container, .footer {
-
         background-color: transparent;
 
         a, p, .header-nav-item-drop-down {
@@ -58,23 +57,21 @@ body.section-pulumi-up {
     }
 
     .top-nav-bar, .header-container {
-        background-color: black;
+        @apply bg-black;
     }
 
     .fade {
-        position: absolute;
-        width: 100%;
+        @apply absolute w-full top-0 left-0;
+
         min-height: 10vh;
-        top: 0;
-        left: 0;
         background-image: linear-gradient(0deg, transparent, black 75%);
         z-index: 1;
     }
 
     .star-wars {
-        //display: flex;
+        @apply relative text-justify;
+
         justify-content: center;
-        position: relative;
         height: 40vh;
         font-family: 'Pathway Gothic One', sans-serif !important;
         font-size: 500%;
@@ -82,7 +79,6 @@ body.section-pulumi-up {
         letter-spacing: 6px;
         line-height: 150%;
         perspective: 400px;
-        text-align: justify;
 
         h1, p {
             color: #feda4a !important;
@@ -94,13 +90,13 @@ body.section-pulumi-up {
             .title-part {
                 @apply my-0 leading-none;
                 font-family: 'StarWars', 'sans-serif';
-                animation: title-fade 39s ease-out;
+                animation: title-fade 41s ease-out;
             }
 
             .subtitle {
                 @apply mt-4 mb-0 text-xl;
                 color: white;
-                animation: move-byline 41s linear;
+                animation: move-byline 43s linear;
             }
         }
 
@@ -138,26 +134,28 @@ body.section-pulumi-up {
         }
       }
 
-      .crawl {
-        position: relative;
+    .crawl {
+        @apply relative;
+
         top: 99999px;
         transform-origin: 50% 100%;
         animation: crawl 60s linear;
-      }
+    }
 
-      .crawl > .title {
+    .crawl > .title {
+        @apply text-center;
+
         font-size: 90%;
-        text-align: center;
-      }
+    }
 
-      .crawl > .title h1 {
+    .crawl > .title h1 {
         margin: 0 0 100px;
         text-transform: uppercase;
-      }
+    }
 
       @keyframes crawl {
         0% {
-          top: -100px;
+          top: 200px;
           transform: rotateX(20deg)  translateZ(0);
         }
         100% {
@@ -165,10 +163,6 @@ body.section-pulumi-up {
           transform: rotateX(25deg) translateZ(-2500px);
         }
       }
-}
-
-.star-background {
-
 }
 
 // 2021 PulumiUP styles (can remove after page is updated).

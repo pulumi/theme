@@ -1,14 +1,5 @@
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
-  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -13774,31 +13765,32 @@ body.section-pulumi-up main .btn-primary:hover,body.section-pulumi-up .top-nav-b
   color:#000 !important
 }
 
-body.section-pulumi-up .top-nav-bar,body.section-pulumi-up .header-container{
-  background-color:#000
+body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 
 body.section-pulumi-up .fade{
-  position:absolute;
-  width:100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   min-height:10vh;
-  top:0;
-  left:0;
   background-image:linear-gradient(0deg, transparent, black 75%);
   z-index:1
 }
 
 body.section-pulumi-up .star-wars{
+  position: relative;
+  text-align: justify;
   justify-content:center;
-  position:relative;
   height:40vh;
   font-family:"Pathway Gothic One",sans-serif !important;
   font-size:500%;
   font-weight:600;
   letter-spacing:6px;
   line-height:150%;
-  perspective:400px;
-  text-align:justify
+  perspective:400px
 }
 
 body.section-pulumi-up .star-wars h1,body.section-pulumi-up .star-wars p{
@@ -13814,7 +13806,7 @@ body.section-pulumi-up .star-wars .title-animation .title-part{
   margin-bottom: 0px;
   line-height: 1;
   font-family:"StarWars","sans-serif";
-  animation:title-fade 39s ease-out
+  animation:title-fade 41s ease-out
 }
 
 body.section-pulumi-up .star-wars .title-animation .subtitle{
@@ -13823,7 +13815,7 @@ body.section-pulumi-up .star-wars .title-animation .subtitle{
   font-size: 1.25rem;
   line-height: 1.75rem;
   color:#fff;
-  animation:move-byline 41s linear
+  animation:move-byline 43s linear
 }
 
 @keyframes title-fade{
@@ -13866,15 +13858,15 @@ body.section-pulumi-up .star-wars .title-animation .subtitle{
 }
 
 body.section-pulumi-up .crawl{
-  position:relative;
+  position: relative;
   top:99999px;
   transform-origin:50% 100%;
   animation:crawl 60s linear
 }
 
 body.section-pulumi-up .crawl>.title{
-  font-size:90%;
-  text-align:center
+  text-align: center;
+  font-size:90%
 }
 
 body.section-pulumi-up .crawl>.title h1{
@@ -13884,7 +13876,7 @@ body.section-pulumi-up .crawl>.title h1{
 
 @keyframes crawl{
   0%{
-    top:-100px;
+    top:200px;
     transform:rotateX(20deg) translateZ(0)
   }
 
