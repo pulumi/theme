@@ -94,13 +94,13 @@ body.section-pulumi-up {
             .title-part {
                 @apply my-0 leading-none;
                 font-family: 'StarWars', 'sans-serif';
-                animation: title-fade 45s ease-out;
+                animation: title-fade 39s ease-out;
             }
 
             .subtitle {
                 @apply mt-4 mb-0 text-xl;
                 color: white;
-                animation: move-byline 48s linear;
+                animation: move-byline 41s linear;
             }
         }
 
