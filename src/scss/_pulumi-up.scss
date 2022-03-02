@@ -1,3 +1,171 @@
+// 2022 PulumiUP styles.
+body.section-pulumi-up {
+    .pulumi-up-stars {
+        @apply absolute w-full h-full top-0 left-0;
+        z-index: -1;
+
+        background-image:
+            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 5px),
+            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 5px),
+            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 5px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white !important;
+    }
+
+    .header-container .logo-container {
+        .normal-logo {
+            @apply hidden;
+        }
+
+        .dark-logo {
+            @apply block;
+        }
+    }
+
+    background: radial-gradient(circle at left, #1f0b20 0, black 100%);
+
+    main, .top-nav-bar, .header-container, .footer {
+        background-color: transparent;
+
+        a, p, .header-nav-item-drop-down {
+            color: white !important;
+        }
+
+        .top-nav-banner-cta {
+            --tw-bg-opacity: 1;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
+
+            .top-nav-banner-cta-text {
+                color: white !important;
+            }
+        }
+
+        .header-nav-drop-down-menu ul {
+            --tw-bg-opacity: 1;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
+        }
+
+        .btn-primary:hover {
+            background-color: white !important;
+            color: black !important;
+        }
+    }
+
+    .top-nav-bar, .header-container {
+        @apply bg-black;
+    }
+
+    .fade {
+        @apply absolute w-full top-0 left-0;
+
+        min-height: 10vh;
+        background-image: linear-gradient(0deg, transparent, black 75%);
+        z-index: 1;
+    }
+
+    .star-wars {
+        @apply relative text-justify;
+
+        justify-content: center;
+        height: 40vh;
+        font-family: 'Pathway Gothic One', sans-serif !important;
+        font-size: 500%;
+        font-weight: 600;
+        letter-spacing: 6px;
+        line-height: 150%;
+        perspective: 400px;
+
+        h1, p {
+            color: #feda4a !important;
+        }
+
+        .title-animation {
+            @apply text-center;
+
+            .title-part {
+                @apply my-0 leading-none;
+                font-family: 'StarWars', 'sans-serif';
+                animation: title-fade 41s ease-out;
+            }
+
+            .subtitle {
+                @apply mt-4 mb-0 text-xl;
+                color: white;
+                animation: move-byline 43s linear;
+            }
+        }
+
+        @keyframes title-fade {
+            0% {
+              opacity: 0;
+              transform: scale(1.5) translateY(-0.75em);
+            }
+            86% {
+                opacity: 0;
+                transform: scale(1.5) translateY(-0.75em);
+              }
+            90% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+        }
+
+        @keyframes move-byline {
+            0% {
+                opacity: 0;
+            }
+            95% {
+                opacity: 0;
+            }
+            96% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+      }
+
+    .crawl {
+        @apply relative;
+
+        top: 99999px;
+        transform-origin: 50% 100%;
+        animation: crawl 60s linear;
+    }
+
+    .crawl > .title {
+        @apply text-center;
+
+        font-size: 90%;
+    }
+
+    .crawl > .title h1 {
+        margin: 0 0 100px;
+        text-transform: uppercase;
+    }
+
+      @keyframes crawl {
+        0% {
+          top: 200px;
+          transform: rotateX(20deg)  translateZ(0);
+        }
+        100% {
+          top: -6000px;
+          transform: rotateX(25deg) translateZ(-2500px);
+        }
+      }
+}
+
+// 2021 PulumiUP styles (can remove after page is updated).
 $blue400: theme("colors.blue.400");
 $blue700: theme("colors.blue.700");
 $blue900: theme("colors.blue.900");
