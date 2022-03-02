@@ -2668,6 +2668,16 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 @font-face{
+  font-family:"StarWars";
+
+  font-weight:400;
+
+  font-style:normal;
+
+  src:url("/fonts/Starjhol.ttf") format("truetype")
+}
+
+@font-face{
   font-family:"Gilroy";
 
   font-weight:400;
@@ -13698,6 +13708,182 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   list-style-type: none;
   padding-left: 0.5rem;
   padding-right: 0.5rem
+}
+
+body.section-pulumi-up{
+  background:radial-gradient(circle at left, #1f0b20 0, black 100%)
+}
+
+body.section-pulumi-up .pulumi-up-stars{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index:-1;
+  background-image:radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px),radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 5px),radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 5px);
+  background-size:550px 550px,350px 350px,250px 250px,150px 150px;
+  background-position:0 0,40px 60px,130px 270px,70px 100px
+}
+
+body.section-pulumi-up h1,body.section-pulumi-up h2,body.section-pulumi-up h3,body.section-pulumi-up h4,body.section-pulumi-up h5,body.section-pulumi-up h6{
+  color:#fff !important
+}
+
+body.section-pulumi-up .header-container .logo-container .normal-logo{
+  display: none
+}
+
+body.section-pulumi-up .header-container .logo-container .dark-logo{
+  display: block
+}
+
+body.section-pulumi-up main,body.section-pulumi-up .top-nav-bar,body.section-pulumi-up .header-container,body.section-pulumi-up .footer{
+  background-color:transparent
+}
+
+body.section-pulumi-up main a,body.section-pulumi-up main p,body.section-pulumi-up main .header-nav-item-drop-down,body.section-pulumi-up .top-nav-bar a,body.section-pulumi-up .top-nav-bar p,body.section-pulumi-up .top-nav-bar .header-nav-item-drop-down,body.section-pulumi-up .header-container a,body.section-pulumi-up .header-container p,body.section-pulumi-up .header-container .header-nav-item-drop-down,body.section-pulumi-up .footer a,body.section-pulumi-up .footer p,body.section-pulumi-up .footer .header-nav-item-drop-down{
+  color:#fff !important
+}
+
+body.section-pulumi-up main .top-nav-banner-cta,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta,body.section-pulumi-up .header-container .top-nav-banner-cta,body.section-pulumi-up .footer .top-nav-banner-cta{
+  --tw-bg-opacity: 1;
+  background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+}
+
+body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .header-container .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .footer .top-nav-banner-cta .top-nav-banner-cta-text{
+  color:#fff !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu ul,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu ul,body.section-pulumi-up .header-container .header-nav-drop-down-menu ul,body.section-pulumi-up .footer .header-nav-drop-down-menu ul{
+  --tw-bg-opacity: 1;
+  background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+}
+
+body.section-pulumi-up main .btn-primary:hover,body.section-pulumi-up .top-nav-bar .btn-primary:hover,body.section-pulumi-up .header-container .btn-primary:hover,body.section-pulumi-up .footer .btn-primary:hover{
+  background-color:#fff !important;
+  color:#000 !important
+}
+
+body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
+}
+
+body.section-pulumi-up .fade{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-height:10vh;
+  background-image:linear-gradient(0deg, transparent, black 75%);
+  z-index:1
+}
+
+body.section-pulumi-up .star-wars{
+  position: relative;
+  text-align: justify;
+  justify-content:center;
+  height:40vh;
+  font-family:"Pathway Gothic One",sans-serif !important;
+  font-size:500%;
+  font-weight:600;
+  letter-spacing:6px;
+  line-height:150%;
+  perspective:400px
+}
+
+body.section-pulumi-up .star-wars h1,body.section-pulumi-up .star-wars p{
+  color:#feda4a !important
+}
+
+body.section-pulumi-up .star-wars .title-animation{
+  text-align: center
+}
+
+body.section-pulumi-up .star-wars .title-animation .title-part{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1;
+  font-family:"StarWars","sans-serif";
+  animation:title-fade 41s ease-out
+}
+
+body.section-pulumi-up .star-wars .title-animation .subtitle{
+  margin-top: 1rem;
+  margin-bottom: 0px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color:#fff;
+  animation:move-byline 43s linear
+}
+
+@keyframes title-fade{
+  0%{
+    opacity:0;
+    transform:scale(1.5) translateY(-0.75em)
+  }
+
+  86%{
+    opacity:0;
+    transform:scale(1.5) translateY(-0.75em)
+  }
+
+  90%{
+    opacity:1
+  }
+
+  100%{
+    opacity:1;
+    transform:scale(1)
+  }
+}
+
+@keyframes move-byline{
+  0%{
+    opacity:0
+  }
+
+  95%{
+    opacity:0
+  }
+
+  96%{
+    opacity:1
+  }
+
+  100%{
+    opacity:1
+  }
+}
+
+body.section-pulumi-up .crawl{
+  position: relative;
+  top:99999px;
+  transform-origin:50% 100%;
+  animation:crawl 60s linear
+}
+
+body.section-pulumi-up .crawl>.title{
+  text-align: center;
+  font-size:90%
+}
+
+body.section-pulumi-up .crawl>.title h1{
+  margin:0 0 100px;
+  text-transform:uppercase
+}
+
+@keyframes crawl{
+  0%{
+    top:200px;
+    transform:rotateX(20deg) translateZ(0)
+  }
+
+  100%{
+    top:-6000px;
+    transform:rotateX(25deg) translateZ(-2500px)
+  }
 }
 
 .neon-container{
