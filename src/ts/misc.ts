@@ -102,6 +102,9 @@ function generateOnThisPage() {
     $(".blog-sidebar-toggle").click(function () {
         $(".blog-sidebar-content").toggleClass("hidden");
     });
+    $(".docs-sidebar-toggle").click(function () {
+        $(".docs-sidebar-content").toggleClass("hidden");
+    });
 
     // Shuffle lists that want to be shuffled.
     $("ul[data-shuffle='true']")
