@@ -69,14 +69,13 @@ body.section-pulumi-up {
     }
 
     .star-wars {
-        @apply relative text-justify;
+        @apply relative text-justify container mx-auto;
 
         justify-content: center;
         height: 40vh;
         font-family: 'Pathway Gothic One', sans-serif !important;
         font-size: 500%;
         font-weight: 600;
-        letter-spacing: 6px;
         line-height: 150%;
         perspective: 400px;
 
@@ -90,13 +89,21 @@ body.section-pulumi-up {
             .title-part {
                 @apply my-0 leading-none;
                 font-family: 'StarWars', 'sans-serif';
-                animation: title-fade 41s ease-out;
+                letter-spacing: 6px;
+
+                @screen lg {
+                    animation: title-fade 46s ease-out;
+                }
             }
 
             .subtitle {
                 @apply mt-4 mb-0 text-xl;
                 color: white;
-                animation: move-byline 43s linear;
+                letter-spacing: 6px;
+
+                @screen lg {
+                    animation: move-byline 48s linear;
+                }
             }
         }
 
@@ -135,11 +142,15 @@ body.section-pulumi-up {
       }
 
     .crawl {
-        @apply relative;
+        @apply relative hidden;
 
         top: 99999px;
         transform-origin: 50% 100%;
         animation: crawl 60s linear;
+
+        @screen lg {
+            @apply block;
+        }
     }
 
     .crawl > .title {
