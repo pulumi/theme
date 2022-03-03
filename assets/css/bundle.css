@@ -13781,16 +13781,59 @@ body.section-pulumi-up .fade{
 }
 
 body.section-pulumi-up .star-wars{
+  width: 100%
+}
+
+@media (min-width: 640px){
+  body.section-pulumi-up .star-wars{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  body.section-pulumi-up .star-wars{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  body.section-pulumi-up .star-wars{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  body.section-pulumi-up .star-wars{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .section-docs body.section-pulumi-up .star-wars,.section-docs .top-nav-bar .top-nav-container,.section-docs .header-container nav,.section-registry body.section-pulumi-up .star-wars,.section-registry .top-nav-bar .top-nav-container,.section-registry .header-container nav{
+    max-width:1536px
+  }
+
+  .section-docs .container,.section-docs .top-nav-bar .top-nav-container,.section-docs .header-container nav,.section-registry .container,.section-registry .top-nav-bar .top-nav-container,.section-registry .header-container nav{
+    max-width:1536px
+  }
+}
+
+.section-docs main body.section-pulumi-up .star-wars dl.package-details+p+dl.tabular{
+  display: none
+}
+
+body.section-pulumi-up .star-wars{
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   text-align: justify;
   justify-content:center;
   height:40vh;
   font-family:"Pathway Gothic One",sans-serif !important;
   font-size:500%;
   font-weight:600;
-  letter-spacing:6px;
   line-height:150%;
-  perspective:400px
+  perspective:400px;
 }
 
 body.section-pulumi-up .star-wars h1,body.section-pulumi-up .star-wars p{
@@ -13806,7 +13849,13 @@ body.section-pulumi-up .star-wars .title-animation .title-part{
   margin-bottom: 0px;
   line-height: 1;
   font-family:"StarWars","sans-serif";
-  animation:title-fade 41s ease-out
+  letter-spacing:6px
+}
+
+@media (min-width: 1024px){
+  body.section-pulumi-up .star-wars .title-animation .title-part{
+    animation:title-fade 46s ease-out
+  }
 }
 
 body.section-pulumi-up .star-wars .title-animation .subtitle{
@@ -13815,7 +13864,13 @@ body.section-pulumi-up .star-wars .title-animation .subtitle{
   font-size: 1.25rem;
   line-height: 1.75rem;
   color:#fff;
-  animation:move-byline 43s linear
+  letter-spacing:6px
+}
+
+@media (min-width: 1024px){
+  body.section-pulumi-up .star-wars .title-animation .subtitle{
+    animation:move-byline 48s linear
+  }
 }
 
 @keyframes title-fade{
@@ -13859,9 +13914,16 @@ body.section-pulumi-up .star-wars .title-animation .subtitle{
 
 body.section-pulumi-up .crawl{
   position: relative;
+  display: none;
   top:99999px;
   transform-origin:50% 100%;
   animation:crawl 60s linear
+}
+
+@media (min-width: 1024px){
+  body.section-pulumi-up .crawl{
+    display: block
+  }
 }
 
 body.section-pulumi-up .crawl>.title{
