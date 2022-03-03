@@ -14315,7 +14315,7 @@ nav.nav-section-sticky ul{
   list-style-type: none;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
