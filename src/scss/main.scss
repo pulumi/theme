@@ -64,170 +64,180 @@
 @import "components/swiper";
 @import "components/slot-machine";
 
-h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-gray-800 mb-2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display text-gray-800 mb-2;
 
-    &:not(:first-child) {
-
-        // Don't apply top margin when one's being specified.
-        &:not([class*="mt-"]):not([class*="m-"]) {
-            @apply mt-8;
-        }
+  &:not(:first-child) {
+    // Don't apply top margin when one's being specified.
+    &:not([class*="mt-"]):not([class*="m-"]) {
+      @apply mt-8;
     }
+  }
 }
 
 h1 {
-    @apply text-4xl;
+  @apply text-4xl;
 }
 
 h2 {
-    @apply text-3xl;
+  @apply text-3xl;
 }
 
 h3 {
-    @apply text-2xl;
+  @apply text-2xl;
 }
 
 h4 {
-    @apply text-xl;
+  @apply text-xl;
 }
 
 h5 {
-    @apply text-lg;
+  @apply text-lg;
 }
 
 h6 {
-    @apply text-sm;
+  @apply text-sm;
 }
 
 p {
-    @apply mb-4 leading-normal my-4;
+  @apply mb-4 leading-normal my-4;
 }
 
 body {
-    @apply font-body text-gray-800;
+  @apply font-body text-gray-800;
 
-    figure {
-        figcaption {
-            clear: left;
-            margin: .75em 0;
-            text-align: center;
-            font-style: italic;
-            line-height: 1.5em;
-        }
+  figure {
+    figcaption {
+      clear: left;
+      margin: 0.75em 0;
+      text-align: center;
+      font-style: italic;
+      line-height: 1.5em;
     }
+  }
 }
 
 .nav-main {
-    a {
-        @include transition;
-    }
+  a {
+    @include transition;
+  }
 }
 
 main {
-    @apply text-gray-800;
+  @apply text-gray-800;
 
-    p, li, blockquote, table {
+  p,
+  li,
+  blockquote,
+  table {
+    a {
+      @apply text-blue-600 break-words;
 
-        a {
-            @apply text-blue-600 break-words;
+      &:hover {
+        @apply text-blue-700;
 
-            &:hover {
-                @apply text-blue-700;
-
-                .section-docs &, .section-blog &, .section-authors &, .section-tags & {
-                    @apply underline;
-                }
-            }
+        .section-docs &,
+        .section-blog &,
+        .section-authors &,
+        .section-tags & {
+          @apply underline;
         }
-
-        strong {
-            @apply font-semibold;
-        }
+      }
     }
 
-    ul, ol {
-        @apply pl-5;
+    strong {
+      @apply font-semibold;
     }
+  }
 
-    ul {
-        @apply list-disc;
+  ul,
+  ol {
+    @apply pl-5;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply my-2 leading-normal;
+  }
+
+  blockquote {
+    @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
+
+    p {
+      @apply my-1 leading-relaxed;
     }
-
-    ol {
-        @apply list-decimal;
-    }
-
-    li {
-        @apply my-2 leading-normal;
-    }
-
-    blockquote {
-        @apply border-l-4 rounded border-blue-100 px-4 py-1 text-sm my-4;
-
-        p {
-            @apply my-1 leading-relaxed;
-        }
-    }
+  }
 }
 
 .link {
-    @apply text-blue-700;
+  @apply text-blue-700;
 }
 
 .tag {
-    @apply text-sm lowercase border border-blue-200 rounded py-1 px-2 mr-1;
+  @apply text-sm lowercase border border-blue-200 rounded py-1 px-2 mr-1;
 
-    &.tag-blog {
-        @apply bg-gray-100 text-blue-600;
+  &.tag-blog {
+    @apply bg-gray-100 text-blue-600;
 
-        &:hover {
-            @apply border-blue-300 text-blue-700 no-underline;
-        }
-
-        &.active {
-            @apply border-blue-600 bg-blue-600 text-white;
-
-            &:hover {
-                @apply text-white;
-            }
-        }
+    &:hover {
+      @apply border-blue-300 text-blue-700 no-underline;
     }
+
+    &.active {
+      @apply border-blue-600 bg-blue-600 text-white;
+
+      &:hover {
+        @apply text-white;
+      }
+    }
+  }
 }
 
 .popup-overlay {
-    @apply flex w-full h-full fixed inset-0 z-50;
-    background-color: rgba(44, 44, 44, 0.6);
+  @apply flex w-full h-full fixed inset-0 z-50;
+  background-color: rgba(44, 44, 44, 0.6);
 }
 
 .transition-all {
-    @include transition(all);
+  @include transition(all);
 
-    &-200 {
-        @include transition($duration: 200ms);
-    }
+  &-200 {
+    @include transition($duration: 200ms);
+  }
 }
 
 .github-widget {
-    > span {
-        @apply flex;
-    }
+  > span {
+    @apply flex;
+  }
 }
 
 // Custom css for the Calendly iframe we use on the event registration pages.
 #calendly-widget {
-    min-width: 270px;
-    height: 600px;
+  min-width: 270px;
+  height: 600px;
 
-    @screen md {
-        min-width: 320px;
-        height: 750px;
-    }
+  @screen md {
+    min-width: 320px;
+    height: 750px;
+  }
 
-    .booking-container {
-        background-color: green;
-        max-width: initial !important;
-    }
+  .booking-container {
+    background-color: green;
+    max-width: initial !important;
+  }
 }
 
 $sitenav-height: 90px;
@@ -239,72 +249,80 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // up as the anchor target, allowing us to position the actual target below the fixed
 // navbar. Only necessary at medium and up.
 @screen md {
-    :target {
-        &::before {
-            content: " ";
-            display: block;
-            height: $sitenav-offset;
-            margin-top: -$sitenav-offset;
-        }
+  :target {
+    &::before {
+      content: " ";
+      display: block;
+      height: $sitenav-offset;
+      margin-top: -$sitenav-offset;
     }
+  }
 }
 
 .sticky-sidebar {
-    @screen lg {
-        @apply sticky self-start overflow-y-auto;
-        max-height: 90vh;
-        top: $sitenav-offset;
+  @screen lg {
+    @apply sticky self-start overflow-y-auto;
+    max-height: 90vh;
+    top: $sitenav-offset;
 
-        // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
-        .section-registry & {
-            @apply top-8;
-        }
+    // Registry's nav isn't sticky, so we don't need to position sidebars in relation to it.
+    .section-registry & {
+      @apply top-8;
     }
+  }
 }
 
 .resource-deprecated {
-    @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+  @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
 }
 
 .aws-reinvent-blog-image {
-    img {
-        @apply mb-0;
+  img {
+    @apply mb-0;
 
-        @screen lg {
-            @apply mb-8;
-        }
+    @screen lg {
+      @apply mb-8;
     }
+  }
 }
 
 .section-docs {
-    // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
-    main .container dl.package-details + p + dl.tabular {
-        @apply hidden;
-    }
-    // Hide input and output type notes as well.
-    #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
-        @apply hidden;
-    }
+  // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
+  main .container dl.package-details + p + dl.tabular {
+    @apply hidden;
+  }
+  // Hide input and output type notes as well.
+  #supporting-types ~ h4 ~ div pulumi-choosable .active blockquote {
+    @apply hidden;
+  }
 }
 
 // New Styles
 .rainbow-text {
-    background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #f7bf2a 0%,
+    #f26e7e 18.23%,
+    #be5188 38.02%,
+    #8a3391 53.65%,
+    #805ac3 74.48%,
+    #7682f4 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 
-    text-shadow: none;
+  text-shadow: none;
 }
 
 #architectures {
-    @apply text-center;
+  @apply text-center;
 
-    h2 {
-        @apply pl-2 pr-2 inline;
-        background-color: rgba(255, 255, 255, 0.7);
-    }
+  h2 {
+    @apply pl-2 pr-2 inline;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 @tailwind utilities;

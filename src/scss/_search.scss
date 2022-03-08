@@ -2,68 +2,68 @@
 
 // Override the default styles of the Swiftype input field.
 .st-default-search-input {
-    display: block !important;
-    width: 100% !important;
-    font-size: .875rem !important;
-    padding: .75rem !important;
-    padding-left: 2.5rem !important;
-    border-radius: .25rem !important;
-    border-color: map-get($gray, 400) !important;
-    font-family: "Inter" !important;
-    background: none !important;
+  display: block !important;
+  width: 100% !important;
+  font-size: 0.875rem !important;
+  padding: 0.75rem !important;
+  padding-left: 2.5rem !important;
+  border-radius: 0.25rem !important;
+  border-color: map-get($gray, 400) !important;
+  font-family: "Inter" !important;
+  background: none !important;
 
-    @include transition;
+  @include transition;
 
-    &:focus:not(.registry) {
-        border-color: map-get($blue, 600) !important;
-    }
+  &:focus:not(.registry) {
+    border-color: map-get($blue, 600) !important;
+  }
 
-    &.registry {
-        @screen md {
-            border-top-right-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
-        }
-
-        &:focus {
-            border-color: map-get($violet, 600) !important;
-        }
-    }
-
+  &.registry {
     @screen md {
-        &:not(.registry) {
-            margin-right: 1em !important;
-        }
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
     }
+
+    &:focus {
+      border-color: map-get($violet, 600) !important;
+    }
+  }
+
+  @screen md {
+    &:not(.registry) {
+      margin-right: 1em !important;
+    }
+  }
 }
 
 // Override the default styles of the Swiftype autocomplete results container.
 .st-default-autocomplete {
-    z-index: 40 !important; /* z-40 */
+  z-index: 40 !important; /* z-40 */
 
-    // Swiftype's JS imperatively positions the autocomplete container in relation to the top-left
-    // corner of the document, which is okay if your search box scrolls with the page, but since ours
-    // scrolls and sticks independently of the main content pane, this doesn't work. Overriding the
-    // top and left settings allows the container to be positioned absolutely in place.
-    top: auto !important;
-    left: auto !important;
+  // Swiftype's JS imperatively positions the autocomplete container in relation to the top-left
+  // corner of the document, which is okay if your search box scrolls with the page, but since ours
+  // scrolls and sticks independently of the main content pane, this doesn't work. Overriding the
+  // top and left settings allows the container to be positioned absolutely in place.
+  top: auto !important;
+  left: auto !important;
 
-    .st-query-present {
-        .st-ui-result {
-            .st-ui-type-heading {
-                font-size: 0.75rem !important; /* text-xs */
-                color: #4387c7 !important; /* text-blue-600 */
-                margin-bottom: 4px !important;
-            }
-            .st-ui-type-detail {
-                color: #4a5568 !important; /* text-gray-600 */
-            }
-        }
+  .st-query-present {
+    .st-ui-result {
+      .st-ui-type-heading {
+        font-size: 0.75rem !important; /* text-xs */
+        color: #4387c7 !important; /* text-blue-600 */
+        margin-bottom: 4px !important;
+      }
+      .st-ui-type-detail {
+        color: #4a5568 !important; /* text-gray-600 */
+      }
     }
+  }
 }
 
 // Override the default styles of the results overlay.
 .st-ui-container {
-    @screen lg {
-        top: 80px !important;
-    }
+  @screen lg {
+    top: 80px !important;
+  }
 }

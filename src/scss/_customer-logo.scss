@@ -1,45 +1,45 @@
 .customer-logo {
+  svg {
+    @apply w-full h-full;
+  }
+
+  &-black {
     svg {
-        @apply w-full h-full;
+      @apply w-full h-full;
     }
 
-    &-black {
-        svg {
-            @apply w-full h-full;
-        }
+    path {
+      fill: black;
+    }
+  }
 
-        path {
-            fill: black;
-        }
+  &-hoverable {
+    svg {
+      @apply w-full h-full;
     }
 
-    &-hoverable {
-        svg {
-            @apply w-full h-full;
-        }
-
-        svg:not(:hover) path {
-            fill: theme("colors.gray.600");
-        }
+    svg:not(:hover) path {
+      fill: theme("colors.gray.600");
     }
+  }
 }
 
 .ro-hoverable {
+  .ro-gray {
+    @apply block;
+  }
+
+  .ro-color {
+    @apply hidden;
+  }
+
+  &:hover {
     .ro-gray {
-        @apply block;
+      @apply hidden;
     }
 
     .ro-color {
-        @apply hidden;
+      @apply block;
     }
-
-    &:hover {
-        .ro-gray {
-            @apply hidden;
-        }
-
-        .ro-color {
-            @apply block;
-        }
-    }
+  }
 }

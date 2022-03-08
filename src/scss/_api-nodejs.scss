@@ -1,99 +1,98 @@
-
 h3.pdoc-module-header {
-    @apply pb-1 border-b border-gray-400;
+  @apply pb-1 border-b border-gray-400;
 }
 
 // Indent all elements preceded by this header.
 h3.pdoc-module-header ~ * {
-    @apply ml-4;
+  @apply ml-4;
 }
 
 // ...except equal or larger headers.
 h3.pdoc-module-header ~ h3,
 h3.pdoc-module-header ~ h2 {
-    @apply ml-0;
+  @apply ml-0;
 }
 
 // We want visually recognizable links here.
 .highlight {
-    a {
-        @apply text-blue-600;
+  a {
+    @apply text-blue-600;
 
-        &:hover {
-            @apply text-blue-700;
-        }
+    &:hover {
+      @apply text-blue-700;
     }
+  }
 }
 
 h3.api {
-    &.resource {
-        &:before {
-            content: "Resource "
-        }
+  &.resource {
+    &:before {
+      content: "Resource ";
     }
+  }
 }
 
 ul.api {
-    @apply list-none p-0 m-0 overflow-hidden;
+  @apply list-none p-0 m-0 overflow-hidden;
 
-    columns: 1;
+  columns: 1;
 
-    @screen xl {
-        columns: 2;
+  @screen xl {
+    columns: 2;
+  }
+
+  li {
+    @apply truncate mt-0;
+
+    a {
+      @apply truncate bg-none inline-block p-1 max-w-full;
+
+      &:hover {
+        @apply underline;
+      }
     }
 
-    li {
-        @apply truncate mt-0;
+    .symbol {
+      &:before {
+        @apply text-white text-xs rounded mr-2 px-1 text-center inline-block;
+        width: 19px;
+      }
 
-        a {
-            @apply truncate bg-none inline-block p-1 max-w-full;
-
-            &:hover {
-                @apply underline;
-            }
+      &.module {
+        &:before {
+          content: "M";
+          @apply bg-green-700;
         }
+      }
 
-        .symbol {
-            &:before {
-                @apply text-white text-xs rounded mr-2 px-1 text-center inline-block;
-                width: 19px;
-            }
+      &.package {
+        &:before {
+          content: "P";
+          @apply bg-purple-700;
+        }
+      }
 
-            &.module {
-                &:before {
-                    content: "M";
-                    @apply bg-green-700;
-                }
-            }
+      &.resource {
+        &:before {
+          content: "R";
+          @apply bg-blue-700;
+        }
+      }
 
-            &.package {
-                &:before {
-                    content: "P";
-                    @apply bg-purple-700;
-                }
-            }
-
-            &.resource {
-                &:before {
-                    content: "R";
-                    @apply bg-blue-700;
-                }
-            }
-
-            &.datasource, // TODO: Remove `datasource` when it's no longer referenced anywhere.
+      &.datasource, // TODO: Remove `datasource` when it's no longer referenced anywhere.
             &.function {
-                &:before {
-                    content: "F";
-                    @apply bg-red-700;
-                }
-            }
-
-            &.api {
-                &:before {
-                    content: "A";
-                    @apply bg-gray-700;
-                }
-            }
+        &:before {
+          content: "F";
+          @apply bg-red-700;
         }
+      }
+
+      &.api {
+        &:before {
+          content: "A";
+          @apply bg-gray-700;
+        }
+      }
     }
+  }
 }

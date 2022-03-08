@@ -1,24 +1,24 @@
 .footer {
-    a.link {
-        @apply text-black;
-        &:hover {
-            @apply underline;
-        }
+  a.link {
+    @apply text-black;
+    &:hover {
+      @apply underline;
     }
+  }
 
-    .footer-nav-container {
-        @apply flex flex-wrap justify-center mt-32 px-8;
+  .footer-nav-container {
+    @apply flex flex-wrap justify-center mt-32 px-8;
 
-        ul {
-            @apply w-1/2 mt-8;
+    ul {
+      @apply w-1/2 mt-8;
 
-            @screen md {
-                @apply w-1/5 mt-0;
-            }
+      @screen md {
+        @apply w-1/5 mt-0;
+      }
 
-            li {
-                @apply mb-4 font-semibold;
-            }
-        }
+      li {
+        @apply mb-4 font-semibold;
+      }
     }
+  }
 }

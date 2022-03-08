@@ -19,121 +19,124 @@ $anchorjs-content: "\e9cb";
 
 // This selector is for the table of contents. There's not much on this page except for a bunch of links.
 div.section[id^="pulumi"] {
-    a.headerlink {
-        @apply invisible;
-    }
+  a.headerlink {
+    @apply invisible;
+  }
 }
 
 // This selector is for the Pulumi Python SDK page.
 section[id="pulumi-python-sdk"] {
-    // Add a custom property just so that we can run tests to validate its presence.
-    --pulumi-python-sdk: true;
+  // Add a custom property just so that we can run tests to validate its presence.
+  --pulumi-python-sdk: true;
 
-    // Don't show the header link - there's an anchorjs link on this header that does the
-    // job just as well.
-    h1[id$="\B6"],
-    h2[id$="\B6"] {
-        a.headerlink {
-            @apply hidden;
+  // Don't show the header link - there's an anchorjs link on this header that does the
+  // job just as well.
+  h1[id$="\B6"],
+  h2[id$="\B6"] {
+    a.headerlink {
+      @apply hidden;
+    }
+  }
+
+  // Add some margin to the top of sections.
+  div.section {
+    @apply mt-8;
+  }
+
+  // Add some margin above and below parameter tables.
+  dd {
+    > table {
+      @apply my-4;
+    }
+  }
+
+  // The definition of a single (Python) class or function. Not to be confused with the CSS class.
+  // Sphinx emits a DL for every class it processes, with a few well-known immediate
+  // subchildren:
+  dl.class,
+  dl.function,
+  dl.exception {
+    > dt {
+      // Hide the header link when not hovering.
+      > a.headerlink {
+        @apply invisible;
+      }
+    }
+
+    dt {
+      // Use the same styling as our `pre` tags for definitions.
+      @apply font-mono bg-gray-100 py-4 px-5 rounded border border-gray-200 overflow-scroll my-4 leading-normal text-sm;
+
+      // Remove italics in these definitions.
+      em {
+        @apply not-italic;
+      }
+
+      code {
+        // Various code blocks are placed next to each other. In these cases, we don't want
+        // any padding between them, and want a consistent font size with surrounding text.
+        @apply p-0;
+        font-size: 100%;
+
+        // descname identifies the name of the thing. This is what users come for, so bold it.
+        &.descname {
+          @apply font-bold;
         }
+      }
     }
 
-    // Add some margin to the top of sections.
-    div.section {
-        @apply mt-8;
-    }
-
-    // Add some margin above and below parameter tables.
+    // Add some margin to the left to indent the content under definitions.
     dd {
-        > table {
-            @apply my-4;
-        }
+      @apply ml-8;
     }
 
-    // The definition of a single (Python) class or function. Not to be confused with the CSS class.
-    // Sphinx emits a DL for every class it processes, with a few well-known immediate
-    // subchildren:
-    dl.class, dl.function, dl.exception {
-        > dt {
-            // Hide the header link when not hovering.
-            > a.headerlink {
-                @apply invisible;
-            }
-        }
-
-        dt {
-            // Use the same styling as our `pre` tags for definitions.
-            @apply font-mono bg-gray-100 py-4 px-5 rounded border border-gray-200 overflow-scroll my-4 leading-normal text-sm;
-
-            // Remove italics in these definitions.
-            em {
-                @apply not-italic;
-            }
-
-            code {
-                // Various code blocks are placed next to each other. In these cases, we don't want
-                // any padding between them, and want a consistent font size with surrounding text.
-                @apply p-0;
-                font-size: 100%;
-
-                // descname identifies the name of the thing. This is what users come for, so bold it.
-                &.descname {
-                    @apply font-bold;
-                }
-            }
-        }
-
-        // Add some margin to the left to indent the content under definitions.
-        dd {
-            @apply ml-8;
-        }
-
-        // Show the headerlink when hovering over the class or function definition,
-        // but use the AnchorJS icon.
-        > dt:hover > a.headerlink {
-            &:after {
-                @apply visible;
-                font: $anchorjs-font;
-                content: $anchorjs-content;
-            }
-        }
-
-        // The body of the class's documentation is in a dd.
-        > dd {
-            // Add some padding underneath the class documentation to help separate sections of the document.
-            @apply pb-8;
-
-            // Like the definition, only show the headerlink if the user is hovering over the entity,
-            // and use the AnchorJS icon.
-            > dl dt a.headerlink {
-                @apply invisible;
-            }
-
-            > dl dt:hover a.headerlink {
-                &:after {
-                    @apply visible;
-                    font: $anchorjs-font;
-                    content: $anchorjs-content;
-                }
-            }
-        }
+    // Show the headerlink when hovering over the class or function definition,
+    // but use the AnchorJS icon.
+    > dt:hover > a.headerlink {
+      &:after {
+        @apply visible;
+        font: $anchorjs-font;
+        content: $anchorjs-content;
+      }
     }
 
-    dl.field-list {
-        @apply mb-8;
+    // The body of the class's documentation is in a dd.
+    > dd {
+      // Add some padding underneath the class documentation to help separate sections of the document.
+      @apply pb-8;
 
-        dt {
-            @apply py-1 pl-0 border-none bg-transparent font-body font-bold text-lg;
-        }
+      // Like the definition, only show the headerlink if the user is hovering over the entity,
+      // and use the AnchorJS icon.
+      > dl dt a.headerlink {
+        @apply invisible;
+      }
 
-        dd {
-            @apply ml-4;
+      > dl dt:hover a.headerlink {
+        &:after {
+          @apply visible;
+          font: $anchorjs-font;
+          content: $anchorjs-content;
         }
+      }
+    }
+  }
+
+  dl.field-list {
+    @apply mb-8;
+
+    dt {
+      @apply py-1 pl-0 border-none bg-transparent font-body font-bold text-lg;
     }
 
-    table td, .pre {
-        @apply break-words;
-        word-break: break-word;
+    dd {
+      @apply ml-4;
     }
+  }
+
+  table td,
+  .pre {
+    @apply break-words;
+    word-break: break-word;
+  }
 }
 /* purgecss end ignore */
