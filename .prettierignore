@@ -1,0 +1,9 @@
+.DS_Store
+/node_modules
+/resources
+/dist
+/stencil/node_modules
+/stencil/dist
+/assets
+
+layouts/partials/assets.html

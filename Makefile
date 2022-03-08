@@ -13,3 +13,7 @@ serve:
 .PHONY: build
 build:
 	yarn build
+
+.PHONY: lint
+build:
+	yarn lint
