@@ -3,6 +3,6 @@ import JSZip from "jszip";
 import FileSaver from "file-saver";
 
 declare global {
-    const CodeMirror: typeof CodeMirror;
-    const JSZip: JSZip;
+  const CodeMirror: typeof CodeMirror;
+  const JSZip: JSZip;
 }

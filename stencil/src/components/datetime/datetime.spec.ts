@@ -1,7 +1,7 @@
-import { Datetime } from './datetime';
+import { Datetime } from "./datetime";
 
-describe('pulumi-datetime', () => {
-  it('builds', () => {
+describe("pulumi-datetime", () => {
+  it("builds", () => {
     expect(new Datetime()).toBeTruthy();
   });
 });

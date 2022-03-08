@@ -1,8 +1,8 @@
 import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
 @Component({
-    tag: "pulumi-filter-select-option-group",
-    shadow: true,
-    styles: `
+  tag: "pulumi-filter-select-option-group",
+  shadow: true,
+  styles: `
         .menu {
             position: relative;
             transition: all 100ms;
@@ -52,45 +52,46 @@ import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
     `,
 })
 export class FilterSelectOptionGroup {
+  @Element()
+  el: HTMLElement;
 
-    @Element()
-    el: HTMLElement;
+  @Prop()
+  name: string;
 
-    @Prop()
-    name: string;
+  @Prop({ reflect: true })
+  expanded: boolean;
 
-    @Prop({ reflect: true })
-    expanded: boolean;
+  onToggle() {
+    this.expanded = !this.expanded;
+  }
 
-    onToggle() {
-        this.expanded = !this.expanded;
+  @Listen("click", { target: "document" })
+  onDocumentClick(event: Event) {
+    if (!this.el.contains(event.target as HTMLElement) && this.expanded) {
+      this.close();
     }
+  }
 
-    @Listen("click", { target: "document" })
-    onDocumentClick(event: Event) {
-        if (!this.el.contains(event.target as HTMLElement) && this.expanded) {
-            this.close();
-        }
-    }
+  @Method()
+  close() {
+    this.expanded = false;
+    return Promise.resolve(null);
+  }
 
-    @Method()
-    close() {
-        this.expanded = false;
-        return Promise.resolve(null);
-    }
-
-    render() {
-        return <div>
-            <div class="button" role="button" onClick={ this.onToggle.bind(this) }>
-                <span class="toggle" part="toggle">
-                    <slot name="toggle" />
-                </span>
-            </div>
-            <div class="menu">
-                <div>
-                    <slot />
-                </div>
-            </div>
-        </div>;
-    }
+  render() {
+    return (
+      <div>
+        <div class="button" role="button" onClick={this.onToggle.bind(this)}>
+          <span class="toggle" part="toggle">
+            <slot name="toggle" />
+          </span>
+        </div>
+        <div class="menu">
+          <div>
+            <slot />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }

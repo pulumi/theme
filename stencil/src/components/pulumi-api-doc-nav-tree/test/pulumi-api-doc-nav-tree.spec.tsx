@@ -1,8 +1,8 @@
-import { newSpecPage } from '@stencil/core/testing';
-import { PulumiApiDocNavTree } from '../pulumi-api-doc-nav-tree';
+import { newSpecPage } from "@stencil/core/testing";
+import { PulumiApiDocNavTree } from "../pulumi-api-doc-nav-tree";
 
-describe('pulumi-api-doc-nav-tree', () => {
-  it('renders', async () => {
+describe("pulumi-api-doc-nav-tree", () => {
+  it("renders", async () => {
     const page = await newSpecPage({
       components: [PulumiApiDocNavTree],
       html: `<pulumi-api-doc-nav-tree></pulumi-api-doc-nav-tree>`,

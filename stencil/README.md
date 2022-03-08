@@ -80,10 +80,10 @@ by default, the `options` you provide will be set globally and persist between p
 
 Available chooser types are:
 
-* `cloud`, with supported options `aws`, `azure`, and `gcp`
-* `os`, with supported options `macos`, `linux` and `windows`
-* `language`, with supported options `javascript`, `typescript`, `python`, `go`, `csharp`, `fsharp`, and `visualbasic`.
-* `k8s-language`, with supported options `typescript`, `typescript-kx`, and `yaml`
+- `cloud`, with supported options `aws`, `azure`, and `gcp`
+- `os`, with supported options `macos`, `linux` and `windows`
+- `language`, with supported options `javascript`, `typescript`, `python`, `go`, `csharp`, `fsharp`, and `visualbasic`.
+- `k8s-language`, with supported options `typescript`, `typescript-kx`, and `yaml`
 
 Options will be ordered automatically by the component; variable sort order is not exposed
 in the component API.
@@ -209,7 +209,7 @@ Some GCP stuff.
 
 A few things to note:
 
-* Pay attention to how you nest `chooser` and `choosable` shortcodes. [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) work with both
+- Pay attention to how you nest `chooser` and `choosable` shortcodes. [Hugo shortcodes](https://gohugo.io/content-management/shortcodes/) work with both
   `<>` and `%%` delimiters, but the two behave very differently: `%` will cause content to be
   Markdown-rendered, `<` and `>` will not. So for example:
 
@@ -276,14 +276,14 @@ A few things to note:
   So as a rule, avoid nesting `%`-delimited shortcodes. Decide which shortcode will be responsible
   for rendering, and use `%`s on that one, `<>`s on descendants.
 
-* The containing `div`s emitted by the `chooser` and `choosable` shortcodes are
+- The containing `div`s emitted by the `chooser` and `choosable` shortcodes are
   intentional and in most cases required, because the template renderers we're using today
   don't know how to handle [custom
   elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
   like these, so wrapping them in a standard HTML tag is necessary. (It's not necessary in
   HTML layouts files, though -- only in Markdown files.)
 
-* By default, active choosables will inherit `display: block;`, but you can override this
+- By default, active choosables will inherit `display: block;`, but you can override this
   behavior by passing the [TailwindCSS](https://tailwindcss.com/) utility class `inline`
   in the chooser (typically in conjunction with `option-style="none"`:
 

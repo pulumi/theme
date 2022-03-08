@@ -1,7 +1,7 @@
-import { SlotMachine } from './slot-machine';
+import { SlotMachine } from "./slot-machine";
 
-describe('pulumi-slot-machine', () => {
-  it('builds', () => {
+describe("pulumi-slot-machine", () => {
+  it("builds", () => {
     expect(new SlotMachine()).toBeTruthy();
   });
 });

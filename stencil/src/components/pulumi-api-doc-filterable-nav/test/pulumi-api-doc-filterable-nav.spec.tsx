@@ -1,8 +1,8 @@
-import { newSpecPage } from '@stencil/core/testing';
-import { PulumiApiDocFilterableNav } from '../pulumi-api-doc-filterable-nav';
+import { newSpecPage } from "@stencil/core/testing";
+import { PulumiApiDocFilterableNav } from "../pulumi-api-doc-filterable-nav";
 
-describe('pulumi-api-doc-filterable-nav', () => {
-  it('renders', async () => {
+describe("pulumi-api-doc-filterable-nav", () => {
+  it("renders", async () => {
     const page = await newSpecPage({
       components: [PulumiApiDocFilterableNav],
       html: `<pulumi-api-doc-filterable-nav></pulumi-api-doc-filterable-nav>`,
