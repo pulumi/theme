@@ -34,3 +34,54 @@ $(function () {
         });
     }
 });
+
+$(function () {
+    // When the arrows are selected, they scroll the tertiary nav in either direction.
+    $("#slideForward").on("click", function () {
+        var navContainer = document.getElementById('event-list-filter-nav');
+        // The width of an individual tab, so the scroll brings one additional full tab into view.
+        navContainer.scrollLeft += 180;
+    });
+
+    $("#slideBackwards").on("click", function () {
+        var navContainer = document.getElementById('event-list-filter-nav');
+        // The width of an individual tab, so the scroll moves one full tab into view.
+        navContainer.scrollLeft -= 180;
+    });
+
+
+    // If the last or first items are fully in view (depending on the scroll direction),
+    // the scroll arrow button is hidden from view (since it's no longer possible to scroll).
+    const options = {
+        root: document.getElementById('event-list-filter-nav'),
+        // To count as in view, the tab must be 100% in view.
+        threshold: 1.0
+    }
+
+    const controlScrollForwardVisibility = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting){
+                $("#slideForward").addClass("hidden");
+            } else {
+                $("#slideForward").removeClass("hidden");
+            }
+        });
+    };
+
+    const scrollForwardObserver = new IntersectionObserver(controlScrollForwardVisibility, options);
+    const lastNavItem = document.querySelector('#event-list-filter-nav li:last-of-type');
+    scrollForwardObserver.observe(lastNavItem);
+
+    const controlScrollBackwardVisibility = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                $("#slideBackwards").addClass("hidden");
+            } else {
+                $("#slideBackwards").removeClass("hidden");
+            }
+        });
+    };
+    const scrollBackwardObserver = new IntersectionObserver(controlScrollBackwardVisibility, options);
+    const firstNavItem = document.querySelector('#event-list-filter-nav li:first-of-type');
+    scrollBackwardObserver.observe(firstNavItem);
+});
