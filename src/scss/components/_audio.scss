@@ -10,22 +10,21 @@ $green400: theme("colors.green.400");
 $green600: theme("colors.green.600");
 
 pulumi-audio {
-  .error-callout {
-    @apply btn btn-orange inline-block;
-    cursor: default;
-  }
-
-  .audio-container {
-    @apply cursor-pointer text-center;
-    i {
-      @apply mr-4;
+    .error-callout {
+        @apply btn btn-orange inline-block;
+        cursor: default;
     }
 
-    .audio-button {
-      @apply btn btn-orange py-3 px-8 rounded-full;
+    .audio-container {
+        @apply cursor-pointer text-center;
+        i {
+            @apply mr-4;
+        }
 
-      box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600,
-        0 0 0.1em $orange600;
+        .audio-button {
+            @apply btn btn-orange py-3 px-8 rounded-full;
+
+            box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600, 0 0 0.1em $orange600;
+        }
     }
-  }
 }

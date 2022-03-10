@@ -1,7 +1,7 @@
 import { SlotMachine } from "./slot-machine";
 
 describe("pulumi-slot-machine", () => {
-  it("builds", () => {
-    expect(new SlotMachine()).toBeTruthy();
-  });
+    it("builds", () => {
+        expect(new SlotMachine()).toBeTruthy();
+    });
 });

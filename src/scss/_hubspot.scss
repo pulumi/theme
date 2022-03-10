@@ -1,137 +1,137 @@
 #hubspot-messages-iframe-container {
-  z-index: 100000000 !important;
+    z-index: 100000000 !important;
 }
 
 .hs-form {
-  @apply text-sm;
+    @apply text-sm;
 
-  &.hs-demo-form {
-    max-width: 500px;
-    @apply mx-auto;
-  }
-
-  fieldset {
-    @apply block;
-    margin: 1rem 0 !important;
-
-    &:not(.form-columns-1) > .field:first-child {
-      @apply pr-2;
+    &.hs-demo-form {
+        max-width: 500px;
+        @apply mx-auto;
     }
 
-    label {
-      @apply block mb-2 font-normal;
+    fieldset {
+        @apply block;
+        margin: 1rem 0 !important;
+
+        &:not(.form-columns-1) > .field:first-child {
+            @apply pr-2;
+        }
+
+        label {
+            @apply block mb-2 font-normal;
+        }
+
+        .hs-input {
+            @apply block text-gray-700;
+            width: 100% !important;
+        }
+
+        .legal-consent-container .hs-form-booleancheckbox-display .hs-input {
+            width: auto !important;
+            margin-top: 4px;
+        }
+
+        .hs-form-required {
+            @apply ml-1 text-red-500;
+        }
+
+        .hs-richtext p {
+            @apply opacity-50 text-xs font-normal my-0;
+
+            a {
+                @apply underline;
+            }
+        }
+
+        input,
+        textarea,
+        select {
+            @apply border border-gray-300 rounded p-2 bg-white;
+            &:focus {
+                @apply outline-none ring;
+            }
+        }
+
+        select {
+            @apply py-1 px-3;
+        }
     }
 
-    .hs-input {
-      @apply block text-gray-700;
-      width: 100% !important;
+    input[type="submit"] {
+        @include gradient-button;
+        @apply py-3 px-6;
     }
 
-    .legal-consent-container .hs-form-booleancheckbox-display .hs-input {
-      width: auto !important;
-      margin-top: 4px;
+    .hs-error-msgs {
+        @apply list-none mt-2 p-0 text-red-500 text-xs;
+
+        label {
+            @apply mb-0;
+        }
     }
 
-    .hs-form-required {
-      @apply ml-1 text-red-500;
+    .hs_error_rollup {
+        @apply hidden;
     }
 
-    .hs-richtext p {
-      @apply opacity-50 text-xs font-normal my-0;
+    &-fg-light {
+        @apply text-gray-100;
 
-      a {
-        @apply underline;
-      }
+        a {
+            @apply text-gray-100;
+        }
     }
 
-    input,
-    textarea,
-    select {
-      @apply border border-gray-300 rounded p-2 bg-white;
-      &:focus {
-        @apply outline-none ring;
-      }
+    &-fg-dark {
+        @apply text-gray-700;
     }
 
-    select {
-      @apply py-1 px-3;
-    }
-  }
+    &.newsletter {
+        @apply flex items-start;
 
-  input[type="submit"] {
-    @include gradient-button;
-    @apply py-3 px-6;
-  }
+        label:not(.hs-error-msg) {
+            @apply hidden;
+        }
 
-  .hs-error-msgs {
-    @apply list-none mt-2 p-0 text-red-500 text-xs;
+        input {
+            @apply block py-3 px-4 rounded-full border;
 
-    label {
-      @apply mb-0;
-    }
-  }
+            @screen md {
+                @apply w-56;
+            }
 
-  .hs_error_rollup {
-    @apply hidden;
-  }
+            &.hs-button {
+                @apply block btn btn-lg btn border-none py-3 px-6 rounded-full w-auto bg-violet-600 ml-2;
+            }
 
-  &-fg-light {
-    @apply text-gray-100;
+            &:focus {
+                @apply outline-none;
+            }
+        }
 
-    a {
-      @apply text-gray-100;
-    }
-  }
+        &.newsletter-dark-border input {
+            @apply border-gray-800;
+        }
 
-  &-fg-dark {
-    @apply text-gray-700;
-  }
+        &.newsletter-wide input {
+            @apply w-full;
 
-  &.newsletter {
-    @apply flex items-start;
+            @screen lg {
+                width: 24rem;
+            }
 
-    label:not(.hs-error-msg) {
-      @apply hidden;
-    }
-
-    input {
-      @apply block py-3 px-4 rounded-full border;
-
-      @screen md {
-        @apply w-56;
-      }
-
-      &.hs-button {
-        @apply block btn btn-lg btn border-none py-3 px-6 rounded-full w-auto bg-violet-600 ml-2;
-      }
-
-      &:focus {
-        @apply outline-none;
-      }
+            &[type="submit"] {
+                @apply w-auto;
+            }
+        }
     }
 
-    &.newsletter-dark-border input {
-      @apply border-gray-800;
+    .hs-recaptcha {
+        @apply mb-5;
     }
 
-    &.newsletter-wide input {
-      @apply w-full;
-
-      @screen lg {
-        width: 24rem;
-      }
-
-      &[type="submit"] {
-        @apply w-auto;
-      }
+    .legal-consent-container ul {
+        @apply list-none pl-0;
     }
-  }
-
-  .hs-recaptcha {
-    @apply mb-5;
-  }
-
-  .legal-consent-container ul {
-    @apply list-none pl-0;
-  }
 }

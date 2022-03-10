@@ -26,22 +26,22 @@ $ hugo mod get github.com/pulumi/theme@release
 
 1. First, make sure you're using the right version of Node.js. We recommend using [`nvm`](https://github.com/nvm-sh/nvm) and generally use Yarn (version 1) for managing Node.js dependencies:
 
-   ```bash
-   $ nvm use
-   Now using node v14.17.6 (npm v6.14.15)
+    ```bash
+    $ nvm use
+    Now using node v14.17.6 (npm v6.14.15)
 
-   $ yarn version
-   yarn version v1.22.15
-   ```
+    $ yarn version
+    yarn version v1.22.15
+    ```
 
 1. Next, install Node.js dependencies and start the development server:
 
-   ```
-   $ make ensure
-   $ make start
-   ```
+    ```
+    $ make ensure
+    $ make start
+    ```
 
-   Once the development server is running, any changes you make to CSS, Sass, TypeScript, or [Stencil.js](https://stenciljs.com/) source code will be compiled into `assets/css` and `assets/js` bundles, respectively.
+    Once the development server is running, any changes you make to CSS, Sass, TypeScript, or [Stencil.js](https://stenciljs.com/) source code will be compiled into `assets/css` and `assets/js` bundles, respectively.
 
 1. Submit your changes (including compiled bundles) as a PR against the `master` branch. Once your change is approved and merge, it'll be incorporated into a new asset build and made available in the `release` branch.
 

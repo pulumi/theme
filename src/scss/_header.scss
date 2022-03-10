@@ -1,336 +1,329 @@
 .top-nav-bar {
-  @apply text-sm;
-
-  @screen lg {
-    @apply pt-6 pb-3 px-4;
-  }
-
-  .top-nav-container {
-    @apply flex flex-col mx-auto;
+    @apply text-sm;
 
     @screen lg {
-      @apply flex-row;
+        @apply pt-6 pb-3 px-4;
     }
 
-    ul li {
-      white-space: nowrap;
-    }
-
-    .top-nav-banner-cta-container {
-      @apply w-full text-right;
-
-      @screen lg {
-        @apply flex-grow justify-start mt-0 text-left mr-4;
-      }
-
-      .top-nav-banner-cta {
-        @apply px-3 py-2 text-left;
+    .top-nav-container {
+        @apply flex flex-col mx-auto;
 
         @screen lg {
-          @apply rounded inline-block;
+            @apply flex-row;
         }
 
-        // TODO: update color
-        background-color: rgba(77, 91, 217, 0.15);
-
-        .top-nav-banner-cta-text {
-          // TODO: update color
-          color: #4d5bd9;
+        ul li {
+            white-space: nowrap;
         }
-      }
-    }
-  }
 
-  // The nav bar will be pinned on mobile but not on desktop.
-  &.registry {
-    @apply sticky z-50 bg-gray-850 -top-px;
+        .top-nav-banner-cta-container {
+            @apply w-full text-right;
 
-    @screen md {
-      @apply relative z-auto;
-    }
+            @screen lg {
+                @apply flex-grow justify-start mt-0 text-left mr-4;
+            }
 
-    &.is-pinned {
-      @apply shadow;
+            .top-nav-banner-cta {
+                @apply px-3 py-2 text-left;
 
-      @screen md {
-        @apply shadow-none;
-      }
-    }
+                @screen lg {
+                    @apply rounded inline-block;
+                }
 
-    .logo-nav-button {
-      @apply flex flex-row block cursor-pointer items-center;
-    }
+                // TODO: update color
+                background-color: rgba(77, 91, 217, 0.15);
 
-    .logo-nav-menu {
-      @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
-      top: 44px; // Height of the nav bar at screens below large.
-
-      @screen md {
-        @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
-      }
-
-      @screen lg {
-        top: 53px; // Height of the nav bar at screens large+.
-      }
-
-      li {
-        @apply text-lg text-white;
-
-        a {
-          @apply block px-4 py-2;
-
-          &:hover {
-            @apply underline;
-          }
+                .top-nav-banner-cta-text {
+                    // TODO: update color
+                    color: #4d5bd9;
+                }
+            }
         }
-      }
     }
 
-    .get-started-header-button {
-      @apply hidden;
+    // The nav bar will be pinned on mobile but not on desktop.
+    &.registry {
+        @apply sticky z-50 bg-gray-850 -top-px;
 
-      @screen lg {
-        @apply flex items-center justify-center;
-        margin-left: 30px;
-        width: 136px;
-        height: 33px;
-        padding: 8px 16px;
-
-        border: 1px solid theme("colors.violet.600");
-        border-radius: 20px;
-        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
-          0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
-
-        &:hover,
-        &:active {
-          background: linear-gradient(90deg, #be5188 0%, #805ac3 100%)
-            border-box;
-          border-color: transparent;
-          border-radius: 20px;
+        @screen md {
+            @apply relative z-auto;
         }
-      }
+
+        &.is-pinned {
+            @apply shadow;
+
+            @screen md {
+                @apply shadow-none;
+            }
+        }
+
+        .logo-nav-button {
+            @apply flex flex-row block cursor-pointer items-center;
+        }
+
+        .logo-nav-menu {
+            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+            top: 44px; // Height of the nav bar at screens below large.
+
+            @screen md {
+                @apply w-auto absolute rounded rounded-t-none pb-2 ml-0 pt-0;
+            }
+
+            @screen lg {
+                top: 53px; // Height of the nav bar at screens large+.
+            }
+
+            li {
+                @apply text-lg text-white;
+
+                a {
+                    @apply block px-4 py-2;
+
+                    &:hover {
+                        @apply underline;
+                    }
+                }
+            }
+        }
+
+        .get-started-header-button {
+            @apply hidden;
+
+            @screen lg {
+                @apply flex items-center justify-center;
+                margin-left: 30px;
+                width: 136px;
+                height: 33px;
+                padding: 8px 16px;
+
+                border: 1px solid theme("colors.violet.600");
+                border-radius: 20px;
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+                &:hover,
+                &:active {
+                    background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
+                    border-color: transparent;
+                    border-radius: 20px;
+                }
+            }
+        }
     }
-  }
 }
 
 .logo-nav-bg-mask {
-  @apply bg-transparent z-40 absolute w-full h-full;
+    @apply bg-transparent z-40 absolute w-full h-full;
 }
 
 .header-container {
-  @apply z-50 bg-white py-6;
-  top: -1px;
-
-  @screen lg {
-    @apply py-3 mt-0;
-  }
-
-  &.is-pinned {
-    @apply sticky shadow;
-  }
-
-  .logo-container {
-    @apply px-4 pb-2;
+    @apply z-50 bg-white py-6;
+    top: -1px;
 
     @screen lg {
-      @apply flex items-center justify-start pl-0;
-    }
-  }
-
-  .cta-container {
-    @apply hidden z-10;
-
-    @screen lg {
-      @apply flex items-center justify-end;
+        @apply py-3 mt-0;
     }
 
-    .header-btn-primary {
-      @include gradient-button;
-      @apply py-3 px-6;
-
-      @screen xl {
-        @apply text-lg;
-      }
+    &.is-pinned {
+        @apply sticky shadow;
     }
-  }
 
-  .desktop-menu {
-    @apply hidden;
+    .logo-container {
+        @apply px-4 pb-2;
 
-    @screen lg {
-      @apply flex items-center flex-grow justify-evenly mx-8;
-
-      li {
-        a {
-          @apply block w-full;
+        @screen lg {
+            @apply flex items-center justify-start pl-0;
         }
-      }
+    }
 
-      li:not(.header-dropdown-item) {
-        @apply flex items-center;
+    .cta-container {
+        @apply hidden z-10;
 
-        a {
-          @apply block px-4 my-1 transition-all;
+        @screen lg {
+            @apply flex items-center justify-end;
         }
 
-        .dropdown-title {
-          @apply pl-4 pr-8;
+        .header-btn-primary {
+            @include gradient-button;
+            @apply py-3 px-6;
+
+            @screen xl {
+                @apply text-lg;
+            }
         }
+    }
 
-        &:hover {
-          a,
-          .dropdown-title {
-            @apply opacity-50;
-          }
-        }
+    .desktop-menu {
+        @apply hidden;
 
-        &.header-nav-item-drop-down {
-          @apply relative cursor-pointer;
+        @screen lg {
+            @apply flex items-center flex-grow justify-evenly mx-8;
 
-          .header-nav-drop-down-menu {
-            @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
-
-            ul {
-              @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
-
-              li {
-                @apply my-1;
-              }
-
-              a {
-                &:hover {
-                  @apply opacity-100;
+            li {
+                a {
+                    @apply block w-full;
                 }
-              }
-            }
-          }
-
-          .dropdown-menu-caret {
-            @apply w-0 h-0 m-1 absolute right-2;
-            content: "";
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid black;
-          }
-
-          &:hover {
-            .dropdown-menu-caret {
-              transform: rotate(180deg);
-              @apply opacity-50;
             }
 
-            .header-nav-drop-down-menu {
-              @apply block;
+            li:not(.header-dropdown-item) {
+                @apply flex items-center;
+
+                a {
+                    @apply block px-4 my-1 transition-all;
+                }
+
+                .dropdown-title {
+                    @apply pl-4 pr-8;
+                }
+
+                &:hover {
+                    a,
+                    .dropdown-title {
+                        @apply opacity-50;
+                    }
+                }
+
+                &.header-nav-item-drop-down {
+                    @apply relative cursor-pointer;
+
+                    .header-nav-drop-down-menu {
+                        @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
+
+                        ul {
+                            @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
+
+                            li {
+                                @apply my-1;
+                            }
+
+                            a {
+                                &:hover {
+                                    @apply opacity-100;
+                                }
+                            }
+                        }
+                    }
+
+                    .dropdown-menu-caret {
+                        @apply w-0 h-0 m-1 absolute right-2;
+                        content: "";
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 5px solid black;
+                    }
+
+                    &:hover {
+                        .dropdown-menu-caret {
+                            transform: rotate(180deg);
+                            @apply opacity-50;
+                        }
+
+                        .header-nav-drop-down-menu {
+                            @apply block;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  }
-
-  .mobile-menu-toggle {
-    @apply hidden;
-  }
-
-  .mobile-menu-toggle:checked + .mobile-menu-icon {
-    .mobile-menu-closed {
-      @apply hidden;
     }
 
-    .mobile-menu-open {
-      @apply block;
-    }
-  }
-
-  .mobile-menu {
-    // The 'pb-16' is used to pad the bottom of the container so
-    // the CTA button does not get cut off.
-    @apply hidden w-full h-screen overflow-y-auto pb-16;
-
-    @screen lg {
-      @apply hidden;
+    .mobile-menu-toggle {
+        @apply hidden;
     }
 
-    ul {
-      @apply m-4;
-
-      li {
-        a {
-          @apply block;
+    .mobile-menu-toggle:checked + .mobile-menu-icon {
+        .mobile-menu-closed {
+            @apply hidden;
         }
-      }
 
-      .mobile-menu-item {
-        @apply text-xl font-display text-gray-800;
-
-        &:not(:first-of-type) {
-          @apply mt-6;
+        .mobile-menu-open {
+            @apply block;
         }
-      }
+    }
 
-      .mobile-menu-subitem {
-        @apply ml-6 mt-4 text-base;
+    .mobile-menu {
+        // The 'pb-16' is used to pad the bottom of the container so
+        // the CTA button does not get cut off.
+        @apply hidden w-full h-screen overflow-y-auto pb-16;
 
-        a {
-          @apply text-gray-700;
+        @screen lg {
+            @apply hidden;
         }
-      }
+
+        ul {
+            @apply m-4;
+
+            li {
+                a {
+                    @apply block;
+                }
+            }
+
+            .mobile-menu-item {
+                @apply text-xl font-display text-gray-800;
+
+                &:not(:first-of-type) {
+                    @apply mt-6;
+                }
+            }
+
+            .mobile-menu-subitem {
+                @apply ml-6 mt-4 text-base;
+
+                a {
+                    @apply text-gray-700;
+                }
+            }
+        }
     }
-  }
 
-  .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
-    @apply block;
+    .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
+        @apply block;
 
-    @screen lg {
-      @apply hidden;
-    }
-  }
-
-  .mobile-menu-icon {
-    @apply absolute right-4;
-
-    @screen lg {
-      @apply hidden;
+        @screen lg {
+            @apply hidden;
+        }
     }
 
-    label {
-      @apply cursor-pointer;
+    .mobile-menu-icon {
+        @apply absolute right-4;
+
+        @screen lg {
+            @apply hidden;
+        }
+
+        label {
+            @apply cursor-pointer;
+        }
     }
-  }
 }
 
 .registry-hero {
-  @apply w-full flex relative flex-col justify-center;
+    @apply w-full flex relative flex-col justify-center;
 
-  height: 100px;
+    height: 100px;
 
-  .dot-overlay {
-    @apply w-full h-full absolute;
-    z-index: -1;
-    background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.9) 0%,
-      rgba(255, 255, 255, 0.8) 10%,
-      rgba(255, 255, 255, 0.5004551991695115) 100%
-    );
-  }
-
-  .registry-hero-title {
-    @screen md {
-      @apply flex items-center;
+    .dot-overlay {
+        @apply w-full h-full absolute;
+        z-index: -1;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551991695115) 100%);
     }
 
-    .title-icon,
-    .title-text-content {
-      @apply text-lg text-gray-800 bg-white bg-opacity-70;
+    .registry-hero-title {
+        @screen md {
+            @apply flex items-center;
+        }
 
-      @screen md {
-        @apply text-2xl;
-      }
-    }
+        .title-icon,
+        .title-text-content {
+            @apply text-lg text-gray-800 bg-white bg-opacity-70;
 
-    .title-text-content {
-      @apply font-display font-bold mb-0 ml-4;
+            @screen md {
+                @apply text-2xl;
+            }
+        }
+
+        .title-text-content {
+            @apply font-display font-bold mb-0 ml-4;
+        }
     }
-  }
 }
