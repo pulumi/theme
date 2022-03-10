@@ -4,6 +4,7 @@
 /dist
 /stencil/node_modules
 /stencil/dist
+/stencil/src/components.d.ts
 /assets
 
 layouts/partials/assets.html
