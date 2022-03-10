@@ -65,3 +65,8 @@ replace github.com/pulumi/theme => ../theme
 **Tip:** If you run `make serve` (in this repo) in a terminal tab and run your Hugo dev server in another, the changes you make to CSS and JavaScript source files will be recompiled and reloaded in the browser automatically.
 
 Be sure to remove the `replace` line before you commit.
+
+### Linting
+This repo uses Prettier for code formatting, to keep styling + formatting issues aligned without the need to be reviewed in PRs.  We currently do not automtically run the formatted as a build check, but may opt to do so in the future as needed.  To see what files have formatting diffs, you can run `yarn lint` from the project root, which will list all the files with diffs.  To fix this diffs in bulk, you can run `yarn lint-fix` also from the root.
+
+Prettier is easiest to use when you run it automatically on save in your editor - see the docs here: https://prettier.io/docs/en/editors.html.  If you set your editor to format on save, you should be staying aligned with formatting without needing to run any of the above commands.
