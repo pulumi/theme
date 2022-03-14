@@ -11,6 +11,7 @@ export interface APINavNode {
     // to allow for accurate rendering of the rebuilt tree after search.
     isExpanded?: boolean;
     parentName?: string;
+    rootName: string;
 }
 
 export type APINavNodeType = "module" | "function" | "resource";
@@ -115,7 +116,7 @@ export class PulumiApiDocFilterableNav {
                 // it with an empty list of children.  The empty list of children ensures that the only children rendered will
                 // be matches to the filter content.
                 if (!isRootDuplicate && rootNode) {
-                    const treeNode = { ...rootNode, children: [], isExpanded: true };
+                    const treeNode = { ...rootNode, children: [], isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[rootName] = true;
                 }
@@ -129,6 +130,7 @@ export class PulumiApiDocFilterableNav {
                         children: [],
                         isExpanded: true,
                         parentName: rootNode.name,
+                        rootName
                     };
                     nodesToRender.push(treeNode);
                     nodeCache[parentName] = true;
@@ -139,17 +141,17 @@ export class PulumiApiDocFilterableNav {
 
                 // If there's a direct parent node, that's the parent.
                 if (directParentNode) {
-                    const treeNode = { ...node, children: [], parentName: directParentNode.name, isExpanded: true };
+                    const treeNode = { ...node, children: [], parentName: directParentNode.name, isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                     // If there's no direct parent, but there is a root, then the root's the parent.
                 } else if (rootNode) {
-                    const treeNode = { ...node, children: [], parentName: rootNode.name, isExpanded: true };
+                    const treeNode = { ...node, children: [], parentName: rootNode.name, isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                     // Otherwise, the current node is a root, with no parent.
                 } else {
-                    const treeNode = { ...node, children: [], parentName: undefined, isExpanded: true };
+                    const treeNode = { ...node, children: [], parentName: undefined, isExpanded: true, rootName};
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                 }
@@ -176,7 +178,9 @@ export class PulumiApiDocFilterableNav {
             root.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === root.name);
 
             root.children?.map((child) => {
-                child.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === child.name);
+                // We check that both the parent and the root match to handle the case where there are multiple parents
+                // with the same name (eg "v1").
+                child.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === child.name && nodeToRender.rootName === root.name);
             });
         });
 
