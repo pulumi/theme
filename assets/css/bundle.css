@@ -1,14 +1,5 @@
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
-  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
-  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -1044,7 +1035,7 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
 .automation-scenarios-carousel-items .automation-scenarios-carousel-headers li[data-product-carousel-type=self-service]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .automation-scenarios-carousel-items .automation-scenarios-carousel-headers li[data-product-carousel-type=self-service] a{
@@ -1056,7 +1047,7 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
   .automation-scenarios-carousel-items #self-service:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=self-service]{
     border-bottom:2px solid;
     border-image-slice:1;
-    border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
   }
 
   .automation-scenarios-carousel-items #self-service:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=self-service] a{
@@ -1093,7 +1084,7 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
   .automation-scenarios-carousel-items #saas:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=saas]{
     border-bottom:2px solid;
     border-image-slice:1;
-    border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
   }
 
   .automation-scenarios-carousel-items #saas:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=saas] a{
@@ -1130,7 +1121,7 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
   .automation-scenarios-carousel-items #workflow:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=workflow]{
     border-bottom:2px solid;
     border-image-slice:1;
-    border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
   }
 
   .automation-scenarios-carousel-items #workflow:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=workflow] a{
@@ -1167,7 +1158,7 @@ section[id=pulumi-python-sdk] table td,section[id=pulumi-python-sdk] .pre{
   .automation-scenarios-carousel-items #tooling:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=tooling]{
     border-bottom:2px solid;
     border-image-slice:1;
-    border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
   }
 
   .automation-scenarios-carousel-items #tooling:target~.automation-scenarios-carousel-headers li[data-product-carousel-type=tooling] a{
@@ -3090,7 +3081,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-radius: 9999px;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%);
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
   border-image-width:2px;
   content:"";
   top:-2px;
@@ -3111,7 +3102,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .header-container .cta-container .header-btn-primary:is(input):hover{
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%)
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
 }
 
 .header-container .cta-container .header-btn-primary:focus{
@@ -3512,7 +3503,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-radius: 9999px;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%);
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
   border-image-width:2px;
   content:"";
   top:-2px;
@@ -3533,7 +3524,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .home-page-hero .home-page-hero-content .home-hero-btn-primary:is(input):hover{
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%)
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
 }
 
 .home-page-hero .home-page-hero-content .home-hero-btn-primary:focus{
@@ -3736,7 +3727,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-radius: 9999px;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%);
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
   border-image-width:2px;
   content:"";
   top:-2px;
@@ -3757,7 +3748,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .hs-form input[type=submit]:is(input):hover{
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%)
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
 }
 
 .hs-form input[type=submit]:focus{
@@ -12811,7 +12802,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-radius: 9999px;
   --tw-border-opacity: 1;
   --tw-bg-opacity: 1;
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%);
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
   border-image-width:2px;
   content:"";
   top:-2px;
@@ -12832,7 +12823,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:is(input):hover{
-  background:linear-gradient(90deg, #BE5188 0%, #805ac3 100%)
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
 }
 
 body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:focus{
@@ -13491,7 +13482,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .trialed-editions .gradient{
   border-radius:12px 12px 0px 0px;
   height:8px;
-  background:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  background:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 @media (min-width: 1024px){
@@ -13511,7 +13502,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .ready-cta.gradient{
-  background:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  background:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .key-feature-description a{
@@ -13538,7 +13529,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .product-carousel-items .product-carousel-headers li[data-product-carousel-type=build]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .product-carousel-items .product-carousel-headers li[data-product-carousel-type=build] a{
@@ -13549,7 +13540,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .product-carousel-items #build:target~.product-carousel-headers li[data-product-carousel-type=build]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .product-carousel-items #build:target~.product-carousel-headers li[data-product-carousel-type=build] a{
@@ -13586,7 +13577,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .product-carousel-items #deploy:target~.product-carousel-headers li[data-product-carousel-type=deploy]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .product-carousel-items #deploy:target~.product-carousel-headers li[data-product-carousel-type=deploy] a{
@@ -13623,7 +13614,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .product-carousel-items #manage:target~.product-carousel-headers li[data-product-carousel-type=manage]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .product-carousel-items #manage:target~.product-carousel-headers li[data-product-carousel-type=manage] a{
@@ -15293,7 +15284,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .slot-machine-overlay .overlay-top{
   border:none;
   background:#fff;
-  background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.85) 95%, rgba(255, 255, 255, 0) 100%);
+  background:linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.85) 95%, rgba(255, 255, 255, 0) 100%);
   height:30%
 }
 
@@ -15306,7 +15297,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .slot-machine-overlay .overlay-end{
   border:none;
   background:#fff;
-  background:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 5%, #FFFFFF 100%);
+  background:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 5%, #ffffff 100%);
   height:30%
 }
 
@@ -16003,7 +15994,7 @@ pulumi-banner{
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  background-image:linear-gradient(77.95deg, #F6BF28 0.06%, #F2707E 48.58%, #BF4E86 95.36%);
+  background-image:linear-gradient(77.95deg, #f6bf28 0.06%, #f2707e 48.58%, #bf4e86 95.36%);
 }
 
 pulumi-banner[visible]{
@@ -16160,7 +16151,7 @@ pulumi-chooser>ul li:hover{
 pulumi-chooser>ul li.active{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 pulumi-chooser>ul li.active a{
@@ -17590,7 +17581,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 }
 
 .rainbow-text{
-  background:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+  background:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   -moz-background-clip:text;
