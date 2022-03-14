@@ -11,7 +11,7 @@ interface CountdownData {
 @Component({
     tag: "pulumi-date-countdown",
     styleUrl: "date-countdown.css",
-    shadow: false
+    shadow: false,
 })
 export class DateCountdown {
     @Prop()
@@ -31,7 +31,7 @@ export class DateCountdown {
 
     componentWillLoad() {
         const countdownEndDate = new Date(this.dateString).getTime();
-        this.generateCountdownData(countdownEndDate)
+        this.generateCountdownData(countdownEndDate);
         setInterval(() => this.generateCountdownData(countdownEndDate), 1000);
     }
 
@@ -44,34 +44,44 @@ export class DateCountdown {
             hours: Math.floor((remainingTimeInMS % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             minutes: Math.floor((remainingTimeInMS % (1000 * 60 * 60)) / (1000 * 60)),
             seconds: Math.floor((remainingTimeInMS % (1000 * 60)) / 1000),
-        }
+        };
     }
 
     private renderValueLabel(label: string) {
-        return <span class={this.valueLabelClass}>{ label }</span>
+        return <span class={this.valueLabelClass}>{label}</span>;
     }
 
     private renderCountdown() {
         const { days, hours, minutes, seconds, remainingTimeInMS } = this.countdownData;
-        return <p class={this.textClass}>
-            { remainingTimeInMS > 0 ?
-                <span>
-                    <span>{ days }{this.renderValueLabel("days")} </span>
-                    <span>{ hours }{this.renderValueLabel("hours")} </span>
-                    <span>{ minutes }{this.renderValueLabel("minutes")} </span>
-                    <span>{ seconds }{this.renderValueLabel("seconds")}</span>
-                </span>
-            :
-                this.countdownOverText
-            }
-        </p>;
+        return (
+            <p class={this.textClass}>
+                {remainingTimeInMS > 0 ? (
+                    <span>
+                        <span>
+                            {days}
+                            {this.renderValueLabel("days")}{" "}
+                        </span>
+                        <span>
+                            {hours}
+                            {this.renderValueLabel("hours")}{" "}
+                        </span>
+                        <span>
+                            {minutes}
+                            {this.renderValueLabel("minutes")}{" "}
+                        </span>
+                        <span>
+                            {seconds}
+                            {this.renderValueLabel("seconds")}
+                        </span>
+                    </span>
+                ) : (
+                    this.countdownOverText
+                )}
+            </p>
+        );
     }
 
     render() {
-        return (
-            <Host>
-                { this.countdownData && this.renderCountdown() }
-            </Host>
-        );
+        return <Host>{this.countdownData && this.renderCountdown()}</Host>;
     }
 }

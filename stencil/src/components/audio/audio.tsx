@@ -2,7 +2,7 @@ import { Component, h, Prop, Element, State } from "@stencil/core";
 
 @Component({
     tag: "pulumi-audio",
-    shadow: false
+    shadow: false,
 })
 export class Audio {
     @Element()
@@ -32,8 +32,8 @@ export class Audio {
             audio.volume = 1;
             audio.muted = false;
         }
-        audio.addEventListener("pause", () => this.paused = true);
-        audio.addEventListener("play", () => this.paused = false);
+        audio.addEventListener("pause", () => (this.paused = true));
+        audio.addEventListener("play", () => (this.paused = false));
     }
 
     private toggleMute() {
@@ -48,11 +48,14 @@ export class Audio {
         }
 
         this.isLoading = true;
-        audio.play().then(() => {
-            this.isLoading = false;
-        }).catch(() => {
-            this.error = true;
-        });
+        audio
+            .play()
+            .then(() => {
+                this.isLoading = false;
+            })
+            .catch(() => {
+                this.error = true;
+            });
     }
 
     private getAudio() {
@@ -60,7 +63,11 @@ export class Audio {
     }
 
     private renderError() {
-        return <div class="audio-container"><div class="error-callout">Music Cannot Be Played</div></div>;
+        return (
+            <div class="audio-container">
+                <div class="error-callout">Music Cannot Be Played</div>
+            </div>
+        );
     }
 
     private renderAudio() {
@@ -68,7 +75,10 @@ export class Audio {
         const icon = this.isLoading ? "fa-cog fa-spin" : "fas fa-music";
         return (
             <div class="audio-container" onClick={this.toggleMute.bind(this)}>
-                <div class="audio-button"><i class={`fas ${icon}`}></i>{ text }</div>
+                <div class="audio-button">
+                    <i class={`fas ${icon}`}></i>
+                    {text}
+                </div>
                 <audio preload="none" loop>
                     <source src={this.url} type="audio/mpeg" />
                 </audio>

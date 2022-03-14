@@ -1,7 +1,7 @@
-import { Swiper } from './swiper';
+import { Swiper } from "./swiper";
 
-describe('pulumi-swiper', () => {
-  it('builds', () => {
-    expect(new Swiper()).toBeTruthy();
-  });
+describe("pulumi-swiper", () => {
+    it("builds", () => {
+        expect(new Swiper()).toBeTruthy();
+    });
 });

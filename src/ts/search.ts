@@ -6,12 +6,12 @@
 // Only bother doing this if we're on a page with a search box.
 if (document.querySelector("#search-container")) {
     const observer = new MutationObserver((mutations, observer) => {
-        var [ mutation ] = mutations;
+        var [mutation] = mutations;
 
         // Only bother when nodes are added.
         if (mutation && mutation.addedNodes && mutation.addedNodes.length > 0) {
-            const [ newNode ] = Array.from(mutation.addedNodes) as HTMLElement[];
-            const hasLoadedSwiftype = newNode && (typeof newNode.getAttribute === "function") && newNode.getAttribute("id") === "st-injected-content";
+            const [newNode] = Array.from(mutation.addedNodes) as HTMLElement[];
+            const hasLoadedSwiftype = newNode && typeof newNode.getAttribute === "function" && newNode.getAttribute("id") === "st-injected-content";
 
             if (hasLoadedSwiftype) {
                 // Find our results container and reparent the Swiftype container with it.
@@ -28,12 +28,9 @@ if (document.querySelector("#search-container")) {
     });
 
     // Start listening for DOM mutation events.
-    observer.observe(
-        document.querySelector("body"),
-        {
-            attributes: false,
-            childList: true, // New childNodes are all we care about.
-            subtree: false,
-        },
-    );
+    observer.observe(document.querySelector("body"), {
+        attributes: false,
+        childList: true, // New childNodes are all we care about.
+        subtree: false,
+    });
 }

@@ -17,7 +17,6 @@ export interface PackageFilter {
     `,
 })
 export class FilterSelect {
-
     @Element()
     el: HTMLElement;
 
@@ -29,7 +28,7 @@ export class FilterSelect {
 
     @Method()
     reset() {
-        this.options.forEach(option => option.selected = false);
+        this.options.forEach(option => (option.selected = false));
         this.groups.forEach(group => group.close());
         this.filterSelect.emit([]);
 
@@ -83,8 +82,10 @@ export class FilterSelect {
     }
 
     render() {
-        return <div>
-            <slot />
-        </div>;
+        return (
+            <div>
+                <slot />
+            </div>
+        );
     }
 }

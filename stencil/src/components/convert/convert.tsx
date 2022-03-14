@@ -9,7 +9,7 @@ export type OutputEditorFilename = "index.ts" | "index.js" | "__main__.py" | "ma
 export interface SourceFile {
     name: string;
     filename: string;
-    description: string,
+    description: string;
     code: string;
 }
 
@@ -21,7 +21,7 @@ interface SupportedLanguage {
 
 interface ConvertServiceResult {
     files: {
-        [filename: string]: string
+        [filename: string]: string;
     };
     diagnostics: string;
     error: string;
@@ -34,16 +34,15 @@ interface OutputEditorResult {
     status: {
         success: boolean;
         message: string;
-    }
+    };
 }
 
 @Component({
     tag: "pulumi-convert",
     styleUrl: "./convert.scss",
-    shadow: false
+    shadow: false,
 })
 export class Convert {
-
     @Prop()
     from: SourceKind;
 
@@ -83,7 +82,7 @@ export class Convert {
     supportedLanguages: SupportedLanguage[] = [
         { key: "typescript", name: "TypeScript", filename: "index.ts" },
         { key: "python", name: "Python", filename: "__main__.py" },
-        { key: "go", name: "Go", filename: "main.go", },
+        { key: "go", name: "Go", filename: "main.go" },
         { key: "csharp", name: "C#", filename: "MyStack.cs" },
     ];
 
@@ -93,20 +92,19 @@ export class Convert {
             this.validateGlobals();
             this.prepareEditors();
             this.prepareSourceFiles();
-        }
-        catch(error) {
+        } catch (error) {
             console.error(error.message);
         }
     }
 
     // The textarea input element that backs the CodeMirror UI.
     private get inputEditorEl() {
-        return (this.el.querySelector("#editor-input") as HTMLTextAreaElement);
+        return this.el.querySelector("#editor-input") as HTMLTextAreaElement;
     }
 
     // The textarea output that backs the CodeMirror UI.
     private get outputEditorEl() {
-        return (this.el.querySelector("#editor-output") as HTMLTextAreaElement);
+        return this.el.querySelector("#editor-output") as HTMLTextAreaElement;
     }
 
     // The CodeMirror language mode. https://codemirror.net/mode/
@@ -202,16 +200,11 @@ export class Convert {
 
     // Ensure the supporting libraries we expect have been loaded and their globals are usable.
     private validateGlobals() {
-        const missingGlobals = [
-            typeof CodeMirror,
-            typeof JSZip,
-            typeof saveAs,
-        ].filter(result => result === "undefined");
+        const missingGlobals = [typeof CodeMirror, typeof JSZip, typeof saveAs].filter(result => result === "undefined");
 
         if (missingGlobals.length > 0) {
             throw new Error(
-                "The pulumi-convert component requires CodeMirror, JZSip, and FileSaver. " +
-                "Please ensure each of these scripts has been loaded into global before using it."
+                "The pulumi-convert component requires CodeMirror, JZSip, and FileSaver. " + "Please ensure each of these scripts has been loaded into global before using it.",
             );
         }
     }
@@ -226,8 +219,7 @@ export class Convert {
 
         try {
             this.endpointURL = new URL(this.endpoint);
-        }
-        catch(error) {
+        } catch (error) {
             errors.push("A valid `endpoint` attribute is required.");
         }
 
@@ -273,7 +265,6 @@ export class Convert {
         });
 
         this.inputEditor.on("keydown", (_instance: CodeMirror.Editor, event: KeyboardEvent) => {
-
             // On Command-Enter or Command-s, submit.
             if (event.metaKey && (event.key === "Enter" || event.key === "s")) {
                 event.preventDefault();
@@ -289,18 +280,17 @@ export class Convert {
         if (this.examples && this.examples.length > 0) {
             try {
                 this.sourceFiles.push(...JSON.parse(this.examples));
-            }
-            catch(error) {
+            } catch (error) {
                 console.error("Failed to load examples:", error);
             }
         }
 
-        this.customSourceFile  = {
+        this.customSourceFile = {
             name: `Custom`,
             description: `Convert your own ${this.sourceLanguageName} code.`,
             filename: this.inputEditorDefaultFilename,
             code: "",
-        }
+        };
 
         this.sourceFiles.push(this.customSourceFile);
         this.selectSourceFile(this.sourceFiles[0]);
@@ -336,10 +326,9 @@ export class Convert {
     private downloadZip() {
         const zip = new JSZip();
         zip.file(this.outputResult.filename, this.outputResult.code);
-        zip.generateAsync({ type: "blob" })
-            .then(content => {
-                saveAs(content, `${this.from}2pulumi.zip`);
-            });
+        zip.generateAsync({ type: "blob" }).then(content => {
+            saveAs(content, `${this.from}2pulumi.zip`);
+        });
     }
 
     // Hide the warning/error message box.
@@ -362,7 +351,7 @@ export class Convert {
         this.alertDismissed = false;
 
         try {
-            const response = await fetch([ this.endpointURL, this.endpointPath].join("/"), {
+            const response = await fetch([this.endpointURL, this.endpointPath].join("/"), {
                 method: "POST",
                 mode: "cors",
                 body: JSON.stringify({
@@ -381,11 +370,10 @@ export class Convert {
                     status: {
                         success: false,
                         message: result.error,
-                    }
+                    },
                 });
-
             } else if (result.files) {
-                let [ filename, code ] = Object.entries(result.files)[0];
+                let [filename, code] = Object.entries(result.files)[0];
 
                 // Nasty hack alert: The service currently returns bogus filenames like
                 // "ouput" and "output". While we await a service-side fix for this, if
@@ -397,7 +385,7 @@ export class Convert {
 
                 // Additionally, the kube2pulumi endpoint returns "no diagnostics" when
                 // there are no diagnostics.
-                const diagnostics = result.diagnostics?.replace(/^no diagnostics$/, "") || ""
+                const diagnostics = result.diagnostics?.replace(/^no diagnostics$/, "") || "";
 
                 if (filename && code) {
                     this.setOutputResult({
@@ -407,7 +395,7 @@ export class Convert {
                         status: {
                             success: true,
                             message: filename,
-                        }
+                        },
                     });
                 }
 
@@ -415,8 +403,7 @@ export class Convert {
                     this.outputResult.diagnostics = diagnostics;
                 }
             }
-        }
-        catch(error) {
+        } catch (error) {
             console.error(`Submission failed: ${error}`);
         }
 
@@ -429,7 +416,7 @@ export class Convert {
 
         if (this.converting) {
             classes.push("converting");
-        };
+        }
 
         if (this.outputResult) {
             if (this.outputResult.diagnostics) {
@@ -449,197 +436,197 @@ export class Convert {
 
     // Render the editor's "window" bar.
     private renderWindowBar() {
-        return <div class="window-bar">
-            <div class="window-bar-buttons">
-                <div class="window-bar-button"></div>
-                <div class="window-bar-button"></div>
-                <div class="window-bar-button"></div>
+        return (
+            <div class="window-bar">
+                <div class="window-bar-buttons">
+                    <div class="window-bar-button"></div>
+                    <div class="window-bar-button"></div>
+                    <div class="window-bar-button"></div>
+                </div>
             </div>
-        </div>;
+        );
     }
 
     // Render an individual editor tab.
     private renderTab(item: any, activeItem: any, label: string, title: string, handler: Function): HTMLLIElement {
-        return <li onClick={ handler.bind(this, item) }
-            class={ this.combineClasses("tab", item === activeItem ? "active" : "") }
-            title={ title }>
-            <span class="label">{ label }</span>
-            <span class="indicator"></span>
-        </li>;
+        return (
+            <li onClick={handler.bind(this, item)} class={this.combineClasses("tab", item === activeItem ? "active" : "")} title={title}>
+                <span class="label">{label}</span>
+                <span class="indicator"></span>
+            </li>
+        );
     }
 
     // Render a convert button.
     private renderConvertButton(withTooltip: boolean) {
-        const title = `Convert this ${ this.sourceLanguageName } code to ${ this.selectedOutputLanguage?.name }`;
+        const title = `Convert this ${this.sourceLanguageName} code to ${this.selectedOutputLanguage?.name}`;
 
-        const button = <button
-            onClick={ this.convert.bind(this) }
-            class={ this.combineClasses("btn-convert", this.converting ? "converting" : "") }
-            title={ title }
-            disabled={ !this.convertible || this.converting }>
-            <span class="label">Convert</span>
-            <span class="icon"></span>
-        </button>;
+        const button = (
+            <button
+                onClick={this.convert.bind(this)}
+                class={this.combineClasses("btn-convert", this.converting ? "converting" : "")}
+                title={title}
+                disabled={!this.convertible || this.converting}
+            >
+                <span class="label">Convert</span>
+                <span class="icon"></span>
+            </button>
+        );
 
         if (!withTooltip) {
             return button;
         }
 
-        return <pulumi-tooltip>
-            { button }
-            <span slot="content">
-                { title }
-            </span>
-        </pulumi-tooltip>
+        return (
+            <pulumi-tooltip>
+                {button}
+                <span slot="content">{title}</span>
+            </pulumi-tooltip>
+        );
     }
 
     private renderDismissAlertButton() {
-        return <button class="toggle" title="Dismiss this message" onClick={ this.dismissAlert.bind(this) }>
-            <span class="icon"></span>
-        </button>;
+        return (
+            <button class="toggle" title="Dismiss this message" onClick={this.dismissAlert.bind(this)}>
+                <span class="icon"></span>
+            </button>
+        );
     }
 
     // Render an editor status bar.
     private renderStatusBar(type: "input" | "output") {
         switch (type) {
             case "input":
-                return <div class="status-bar">
-                    <span class="message">
-                        { this.selectedSourceFile?.filename }
-                        { this.selectedSourceFile?.description ? ` • ${this.selectedSourceFile.description}` : ""}
-                    </span>
-                </div>;
+                return (
+                    <div class="status-bar">
+                        <span class="message">
+                            {this.selectedSourceFile?.filename}
+                            {this.selectedSourceFile?.description ? ` • ${this.selectedSourceFile.description}` : ""}
+                        </span>
+                    </div>
+                );
             case "output":
-                return <div class={ this.statusBarClasses }>
-                    <span class="icon"></span>
-                    <span class="message">{ this.outputResult?.status?.message }</span>
-                    <div class={ this.combineClasses("alert", "alert-error", this.alertDismissed ? "dismissed" : undefined) }>
-                        { this.renderDismissAlertButton() }
-                        <p>
-                            <strong>Sorry, we were unable to convert your code.</strong>
-                        </p>
-                        <p>
-                            There could be a problem with the code you submitted, or it might use a
-                            feature { this.conversionTool.name } doesn't support. Join us
-                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
-                        </p>
+                return (
+                    <div class={this.statusBarClasses}>
+                        <span class="icon"></span>
+                        <span class="message">{this.outputResult?.status?.message}</span>
+                        <div class={this.combineClasses("alert", "alert-error", this.alertDismissed ? "dismissed" : undefined)}>
+                            {this.renderDismissAlertButton()}
+                            <p>
+                                <strong>Sorry, we were unable to convert your code.</strong>
+                            </p>
+                            <p>
+                                There could be a problem with the code you submitted, or it might use a feature {this.conversionTool.name} doesn't support. Join us in{" "}
+                                <a href="https://slack.pulumi.com/">Community Slack</a> for help.
+                            </p>
+                        </div>
+                        <div class={this.combineClasses("alert", "alert-warn", this.alertDismissed ? "dismissed" : undefined)}>
+                            {this.renderDismissAlertButton()}
+                            <p>
+                                <strong>Sorry, we were unable to convert your code completely.</strong>
+                            </p>
+                            <p>
+                                The code was valid, but {this.conversionTool.name} was unable to convert it completely. There could be a problem with the code you submitted, or it
+                                might use a feature {this.conversionTool.name} doesn't support. Join us in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
+                            </p>
+                        </div>
                     </div>
-                    <div class={ this.combineClasses("alert", "alert-warn", this.alertDismissed ? "dismissed" : undefined) }>
-                        { this.renderDismissAlertButton() }
-                        <p>
-                            <strong>Sorry, we were unable to convert your code completely.</strong>
-                        </p>
-                        <p>
-                            The code was valid, but { this.conversionTool.name } was unable to convert it completely.
-                            There could be a problem with the code you submitted, or it might use a
-                            feature { this.conversionTool.name } doesn't support. Join us
-                            in <a href="https://slack.pulumi.com/">Community Slack</a> for help.
-                        </p>
-                    </div>
-                </div>;
+                );
             default:
-                return <div class="status-bar">
-                    <span class="message">&nbsp;</span>
-                </div>;
+                return (
+                    <div class="status-bar">
+                        <span class="message">&nbsp;</span>
+                    </div>
+                );
         }
     }
 
     private renderDiagnostics() {
         if (this.outputResult?.diagnostics) {
-            console.log("Conversion completed with errors. Diagnostics:")
+            console.log("Conversion completed with errors. Diagnostics:");
             console.log(this.outputResult?.diagnostics);
 
-            return <div class="diagnostics">
-                <p>
-                    <strong>Diagnostics:</strong>
-                </p>
-                <p class="details">
-                    { this.outputResult.diagnostics }
-                </p>
-            </div>;
+            return (
+                <div class="diagnostics">
+                    <p>
+                        <strong>Diagnostics:</strong>
+                    </p>
+                    <p class="details">{this.outputResult.diagnostics}</p>
+                </div>
+            );
         }
     }
 
     // Render the full component.
     render() {
-        return <div>
-            <div id="editors">
-                <div class="editor editor-input">
-                    <div class="editor-heading">
-                        <h3>
-                            <span class="editor-step">1</span>
-                            Start with some { this.sourceLanguageName }.
-                        </h3>
-                        <p>
-                            We've included a few examples for reference &mdash; feel free to edit them as you like,
-                            or replace them with your own code. (And don't worry, we send your code over SSL
-                            and don't store anything on our servers.) When you're ready to transform
-                            your { this.sourceLanguageName } code to Pulumi, select <strong>Convert</strong>.
-                        </p>
-                    </div>
-                    <div class="editor-container">
-                        { this.renderWindowBar() }
-                        <ul class="tabs">
-                            {
-                                this.sourceFiles.map(file =>
-                                    this.renderTab(file, this.selectedSourceFile, file.name, file.description, this.selectSourceFile)
-                                )
-                            }
-                            <li class="actions">
-                                { this.renderConvertButton(true) }
-                            </li>
-                        </ul>
-                        <textarea id="editor-input"></textarea>
-                        { this.renderStatusBar("input") }
-                    </div>
-                </div>
-                <div class={ this.combineClasses("editor", "editor-output", this.converting ? "converting" : "") }>
-                    <div class="editor-heading">
-                        <h3>
-                            <span class="editor-step">2</span>
-                            Turn it into your language of choice.
-                        </h3>
-                        <p>
-                            Your code will be converted
-                            with { this.conversionTool.githubURL ? <a href={ this.conversionTool.githubURL }>{ this.conversionTool.name }</a> : this.conversionTool.name },
-                            an open-source command-line tool we built to make it as easy as possible for you to migrate
-                            your existing { this.sourceLanguageName } projects to Pulumi. The resulting file can
-                            be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
-                        </p>
-                        <div>
-                            { this.renderConvertButton(false) }
+        return (
+            <div>
+                <div id="editors">
+                    <div class="editor editor-input">
+                        <div class="editor-heading">
+                            <h3>
+                                <span class="editor-step">1</span>
+                                Start with some {this.sourceLanguageName}.
+                            </h3>
+                            <p>
+                                We've included a few examples for reference &mdash; feel free to edit them as you like, or replace them with your own code. (And don't worry, we
+                                send your code over SSL and don't store anything on our servers.) When you're ready to transform your {this.sourceLanguageName} code to Pulumi,
+                                select <strong>Convert</strong>.
+                            </p>
+                        </div>
+                        <div class="editor-container">
+                            {this.renderWindowBar()}
+                            <ul class="tabs">
+                                {this.sourceFiles.map(file => this.renderTab(file, this.selectedSourceFile, file.name, file.description, this.selectSourceFile))}
+                                <li class="actions">{this.renderConvertButton(true)}</li>
+                            </ul>
+                            <textarea id="editor-input"></textarea>
+                            {this.renderStatusBar("input")}
                         </div>
                     </div>
-                    <div class="editor-container">
-                        { this.renderWindowBar() }
-                        <ul class="tabs">
-                            {
-                                this.supportedLanguages.map(language =>
-                                    this.renderTab(language, this.selectedOutputLanguage, language.name, language.name, this.selectOutputLanguage)
-                                )
-                            }
-                            <li class="actions">
-                                <pulumi-tooltip>
-                                    <button onClick={ this.copyToClipboard.bind(this) } class="btn-copy">
-                                        <i></i>
-                                    </button>
-                                    <span slot="content">Copy to clipboard</span>
-                                </pulumi-tooltip>
-                                <pulumi-tooltip>
-                                    <button onClick={ this.downloadZip.bind(this) } class="btn-download">
-                                        <i></i>
-                                    </button>
-                                    <span slot="content">Download as .zip</span>
-                                </pulumi-tooltip>
-                            </li>
-                        </ul>
-                        <div class="editor-spinner"></div>
-                        <textarea id="editor-output"></textarea>
-                        { this.renderStatusBar("output") }
+                    <div class={this.combineClasses("editor", "editor-output", this.converting ? "converting" : "")}>
+                        <div class="editor-heading">
+                            <h3>
+                                <span class="editor-step">2</span>
+                                Turn it into your language of choice.
+                            </h3>
+                            <p>
+                                Your code will be converted with{" "}
+                                {this.conversionTool.githubURL ? <a href={this.conversionTool.githubURL}>{this.conversionTool.name}</a> : this.conversionTool.name}, an open-source
+                                command-line tool we built to make it as easy as possible for you to migrate your existing {this.sourceLanguageName} projects to Pulumi. The
+                                resulting file can be copied or downloaded for use with <a href="https://pulumi.com/start">a new Pulumi project</a>.
+                            </p>
+                            <div>{this.renderConvertButton(false)}</div>
+                        </div>
+                        <div class="editor-container">
+                            {this.renderWindowBar()}
+                            <ul class="tabs">
+                                {this.supportedLanguages.map(language =>
+                                    this.renderTab(language, this.selectedOutputLanguage, language.name, language.name, this.selectOutputLanguage),
+                                )}
+                                <li class="actions">
+                                    <pulumi-tooltip>
+                                        <button onClick={this.copyToClipboard.bind(this)} class="btn-copy">
+                                            <i></i>
+                                        </button>
+                                        <span slot="content">Copy to clipboard</span>
+                                    </pulumi-tooltip>
+                                    <pulumi-tooltip>
+                                        <button onClick={this.downloadZip.bind(this)} class="btn-download">
+                                            <i></i>
+                                        </button>
+                                        <span slot="content">Download as .zip</span>
+                                    </pulumi-tooltip>
+                                </li>
+                            </ul>
+                            <div class="editor-spinner"></div>
+                            <textarea id="editor-output"></textarea>
+                            {this.renderStatusBar("output")}
+                        </div>
+                        {this.renderDiagnostics()}
                     </div>
-                    { this.renderDiagnostics() }
                 </div>
             </div>
-        </div>;
+        );
     }
 }

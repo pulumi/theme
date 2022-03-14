@@ -38,13 +38,13 @@ export class ContactUsForm {
             return {
                 key: item.key,
                 label: item.label ? item.label : item.key.charAt(0).toUpperCase() + item.key.slice(1),
-                hubspotFormId: item.hubspot_form_id
+                hubspotFormId: item.hubspot_form_id,
             };
         });
 
         const formQueryParam = getQueryVariable("form");
         if (formQueryParam) {
-            const selectedForm = this.parsedItems.find((item) => (item.key as string).toLowerCase() === formQueryParam.toLowerCase());
+            const selectedForm = this.parsedItems.find(item => (item.key as string).toLowerCase() === formQueryParam.toLowerCase());
 
             if (selectedForm) {
                 this.defaultFormId = selectedForm.hubspotFormId;

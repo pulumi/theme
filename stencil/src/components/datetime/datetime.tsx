@@ -6,7 +6,6 @@ import { Component, Prop, h } from "@stencil/core";
     shadow: true,
 })
 export class Datetime {
-
     @Prop()
     class?: string;
 
@@ -23,7 +22,7 @@ export class Datetime {
             month: "long",
             day: "numeric",
             hour: "numeric",
-            minute: "2-digit"
+            minute: "2-digit",
         };
 
         this.date = date.toLocaleString(undefined, options);
@@ -36,5 +35,4 @@ export class Datetime {
             </time>
         );
     }
-
 }

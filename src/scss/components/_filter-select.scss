@@ -1,5 +1,4 @@
 pulumi-filter-select {
-
     pulumi-filter-select-option-group {
         @apply font-display text-base;
 
@@ -23,7 +22,8 @@ pulumi-filter-select {
             }
         }
 
-        &:hover, &[expanded] {
+        &:hover,
+        &[expanded] {
             &::part(toggle) {
                 @apply text-white;
             }

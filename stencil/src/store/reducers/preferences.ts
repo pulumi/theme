@@ -31,7 +31,6 @@ function guessOS(): OSKey {
 // The preferences reducer. Note that it does not mutate state, but rather always returns a fresh copy.
 // https://redux.js.org/basics/reducers/
 export const preferences = (currentState = getInitialState(), action: PreferencesAction): PreferencesState => {
-
     switch (action.type) {
         case TypeKeys.SET_LANGUAGE:
             return { ...currentState, language: action.key };

@@ -49,7 +49,7 @@ export class PulumiMultiSelectForm {
     // When the component loads we need to parse the items string.
     componentWillLoad() {
         if (this.defaultFormId !== "") {
-            this.selectedItem = this.items.find((item) => item.hubspotFormId === this.defaultFormId);
+            this.selectedItem = this.items.find(item => item.hubspotFormId === this.defaultFormId);
 
             if (this.selectedItem) {
                 return;
@@ -84,7 +84,7 @@ export class PulumiMultiSelectForm {
 
     // When the select input changes we need to update the state accordingly.
     private handleSelectChange(hubspotFormId: string) {
-        this.selectedItem = this.items.find((item) => item.hubspotFormId === hubspotFormId);
+        this.selectedItem = this.items.find(item => item.hubspotFormId === hubspotFormId);
     }
 
     render() {
@@ -92,23 +92,22 @@ export class PulumiMultiSelectForm {
 
         return (
             <div>
-                { this.formSubmitted ? null :
+                {this.formSubmitted ? null : (
                     <span>
-                        <span class={this.labelClass || ""}>{ this.labelText }</span>
+                        <span class={this.labelClass || ""}>{this.labelText}</span>
                         <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
-                            {this.items.map((item) => {
+                            {this.items.map(item => {
                                 const isSelected = item.hubspotFormId === selectedFormId;
-                                return <option value={item.hubspotFormId} selected={isSelected}>
-                                    { item.label ? item.label : item.key }
-                                </option>;
+                                return (
+                                    <option value={item.hubspotFormId} selected={isSelected}>
+                                        {item.label ? item.label : item.key}
+                                    </option>
+                                );
                             })}
                         </select>
                     </span>
-                }
-                <pulumi-hubspot-form
-                    key={selectedFormId}
-                    form-id={selectedFormId}
-                ></pulumi-hubspot-form>
+                )}
+                <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
             </div>
         );
     }

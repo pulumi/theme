@@ -1,7 +1,6 @@
 import { newE2EPage } from "@stencil/core/testing";
 
 describe("pulumi-choosable", () => {
-
     it("renders", async () => {
         const page = await newE2EPage();
         await page.setContent("<pulumi-choosable></pulumi-choosable>");

@@ -1,7 +1,8 @@
 pulumi-greenhouse-jobs-list {
     @apply block;
 
-    ul.departments, ul.jobs {
+    ul.departments,
+    ul.jobs {
         @apply p-0 list-none;
     }
 

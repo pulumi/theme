@@ -22,14 +22,7 @@ import "./pricing-trial";
 // Initialize the Facet design system and components.
 initDesignSystem({
     prefix: "pulumi",
-    components: [
-        accordion(),
-        accordionItem(),
-        button(),
-        disclosure(),
-        treeItem(),
-        treeView()
-    ],
+    components: [accordion(), accordionItem(), button(), disclosure(), treeItem(), treeView()],
 });
 
 // Register all Stencil components.

@@ -33,9 +33,9 @@ export class PulumiApiDocNavNode {
         // When the node is expanded, we render child nodes.
         // When we collapse that same node, we want to avoid throwing out
         // the rendered nodes. (Helps with toggling nodes open/close repeatedly)
-        if (propName === "isExpanded"){
-            if (oldVal === true && newVal === false){
-                return false
+        if (propName === "isExpanded") {
+            if (oldVal === true && newVal === false) {
+                return false;
             }
 
             return true;
@@ -66,20 +66,18 @@ export class PulumiApiDocNavNode {
         // To compare the current path to the href, we strip the starting and ending slashes.
         const formattedCurrentPath = window.location.pathname
             .split("/")
-            .filter((item) => item !== "")
+            .filter(item => item !== "")
             .join("/");
         const formattedNodeHref = nodeHref
             .split("/")
-            .filter((item) => item !== "")
+            .filter(item => item !== "")
             .join("/");
 
         return formattedCurrentPath === formattedNodeHref;
     }
 
     getChildNodes(nodes: APINavNode[], isRootExpanded: boolean, depth: number = 1, linkBase = this.href) {
-        const dummyNode = (
-            <pulumi-tree-item slot="item" selected={false} expanded={false} title="dummy"></pulumi-tree-item>
-        );
+        const dummyNode = <pulumi-tree-item slot="item" selected={false} expanded={false} title="dummy"></pulumi-tree-item>;
         // By default, we render all of the root nodes.  Whether we use a "dummy" node or not
         // depends on if the root is expanded.  If it is expanded, we need to show its children.
         // If not, we don't need to render those children until the root is expanded.
@@ -87,23 +85,17 @@ export class PulumiApiDocNavNode {
             return dummyNode;
         }
 
-        return nodes?.map((node) => {
+        return nodes?.map(node => {
             const nodeHref = `${linkBase}${node.link}`;
 
             return (
-                <pulumi-tree-item
-                    slot="item"
-                    selected={!!this.shouldNodeBeSelected(nodeHref)}
-                    expanded={this.isExpanded}
-                    class="nav-tree-item nested"
-                    title={node.name}
-                >
-                        <div class="content-container">
-                            <a class={`depth-${depth}`} href={nodeHref}>
-                                {this.getIcon(node.type)}
-                                <span class="link-container">{node.name}</span>
-                            </a>
-                        </div>
+                <pulumi-tree-item slot="item" selected={!!this.shouldNodeBeSelected(nodeHref)} expanded={this.isExpanded} class="nav-tree-item nested" title={node.name}>
+                    <div class="content-container">
+                        <a class={`depth-${depth}`} href={nodeHref}>
+                            {this.getIcon(node.type)}
+                            <span class="link-container">{node.name}</span>
+                        </a>
+                    </div>
                     {this.getChildNodes(node.children, this.isExpanded, depth + 1, nodeHref)}
                 </pulumi-tree-item>
             );
@@ -120,12 +112,12 @@ export class PulumiApiDocNavNode {
                 id={this.node.name}
                 title={this.node.name}
             >
-                    <div class="content-container">
-                        <a class={`depth-${this.depth}`} href={this.href}>
-                            {this.getIcon(this.node.type)}
-                            <span class="link-container">{this.node.name}</span>
-                        </a>
-                    </div>
+                <div class="content-container">
+                    <a class={`depth-${this.depth}`} href={this.href}>
+                        {this.getIcon(this.node.type)}
+                        <span class="link-container">{this.node.name}</span>
+                    </a>
+                </div>
                 {this.getChildNodes(this.node.children, this.isExpanded)}
             </pulumi-tree-item>
         );

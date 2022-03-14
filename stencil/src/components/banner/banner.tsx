@@ -33,7 +33,7 @@ export class Banner {
             return {
                 // Banners are visible if they have a name and haven't been dismissed.
                 visible: !!this.name && !state.banners.dismissed.find(b => b.name === this.name),
-            }
+            };
         });
     }
 
@@ -47,7 +47,7 @@ export class Banner {
         return (
             <div>
                 <slot></slot>
-                <div class="dismiss" onClick={ (event) => this.dismiss(event) } title="Dismiss">
+                <div class="dismiss" onClick={event => this.dismiss(event)} title="Dismiss">
                     <span>&times;</span>
                 </div>
             </div>

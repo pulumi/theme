@@ -33,26 +33,26 @@
         opacity: 1;
     }
     100% {
-        opacity: .6;
+        opacity: 0.6;
     }
 }
 
 @keyframes sparkle-secondary {
     0% {
-        opacity: .4;
+        opacity: 0.4;
     }
     100% {
-        opacity: .8;
+        opacity: 0.8;
     }
 }
 
 .sparkle {
     &.primary {
-        animation: sparkle-primary .6s ease-in infinite alternate;
+        animation: sparkle-primary 0.6s ease-in infinite alternate;
     }
 
     &.secondary {
-        animation: sparkle-secondary .6s ease-in infinite alternate;
+        animation: sparkle-secondary 0.6s ease-in infinite alternate;
     }
 }
 

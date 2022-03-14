@@ -22,11 +22,11 @@ export class SlotMachine {
     rightSwiper!: HTMLPulumiSwiperElement;
 
     componentWillLoad() {
-        SwiperJS.use([ Autoplay ]);
+        SwiperJS.use([Autoplay]);
     }
 
     componentDidLoad() {
-        this.runSlotMachine()
+        this.runSlotMachine();
     }
 
     private runSlotMachine() {
@@ -63,12 +63,12 @@ export class SlotMachine {
             (this.centerSwiper as any).startSwiper();
             (this.rightSwiper as any).startSwiper();
             this.runSlotMachine();
-        }, 7000)
+        }, 7000);
     }
 
     private renderImageList(images: string[]) {
-        return images.map((image) => {
-            return(
+        return images.map(image => {
+            return (
                 <pulumi-swipeable>
                     <img src={image} alt="" />
                 </pulumi-swipeable>
@@ -81,7 +81,7 @@ export class SlotMachine {
             <ul>
                 <li>
                     <pulumi-swiper
-                        ref={(el) => this.leftSwiper = el}
+                        ref={el => (this.leftSwiper = el)}
                         direction="vertical"
                         slides={3}
                         centered-slides={true}
@@ -98,7 +98,7 @@ export class SlotMachine {
 
                 <li>
                     <pulumi-swiper
-                        ref={(el) => this.centerSwiper = el}
+                        ref={el => (this.centerSwiper = el)}
                         direction="vertical"
                         slides={3}
                         centered-slides={true}
@@ -115,7 +115,7 @@ export class SlotMachine {
 
                 <li>
                     <pulumi-swiper
-                        ref={(el) => this.rightSwiper = el}
+                        ref={el => (this.rightSwiper = el)}
                         direction="vertical"
                         slides={3}
                         centered-slides={true}
@@ -132,5 +132,4 @@ export class SlotMachine {
             </ul>
         );
     }
-
 }

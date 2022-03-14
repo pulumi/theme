@@ -8,7 +8,6 @@ import { OSKey } from "../chooser/chooser";
     styleUrl: "install.scss",
 })
 export class Install {
-
     @Element()
     el: HTMLElement;
 
@@ -21,7 +20,7 @@ export class Install {
     defaultTooltipContent = "Copy command";
 
     componentWillLoad() {
-        this.tooltipContent = this.defaultTooltipContent
+        this.tooltipContent = this.defaultTooltipContent;
     }
 
     componentDidLoad() {
@@ -52,11 +51,10 @@ export class Install {
     }
 
     private copyToClipboard() {
-        clipboard.writeText(this.installCommand.toString())
-            .then(() => {
-                this.tooltipContent = "Copied!";
-                setTimeout(() => this.tooltipContent = this.defaultTooltipContent, 3000);
-            });
+        clipboard.writeText(this.installCommand.toString()).then(() => {
+            this.tooltipContent = "Copied!";
+            setTimeout(() => (this.tooltipContent = this.defaultTooltipContent), 3000);
+        });
     }
 
     render() {

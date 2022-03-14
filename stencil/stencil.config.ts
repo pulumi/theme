@@ -12,9 +12,7 @@ export const config: Config = {
         {
             type: "www",
             buildDir: "./build",
-        }
+        },
     ],
-    plugins: [
-        sass(),
-    ],
+    plugins: [sass()],
 };

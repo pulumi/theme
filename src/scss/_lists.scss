@@ -1,6 +1,7 @@
 dl {
-
-    &.resources-properties, &.package-details, &.tabular {
+    &.resources-properties,
+    &.package-details,
+    &.tabular {
         @apply mb-8 mt-4 p-1 flex flex-col items-start items-stretch bg-gray-100 border rounded border-gray-300 text-sm text-gray-700;
 
         @screen lg {
@@ -49,7 +50,8 @@ dl {
             }
         }
 
-        dt, dd {
+        dt,
+        dd {
             @apply py-4 px-5;
 
             &:not(:first-of-type) {
@@ -68,7 +70,8 @@ dl {
         dt {
             @apply text-sm;
 
-            &.property-required, &.property-deprecated {
+            &.property-required,
+            &.property-deprecated {
                 .property-indicator {
                     @apply ml-1 cursor-pointer;
                     font-size: 0.6em;
@@ -102,7 +105,7 @@ dl {
             }
 
             span {
-                @apply align-middle
+                @apply align-middle;
             }
         }
     }

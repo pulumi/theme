@@ -70,12 +70,7 @@ export class PulumiApiDocFilterableNav {
     @State()
     filterContent: string = "";
 
-    filterTreeToMatchingContent(
-        nodesToRender: APINavNode[],
-        nodesToSearch: APINavNode[],
-        rootNode?: APINavNode,
-        directParentNode?: APINavNode
-    ) {
+    filterTreeToMatchingContent(nodesToRender: APINavNode[], nodesToSearch: APINavNode[], rootNode?: APINavNode, directParentNode?: APINavNode) {
         // call recursive helper method, only setting this.currentlyRenderedNodes once at the end to trigger re-painting the DOM.
         const resultNodes = this.filterTreeToMatchingRecursive(
             nodesToRender,
@@ -96,9 +91,9 @@ export class PulumiApiDocFilterableNav {
         rootNode?: APINavNode,
         directParentNode?: APINavNode,
         nodeCache: { [key: string]: boolean } = {},
-        nodePath: string[] = [""]
+        nodePath: string[] = [""],
     ): APINavNode[] {
-        nodesToSearch.map((node) => {
+        nodesToSearch.map(node => {
             const nodeName = nodePath.join("") + node.name;
             const parentName = nodePath.join("");
             const rootName = rootNode ? rootNode.name : "";
@@ -189,11 +184,9 @@ export class PulumiApiDocFilterableNav {
         // Now that we have a flat array of all the nodes we need to render, we need to reconstruct the tree of matches.
 
         // Iterate over all the nodes to match the parents with their children, starting with the root nodes.
-        const reconstructedTreeOfMatches = nodesToRender.filter(
-            (nodeToRender) => nodeToRender.parentName === undefined
-        );
-        reconstructedTreeOfMatches.map((root) => {
-            root.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === root.name);
+        const reconstructedTreeOfMatches = nodesToRender.filter(nodeToRender => nodeToRender.parentName === undefined);
+        reconstructedTreeOfMatches.map(root => {
+            root.children = nodesToRender.filter(nodeToRender => nodeToRender.parentName === root.name);
 
             root.children?.map((child) => {
                 // We check that both the parent and the root match to handle the case where there are multiple parents
@@ -236,12 +229,7 @@ export class PulumiApiDocFilterableNav {
         return (
             <div class="filter-and-nav-tree">
                 <div class="input-container">
-                    <input
-                        class="navigation-filter-input"
-                        placeholder="Filter"
-                        onInput={this.onChange.bind(this)}
-                        value={this.filterContent}
-                    ></input>
+                    <input class="navigation-filter-input" placeholder="Filter" onInput={this.onChange.bind(this)} value={this.filterContent}></input>
                     {this.filterContent && (
                         <div class="clear-container">
                             <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
@@ -250,17 +238,9 @@ export class PulumiApiDocFilterableNav {
                         </div>
                     )}
                 </div>
-                {this.filterContent?.length === 1 && (
-                    <div class="filter-help-text">Provide at least two characters to filter.</div>
-                )}
-                {this.currentlyRenderedNodes?.length < 1 && (
-                    <div class="no-results">No results found. Try a different filter.</div>
-                )}
-                <pulumi-api-doc-nav-tree
-                    class="nav-tree"
-                    baseDirectory={this.baseDirectory}
-                    nodes={this.currentlyRenderedNodes}
-                ></pulumi-api-doc-nav-tree>
+                {this.filterContent?.length === 1 && <div class="filter-help-text">Provide at least two characters to filter.</div>}
+                {this.currentlyRenderedNodes?.length < 1 && <div class="no-results">No results found. Try a different filter.</div>}
+                <pulumi-api-doc-nav-tree class="nav-tree" baseDirectory={this.baseDirectory} nodes={this.currentlyRenderedNodes}></pulumi-api-doc-nav-tree>
             </div>
         );
     }

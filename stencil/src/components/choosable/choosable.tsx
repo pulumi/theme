@@ -1,4 +1,4 @@
-import { Component, Element, h, Listen, Prop, Watch } from '@stencil/core';
+import { Component, Element, h, Listen, Prop, Watch } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
@@ -15,9 +15,9 @@ import { ChooserType, ChooserKey, ChooserMode } from "../chooser/chooser";
  * selected language choice is TypeScript.
  */
 @Component({
-    tag: 'pulumi-choosable',
-    styleUrl: 'choosable.scss',
-    shadow: false
+    tag: "pulumi-choosable",
+    styleUrl: "choosable.scss",
+    shadow: false,
 })
 export class Choosable {
     private storeUnsubscribe: Unsubscribe;
@@ -65,13 +65,14 @@ export class Choosable {
 
     @Listen("rendered", { target: "document" })
     onRendered(_event: CustomEvent) {
-
         // By default, mode is global, until told otherwise by some parental chooser.
         this.mode = "global";
 
         if (this.mode === "global") {
             this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
-                const { preferences: { language, k8sLanguage, os, cloud, persona } } = state;
+                const {
+                    preferences: { language, k8sLanguage, os, cloud, persona },
+                } = state;
 
                 switch (this.type) {
                     case "language":
@@ -93,8 +94,10 @@ export class Choosable {
         const values = this.values ? this.values.split(",").map(v => v.trim()) : [];
         const isActive = this.selection && (this.selection === this.value || values.includes(this.selection));
 
-        return <div class={isActive ? "active" : ""}>
-            <slot></slot>
-        </div>;
+        return (
+            <div class={isActive ? "active" : ""}>
+                <slot></slot>
+            </div>
+        );
     }
 }

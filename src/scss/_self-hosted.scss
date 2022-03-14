@@ -1,4 +1,5 @@
-#self-hosted-overview, #self-hosted-deployment {
+#self-hosted-overview,
+#self-hosted-deployment {
     a:not(.btn-secondary, .btn-primary) {
         text-decoration: underline;
     }
@@ -11,7 +12,7 @@
 }
 
 #self-hosted-capabilities {
-    .card:nth-child(even){
+    .card:nth-child(even) {
         margin-right: 0px;
     }
 }
