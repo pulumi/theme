@@ -2518,6 +2518,17 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   width:110px
 }
 
+.pulumi-event-list-container .scroll-container button i:hover{
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity))
+}
+
+@media (min-width: 1280px){
+  .pulumi-event-list-container .scroll-container{
+    display: none
+  }
+}
+
 .pulumi-event-list-container #event-list-filter-nav{
   display: flex;
   padding: 0px;
@@ -2529,9 +2540,9 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   overflow-x:scroll
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1280px){
   .pulumi-event-list-container #event-list-filter-nav{
-    max-width:900px
+    max-width:1080px
   }
 }
 
@@ -2566,8 +2577,9 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 400;
-  text-decoration: none;
-  color:#5f6064
+  --tw-text-opacity: 1;
+  color: rgba(95, 96, 101, var(--tw-text-opacity));
+  text-decoration: none
 }
 
 @media (min-width: 768px){
@@ -17557,6 +17569,7 @@ pulumi-tertiary-nav ul li{
 
 pulumi-tertiary-nav ul li>a{
   display: block;
+  cursor: pointer;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -17565,8 +17578,9 @@ pulumi-tertiary-nav ul li>a{
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 400;
-  text-decoration: none;
-  color:#5f6064
+  --tw-text-opacity: 1;
+  color: rgba(95, 96, 101, var(--tw-text-opacity));
+  text-decoration: none
 }
 
 @media (min-width: 768px){

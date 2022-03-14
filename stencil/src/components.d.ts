@@ -22,7 +22,7 @@ import { SourceKind } from "./components/convert/convert";
 import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 import { TertiaryNavItem } from "./components/pulumi-tertiary-nav/pulumi-tertiary-nav";
-export namespace Components {``
+export namespace Components {
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
         "packageName": string;
@@ -146,7 +146,6 @@ export namespace Components {``
     }
     interface PulumiTertiaryNav {
         "items": string;
-        "parsedItems": TertiaryNavItem[];
         "selection": any;
         "tabContent": string[];
     }
@@ -481,7 +480,6 @@ declare namespace LocalJSX {
     }
     interface PulumiTertiaryNav {
         "items"?: string;
-        "parsedItems"?: TertiaryNavItem[];
         "selection"?: any;
         "tabContent"?: string[];
     }

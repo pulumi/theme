@@ -13,8 +13,7 @@ pulumi-tertiary-nav {
             @apply flex-grow border-solid border-b-2 border-transparent;
 
             > a {
-                @apply block py-2 px-4 font-normal text-lg text-center no-underline;
-                color: #5f6064;
+                @apply block py-2 px-4 font-normal text-lg text-center text-gray-700 no-underline cursor-pointer;
 
                 @screen md {
                     @apply py-4;

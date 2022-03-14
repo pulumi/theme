@@ -1,10 +1,10 @@
 import { Component, Host, h, Prop } from "@stencil/core";
 
 export interface TertiaryNavItem {
-  // The anchor for the content that the nav item controls viewability of
-  anchor: string;
-  // The text that should show for the nav item
-  label: string;
+    // The anchor of the content that the nav item shows.
+    anchor: string;
+    // The text that should show for the nav item.
+    label: string;
 }
 
 @Component({
@@ -13,12 +13,9 @@ export interface TertiaryNavItem {
     shadow: false,
 })
 export class PulumiTertiaryNav {
-    // TertiaryNavItem[], passed into the component as stringified JSON
+    // TertiaryNavItem[], passed into the component as stringified JSON.
     @Prop({ mutable: true })
     items: string;
-
-    @Prop({ mutable: true })
-    parsedItems: TertiaryNavItem[];
 
     @Prop({ mutable: true })
     tabContent: string[];
@@ -26,6 +23,8 @@ export class PulumiTertiaryNav {
     // The currently selected tab.
     @Prop({ mutable: true })
     selection: any;
+
+    parsedItems: TertiaryNavItem[];
 
     componentWillLoad() {
         this.parsedItems = JSON.parse(this.items);
@@ -40,11 +39,12 @@ export class PulumiTertiaryNav {
     private selectTab(item: TertiaryNavItem) {
         this.selection = item.anchor;
 
-        $(`#${item.anchor}`).removeClass("hidden");
+        document.getElementById(`${item.anchor}`).classList.remove("hidden");
+
         const unselectedTabs = this.tabContent.filter((value) => value !== item.anchor);
 
         unselectedTabs.forEach((tab) => {
-            $(`#${tab}`).addClass("hidden");
+            document.getElementById(`${tab}`).classList.add("hidden");
         });
     }
 
