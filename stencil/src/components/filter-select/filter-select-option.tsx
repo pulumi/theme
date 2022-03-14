@@ -19,7 +19,6 @@ export interface Filter {
     `,
 })
 export class FilterSelectOption {
-
     @Element()
     el: HTMLElement;
 
@@ -55,20 +54,19 @@ export class FilterSelectOption {
     }
 
     private emit() {
-        this.optionChange.emit({ option: { value: this.value, selected: this.selected, label: this.label } });
+        this.optionChange.emit({
+            option: { value: this.value, selected: this.selected, label: this.label },
+        });
     }
 
     render() {
-        return <div>
-           <label>
-                <input
-                    type="checkbox"
-                    value={this.value}
-                    onChange={ this.onChange.bind(this) }
-                    checked={this.selected}
-                />
-                <slot />
-            </label>
-        </div>;
+        return (
+            <div>
+                <label>
+                    <input type="checkbox" value={this.value} onChange={this.onChange.bind(this)} checked={this.selected} />
+                    <slot />
+                </label>
+            </div>
+        );
     }
 }

@@ -6,7 +6,7 @@ export function getQueryVariable(paramKey: string): string | null {
     const vars = query.split("&");
 
     let paramVal = null;
-    vars.forEach( v => {
+    vars.forEach(v => {
         const pair = v.split("=");
         if (pair[0] === paramKey) {
             paramVal = decodeURIComponent(pair[1].replace(/\+/g, "%20"));

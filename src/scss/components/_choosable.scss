@@ -1,5 +1,4 @@
 pulumi-choosable {
-
     // All choosables are hidden unless active.
     > div:first-child {
         &:not(.active) {
@@ -19,7 +18,8 @@ pulumi-choosable {
         }
     }
 
-    .highlight, .chroma {
+    .highlight,
+    .chroma {
         // @apply border-transparent;
     }
 

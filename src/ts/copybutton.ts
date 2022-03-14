@@ -1,6 +1,6 @@
 import * as clipboard from "clipboard-polyfill";
 
-"use strict";
+("use strict");
 
 // Used to "normalize" code snippet text that will be written to the clipboard.
 function normalizeText(lang, text) {
@@ -33,7 +33,7 @@ function normalizeText(lang, text) {
         case "zsh":
             prompt = "$ ";
             comment = "#";
-            trailingCommentRE = /\s+#.*$/m
+            trailingCommentRE = /\s+#.*$/m;
             trailingContinuationChar = "\\";
             combinator = " && ";
             break;
@@ -43,7 +43,7 @@ function normalizeText(lang, text) {
         case "batchfile":
             prompt = "> ";
             comment = "::";
-            trailingCommentRE = /\s+::.*$/m
+            trailingCommentRE = /\s+::.*$/m;
             trailingContinuationChar = "^";
             combinator = " && ";
             break;
@@ -53,7 +53,7 @@ function normalizeText(lang, text) {
         case "pwsh":
             prompt = "> ";
             comment = "#";
-            trailingCommentRE = /\s+#.*$/m
+            trailingCommentRE = /\s+#.*$/m;
             trailingContinuationChar = "`";
             combinator = "; ";
             break;
@@ -81,13 +81,13 @@ function normalizeText(lang, text) {
             // a line is reached that doesn't start with a prompt.
             if (line.startsWith(prompt) || priorLineContinued) {
                 // Removing trailing comments.
-                line = line.replace(trailingCommentRE, "")
+                line = line.replace(trailingCommentRE, "");
 
                 // Remember and remove line continuations.
                 var wasContinued = priorLineContinued;
                 if (line.endsWith(trailingContinuationChar)) {
                     priorLineContinued = true;
-                    line = line.substring(0, line.length-trailingContinuationChar.length);
+                    line = line.substring(0, line.length - trailingContinuationChar.length);
                 } else {
                     priorLineContinued = false;
                 }
@@ -121,49 +121,46 @@ function addCopyButton(e) {
     var tooltipText = "Copy";
     var buttonHtml =
         '<div class="copy-button-container">' +
-        '    <pulumi-tooltip>' +
+        "    <pulumi-tooltip>" +
         '        <button class="copy-button"><i class="far fa-copy copy text-xl"></i></button>' +
-        '        <span slot="content">' + tooltipText + '</span>' +
-        '    </pulumi-tooltip>' +
-        '</div>';
+        '        <span slot="content">' +
+        tooltipText +
+        "</span>" +
+        "    </pulumi-tooltip>" +
+        "</div>";
 
-    e.append(buttonHtml)
-        .on("click", "button.copy-button", function() {
-            var $b = $(this);
-            var $code = $b.parent().parent().parent().siblings("pre").children("code");
+    e.append(buttonHtml).on("click", "button.copy-button", function () {
+        var $b = $(this);
+        var $code = $b.parent().parent().parent().siblings("pre").children("code");
 
-            // Get the lang and code.
-            var lang = $code.attr("data-lang");
-            var text = $code.text();
+        // Get the lang and code.
+        var lang = $code.attr("data-lang");
+        var text = $code.text();
 
-            // Write the text to the clipboard.
-            var normalized = normalizeText(lang, text);
-            if (normalized && normalized.length > 0) {
-                clipboard.writeText(normalized);
-            }
+        // Write the text to the clipboard.
+        var normalized = normalizeText(lang, text);
+        if (normalized && normalized.length > 0) {
+            clipboard.writeText(normalized);
+        }
 
-            // Remove focus from the button.
-            $b.blur();
+        // Remove focus from the button.
+        $b.blur();
 
-            // Show a "Copied!" tooltip for a second.
-            var $tooltip = $b.closest("pulumi-tooltip");
-            var $tooltipContent = $tooltip.find("[slot='content']");
-            var tooltipEl = $tooltip.get(0);
+        // Show a "Copied!" tooltip for a second.
+        var $tooltip = $b.closest("pulumi-tooltip");
+        var $tooltipContent = $tooltip.find("[slot='content']");
+        var tooltipEl = $tooltip.get(0);
 
-            $tooltipContent.text("Copied!");
-            tooltipEl
-                .show()
-                .then(() => {
-                    setTimeout(function() {
-                        tooltipEl
-                            .hide()
-                            .then(() => $tooltipContent.text(tooltipText));
-                    }, 1000);
-                });
+        $tooltipContent.text("Copied!");
+        tooltipEl.show().then(() => {
+            setTimeout(function () {
+                tooltipEl.hide().then(() => $tooltipContent.text(tooltipText));
+            }, 1000);
         });
+    });
 }
 
 // When the DOM is ready, add copy buttons to code snippets.
-$(function() {
+$(function () {
     addCopyButton($(":not(.no-copy) > div.highlight"));
 });

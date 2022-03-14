@@ -64,11 +64,15 @@
 @import "components/swiper";
 @import "components/slot-machine";
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @apply font-display text-gray-800 mb-2;
 
     &:not(:first-child) {
-
         // Don't apply top margin when one's being specified.
         &:not([class*="mt-"]):not([class*="m-"]) {
             @apply mt-8;
@@ -110,7 +114,7 @@ body {
     figure {
         figcaption {
             clear: left;
-            margin: .75em 0;
+            margin: 0.75em 0;
             text-align: center;
             font-style: italic;
             line-height: 1.5em;
@@ -127,15 +131,20 @@ body {
 main {
     @apply text-gray-800;
 
-    p, li, blockquote, table {
-
+    p,
+    li,
+    blockquote,
+    table {
         a {
             @apply text-blue-600 break-words;
 
             &:hover {
                 @apply text-blue-700;
 
-                .section-docs &, .section-blog &, .section-authors &, .section-tags & {
+                .section-docs &,
+                .section-blog &,
+                .section-authors &,
+                .section-tags & {
                     @apply underline;
                 }
             }
@@ -146,7 +155,8 @@ main {
         }
     }
 
-    ul, ol {
+    ul,
+    ol {
         @apply pl-5;
     }
 
@@ -289,7 +299,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 
 // New Styles
 .rainbow-text {
-    background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+    background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;

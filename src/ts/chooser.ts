@@ -10,7 +10,7 @@ function selectChoice(kind, choice, extra?) {
     // Explicitly set `path` to `/` so the saved selection is available across all pages, and
     // set `max-age` to one year (31536000 is one year in seconds) so the saved selection does
     // not expire when the browser session ends.
-    document.cookie = "pulumi_" + kind + "=" + choice + "; max-age=31536000; path=/"
+    document.cookie = "pulumi_" + kind + "=" + choice + "; max-age=31536000; path=/";
 
     // Change the active tab.
     var choiceTabs = 0;
@@ -53,12 +53,10 @@ function selectChoice(kind, choice, extra?) {
 
 // selectLanguage chooses a language.
 function selectLanguage(lang) {
-    selectChoice("language", lang, function() {
-        var shellLanguages = ["bat", "batch", "batchfile", "powershell", "posh", "pwsh", "bash", "sh", "shell", "zsh", "diff"].map(
-            function(l) {
-                return "language-" + l;
-            }
-        );
+    selectChoice("language", lang, function () {
+        var shellLanguages = ["bat", "batch", "batchfile", "powershell", "posh", "pwsh", "bash", "sh", "shell", "zsh", "diff"].map(function (l) {
+            return "language-" + l;
+        });
         // In addition to the basic showing/hiding, highlight the right code blocks:
         $("code").each(function (i, e) {
             var classes = getElemClasses(e);
@@ -73,8 +71,7 @@ function selectLanguage(lang) {
                     // don't currently have JavaScript examples above.
                     // Ensure these TypeScript examples are always visible, even when
                     // JavaScript is the selected language.
-                    if (lang === "javascript" &&
-                        (classes[i] === "language-typescript" || classes[i] === "language-ts")) {
+                    if (lang === "javascript" && (classes[i] === "language-typescript" || classes[i] === "language-ts")) {
                         // If the previous element doesn't have a highlight, show it.
                         var prev = parents.prev();
                         if (prev && !prev.hasClass("highlight")) {
@@ -83,10 +80,12 @@ function selectLanguage(lang) {
                         }
                     }
 
-                    if (classes[i] === "language-"+lang ||
+                    if (
+                        classes[i] === "language-" + lang ||
                         (lang === "typescript" && classes[i] === "language-ts") ||
                         (lang === "javascript" && classes[i] === "language-js") ||
-                        (lang === "visualbasic" && classes[i] === "language-vb")) {
+                        (lang === "visualbasic" && classes[i] === "language-vb")
+                    ) {
                         parents.show();
                     } else {
                         parents.hide();
@@ -123,8 +122,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
         tabsOnPage[choice] = true;
 
         // For every language tab, inject a handler and make the correct one hidden.
-        e.addEventListener("click", function() {
-
+        e.addEventListener("click", function () {
             // Choosing a tab currently affects the selection state of all of the other
             // tabs on the page, which can cause unpredictable reflows, so we note the
             // current position of the clicked element relative to the upper edge of the
@@ -135,7 +133,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
 
             selector(choice, e);
 
-            requestAnimationFrame(function() {
+            requestAnimationFrame(function () {
                 window.scroll(0, el.offsetTop - distanctFromViewportTop);
             });
         });
@@ -149,8 +147,7 @@ function hideShowChoices(kind, selector, defaultChoice) {
     }
 
     // Now select the right choice based on whether there's a cookie, defaulting as appropriate.
-    var choiceCookie = decodeURIComponent(
-        document.cookie.replace(new RegExp("(?:(?:^|.*;\\s*)pulumi_" + kind + "\\=\\s*([^;]*).*$)|^.*$"), "$1"));
+    var choiceCookie = decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;\\s*)pulumi_" + kind + "\\=\\s*([^;]*).*$)|^.*$"), "$1"));
     if (choiceCookie && tabsOnPage.hasOwnProperty(choiceCookie)) {
         selector(choiceCookie);
     } else if (defaultChoice && tabsOnPage.hasOwnProperty(defaultChoice)) {
@@ -161,10 +158,9 @@ function hideShowChoices(kind, selector, defaultChoice) {
 }
 
 // The first time the DOM is finished loading, select the right language and OS.
-$(document).on("rendered", function() {
-
+$(document).on("rendered", function () {
     // If a query param's been provided for a tab category, honor that.
-    ["language", "os", "cloud", "k8s-language", "input-kind"].forEach(function(kind) {
+    ["language", "os", "cloud", "k8s-language", "input-kind"].forEach(function (kind) {
         var val = getQueryVariable(kind);
         if (val) {
             selectChoice(kind, val);

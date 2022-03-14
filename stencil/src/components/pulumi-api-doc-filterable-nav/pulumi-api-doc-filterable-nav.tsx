@@ -11,6 +11,7 @@ export interface APINavNode {
     // to allow for accurate rendering of the rebuilt tree after search.
     isExpanded?: boolean;
     parentName?: string;
+    rootName: string;
 }
 
 export type APINavNodeType = "module" | "function" | "resource";
@@ -69,14 +70,14 @@ export class PulumiApiDocFilterableNav {
     @State()
     filterContent: string = "";
 
-    filterTreeToMatchingContent(
-        nodesToRender: APINavNode[],
-        nodesToSearch: APINavNode[],
-        rootNode?: APINavNode,
-        directParentNode?: APINavNode
-    ) {
+    filterTreeToMatchingContent(nodesToRender: APINavNode[], nodesToSearch: APINavNode[], rootNode?: APINavNode, directParentNode?: APINavNode) {
         // call recursive helper method, only setting this.currentlyRenderedNodes once at the end to trigger re-painting the DOM.
-        const resultNodes = this.filterTreeToMatchingRecursive(nodesToRender, nodesToSearch, rootNode, directParentNode);
+        const resultNodes = this.filterTreeToMatchingRecursive(
+            nodesToRender,
+            nodesToSearch,
+            rootNode,
+            directParentNode
+        );
         this.currentlyRenderedNodes = resultNodes;
     }
 
@@ -89,13 +90,13 @@ export class PulumiApiDocFilterableNav {
         nodesToSearch: APINavNode[],
         rootNode?: APINavNode,
         directParentNode?: APINavNode,
-        nodeCache: { [key: string]: boolean} = {},
+        nodeCache: { [key: string]: boolean } = {},
         nodePath: string[] = [""],
     ): APINavNode[] {
-        nodesToSearch.map((node) => {
+        nodesToSearch.map(node => {
             const nodeName = nodePath.join("") + node.name;
             const parentName = nodePath.join("");
-            const rootName = rootNode ? rootNode.name: "";
+            const rootName = rootNode ? rootNode.name : "";
 
             // Check if the nodes we're currently working with are already represented in the array of nodes to render.
             const isNodeDuplicate = !!nodeCache[nodeName];
@@ -115,7 +116,7 @@ export class PulumiApiDocFilterableNav {
                 // it with an empty list of children.  The empty list of children ensures that the only children rendered will
                 // be matches to the filter content.
                 if (!isRootDuplicate && rootNode) {
-                    const treeNode = { ...rootNode, children: [], isExpanded: true };
+                    const treeNode = { ...rootNode, children: [], isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[rootName] = true;
                 }
@@ -129,6 +130,7 @@ export class PulumiApiDocFilterableNav {
                         children: [],
                         isExpanded: true,
                         parentName: rootNode.name,
+                        rootName,
                     };
                     nodesToRender.push(treeNode);
                     nodeCache[parentName] = true;
@@ -139,17 +141,23 @@ export class PulumiApiDocFilterableNav {
 
                 // If there's a direct parent node, that's the parent.
                 if (directParentNode) {
-                    const treeNode = { ...node, children: [], parentName: directParentNode.name, isExpanded: true };
+                    const treeNode = {
+                        ...node,
+                        children: [],
+                        parentName: directParentNode.name,
+                        isExpanded: true,
+                        rootName,
+                    };
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                     // If there's no direct parent, but there is a root, then the root's the parent.
                 } else if (rootNode) {
-                    const treeNode = { ...node, children: [], parentName: rootNode.name, isExpanded: true };
+                    const treeNode = { ...node, children: [], parentName: rootNode.name, isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                     // Otherwise, the current node is a root, with no parent.
                 } else {
-                    const treeNode = { ...node, children: [], parentName: undefined, isExpanded: true };
+                    const treeNode = { ...node, children: [], parentName: undefined, isExpanded: true, rootName };
                     nodesToRender.push(treeNode);
                     nodeCache[nodeName] = true;
                 }
@@ -162,32 +170,40 @@ export class PulumiApiDocFilterableNav {
                 const nodesDirectParent = rootNode ? node : null;
                 // we recurse to children passing along the cache and building up the nodePath array so we dedupe items by fully qualified name.
                 // node that this function mutates nodesToRender, accumulating child state.
-                this.filterTreeToMatchingRecursive(nodesToRender, node.children, nodesRootParent, nodesDirectParent, nodeCache, nodePath.concat([node.name]));
+                this.filterTreeToMatchingRecursive(
+                    nodesToRender,
+                    node.children,
+                    nodesRootParent,
+                    nodesDirectParent,
+                    nodeCache,
+                    nodePath.concat([node.name])
+                );
             }
         });
 
         // Now that we have a flat array of all the nodes we need to render, we need to reconstruct the tree of matches.
 
         // Iterate over all the nodes to match the parents with their children, starting with the root nodes.
-        const reconstructedTreeOfMatches = nodesToRender.filter(
-            (nodeToRender) => nodeToRender.parentName === undefined
-        );
-        reconstructedTreeOfMatches.map((root) => {
-            root.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === root.name);
+        const reconstructedTreeOfMatches = nodesToRender.filter(nodeToRender => nodeToRender.parentName === undefined);
+        reconstructedTreeOfMatches.map(root => {
+            root.children = nodesToRender.filter(nodeToRender => nodeToRender.parentName === root.name);
 
             root.children?.map((child) => {
-                child.children = nodesToRender.filter((nodeToRender) => nodeToRender.parentName === child.name);
+                // We check that both the parent and the root match to handle the case where there are multiple parents
+                // with the same name (eg "v1").
+                child.children = nodesToRender.filter(
+                    (nodeToRender) => nodeToRender.parentName === child.name && nodeToRender.rootName === root.name
+                );
             });
         });
 
         // Update the currently rendered nodes to be the matches found above.
         // We return reconstructedTreeOfMatches and allow the calling function to set this.currentlyRenderedNodes
-        // to prevent excessive repainting. 
+        // to prevent excessive repainting.
         return [...reconstructedTreeOfMatches];
     }
 
     onChange(event: KeyboardEvent) {
-
         this.debouncedFilterTree(event);
     }
 
@@ -203,7 +219,7 @@ export class PulumiApiDocFilterableNav {
         // instead, we will skip filtering for single character queries so the UI doesn't hang.
         if (this.filterContent.length < 2) {
             this.currentlyRenderedNodes = this.parsedNodes;
-            return
+            return;
         }
         // Otherwise, find the nodes that match the filter content.
         this.filterTreeToMatchingContent([], this.parsedNodes);
@@ -213,12 +229,7 @@ export class PulumiApiDocFilterableNav {
         return (
             <div class="filter-and-nav-tree">
                 <div class="input-container">
-                    <input
-                        class="navigation-filter-input"
-                        placeholder="Filter"
-                        onInput={this.onChange.bind(this)}
-                        value={this.filterContent}
-                    ></input>
+                    <input class="navigation-filter-input" placeholder="Filter" onInput={this.onChange.bind(this)} value={this.filterContent}></input>
                     {this.filterContent && (
                         <div class="clear-container">
                             <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
@@ -227,17 +238,9 @@ export class PulumiApiDocFilterableNav {
                         </div>
                     )}
                 </div>
-                {this.filterContent?.length === 1 && (
-                    <div class="filter-help-text">Provide at least two characters to filter.</div>
-                )}
-                {this.currentlyRenderedNodes?.length < 1 && (
-                    <div class="no-results">No results found. Try a different filter.</div>
-                )}
-                <pulumi-api-doc-nav-tree
-                    class="nav-tree"
-                    baseDirectory={this.baseDirectory}
-                    nodes={this.currentlyRenderedNodes}
-                ></pulumi-api-doc-nav-tree>
+                {this.filterContent?.length === 1 && <div class="filter-help-text">Provide at least two characters to filter.</div>}
+                {this.currentlyRenderedNodes?.length < 1 && <div class="no-results">No results found. Try a different filter.</div>}
+                <pulumi-api-doc-nav-tree class="nav-tree" baseDirectory={this.baseDirectory} nodes={this.currentlyRenderedNodes}></pulumi-api-doc-nav-tree>
             </div>
         );
     }

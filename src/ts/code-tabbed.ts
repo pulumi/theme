@@ -1,7 +1,7 @@
-(function($) {
+(function ($) {
     var languageItem = 1;
 
-    var languageInterval = window.setInterval(function() {
+    var languageInterval = window.setInterval(function () {
         showLanguageItem(languageItem);
         languageItem++;
 
@@ -12,7 +12,7 @@
 
     showLanguageItem(0);
 
-    $(".code-tabbed-tab").click(function() {
+    $(".code-tabbed-tab").click(function () {
         clearInterval(languageInterval);
 
         var i = $(".code-tabbed-tab").index(this);
@@ -20,19 +20,10 @@
     });
 
     function showLanguageItem(i) {
+        $(".code-tabbed-content").scrollTop(0).scrollLeft(0);
 
-        $(".code-tabbed-content")
-            .scrollTop(0)
-            .scrollLeft(0);
+        $(".code-tabbed-tab").removeClass("active").eq(i).addClass("active");
 
-        $(".code-tabbed-tab")
-            .removeClass("active")
-            .eq(i)
-            .addClass("active");
-
-        $(".code-tabbed-content-item")
-            .removeClass("active")
-            .eq(i)
-            .addClass("active");
+        $(".code-tabbed-content-item").removeClass("active").eq(i).addClass("active");
     }
 })(jQuery);

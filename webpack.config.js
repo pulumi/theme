@@ -1,9 +1,9 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const WebpackShellPluginNext = require('webpack-shell-plugin-next');
+const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 const webpack = require("webpack");
 
-module.exports = function(env, { mode }) {
+module.exports = function (env, { mode }) {
     return {
         mode: mode || "development",
         entry: {
@@ -16,7 +16,7 @@ module.exports = function(env, { mode }) {
         },
         resolve: {
             extensions: [".ts", ".js"],
-            modules: ["src", "node_modules"]
+            modules: ["src", "node_modules"],
         },
         devServer: {
             writeToDisk: true,
@@ -67,12 +67,10 @@ module.exports = function(env, { mode }) {
                 maxChunks: 1,
             }),
             new WebpackShellPluginNext({
-                onBuildStart:{
+                onBuildStart: {
                     blocking: true,
                     parallel: false,
-                    scripts: [
-                        "yarn --cwd stencil run build",
-                    ],
+                    scripts: ["yarn --cwd stencil run build"],
                 },
             }),
         ],

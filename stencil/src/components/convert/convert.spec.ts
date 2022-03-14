@@ -1,7 +1,7 @@
-import { Convert } from './convert';
+import { Convert } from "./convert";
 
-describe('pulumi-convert', () => {
-  it('builds', () => {
-    expect(new Convert()).toBeTruthy();
-  });
+describe("pulumi-convert", () => {
+    it("builds", () => {
+        expect(new Convert()).toBeTruthy();
+    });
 });

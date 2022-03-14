@@ -52,7 +52,6 @@ import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
     `,
 })
 export class FilterSelectOptionGroup {
-
     @Element()
     el: HTMLElement;
 
@@ -80,17 +79,19 @@ export class FilterSelectOptionGroup {
     }
 
     render() {
-        return <div>
-            <div class="button" role="button" onClick={ this.onToggle.bind(this) }>
-                <span class="toggle" part="toggle">
-                    <slot name="toggle" />
-                </span>
-            </div>
-            <div class="menu">
-                <div>
-                    <slot />
+        return (
+            <div>
+                <div class="button" role="button" onClick={this.onToggle.bind(this)}>
+                    <span class="toggle" part="toggle">
+                        <slot name="toggle" />
+                    </span>
+                </div>
+                <div class="menu">
+                    <div>
+                        <slot />
+                    </div>
                 </div>
             </div>
-        </div>;
+        );
     }
 }

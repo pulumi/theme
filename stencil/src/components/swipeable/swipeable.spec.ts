@@ -1,7 +1,7 @@
-import { Swipeable } from './swipeable';
+import { Swipeable } from "./swipeable";
 
-describe('pulumi-swipeable', () => {
-  it('builds', () => {
-    expect(new Swipeable()).toBeTruthy();
-  });
+describe("pulumi-swipeable", () => {
+    it("builds", () => {
+        expect(new Swipeable()).toBeTruthy();
+    });
 });

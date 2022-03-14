@@ -111,7 +111,6 @@
                 }
             }
 
-
             @if $filter-type != "pricing" {
                 ~ ul[data-faq-type="faq-pricing"] {
                     @apply hidden;
@@ -134,12 +133,14 @@
                 @apply pr-2;
             }
 
-            p, i {
+            p,
+            i {
                 @apply text-black;
             }
 
             &:hover {
-                p, i {
+                p,
+                i {
                     @apply text-gray-700;
                 }
             }
@@ -165,12 +166,12 @@
     .edition > div {
         @apply rounded-xl;
         box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.1);
-    } 
+    }
 
     .gradient {
         border-radius: 12px 12px 0px 0px;
         height: 8px;
-        background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     }
 
     @screen lg {
@@ -180,18 +181,21 @@
         .edition > div {
             border-radius: none;
             box-shadow: none;
-        } 
+        }
     }
 }
 
-.edition, .trialed-editions, .ready-cta {
-    p, span {
-        color: map-get($gray,800) !important;
+.edition,
+.trialed-editions,
+.ready-cta {
+    p,
+    span {
+        color: map-get($gray, 800) !important;
     }
 }
 
 .ready-cta {
     &.gradient {
-        background: linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%);
+        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     }
 }

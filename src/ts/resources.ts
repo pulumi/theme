@@ -7,7 +7,7 @@ function sortResourceItems(sortDescending) {
     const resourceList = $("ul.resource-list");
     const items = resourceList.children("li").detach();
 
-    Array.from(items).sort(function(a,b) {
+    Array.from(items).sort(function (a, b) {
         const firstDate = $(a).attr("data-display-date");
         const secondDate = $(b).attr("data-display-date");
 
@@ -20,15 +20,15 @@ function sortResourceItems(sortDescending) {
     resourceList.append(items);
 }
 
-$(function() {
+$(function () {
     const pathParts = location.pathname.split("/");
     if (pathParts.length > 1 && pathParts[1] === "resources") {
-        window.addEventListener("hashchange", function() {
+        window.addEventListener("hashchange", function () {
             const shouldSortDescending = location.hash !== "#upcoming";
             sortResourceItems(shouldSortDescending);
         });
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             const shouldSortDescending = location.hash !== "#upcoming";
             sortResourceItems(shouldSortDescending);
         });

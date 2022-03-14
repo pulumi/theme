@@ -4,16 +4,18 @@ body.section-pulumi-up {
         @apply absolute w-full h-full top-0 left-0;
         z-index: -1;
 
-        background-image:
-            radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 5px),
-            radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
-            radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 5px),
-            radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 5px);
+        background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+            radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 5px);
         background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
         background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         color: white !important;
     }
 
@@ -29,10 +31,15 @@ body.section-pulumi-up {
 
     background: radial-gradient(circle at left, #1f0b20 0, black 100%);
 
-    main, .top-nav-bar, .header-container, .footer {
+    main,
+    .top-nav-bar,
+    .header-container,
+    .footer {
         background-color: transparent;
 
-        a, p, .header-nav-item-drop-down {
+        a,
+        p,
+        .header-nav-item-drop-down {
             color: white !important;
         }
 
@@ -56,7 +63,8 @@ body.section-pulumi-up {
         }
     }
 
-    .top-nav-bar, .header-container {
+    .top-nav-bar,
+    .header-container {
         @apply bg-black;
     }
 
@@ -73,13 +81,14 @@ body.section-pulumi-up {
 
         justify-content: center;
         height: 40vh;
-        font-family: 'Pathway Gothic One', sans-serif !important;
+        font-family: "Pathway Gothic One", sans-serif !important;
         font-size: 500%;
         font-weight: 600;
         line-height: 150%;
         perspective: 400px;
 
-        h1, p {
+        h1,
+        p {
             color: #feda4a !important;
         }
 
@@ -88,7 +97,7 @@ body.section-pulumi-up {
 
             .title-part {
                 @apply my-0 leading-none;
-                font-family: 'StarWars', 'sans-serif';
+                font-family: "StarWars", "sans-serif";
                 letter-spacing: 6px;
 
                 @screen lg {
@@ -109,19 +118,19 @@ body.section-pulumi-up {
 
         @keyframes title-fade {
             0% {
-              opacity: 0;
-              transform: scale(1.5) translateY(-0.75em);
+                opacity: 0;
+                transform: scale(1.5) translateY(-0.75em);
             }
             86% {
                 opacity: 0;
                 transform: scale(1.5) translateY(-0.75em);
-              }
+            }
             90% {
-              opacity: 1;
+                opacity: 1;
             }
             100% {
-              opacity: 1;
-              transform: scale(1);
+                opacity: 1;
+                transform: scale(1);
             }
         }
 
@@ -139,7 +148,7 @@ body.section-pulumi-up {
                 opacity: 1;
             }
         }
-      }
+    }
 
     .crawl {
         @apply relative hidden;
@@ -164,16 +173,16 @@ body.section-pulumi-up {
         text-transform: uppercase;
     }
 
-      @keyframes crawl {
+    @keyframes crawl {
         0% {
-          top: 200px;
-          transform: rotateX(20deg)  translateZ(0);
+            top: 200px;
+            transform: rotateX(20deg) translateZ(0);
         }
         100% {
-          top: -6000px;
-          transform: rotateX(25deg) translateZ(-2500px);
+            top: -6000px;
+            transform: rotateX(25deg) translateZ(-2500px);
         }
-      }
+    }
 }
 
 // 2021 PulumiUP styles (can remove after page is updated).
@@ -207,7 +216,8 @@ $orange900: theme("colors.orange.900");
     animation: unquote($name) $pulseTime linear infinite;
 
     @keyframes #{$name} {
-        0%, 100% {
+        0%,
+        100% {
             text-shadow: 0 0 30px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
             color: $light;
         }
@@ -259,8 +269,6 @@ $orange900: theme("colors.orange.900");
     }
 }
 
-
-
 %dialog-box {
     @apply relative p-8 w-full text-white;
     border-radius: 1rem;
@@ -274,7 +282,7 @@ $orange900: theme("colors.orange.900");
     }
 }
 
-@mixin dialog-box ($color: #05d5fc){
+@mixin dialog-box($color: #05d5fc) {
     @extend %dialog-box;
     border: 0.2em solid $color;
     box-shadow: inset 0 0 0.4em $color, 0 0 0.4em $color;

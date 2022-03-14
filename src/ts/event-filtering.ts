@@ -1,6 +1,6 @@
 import { getQueryVariable } from "./util";
 
-$(function() {
+$(function () {
     /**
      * This function creates a checkbox from a given text string.
      * It will set the label and the value to whatever the input string is.
@@ -101,7 +101,7 @@ $(function() {
             }
         }
         if (visibleEvents === events.length) {
-            $("#event-list-heading").text("All Upcoming Events")
+            $("#event-list-heading").text("All Upcoming Events");
         } else {
             $("#event-list-heading").text(visibleEvents + " Upcoming Events");
         }
@@ -139,7 +139,6 @@ $(function() {
             const input = createCheckbox(text);
             eventFilterParent.append(input);
         }
-
     }
 
     // Filter the events based on the filter query parameter.
@@ -147,7 +146,7 @@ $(function() {
 
     // This click handler will determine which checkboxes are selected
     // and then provide them to the filter event function to filter the events.
-    $("#eventFilter input[type='checkbox']").click(function() {
+    $("#eventFilter input[type='checkbox']").click(function () {
         getFilterValuesAndFilterList();
     });
 });

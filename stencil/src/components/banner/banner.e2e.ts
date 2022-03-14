@@ -1,7 +1,6 @@
-import { newE2EPage, E2EPage, E2EElement } from '@stencil/core/testing';
+import { newE2EPage, E2EPage, E2EElement } from "@stencil/core/testing";
 
 describe("pulumi-banner", () => {
-
     it("renders", async () => {
         const page = await newE2EPage();
         await page.setContent("<pulumi-banner></pulumi-banner>");
@@ -44,7 +43,6 @@ describe("pulumi-banner", () => {
         });
 
         describe("when the banner is marked dismissible", () => {
-
             beforeEach(async () => {
                 page = await newE2EPage();
                 await page.setContent(`
@@ -63,7 +61,6 @@ describe("pulumi-banner", () => {
             });
 
             describe("and the banner is dismissed", () => {
-
                 beforeEach(async () => {
                     const dismissButton = await element.find(".dismiss");
                     await dismissButton.click();

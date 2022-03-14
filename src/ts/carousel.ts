@@ -1,11 +1,10 @@
-(function($) {
-
+(function ($) {
     // The home-page carousel. Items cycle every four seconds. Clicking a label stops the
     // cycling and shows the selected item.
 
     var carouselItem = 1;
 
-    var carouselInterval = window.setInterval(function() {
+    var carouselInterval = window.setInterval(function () {
         showCarouselItem(carouselItem);
         carouselItem++;
 
@@ -16,7 +15,7 @@
 
     showCarouselItem(0);
 
-    $(".carousel-item-label").click(function() {
+    $(".carousel-item-label").click(function () {
         clearInterval(carouselInterval);
 
         var i = $(".carousel-item-label").index(this);
@@ -24,7 +23,6 @@
     });
 
     function showCarouselItem(i) {
-
         // On some pages we might want to show all the carousel animations at
         // once, so if this element is available we show everything and return.
         if ($(".carousel-always-visible").length) {
@@ -39,19 +37,9 @@
             return;
         }
 
-        $(".carousel-item")
-            .css("opacity", 0)
-            .css("pointer-events", "none")
-            .eq(i)
-            .css("opacity", 1)
-            .css("pointer-events", "auto");
+        $(".carousel-item").css("opacity", 0).css("pointer-events", "none").eq(i).css("opacity", 1).css("pointer-events", "auto");
 
-        $(".carousel-item-description")
-            .css("opacity", 0)
-            .css("pointer-events", "none")
-            .eq(i)
-            .css("opacity", 1)
-            .css("pointer-events", "auto");
+        $(".carousel-item-description").css("opacity", 0).css("pointer-events", "none").eq(i).css("opacity", 1).css("pointer-events", "auto");
 
         $(".carousel-item-label")
             .removeClass("border-purple-700")
@@ -74,34 +62,25 @@
     }
 
     function showIDE() {
-
         // Hide the windows.
         $(".menu").css("opacity", 0);
 
         // Restore the selection state of the first menu.
-        $(".menu")
-            .find(".row")
-            .removeClass("bg-gray-600")
-            .eq(0)
-            .addClass("bg-gray-600");
+        $(".menu").find(".row").removeClass("bg-gray-600").eq(0).addClass("bg-gray-600");
 
         // Start typing. On completion, show the menus.
-        startTyping(0, function() {
-            $(".menu").each(function(i, el) {
+        startTyping(0, function () {
+            $(".menu").each(function (i, el) {
                 var delay = parseInt($(el).attr("data-delay")) || 0;
 
                 // Animate the selection indicator of the first menu when it's shown.
                 if (i === 0) {
-                    setTimeout(function() {
-                        $(el)
-                            .find(".row")
-                            .removeClass("bg-gray-600")
-                            .eq(1)
-                            .addClass("bg-gray-600");
+                    setTimeout(function () {
+                        $(el).find(".row").removeClass("bg-gray-600").eq(1).addClass("bg-gray-600");
                     }, 600);
                 }
 
-                setTimeout(function() {
+                setTimeout(function () {
                     $(el).css("opacity", 1);
                 }, delay);
             });
@@ -121,34 +100,32 @@
     function showConsole() {
         var tabs = $("#carousel-console .tab");
 
-        tabs
-            .css("opacity", 0)
-            .eq(0)
-            .css("opacity", 1);
+        tabs.css("opacity", 0).eq(0).css("opacity", 1);
 
-        setTimeout(function() {
-            tabs.eq(0).css("opacity", 0)
+        setTimeout(function () {
+            tabs.eq(0).css("opacity", 0);
             tabs.eq(1).css("opacity", 1);
         }, 5000);
     }
 
     function startTyping(i, onComplete?) {
         var spans = $(".carousel-item").eq(i).find(".line.typed span");
-        var offset = 500 /* ms */;
-        var delay = 75 /* ms */;
+        var offset = 500; /* ms */
+        var delay = 75; /* ms */
 
         // Wrap every character in a span to make it individually selectable.
-        spans.each(function(i, span) {
+        spans.each(function (i, span) {
             var chars = span.textContent.split("");
 
             $(span)
                 .addClass("typing")
                 .html(
-                    chars.map(char => {
-                        return "<span class='char'>" + char + "</span>";
-                    })
-                    .join("")
-                    .toString(),
+                    chars
+                        .map(char => {
+                            return "<span class='char'>" + char + "</span>";
+                        })
+                        .join("")
+                        .toString(),
                 );
         });
 
@@ -156,13 +133,13 @@
         var cursor = $("<span class='cursor'></span>");
 
         var chars = $(".carousel-item").eq(i).find(".char");
-        chars.map(function(j, el) {
+        chars.map(function (j, el) {
             offset += Math.ceil(Math.random() * delay);
 
             // Position the cursor in relation to the character. If a line break is
             // encountered, show the cursor before the line break (as we pause for
             // line breaks); otherwise, show it after the character.
-            setTimeout(function() {
+            setTimeout(function () {
                 if (el.textContent === "\n") {
                     $(el).css("opacity", 1).prepend(cursor);
                 } else {
@@ -171,7 +148,7 @@
 
                 // If we've reached end of the input in the current view, remove the cursor.
                 if (j === chars.length - 1) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         cursor.remove();
 
                         if (typeof onComplete === "function") {
@@ -192,14 +169,14 @@
     function showLines(i) {
         var lines = $(".carousel-item").eq(i).find(".line.full");
         lines.css("opacity", 0);
-        var offset = 2000 /* ms */;
-        var delay = 75 /* ms */;
+        var offset = 2000; /* ms */
+        var delay = 75; /* ms */
 
-        lines.each(function(i, el) {
+        lines.each(function (i, el) {
             var d = parseInt($(el).attr("data-delay")) || delay;
             offset += Math.ceil(Math.random() * d);
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $(el).css("opacity", 1);
             }, offset);
         });

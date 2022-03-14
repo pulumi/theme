@@ -1,7 +1,7 @@
-import { TopButton } from './top-button';
+import { TopButton } from "./top-button";
 
-describe('pulumi-top-button', () => {
-    it('builds', () => {
+describe("pulumi-top-button", () => {
+    it("builds", () => {
         expect(new TopButton()).toBeTruthy();
     });
 });

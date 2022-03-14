@@ -10,7 +10,7 @@ interface WebinarSessionItem {
 @Component({
     tag: "pulumi-webinar-form-select",
     styleUrl: "webinar-form-select.scss",
-    shadow: false
+    shadow: false,
 })
 export class WebinarFormSelect {
     // The JSON string of the sessions.
@@ -45,11 +45,13 @@ export class WebinarFormSelect {
                 return;
             }
 
-            const selectedSession = this.parsedSessions.find((session) => {
+            const selectedSession = this.parsedSessions.find(session => {
                 const sessionDate = new Date(session.key);
-                return sessionDate.getFullYear() === queryParamDate.getFullYear() &&
-                       sessionDate.getMonth() === queryParamDate.getMonth() &&
-                       sessionDate.getDate() === queryParamDate.getDate();
+                return (
+                    sessionDate.getFullYear() === queryParamDate.getFullYear() &&
+                    sessionDate.getMonth() === queryParamDate.getMonth() &&
+                    sessionDate.getDate() === queryParamDate.getDate()
+                );
             });
 
             if (selectedSession) {
@@ -67,11 +69,14 @@ export class WebinarFormSelect {
                 weekday: "short",
                 year: "numeric",
                 month: "long",
-                day: 'numeric',
+                day: "numeric",
                 hour: "numeric",
-                minute: "2-digit"
+                minute: "2-digit",
             };
-            return { hubspotFormId: session.hubspot_form_id, key: sessionDate.toLocaleString(undefined, options)};
+            return {
+                hubspotFormId: session.hubspot_form_id,
+                key: sessionDate.toLocaleString(undefined, options),
+            };
         });
     }
 
@@ -86,5 +91,4 @@ export class WebinarFormSelect {
             />
         );
     }
-
 }

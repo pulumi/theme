@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, State } from "@stencil/core";
 
 interface GreenhouseJob {
     id: number;
@@ -12,7 +12,7 @@ interface GreenhouseJob {
 interface GreenhouseJobDepartment {
     id: number;
     name: string;
-    jobs: GreenhouseJob[],
+    jobs: GreenhouseJob[];
 }
 
 @Component({
@@ -20,7 +20,6 @@ interface GreenhouseJobDepartment {
     shadow: false,
 })
 export class GreenhouseJobsList {
-
     @State()
     departments: GreenhouseJobDepartment[];
 
@@ -28,7 +27,7 @@ export class GreenhouseJobsList {
     loading: boolean;
 
     constructor() {
-        this.departments = []
+        this.departments = [];
     }
 
     componentWillLoad() {
@@ -62,29 +61,29 @@ export class GreenhouseJobsList {
     }
 
     renderJobsList() {
-        return this.departments.length > 0 ?
+        return this.departments.length > 0 ? (
             <ul class="departments">
-                {
-                    this.departments.map(department => <li>
+                {this.departments.map(department => (
+                    <li>
                         <h4>{department.name}</h4>
                         <ul class="jobs">
-                            {
-                                department.jobs.map(job => <li>
+                            {department.jobs.map(job => (
+                                <li>
                                     <a class="job-title" href={job.absolute_url} target="_blank" rel="noreferrer noopener">
                                         {job.title}
                                     </a>
-                                    <div class="job-location">
-                                        {job.location.name}
-                                    </div>
-                                </li>)
-                            }
+                                    <div class="job-location">{job.location.name}</div>
+                                </li>
+                            ))}
                         </ul>
-                    </li>)
-                }
-            </ul> :
+                    </li>
+                ))}
+            </ul>
+        ) : (
             <div>
                 <p>There are no open positions at this time.</p>
-            </div>;
+            </div>
+        );
     }
 
     render() {

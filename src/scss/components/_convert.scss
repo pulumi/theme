@@ -1,5 +1,4 @@
 pulumi-convert {
-
     #editors {
         @apply flex flex-col;
 
@@ -87,7 +86,7 @@ pulumi-convert {
                     @apply flex p-2;
 
                     .window-bar-button {
-                        @apply  rounded-full h-3 w-3 bg-gray-700;
+                        @apply rounded-full h-3 w-3 bg-gray-700;
 
                         &:nth-of-type(2) {
                             @apply mx-2;
@@ -160,7 +159,8 @@ pulumi-convert {
                         }
                     }
 
-                    .btn-download, .btn-copy {
+                    .btn-download,
+                    .btn-copy {
                         @apply ml-2 btn bg-gray-800 border-gray-800 text-xs;
 
                         &:hover {
@@ -246,7 +246,7 @@ pulumi-convert {
                     }
 
                     .alert-error {
-                        @apply block bg-red-100 border-red-800 text-red-800 ;
+                        @apply block bg-red-100 border-red-800 text-red-800;
                     }
                 }
 
@@ -258,7 +258,7 @@ pulumi-convert {
                     }
 
                     .alert-warn {
-                        @apply block bg-yellow-100 border-yellow-800 text-yellow-800 ;
+                        @apply block bg-yellow-100 border-yellow-800 text-yellow-800;
                     }
                 }
             }
@@ -267,7 +267,7 @@ pulumi-convert {
                 @apply px-2 py-4 font-mono text-sm bg-gray-900 w-full relative;
                 height: 36rem;
 
-                &-gutters{
+                &-gutters {
                     @apply bg-gray-900;
                 }
             }

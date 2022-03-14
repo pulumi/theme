@@ -5,7 +5,7 @@ export interface DismissBanner {
     payload: {
         name: string;
         dismissedAt: number;
-    }
+    };
 }
 
 // Dismiss the banner component.

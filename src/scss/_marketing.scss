@@ -26,7 +26,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
         @apply text-base;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         // Tailwind v2 makes some changes to line-heights, one of which is that headings
         // now get line-heights of 1. This is generally a good thing, but it makes the
         // headings in our marketing pages lose some intentional vertical spacing. So we
@@ -48,7 +53,8 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
         max-width: 1680px;
     }
 
-    .description a, a.link {
+    .description a,
+    a.link {
         @apply text-black font-semibold;
 
         &:hover {
@@ -61,7 +67,8 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
     }
 
     // Buttons
-    a[class^="btn-"], a[class*=" btn-"] {
+    a[class^="btn-"],
+    a[class*=" btn-"] {
         @apply text-lg py-3 px-8 rounded-full;
 
         &:hover {
@@ -73,7 +80,8 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
         }
     }
 
-    .btn-primary, .btn-secondary {
+    .btn-primary,
+    .btn-secondary {
         @apply whitespace-normal;
     }
 

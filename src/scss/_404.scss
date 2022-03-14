@@ -1,5 +1,4 @@
 body.page-404 {
-
     // When to switch between the layout for larger screens or smaller ones.
     $width-break: 830px;
 
@@ -17,7 +16,9 @@ body.page-404 {
     #clouds-and-beams {
         @apply text-white leading-normal text-xl mt-8 absolute w-1/2;
 
-        h1, h2, p {
+        h1,
+        h2,
+        p {
             text-shadow: 0 1px 2px #111;
         }
 
@@ -38,8 +39,8 @@ body.page-404 {
         }
 
         @media (max-width: $width-break) {
-            top: calc(#{ $position-top } * 1.5);
-            left: calc(#{ $position-left } * 1.5);
+            top: calc(#{$position-top} * 1.5);
+            left: calc(#{$position-left} * 1.5);
         }
 
         @media (min-width: $width-break) {
@@ -105,7 +106,7 @@ body.page-404 {
 
         .beam4 {
             height: calc(595vw * 1.5);
-            top: calc(18.0vw * 1.5);
+            top: calc(18vw * 1.5);
             left: calc(26.8vw * 1.5);
         }
     }
@@ -167,7 +168,7 @@ body.page-404 {
 
         .beam4 {
             height: 595vw;
-            top: 18.0vw;
+            top: 18vw;
             left: 26.8vw;
         }
     }
@@ -177,39 +178,75 @@ body.page-404 {
     }
 
     @keyframes fadein {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 
     @keyframes lightningframes {
-        14% { opacity: 0; }
-        15% { opacity: 1; }
-        17% { opacity: 1; }
-        18% { opacity: 0; }
-        19% { opacity: 0; }
-        20% { opacity: 1; }
-        22% { opacity: 1; }
-        23% { opacity: 0; }
+        14% {
+            opacity: 0;
+        }
+        15% {
+            opacity: 1;
+        }
+        17% {
+            opacity: 1;
+        }
+        18% {
+            opacity: 0;
+        }
+        19% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        22% {
+            opacity: 1;
+        }
+        23% {
+            opacity: 0;
+        }
     }
 
     @keyframes frames1 {
-        from { transform: translateY(0); }
-        to { transform: translateY(.6vw); }
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(0.6vw);
+        }
     }
 
     @keyframes frames2 {
-        from { transform: translateY(0); }
-        to { transform: translateY(-.75vw); }
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-0.75vw);
+        }
     }
 
     @keyframes frames3 {
-        from { transform: translateY(0); }
-        to { transform: translateY(1vw); }
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(1vw);
+        }
     }
 
     @keyframes frames4 {
-        from { transform: translateY(0); }
-        to { transform: translateY(-.5vw); }
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-0.5vw);
+        }
     }
 
     .anim1 {
@@ -238,54 +275,54 @@ body.page-404 {
 
     .cloud1 {
         @apply opacity-0 absolute;
-        animation: fadein .5s ease-in .6s;
+        animation: fadein 0.5s ease-in 0.6s;
         animation-fill-mode: forwards;
     }
 
     .cloud2 {
         @apply opacity-0 absolute;
-        animation: fadein .5s ease-in .4s;
+        animation: fadein 0.5s ease-in 0.4s;
         animation-fill-mode: forwards;
     }
 
     .cloud3 {
         @apply opacity-0 absolute;
-        animation: fadein .5s ease-in .2s;
+        animation: fadein 0.5s ease-in 0.2s;
         animation-fill-mode: forwards;
     }
 
     .lightning3 {
         @apply opacity-0 fixed;
-        animation: lightningframes 5s linear .2s infinite;
+        animation: lightningframes 5s linear 0.2s infinite;
     }
 
     .cloud4 {
         @apply opacity-0 absolute;
-        animation: fadein .5s ease-in 0s;
+        animation: fadein 0.5s ease-in 0s;
         animation-fill-mode: forwards;
     }
 
     .beam1 {
         @apply opacity-0 fixed;
-        animation: fadein .5s ease-in .6s;
+        animation: fadein 0.5s ease-in 0.6s;
         animation-fill-mode: forwards;
     }
 
     .beam2 {
         @apply opacity-0 fixed;
-        animation: fadein .5s ease-in .4s;
+        animation: fadein 0.5s ease-in 0.4s;
         animation-fill-mode: forwards;
     }
 
     .beam3 {
         @apply opacity-0 fixed;
-        animation: fadein .5s ease-in .2s;
+        animation: fadein 0.5s ease-in 0.2s;
         animation-fill-mode: forwards;
     }
 
     .beam4 {
         @apply opacity-0 fixed;
-        animation: fadein .5s ease-in 0s;
+        animation: fadein 0.5s ease-in 0s;
         animation-fill-mode: forwards;
     }
 }
