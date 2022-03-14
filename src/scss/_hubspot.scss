@@ -44,7 +44,9 @@
             }
         }
 
-        input, textarea, select {
+        input,
+        textarea,
+        select {
             @apply border border-gray-300 rounded p-2 bg-white;
             &:focus {
                 @apply outline-none ring;

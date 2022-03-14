@@ -53,7 +53,9 @@ section[id="pulumi-python-sdk"] {
     // The definition of a single (Python) class or function. Not to be confused with the CSS class.
     // Sphinx emits a DL for every class it processes, with a few well-known immediate
     // subchildren:
-    dl.class, dl.function, dl.exception {
+    dl.class,
+    dl.function,
+    dl.exception {
         > dt {
             // Hide the header link when not hovering.
             > a.headerlink {
@@ -131,7 +133,8 @@ section[id="pulumi-python-sdk"] {
         }
     }
 
-    table td, .pre {
+    table td,
+    .pre {
         @apply break-words;
         word-break: break-word;
     }

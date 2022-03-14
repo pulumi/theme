@@ -1,9 +1,7 @@
-import { normalizeState } from './index';
+import { normalizeState } from "./index";
 
 describe("normalizeState", () => {
-
     describe("given bogus data", () => {
-
         it("returns an empty state object", () => {
             expect(normalizeState({ lol: "haha" })).toStrictEqual({});
             expect(normalizeState("stuff")).toStrictEqual({});
@@ -22,7 +20,7 @@ describe("normalizeState", () => {
                 preferencesSlice = {
                     preferences: {
                         language: "typescript",
-                    }
+                    },
                 };
             });
 
@@ -45,11 +43,13 @@ describe("normalizeState", () => {
 
         describe("that is incomplete", () => {
             beforeEach(() => {
-                bannersSlice = { banners: { dismissed: [ "some-banner" ] } };
+                bannersSlice = { banners: { dismissed: ["some-banner"] } };
             });
 
-            it ("returns the default banners slice", () => {
-                expect(normalizeState(bannersSlice)).toStrictEqual({ banners: { dismissed: [] } });
+            it("returns the default banners slice", () => {
+                expect(normalizeState(bannersSlice)).toStrictEqual({
+                    banners: { dismissed: [] },
+                });
             });
         });
 
@@ -58,7 +58,7 @@ describe("normalizeState", () => {
                 const tenSecondsAgo = Date.now() - 10000;
                 bannersSlice = {
                     banners: {
-                        dismissed: [ { name: "some-banner", dismissedAt: tenSecondsAgo } ],
+                        dismissed: [{ name: "some-banner", dismissedAt: tenSecondsAgo }],
                     },
                 };
             });
@@ -73,13 +73,15 @@ describe("normalizeState", () => {
                 const september7th2020 = 1599444674986;
                 bannersSlice = {
                     banners: {
-                        dismissed: [ { name: "some-banner", dismissedAt: september7th2020 } ]
-                    }
+                        dismissed: [{ name: "some-banner", dismissedAt: september7th2020 }],
+                    },
                 };
             });
 
             it("excludes them from the list of dismissed banners", () => {
-                expect(normalizeState(bannersSlice)).toStrictEqual({ banners: { dismissed: [] } });
+                expect(normalizeState(bannersSlice)).toStrictEqual({
+                    banners: { dismissed: [] },
+                });
             });
         });
     });

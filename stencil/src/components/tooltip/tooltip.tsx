@@ -1,4 +1,4 @@
-import { Component, Element, Host, h, Method, State } from '@stencil/core';
+import { Component, Element, Host, h, Method, State } from "@stencil/core";
 import { getUUID } from "../../util/util";
 
 /**
@@ -20,7 +20,6 @@ import { getUUID } from "../../util/util";
     shadow: false,
 })
 export class Tooltip {
-
     @Element()
     el: HTMLElement;
 
@@ -61,19 +60,19 @@ export class Tooltip {
 
         // Toggle the tooltip when the target element is hovered or tapped.
         const target = this.el.querySelector(".tooltip-target");
-        target.addEventListener("mouseover", () => this.active = true);
-        target.addEventListener("mouseout", () => this.active = false);
-        target.addEventListener("touchstart", () => this.active = true);
-        target.addEventListener("touchend", () => this.active = false);
+        target.addEventListener("mouseover", () => (this.active = true));
+        target.addEventListener("mouseout", () => (this.active = false));
+        target.addEventListener("touchstart", () => (this.active = true));
+        target.addEventListener("touchend", () => (this.active = false));
     }
 
     render() {
         return (
             <Host>
-                <span class={`tooltip-target ${ this.active ? "active" : "" }`} aria-labelledby={ this.id }>
+                <span class={`tooltip-target ${this.active ? "active" : ""}`} aria-labelledby={this.id}>
                     <slot></slot>
                 </span>
-                <span id={ this.id } class="tooltip-content" role="tooltip">
+                <span id={this.id} class="tooltip-content" role="tooltip">
                     <slot name="content"></slot>
                 </span>
             </Host>

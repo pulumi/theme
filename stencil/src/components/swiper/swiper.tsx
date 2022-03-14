@@ -77,7 +77,6 @@ export class Swiper {
     }
 
     componentDidLoad() {
-
         const autoplayOptions: AutoplayOptions = {
             delay: this.autoplayDelay,
             disableOnInteraction: true,
@@ -132,12 +131,12 @@ export class Swiper {
                     <slot></slot>
                 </div>
 
-                {!this.navControls ? null :
+                {!this.navControls ? null : (
                     <span>
                         <div class={`swiper-button-prev ${this.previousBtnClass}`}></div>
                         <div class={`swiper-button-next ${this.nextBtnClass}`}></div>
                     </span>
-                }
+                )}
             </div>
         );
     }

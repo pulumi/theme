@@ -5,23 +5,15 @@
         "declaration": true,
         "outDir": "./me",
         "experimentalDecorators": true,
-        "lib": [
-            "dom",
-            "es2017"
-        ],
+        "lib": ["dom", "es2017"],
         "moduleResolution": "node",
         "module": "esnext",
         "target": "es2017",
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "jsx": "react",
-        "jsxFactory": "h",
+        "jsxFactory": "h"
     },
-    "include": [
-        "src",
-        "types/jsx.d.ts"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "include": ["src", "types/jsx.d.ts"],
+    "exclude": ["node_modules"]
 }

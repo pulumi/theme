@@ -1,7 +1,6 @@
 import { newE2EPage } from "@stencil/core/testing";
 
 describe("pulumi-install", () => {
-
     describe("by default", () => {
         it("renders the current os preference", async () => {
             const page = await newE2EPage();

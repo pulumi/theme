@@ -35,7 +35,7 @@
 
                 .top-nav-banner-cta-text {
                     // TODO: update color
-                    color: #4D5BD9;
+                    color: #4d5bd9;
                 }
             }
         }
@@ -98,8 +98,7 @@
 
                 border: 1px solid theme("colors.violet.600");
                 border-radius: 20px;
-                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14),
-                    0px 1px 5px rgba(0, 0, 0, 0.12);
+                box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
 
                 &:hover,
                 &:active {
@@ -166,7 +165,7 @@
             }
 
             li:not(.header-dropdown-item) {
-                @apply flex items-center ;
+                @apply flex items-center;
 
                 a {
                     @apply block px-4 my-1 transition-all;
@@ -177,7 +176,8 @@
                 }
 
                 &:hover {
-                    a, .dropdown-title {
+                    a,
+                    .dropdown-title {
                         @apply opacity-50;
                     }
                 }
@@ -305,7 +305,7 @@
     .dot-overlay {
         @apply w-full h-full absolute;
         z-index: -1;
-        background: linear-gradient(to top, rgba(255,255,255, 0.9) 0%, rgba(255,255,255, 0.8) 10%, rgba(255,255,255,0.5004551991695115) 100%);
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551991695115) 100%);
     }
 
     .registry-hero-title {
@@ -313,7 +313,8 @@
             @apply flex items-center;
         }
 
-        .title-icon, .title-text-content {
+        .title-icon,
+        .title-text-content {
             @apply text-lg text-gray-800 bg-white bg-opacity-70;
 
             @screen md {

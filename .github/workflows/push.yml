@@ -1,38 +1,38 @@
 name: Build
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
+    build:
+        name: Build
+        runs-on: ubuntu-18.04
+        steps:
+            - name: Install Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: "14.x"
 
-      - name: Check out branch
-        uses: actions/checkout@v2
+            - name: Check out branch
+              uses: actions/checkout@v2
 
-      - name: Build assets
-        run: |
-          make ensure build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Build assets
+              run: |
+                  make ensure build
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit artifacts
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: assets/js/bundle.js assets/css/bundle.css
-          commit_message: Commit asset bundles
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
+            - name: Commit artifacts
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  file_pattern: assets/js/bundle.js assets/css/bundle.css
+                  commit_message: Commit asset bundles
+                  token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
-      - name: Merge into release
-        uses: everlytic/branch-merge@1.1.2
-        with:
-          github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
-          source_ref: ${{ github.ref }}
-          target_branch: release
-          commit_message_template: "[Automated] Merge {source_ref} into {target_branch}"
+            - name: Merge into release
+              uses: everlytic/branch-merge@1.1.2
+              with:
+                  github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
+                  source_ref: ${{ github.ref }}
+                  target_branch: release
+                  commit_message_template: "[Automated] Merge {source_ref} into {target_branch}"

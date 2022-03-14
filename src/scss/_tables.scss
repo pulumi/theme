@@ -1,7 +1,8 @@
 table {
     @apply border-separate rounded bg-gray-200;
 
-    th, td {
+    th,
+    td {
         @apply px-4 py-2;
     }
 

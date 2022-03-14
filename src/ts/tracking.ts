@@ -4,11 +4,10 @@
  *
  *   - ex. <a data-track="get-started-no-yaml" class="btn" href="/docs/get-started">GET STARTED</a>
  */
-$(document).ready(function() {
+$(document).ready(function () {
     // Check if the analytics object and track function are available. If they are
     // not we do not even want to attempt to track anything.
     if (window && window["analytics"] && typeof window["analytics"].track === "function") {
-
         // Find all the links with a "data-track" attribute.
         const links = $("a");
 
@@ -26,15 +25,17 @@ $(document).ready(function() {
             // Get the tracking id.
             const dataTrack = elem.attr("data-track");
             const href = (elem.attr("href") || "").replace(/https?:\/\//g, "");
-            const trackingDescription = dataTrack ? dataTrack :
-                  href.replace(/^#/, "anchor-")
-                      .replace(/^\//, "")
-                      .split("/").join("-");
+            const trackingDescription = dataTrack ? dataTrack : href.replace(/^#/, "anchor-").replace(/^\//, "").split("/").join("-");
 
             const currentPath = window.location.pathname === "/" ? "home" : window.location.pathname;
-            const path = currentPath.split("/")
-                .filter(function(segment) { return segment !== ""; })
-                .map(function(segment) { return segment; });
+            const path = currentPath
+                .split("/")
+                .filter(function (segment) {
+                    return segment !== "";
+                })
+                .map(function (segment) {
+                    return segment;
+                });
 
             const trackingId = path.concat(trackingDescription, i).join("-");
 
@@ -51,13 +52,13 @@ $(document).ready(function() {
                 category: "User Interaction",
                 label: trackingId,
                 value: undefined,
-            }
+            };
 
             // Register a listener to the link to send data to Segment
             // when it has been clicked.
-            elem.on("click", function(e) {
+            elem.on("click", function (e) {
                 // The value is the time in seconds from page load to user action.
-                trackingData.value = ((new Date().getTime()) - now) / 1000;
+                trackingData.value = (new Date().getTime() - now) / 1000;
                 window["analytics"].track("link-click", trackingData);
             });
         }
@@ -68,7 +69,7 @@ $(document).ready(function() {
         }
 
         // Remove the event listeners when we navigate to a new page.
-        $(window).on("unload", function() {
+        $(window).on("unload", function () {
             for (var i = 0; i < links.length; i++) {
                 $(links[i]).off("click");
             }

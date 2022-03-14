@@ -16,14 +16,15 @@
     }
 
     &.home-build-section {
-        .circle-left, .circle-center, .circle-right {
+        .circle-left,
+        .circle-center,
+        .circle-right {
             @apply rounded-full absolute bg-yellow-600;
         }
 
         .circle-left {
             @apply w-32 h-32 top-0;
             left: -4rem;
-
         }
 
         .circle-center {
@@ -47,7 +48,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute top-0 left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
             }
 
@@ -78,7 +79,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute top-0 left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
             }
 
@@ -146,7 +147,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute top-0 left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
             }
 
@@ -162,7 +163,7 @@
 
                 .dot-background-overlay {
                     @apply w-full h-full absolute left-0;
-                    background-color: rgba(255,255,255,0.5);
+                    background-color: rgba(255, 255, 255, 0.5);
                     top: -10rem;
                     z-index: 0;
                 }
@@ -311,7 +312,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute bottom-0 left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
                 height: 71%;
             }
@@ -348,7 +349,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
                 top: 80%;
             }
@@ -401,7 +402,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute top-0 left-0 z-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
             }
 
             .dot-background {
@@ -486,7 +487,7 @@
 
             .dot-background-overlay {
                 @apply w-full h-full absolute left-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 top: 15rem;
                 z-index: 0;
             }
@@ -504,7 +505,7 @@
 
             .dot-background-overlay {
                 @apply w-full absolute left-0 top-0;
-                background-color: rgba(255,255,255,0.5);
+                background-color: rgba(255, 255, 255, 0.5);
                 z-index: 0;
                 height: calc(100% - 18rem);
             }

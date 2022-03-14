@@ -11,7 +11,6 @@ import { getQueryVariable } from "../../util/util";
     shadow: false,
 })
 export class Root {
-
     @Event()
     rendered: EventEmitter;
 
@@ -19,7 +18,6 @@ export class Root {
     setLanguage: typeof setLanguage;
 
     componentWillLoad() {
-
         // Initialize the store. This makes the store available to any component on the page.
         store.setStore(configureStore());
         // Map internal methods to actions defined on the store.
@@ -27,7 +25,6 @@ export class Root {
     }
 
     componentDidRender() {
-
         // Set language if specified by query param or is part of an anchor tag (e.g. #anchor~nodejs).
         this.setSelectedLanguage();
         // Since this element initializes the store, dispatch a DOM event letting
@@ -36,15 +33,13 @@ export class Root {
     }
 
     render() {
-        return <div>
-        </div>;
+        return <div></div>;
     }
 
     private setSelectedLanguage() {
-
         // Check if language is specified in the query params and set language if present.
         const queryParamLanguage = getQueryVariable("language");
-        if (queryParamLanguage){
+        if (queryParamLanguage) {
             this.setLanguage(queryParamLanguage as LanguageKey);
         }
 
@@ -52,7 +47,8 @@ export class Root {
         // both are present because the anchor will not work otherwise.
         const anchorTag = window.location.hash;
         if (anchorTag) {
-            const language = anchorTag.split("_")
+            const language = anchorTag
+                .split("_")
                 .slice(-1)
                 .find(lang => ["typescript", "javascript", "csharp", "go", "python"].includes(lang));
             if (language) {

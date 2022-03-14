@@ -6,7 +6,6 @@
 
 module.exports = {
     plugins: [
-
         // TailwindCSS
         require("tailwindcss")("./tailwind.config.js"),
 
@@ -96,5 +95,5 @@ module.exports = {
         //     // Ex. https://tailwindcss.com/docs/controlling-file-size/#writing-purgeable-html
         //     defaultExtractor: content => content.match(/[\w-/:]*[\w-/:]/g) || [],
         // }),
-    ]
+    ],
 };

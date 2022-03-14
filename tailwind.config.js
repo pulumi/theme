@@ -1,4 +1,3 @@
-
 // Tailwind configuration. Changes to this file require a dev-server restart.
 //
 // Configuration docs:
@@ -21,7 +20,7 @@
 //     blue: color.brand.blue,
 // };
 
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const brand = {
     yellow: "#f7bf2a",
@@ -107,7 +106,7 @@ const purple = {
     700: "#6e2974",
     800: "#531f57",
     900: "#37143a",
-}
+};
 
 const violet = {
     100: "#f2eff9",
@@ -131,7 +130,7 @@ const blue = {
     700: "#3e49ae",
     800: "#2e3782",
     900: "#1f2457",
-}
+};
 
 const orange = {
     100: "#fff7eb",
@@ -143,7 +142,7 @@ const orange = {
     700: "#d86131",
     800: "#ba4a2c",
     900: "#993d29",
-}
+};
 
 const green = {
     100: "#e0fff2",
@@ -155,25 +154,16 @@ const green = {
     700: "#1d8673",
     800: "#19675b",
     900: "#155148",
-}
+};
 
 module.exports = {
     purge: false,
     theme: {
         extend: {
             fontFamily: {
-                display: [
-                    "Gilroy",
-                    ...defaultTheme.fontFamily.sans,
-                ],
-                body: [
-                    "Inter",
-                    ...defaultTheme.fontFamily.sans,
-                ],
-                mono: [
-                    "Roboto Mono",
-                    ...defaultTheme.fontFamily.mono,
-                ]
+                display: ["Gilroy", ...defaultTheme.fontFamily.sans],
+                body: ["Inter", ...defaultTheme.fontFamily.sans],
+                mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono],
             },
         },
         colors: {
@@ -192,10 +182,10 @@ module.exports = {
             violet,
         },
         maxHeight: {
-            "25": "25vh",
-            "50": "50vh",
-            "75": "75vh",
-            "100": "100vh",
+            25: "25vh",
+            50: "50vh",
+            75: "75vh",
+            100: "100vh",
         },
         screens: {
             sm: "640px",

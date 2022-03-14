@@ -2,7 +2,6 @@ import { SetLanguage, SetK8sLanguage, SetOS, SetCloud, SetPersona } from "./pref
 import { DismissBanner } from "./banners";
 
 export enum TypeKeys {
-
     // Chooser-related action types.
     SET_LANGUAGE = "SET_LANGUAGE",
     SET_K8S_LANGUAGE = "SET_K8S_LANGUAGE",

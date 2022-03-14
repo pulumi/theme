@@ -3,10 +3,9 @@ import { Component, Element, h } from "@stencil/core";
 @Component({
     tag: "pulumi-examples",
     styleUrl: "examples.scss",
-    shadow: false
+    shadow: false,
 })
 export class Examples {
-
     @Element()
     el: HTMLElement;
 
@@ -14,13 +13,12 @@ export class Examples {
         const headings = Array.from(this.el.querySelectorAll("pulumi-examples h3"));
 
         headings.forEach(heading => {
-
             // Prepend a span to each heading. We use these to hold the caret symbols.
             const span = document.createElement("span");
             heading.prepend(span);
 
             // Listen for clicks on headings.
-            heading.addEventListener("click", (event) => {
+            heading.addEventListener("click", event => {
                 const clicked = event.target as HTMLElement;
 
                 // Ignore anchor clicks; we want them to be clickable without triggering

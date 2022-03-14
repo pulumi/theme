@@ -117,7 +117,6 @@ export class Chooser {
     setPersona: typeof setPersona;
 
     componentWillLoad() {
-
         // Translate the set of options provided into choices.
         this.parseOptions();
     }
@@ -134,7 +133,6 @@ export class Chooser {
 
     @Listen("rendered", { target: "document" })
     onRendered(_event: CustomEvent) {
-
         // By default, choosers act globally and use a tabbed layout.
         this.mode = "global";
         this.optionStyle = "tabbed";
@@ -145,11 +143,19 @@ export class Chooser {
         this.parseOptions();
 
         // Map internal methods to actions defined on the store.
-        store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud, setPersona });
+        store.mapDispatchToProps(this, {
+            setLanguage,
+            setK8sLanguage,
+            setOS,
+            setCloud,
+            setPersona,
+        });
 
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
-            const { preferences: { language, k8sLanguage, os, cloud, persona } } = state;
+            const {
+                preferences: { language, k8sLanguage, os, cloud, persona },
+            } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
             // may not be available as an option. When that happens, we switch into local
@@ -166,21 +172,19 @@ export class Chooser {
                         // Tell the children of this chooser they're local now, too.
                         this.choosables.forEach(choosable => {
                             choosable.setAttribute("mode", "local");
-                        })
+                        });
 
                         // In local mode, there's no need to listen for store updates anymore,
                         // so we unsubscribe.
                         setTimeout(() => this.storeUnsubscribe());
-
                     } else {
-
                         // This is a global chooser with (presumably) on-page choosables,
                         // so we need to dispatch an event to reset the selected language.
                         setTimeout(() => this.setChoice(this.type, defaultChoice));
                     }
                 }
                 return { selection: key };
-            }
+            };
 
             switch (this.type) {
                 case "language":
@@ -190,7 +194,7 @@ export class Chooser {
                 case "os":
                     return preferredOrDefault(os);
                 case "cloud":
-                   return preferredOrDefault(cloud);
+                    return preferredOrDefault(cloud);
                 case "persona":
                     return preferredOrDefault(persona);
                 default:
@@ -200,16 +204,18 @@ export class Chooser {
     }
 
     render() {
-        return(
+        return (
             <Host selection={this.selection}>
                 <ul>
                     {
                         // Render the current set of options, marking the selected one active.
-                        this.currentOptions.map(opt => <li class={this.selection === opt.key ? "active" : ""}>
-                            <a onClick={(event) => this.makeChoice(event, this.type, opt)}>
-                                {opt.name} { opt.preview ? <span>PREVIEW</span> : ""}
-                            </a>
-                        </li>)
+                        this.currentOptions.map(opt => (
+                            <li class={this.selection === opt.key ? "active" : ""}>
+                                <a onClick={event => this.makeChoice(event, this.type, opt)}>
+                                    {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
+                                </a>
+                            </li>
+                        ))
                     }
                 </ul>
                 <slot></slot>
@@ -238,10 +244,9 @@ export class Chooser {
         try {
             const keys: string[] = this.options.split(",").map(s => s.trim());
             this.mapOptions(this.type, keys as ChooserKey[]);
-        }
-        catch (err) {
+        } catch (err) {
             console.error(`Error parsing chooser options "${this.options}"`);
-            throw(err);
+            throw err;
         }
     }
 
@@ -267,7 +272,7 @@ export class Chooser {
                 break;
         }
 
-        this.currentOptions = options.filter(opt => keys.includes(opt.key))
+        this.currentOptions = options.filter(opt => keys.includes(opt.key));
     }
 
     // Handle the selection of chooser item.
@@ -357,8 +362,7 @@ export class Chooser {
             name: "Engineering Leaders",
             preview: false,
         },
-
-    ]
+    ];
 
     // The list of supported languages.
     private supportedLanguages: SupportedLanguage[] = [
@@ -403,7 +407,7 @@ export class Chooser {
             name: "VB",
             extension: "vb",
             preview: false,
-        }
+        },
     ];
 
     // The list of supported Kubernetes languages.

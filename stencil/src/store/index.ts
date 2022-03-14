@@ -15,24 +15,19 @@ export const rootReducer = combineReducers({
 // The Redux store. See https://redux.js.org/ for general information about Redux and
 // https://stenciljs.com/docs/stencil-redux for details about Stencil's implementation.
 export const configureStore = () => {
-
     // Deserialize from localStorage.
     let local: string | null;
 
     try {
         // localStorage.getItem can fail when cookies are blocked.
         local = localStorage.getItem("pulumi_state");
-    } catch (e){
+    } catch (e) {
         console.error("Failed to read pulumi_state from localStorage:", e);
     }
 
     const persistedState: any = local ? JSON.parse(local) : {};
 
-    const store = createStore(
-        rootReducer,
-        normalizeState(persistedState),
-        composeWithDevTools(applyMiddleware(thunk))
-    );
+    const store = createStore(rootReducer, normalizeState(persistedState), composeWithDevTools(applyMiddleware(thunk)));
 
     // Serialize to localStorage.
     store.subscribe(() => {
@@ -48,7 +43,7 @@ export const configureStore = () => {
     });
 
     return store;
-}
+};
 
 // normalizeState transforms slices of serialized state into a shape that conforms to
 // our current expectations.
@@ -56,12 +51,10 @@ export function normalizeState(persistedState: any): Partial<AppState> {
     let state: Partial<AppState> = {};
 
     try {
-
         // state.banners
         if (persistedState.banners && Array.isArray(persistedState.banners.dismissed)) {
-
             // Only load banner dismissals recorded within the last four days.
-            const fourDaysAgo = Date.now() - (60 * 60 * 24 * 4 * 1000);
+            const fourDaysAgo = Date.now() - 60 * 60 * 24 * 4 * 1000;
             state.banners = {
                 dismissed: persistedState.banners.dismissed.filter(b => {
                     return !!b.name && b.dismissedAt && b.dismissedAt > fourDaysAgo;
@@ -79,8 +72,7 @@ export function normalizeState(persistedState: any): Partial<AppState> {
                 persona: persistedState.preferences.persona || "developer",
             };
         }
-    }
-    catch (e) {
+    } catch (e) {
         return state;
     }
 

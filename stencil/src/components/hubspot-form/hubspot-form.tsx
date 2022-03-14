@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop, State, } from '@stencil/core';
+import { Component, Element, h, Prop, State } from "@stencil/core";
 import { parseCookie, parseUTMCookieString, getQueryVariable } from "../../util/util";
 
 interface UTMData {
@@ -14,10 +14,9 @@ type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormR
 @Component({
     tag: "pulumi-hubspot-form",
     styleUrl: "hubspot-form.scss",
-    shadow: false
+    shadow: false,
 })
 export class HubspotForm {
-
     // The formId is the HubSpot defined form ID this form will submit to.
     @Prop()
     formId: string;
@@ -57,7 +56,6 @@ export class HubspotForm {
     }
 
     componentDidLoad() {
-
         // Check for an existing HubSpot global. If there isn't one already, load
         // the HubSpot form script dynamically.
         const hubspotGlobal = window["hbspt"];
@@ -78,7 +76,6 @@ export class HubspotForm {
 
     // HubSpot form events are dispatched as window message events.
     private onMessage(event: MessageEvent) {
-
         // Ignore any non-HubSpot-form-related events.
         if (event.data?.type !== "hsFormCallback") {
             return;
@@ -137,7 +134,7 @@ export class HubspotForm {
     // Send a tracking event to Segment.
     private notifySegment(emailAddress: string, utmData: UTMData) {
         const analytics = (window as any).analytics;
-        const analyticsAvailable = analytics && analytics.track && (typeof analytics.track === "function");
+        const analyticsAvailable = analytics && analytics.track && typeof analytics.track === "function";
 
         if (analyticsAvailable) {
             const submissionData = {
@@ -211,22 +208,23 @@ export class HubspotForm {
     }
 
     private renderIsLoadingForm() {
-        return <p>
-            <i class="fa fa-spinner fa-spin mr-2"></i>
-        </p>;
+        return (
+            <p>
+                <i class="fa fa-spinner fa-spin mr-2"></i>
+            </p>
+        );
     }
 
     private renderFailedToLoadForm() {
-        return <p>
-            There was an problem loading this form. Please try refreshing your
-            browser, and if you continue to see this message, let us know
-            at <a href="mailto:support@pulumi.com">support@pulumi.com</a>.
-        </p>;
+        return (
+            <p>
+                There was an problem loading this form. Please try refreshing your browser, and if you continue to see this message, let us know at{" "}
+                <a href="mailto:support@pulumi.com">support@pulumi.com</a>.
+            </p>
+        );
     }
 
     render() {
-        return <div id={this.hubspotFormTargetId}>
-            { !this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm() }
-        </div>;
+        return <div id={this.hubspotFormTargetId}>{!this.didLoad && !this.isLoading ? this.renderFailedToLoadForm() : this.renderIsLoadingForm()}</div>;
     }
 }

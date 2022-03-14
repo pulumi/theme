@@ -8,7 +8,8 @@
             @apply border-l border-gray-200;
         }
 
-        > span, > a {
+        > span,
+        > a {
             @apply block px-2 py-1;
 
             @screen md {
