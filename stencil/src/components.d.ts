@@ -6,22 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { APINavNode } from "./components/pulumi-api-doc-filterable-nav/pulumi-api-doc-filterable-nav";
-import {
-  ChooserKey,
-  ChooserMode,
-  ChooserType,
-  OSKey,
-} from "./components/chooser/chooser";
-import {
-  ChooserKey as ChooserKey1,
-  ChooserMode as ChooserMode1,
-  ChooserOptionStyle,
-  ChooserType as ChooserType1,
-} from "./components/chooser/chooser";
+import { ChooserKey, ChooserMode, ChooserType, OSKey } from "./components/chooser/chooser";
+import { ChooserKey as ChooserKey1, ChooserMode as ChooserMode1, ChooserOptionStyle, ChooserType as ChooserType1 } from "./components/chooser/chooser";
 import { SourceKind } from "./components/convert/convert";
 import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
-import { TertiaryNavItem } from "./components/pulumi-tertiary-nav/pulumi-tertiary-nav";
 export namespace Components {
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;

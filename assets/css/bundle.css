@@ -2602,7 +2602,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 .pulumi-event-list-container #event-list-filter-nav li[data-filter-name=all]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 .pulumi-event-list-container #event-list-filter-nav li[data-filter-name=all]>a{
@@ -2614,7 +2614,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #all:target~.event-list-filter li[data-filter-name=all]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #all:target~.event-list-filter li[data-filter-name=all]>a{
@@ -2666,7 +2666,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #featured:target~.event-list-filter li[data-filter-name=featured]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #featured:target~.event-list-filter li[data-filter-name=featured]>a{
@@ -2718,7 +2718,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #upcoming:target~.event-list-filter li[data-filter-name=upcoming]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #upcoming:target~.event-list-filter li[data-filter-name=upcoming]>a{
@@ -2770,7 +2770,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #videos:target~.event-list-filter li[data-filter-name=videos]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #videos:target~.event-list-filter li[data-filter-name=videos]>a{
@@ -2822,7 +2822,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #pulumitv:target~.event-list-filter li[data-filter-name=pulumitv]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #pulumitv:target~.event-list-filter li[data-filter-name=pulumitv]>a{
@@ -2874,7 +2874,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 #whitepaper:target~.event-list-filter li[data-filter-name=whitepaper]{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 #whitepaper:target~.event-list-filter li[data-filter-name=whitepaper]>a{
@@ -17593,7 +17593,7 @@ pulumi-tertiary-nav ul li>a{
 pulumi-tertiary-nav ul li.active{
   border-bottom:2px solid;
   border-image-slice:1;
-  border-image-source:linear-gradient(90deg, #F7BF2A 0%, #F26E7E 18.23%, #BE5188 38.02%, #8A3391 53.65%, #805AC3 74.48%, #7682F4 100%)
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
 pulumi-tertiary-nav ul li.active>a{
