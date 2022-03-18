@@ -2834,7 +2834,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   display: block
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=all]{
+#whitepapers:target~.event-list-filter li[data-filter-name=all]{
   flex-grow: 1;
   border-bottom-width: 2px;
   border-style: solid;
@@ -2842,47 +2842,47 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-image-source:none
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=all]>a{
+#whitepapers:target~.event-list-filter li[data-filter-name=all]>a{
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgba(142, 143, 151, var(--tw-text-opacity))
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=all]:hover{
+#whitepapers:target~.event-list-filter li[data-filter-name=all]:hover{
   --tw-border-opacity: 1;
   border-color: rgba(142, 143, 151, var(--tw-border-opacity))
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=all]:hover>a{
+#whitepapers:target~.event-list-filter li[data-filter-name=all]:hover>a{
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity))
 }
 
-#whitepaper:target~h3[data-filter-title=all]{
+#whitepapers:target~h3[data-filter-title=all]{
   display: none
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=whitepaper]{
+#whitepapers:target~.event-list-filter li[data-filter-name=whitepapers]{
   border-bottom:2px solid;
   border-image-slice:1;
   border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
 }
 
-#whitepaper:target~.event-list-filter li[data-filter-name=whitepaper]>a{
+#whitepapers:target~.event-list-filter li[data-filter-name=whitepapers]>a{
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity))
 }
 
-#whitepaper:target~h3[data-filter-title=whitepaper]{
+#whitepapers:target~h3[data-filter-title=whitepapers]{
   display: block
 }
 
-#whitepaper:target~ul li{
+#whitepapers:target~ul li{
   display: none
 }
 
-#whitepaper:target~ul li[data-filters~=whitepaper]{
+#whitepapers:target~ul li[data-filters~=whitepapers]{
   display: block
 }
 
