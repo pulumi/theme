@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -14169,15 +14178,12 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
   transition:all 120ms linear
 }
 
-.st-default-search-input:focus:not(.registry){
-  border-color:#4d5bd9 !important
+.st-default-search-input::placeholder{
+  color:#8e8f97 !important
 }
 
-@media (min-width: 768px){
-  .st-default-search-input.registry{
-    border-top-right-radius:0 !important;
-    border-bottom-right-radius:0 !important
-  }
+.st-default-search-input:focus:not(.registry){
+  border-color:#4d5bd9 !important
 }
 
 .st-default-search-input.registry:focus{
@@ -14185,8 +14191,9 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
 }
 
 @media (min-width: 768px){
-  .st-default-search-input:not(.registry){
-    margin-right:1em !important
+  .st-default-search-input{
+    border-top-right-radius:0 !important;
+    border-bottom-right-radius:0 !important
   }
 }
 

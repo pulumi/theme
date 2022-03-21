@@ -75,6 +75,14 @@ function generateOnThisPage() {
     const observer = new IntersectionObserver(
         ([e]) => {
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
+            const docsLogoContainerEl = document.querySelector(".docs-pinned-logo");
+            if (e.isIntersecting) {
+                $(docsLogoContainerEl).addClass("opacity-0");
+                $(docsLogoContainerEl).removeClass("opacity-100");
+            } else {
+                $(docsLogoContainerEl).removeClass("opacity-0");
+                $(docsLogoContainerEl).addClass("opacity-100");
+            }
         },
         { threshold: [1] },
     );
