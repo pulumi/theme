@@ -12,6 +12,11 @@ import { SourceKind } from "./components/convert/convert";
 import { Filter } from "./components/filter-select/filter-select-option";
 import { MultiSelectFormItem } from "./components/pulumi-multi-select-form/pulumi-multi-select-form";
 export namespace Components {
+    interface EventSessionRegistrationModal {
+        "buttonClass": string;
+        "buttonText": string;
+        "modalTitle": string;
+    }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
         "packageName": string;
@@ -62,6 +67,7 @@ export namespace Components {
         "theme": string;
     }
     interface PulumiDateCountdown {
+        "containerClass": string;
         "countdownOverText": string;
         "dateString": string;
         "textClass": string;
@@ -151,6 +157,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLEventSessionRegistrationModalElement extends Components.EventSessionRegistrationModal, HTMLStencilElement {
+    }
+    var HTMLEventSessionRegistrationModalElement: {
+        prototype: HTMLEventSessionRegistrationModalElement;
+        new (): HTMLEventSessionRegistrationModalElement;
+    };
     interface HTMLPulumiApiDocFilterableNavElement extends Components.PulumiApiDocFilterableNav, HTMLStencilElement {
     }
     var HTMLPulumiApiDocFilterableNavElement: {
@@ -320,6 +332,7 @@ declare global {
         new (): HTMLPulumiWebinarFormSelectElement;
     };
     interface HTMLElementTagNameMap {
+        "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
         "pulumi-api-doc-filterable-nav": HTMLPulumiApiDocFilterableNavElement;
         "pulumi-api-doc-nav-node": HTMLPulumiApiDocNavNodeElement;
         "pulumi-api-doc-nav-tree": HTMLPulumiApiDocNavTreeElement;
@@ -351,6 +364,11 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface EventSessionRegistrationModal {
+        "buttonClass"?: string;
+        "buttonText"?: string;
+        "modalTitle"?: string;
+    }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
         "packageName"?: string;
@@ -401,6 +419,7 @@ declare namespace LocalJSX {
         "theme"?: string;
     }
     interface PulumiDateCountdown {
+        "containerClass"?: string;
         "countdownOverText"?: string;
         "dateString"?: string;
         "textClass"?: string;
@@ -482,6 +501,7 @@ declare namespace LocalJSX {
         "sessions"?: string;
     }
     interface IntrinsicElements {
+        "event-session-registration-modal": EventSessionRegistrationModal;
         "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
         "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
         "pulumi-api-doc-nav-tree": PulumiApiDocNavTree;
@@ -516,6 +536,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
             "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
             "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
             "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;

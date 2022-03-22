@@ -1,5 +1,10 @@
 // 2022 PulumiUP styles.
 body.section-pulumi-up {
+    &.disable-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .pulumi-up-stars {
         @apply absolute w-full h-full top-0 left-0;
         z-index: -1;
@@ -17,6 +22,26 @@ body.section-pulumi-up {
     h5,
     h6 {
         color: white !important;
+    }
+
+    .white-background {
+        @apply bg-white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p:not(.pulumiup-card-top-date),
+        a:not(.btn-primary) {
+            color: black !important;
+        }
+    }
+
+    .btn-pulumiup-card {
+        background-color: #feda4a;
+        border-radius: 5px;
     }
 
     .header-container .logo-container {
@@ -181,6 +206,44 @@ body.section-pulumi-up {
         100% {
             top: -6000px;
             transform: rotateX(25deg) translateZ(-2500px);
+        }
+    }
+
+    .pulumiup-overview-date-block {
+        @apply inline-block px-6;
+
+        background-color: #feda4a;
+        transform: skewX(-45deg);
+
+        p {
+            @apply text-lg font-bold py-2 px-8 m-0;
+
+            color: black !important;
+            transform: skewX(45deg);
+        }
+    }
+
+    .date-countdown-container {
+        //@apply absolute left-0 right-0;
+
+        margin-bottom: -4rem;
+    }
+
+    .date-countdown p {
+        color: black !important;
+        text-shadow: none;
+    }
+
+    .why-attend {
+        div[class^="icon-"], div[class*=" icon-"] {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.6rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 }
