@@ -708,4 +708,65 @@
             top: -15rem;
         }
     }
+
+    &.docs-landing-getting-started {
+        .circle-top {
+            @apply rounded-full absolute bg-salmon-600 opacity-50;
+            width: 5.5rem;
+            height: 5.5rem;
+            right: 1rem;
+            top: 2rem;
+        }
+
+        .circle-bottom {
+            @apply rounded-full absolute bg-yellow-600 opacity-50;
+            width: 3.25rem;
+            height: 3.25rem;
+            right: -1rem;
+            top: 9rem;
+        }
+    }
+
+    &.docs-landing-converters {
+        .circle-left {
+            @apply rounded-full absolute bg-salmon-600 opacity-50;
+            width: 3.25rem;
+            height: 3.25rem;
+            left: 0;
+            bottom: -1rem;
+        }
+        .circle-top {
+            @apply rounded-full absolute bg-yellow-600 opacity-50;
+            width: 5.5rem;
+            height: 5.5rem;
+            right: -1rem;
+            top: -1rem;
+        }
+
+        .circle-bottom {
+            @apply rounded-full absolute bg-purple-600 opacity-50;
+            width: 1.75rem;
+            height: 1.75rem;
+            right: 0.5rem;
+            top: 6rem;
+        }
+    }
+
+    &.docs-landing-reference {
+        .circle-top {
+            @apply rounded-full absolute bg-yellow-600 opacity-50;
+            width: 2rem;
+            height: 2rem;
+            bottom: 5rem;
+            right: 1rem;
+        }
+
+        .circle-bottom {
+            @apply rounded-full absolute bg-purple-600 opacity-50;
+            width: 5.5rem;
+            height: 5.5rem;
+            bottom: -2rem;
+            right: -1rem;
+        }
+    }
 }

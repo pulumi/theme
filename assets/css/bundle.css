@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -15489,6 +15498,90 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:-15rem
 }
 
+.shape-background.docs-landing-getting-started .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:5.5rem;
+  height:5.5rem;
+  right:1rem;
+  top:2rem
+}
+
+.shape-background.docs-landing-getting-started .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:3.25rem;
+  height:3.25rem;
+  right:-1rem;
+  top:9rem
+}
+
+.shape-background.docs-landing-converters .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:3.25rem;
+  height:3.25rem;
+  left:0;
+  bottom:-1rem
+}
+
+.shape-background.docs-landing-converters .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:5.5rem;
+  height:5.5rem;
+  right:-1rem;
+  top:-1rem
+}
+
+.shape-background.docs-landing-converters .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:1.75rem;
+  height:1.75rem;
+  right:.5rem;
+  top:6rem
+}
+
+.shape-background.docs-landing-reference .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:2rem;
+  height:2rem;
+  bottom:5rem;
+  right:1rem
+}
+
+.shape-background.docs-landing-reference .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  opacity: 0.5;
+  width:5.5rem;
+  height:5.5rem;
+  bottom:-2rem;
+  right:-1rem
+}
+
 .slot-machine{
   position: relative;
   width: 100%;
@@ -17875,6 +17968,74 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   .aws-reinvent-blog-image img{
     margin-bottom: 2rem
   }
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.docs-landing-btn-primary{
+  color:#fff
+}
+
+body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .docs-landing-btn-primary .btn-secondary{
+  border-color: transparent
+}
+
+.docs-landing-btn-primary{
+  position: relative;
+  z-index: auto;
+  cursor: pointer;
+  border-radius: 9999px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgba(128, 90, 195, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(128, 90, 195, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.docs-landing-btn-primary:hover{
+  text-decoration: none
+}
+
+.docs-landing-btn-primary:not(input){
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  transition:all 120ms linear
+}
+
+.docs-landing-btn-primary:not(input)::before{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
+  border-image-width:2px;
+  content:"";
+  top:-2px;
+  left:-2px;
+  width:calc(100% + 4px);
+  height:calc(100% + 4px);
+  z-index:-1
+}
+
+.docs-landing-btn-primary:not(input):hover{
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 0
+}
+
+.docs-landing-btn-primary:is(input){
+  --tw-border-opacity: 1;
+  border-color: rgba(249, 249, 250, var(--tw-border-opacity))
+}
+
+.docs-landing-btn-primary:is(input):hover{
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+}
+
+.docs-landing-btn-primary:focus{
+  --tw-border-opacity: 1;
+  border-color: rgba(77, 91, 217, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(77, 91, 217, var(--tw-bg-opacity))
 }
 
 .section-docs main .container dl.package-details+p+dl.tabular{

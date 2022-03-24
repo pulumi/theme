@@ -287,6 +287,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 }
 
+.docs-landing-btn-primary {
+    @include gradient-button;
+}
+
 .section-docs {
     // Hide the language-specific SDK-docs tables until we've removed them from the provider builds.
     main .container dl.package-details + p + dl.tabular {
