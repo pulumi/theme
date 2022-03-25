@@ -15498,7 +15498,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:-15rem
 }
 
-.shape-background.docs-landing-getting-started .circle-top{
+.shape-background.docs-landing-get-started-with-pulumi .circle-top{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -15507,10 +15507,10 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   width:5.5rem;
   height:5.5rem;
   right:1rem;
-  top:2rem
+  top:3rem
 }
 
-.shape-background.docs-landing-getting-started .circle-bottom{
+.shape-background.docs-landing-get-started-with-pulumi .circle-bottom{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -15558,7 +15558,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   top:6rem
 }
 
-.shape-background.docs-landing-reference .circle-top{
+.shape-background.docs-landing-support .circle-top{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -15570,7 +15570,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   right:1rem
 }
 
-.shape-background.docs-landing-reference .circle-bottom{
+.shape-background.docs-landing-support .circle-bottom{
   position: absolute;
   border-radius: 9999px;
   --tw-bg-opacity: 1;

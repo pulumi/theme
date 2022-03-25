@@ -709,13 +709,13 @@
         }
     }
 
-    &.docs-landing-getting-started {
+    &.docs-landing-get-started-with-pulumi {
         .circle-top {
             @apply rounded-full absolute bg-salmon-600 opacity-50;
             width: 5.5rem;
             height: 5.5rem;
             right: 1rem;
-            top: 2rem;
+            top: 3rem;
         }
 
         .circle-bottom {
@@ -752,7 +752,7 @@
         }
     }
 
-    &.docs-landing-reference {
+    &.docs-landing-support {
         .circle-top {
             @apply rounded-full absolute bg-yellow-600 opacity-50;
             width: 2rem;
