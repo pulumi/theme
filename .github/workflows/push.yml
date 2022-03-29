@@ -27,7 +27,7 @@ jobs:
             - name: Commit artifacts
               uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                  file_pattern: assets/js/bundle.js assets/css/bundle.css
+                  file_pattern: assets/js/bundle.js assets/js/marketing.js assets/css/bundle.css assets/css/marketing.css
                   commit_message: Commit asset bundles
 
             - name: Merge into release

@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -791,10 +800,6 @@ ul.api li a:hover{
   text-decoration: underline
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pul.api li .symbol:before{
-  color:#fff
-}
-
 ul.api li .symbol:before{
   margin-right: 0.5rem;
   display: inline-block;
@@ -806,7 +811,7 @@ ul.api li .symbol:before{
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  width:19px;
+  width:19px
 }
 
 ul.api li .symbol.module:before{
@@ -1412,14 +1417,7 @@ ol.breadcrumb li+li::before{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.btn{
-  color:#fff
-}
-
-.btn{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -1427,11 +1425,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.btn:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .btn:hover{
@@ -1440,7 +1434,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .btn:active{
@@ -1458,15 +1452,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   color: rgba(77, 91, 217, var(--tw-text-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.btn-secondary:hover{
-  color:#fff
-}
-
 .btn-secondary:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .btn-sm{
@@ -1535,10 +1525,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   margin-right: 0.25rem
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.btn-scroll-top{
-  color:#fff
-}
-
 .btn-scroll-top{
   margin-top: 2rem;
   height: 1rem;
@@ -1549,7 +1535,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   text-align: center;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  opacity: 0.75;
+  opacity: 0.75
 }
 
 .card{
@@ -2142,14 +2128,10 @@ pre code{
   opacity: 0
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.typed .cursor:after{
-  color:#fff
-}
-
 .typed .cursor:after{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  content:"|";
+  content:"|"
 }
 
 .line[data-delay]{
@@ -2225,13 +2207,9 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(19, 19, 20, var(--tw-bg-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.code-tabbed .code-tabbed-tabs .code-tabbed-tab.active .code-tabbed-tab-label{
-  color:#fff
-}
-
 .code-tabbed .code-tabbed-tabs .code-tabbed-tab.active .code-tabbed-tab-label{
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .code-tabbed .code-tabbed-tabs .code-tabbed-tab.active .code-tabbed-tab-indicator{
@@ -2373,14 +2351,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.supported-cicd-platforms>a{
-  color:#fff
-}
-
-.supported-cicd-platforms>a{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -2388,11 +2359,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.supported-cicd-platforms>a:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .supported-cicd-platforms>a:hover{
@@ -2401,7 +2368,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .supported-cicd-platforms>a:active{
@@ -3120,10 +3087,6 @@ ul.glossary{
   align-items: center
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.top-nav-bar.registry .logo-nav-menu{
-  color:#fff
-}
-
 .top-nav-bar.registry .logo-nav-menu{
   z-index: 50;
   margin-left: -0.5rem;
@@ -3134,7 +3097,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  top:44px;
+  top:44px
 }
 
 @media (min-width: 768px){
@@ -3156,15 +3119,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.top-nav-bar.registry .logo-nav-menu li{
-  color:#fff
-}
-
 .top-nav-bar.registry .logo-nav-menu li{
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .top-nav-bar.registry .logo-nav-menu li a{
@@ -3263,14 +3222,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.header-container .cta-container .header-btn-primary{
-  color:#fff
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .header-container .cta-container .header-btn-primary .btn-secondary{
-  border-color: transparent
-}
-
 .header-container .cta-container .header-btn-primary{
   position: relative;
   z-index: auto;
@@ -3286,7 +3237,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.75rem
 }
 
 .header-container .cta-container .header-btn-primary:hover{
@@ -3683,14 +3634,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.home-page-hero .home-page-hero-content .home-hero-btn-primary{
-  color:#fff
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .home-page-hero .home-page-hero-content .home-hero-btn-primary .btn-secondary{
-  border-color: transparent
-}
-
 .home-page-hero .home-page-hero-content .home-hero-btn-primary{
   position: relative;
   z-index: auto;
@@ -3708,7 +3651,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 1.125rem;
-  line-height: 1.75rem;
+  line-height: 1.75rem
 }
 
 .home-page-hero .home-page-hero-content .home-hero-btn-primary:hover{
@@ -3909,14 +3852,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-bottom: 0.25rem
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.hs-form input[type=submit]{
-  color:#fff
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .hs-form input[type=submit] .btn-secondary{
-  border-color: transparent
-}
-
 .hs-form input[type=submit]{
   position: relative;
   z-index: auto;
@@ -3932,7 +3867,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.75rem
 }
 
 .hs-form input[type=submit]:hover{
@@ -4050,14 +3985,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.hs-form.newsletter input.hs-button{
-  color:#fff
-}
-
-.hs-form.newsletter input.hs-button{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -4077,13 +4005,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.hs-form.newsletter input.hs-button{
-  color:#fff
-}
-
-.hs-form.newsletter input.hs-button{
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -4091,11 +4012,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.hs-form.newsletter input.hs-button:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .hs-form.newsletter input.hs-button:hover{
@@ -4105,19 +4022,12 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.hs-form.newsletter input.hs-button:hover{
-  color:#fff
-}
-
-.hs-form.newsletter input.hs-button:hover{
   --tw-border-opacity: 1;
   border-color: rgba(113, 124, 225, var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .hs-form.newsletter input.hs-button:active{
@@ -4131,14 +4041,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .hs-form.newsletter input.hs-button .btn-secondary{
-  border-color: transparent
-}
-
-.hs-form.newsletter input.hs-button{
+  padding-bottom: 0.75rem;
   margin-left: 0.5rem;
   display: block;
   width: auto;
@@ -4149,7 +4052,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.75rem
 }
 
 .hs-form.newsletter input:focus{
@@ -12891,237 +12794,6 @@ dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span{
   color: rgba(46, 55, 130, var(--tw-text-opacity))
 }
 
-.section-docs .footer-dots-container{
-  display: none
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal){
-  overflow-x: hidden
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h1{
-  font-size: 3rem;
-  line-height: 1
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h2{
-  font-size: 2.25rem;
-  line-height: 2.5rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h3{
-  font-size: 1.875rem;
-  line-height: 2.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h4{
-  font-size: 1.5rem;
-  line-height: 2rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h5{
-  font-size: 1.25rem;
-  line-height: 1.75rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h6{
-  font-size: 1rem;
-  line-height: 1.5rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h1, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h2, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h3, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h4, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h5, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h6{
-  line-height: 1.375 !important;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p{
-  --tw-text-opacity: 1;
-  color: rgba(95, 96, 101, var(--tw-text-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.text-white{
-  color:#fff !important
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .large-container{
-  max-width:1680px
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .description a, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a.link{
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .description a:hover, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a.link:hover{
-  text-decoration: underline;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .description a.btn-primary,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a.link.btn-primary{
-  color:#fff
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .description a.btn-primary, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a.link.btn-primary{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class^=btn-], body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class*=" btn-"]{
-  border-radius: 9999px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class^=btn-]:hover, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class*=" btn-"]:hover{
-  text-decoration: none;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class^=btn-].disabled, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) a[class*=" btn-"].disabled{
-  pointer-events: none;
-  cursor: default;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary, body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-secondary{
-  white-space: normal;
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary{
-  color:#fff
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary .btn-secondary{
-  border-color: transparent
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary{
-  position: relative;
-  z-index: auto;
-  cursor: pointer;
-  border-radius: 9999px;
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgba(128, 90, 195, var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgba(128, 90, 195, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:hover{
-  text-decoration: none
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:not(input){
-  --tw-border-opacity: 1;
-  --tw-bg-opacity: 1;
-  transition:all 120ms linear
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:not(input)::before{
-  position: absolute;
-  border-radius: 9999px;
-  --tw-border-opacity: 1;
-  --tw-bg-opacity: 1;
-  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%);
-  border-image-width:2px;
-  content:"";
-  top:-2px;
-  left:-2px;
-  width:calc(100% + 4px);
-  height:calc(100% + 4px);
-  z-index:-1
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:not(input):hover{
-  --tw-border-opacity: 0;
-  --tw-bg-opacity: 0
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:is(input){
-  --tw-border-opacity: 1;
-  border-color: rgba(249, 249, 250, var(--tw-border-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:is(input):hover{
-  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-primary:focus{
-  --tw-border-opacity: 1;
-  border-color: rgba(77, 91, 217, var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgba(77, 91, 217, var(--tw-bg-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-secondary{
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgba(128, 90, 195, var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(128, 90, 195, var(--tw-text-opacity));
-  transition:all 120ms linear
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-secondary.disabled{
-  opacity:.3rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-secondary:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgba(242, 239, 249, var(--tw-bg-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .btn-secondary:focus{
-  --tw-bg-opacity: 1;
-  background-color: rgba(230, 222, 243, var(--tw-bg-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .bg-violet-600 .btn-secondary{
-  border-color: transparent
-}
-
-@media (min-width: 768px){
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h1{
-    font-size: 4.5rem;
-    line-height: 1
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h1.small-title{
-    font-size: 3rem;
-    line-height: 1
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h2{
-    font-size: 3rem;
-    line-height: 1
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h3{
-    font-size: 2.25rem;
-    line-height: 2.5rem
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h4{
-    font-size: 1.875rem;
-    line-height: 2.25rem
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h5{
-    font-size: 1.5rem;
-    line-height: 2rem
-  }
-
-  body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) h6{
-    font-size: 1.125rem;
-    line-height: 1.75rem
-  }
-}
-
 .note{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -13166,15 +12838,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-color: rgba(77, 91, 217, var(--tw-border-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-info .note-heading{
-  color:#fff
-}
-
 .note.note-info .note-heading{
   --tw-bg-opacity: 1;
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .note.note-warning{
@@ -13182,15 +12850,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-color: rgba(189, 76, 133, var(--tw-border-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-warning .note-heading{
-  color:#fff
-}
-
 .note.note-warning .note-heading{
   --tw-bg-opacity: 1;
   background-color: rgba(189, 76, 133, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .note.note-deprecated{
@@ -13198,15 +12862,11 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   border-color: rgba(189, 76, 133, var(--tw-border-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.note.note-deprecated .note-heading{
-  color:#fff
-}
-
 .note.note-deprecated .note-heading{
   --tw-bg-opacity: 1;
   background-color: rgba(189, 76, 133, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .all-packages .package~.no-results{
@@ -14303,10 +13963,6 @@ body.section-pulumi-up .crawl>.title h1{
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.neon-callout-box-orange,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.neon-callout-box-blue,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.neon-callout-box-green{
-  color:#fff
-}
-
 .neon-callout-box-orange, .neon-callout-box-blue, .neon-callout-box-green{
   position: relative;
   width: 100%;
@@ -15331,10 +14987,6 @@ nav.nav-section-sticky ul li>a:hover{
   bottom:30%
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) .shape-background.automation-video .circle-left .btn-secondary{
-  border-color: transparent
-}
-
 .shape-background.automation-video .circle-left{
   position: absolute;
   border-radius: 9999px;
@@ -15343,7 +14995,7 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
   width:5rem;
   height:5rem;
   left:-2.5rem;
-  bottom:-2.5rem;
+  bottom:-2.5rem
 }
 
 .shape-background.automation-video .circle-right{
@@ -15727,10 +15379,6 @@ pulumi-tooltip{
   font-size:1em
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-tooltip .tooltip-content{
-  color:#fff
-}
-
 pulumi-tooltip .tooltip-content{
   pointer-events: none;
   position: absolute;
@@ -15759,7 +15407,7 @@ pulumi-tooltip .tooltip-content{
   transition:all 120ms linear;
   bottom:108%;
   transform:translateX(-50%);
-  left:50%;
+  left:50%
 }
 
 pulumi-tooltip .tooltip-content:after{
@@ -15803,10 +15451,6 @@ body.page-404 img{
   max-width: none
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody.page-404 #clouds-and-beams{
-  color:#fff
-}
-
 body.page-404 #clouds-and-beams{
   position: absolute;
   margin-top: 2rem;
@@ -15815,15 +15459,11 @@ body.page-404 #clouds-and-beams{
   line-height: 1.75rem;
   line-height: 1.5;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 body.page-404 #clouds-and-beams h1,body.page-404 #clouds-and-beams h2,body.page-404 #clouds-and-beams p{
   text-shadow:0 1px 2px #111
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody.page-404 #clouds-and-beams h1{
-  color:#fff
 }
 
 body.page-404 #clouds-and-beams h1{
@@ -15832,7 +15472,7 @@ body.page-404 #clouds-and-beams h1{
   line-height: 1;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 body.page-404 #clouds-and-beams h2{
@@ -15845,26 +15485,18 @@ body.page-404 #clouds-and-beams h2{
   color: rgba(249, 249, 250, var(--tw-text-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody.page-404 #clouds-and-beams p:first-of-type{
-  color:#fff
-}
-
 body.page-404 #clouds-and-beams p:first-of-type{
   padding-top: 1rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) pbody.page-404 #clouds-and-beams p:first-of-type a{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 body.page-404 #clouds-and-beams p:first-of-type a{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-  text-decoration: underline;
+  text-decoration: underline
 }
 
 @media(max-width: 830px){
@@ -16199,10 +15831,6 @@ body.page-404 .beam4{
   animation-fill-mode:forwards
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-banner{
-  color:#fff
-}
-
 pulumi-banner{
   display: none;
   padding-left: 1rem;
@@ -16217,7 +15845,7 @@ pulumi-banner{
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  background-image:linear-gradient(77.95deg, #f6bf28 0.06%, #f2707e 48.58%, #bf4e86 95.36%);
+  background-image:linear-gradient(77.95deg, #f6bf28 0.06%, #f2707e 48.58%, #bf4e86 95.36%)
 }
 
 pulumi-banner[visible]{
@@ -16245,15 +15873,11 @@ pulumi-banner .dismiss span{
   color: rgba(237, 239, 251, var(--tw-text-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-banner .dismiss span:hover{
-  color:#fff
-}
-
 pulumi-banner .dismiss span:hover{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   transition:all 120ms linear;
-  transform:scale(1.1);
+  transform:scale(1.1)
 }
 
 pulumi-banner .content{
@@ -16503,14 +16127,7 @@ pulumi-convert #editors .btn-convert{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .btn-convert{
-  color:#fff
-}
-
-pulumi-convert #editors .btn-convert{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -16518,11 +16135,7 @@ pulumi-convert #editors .btn-convert{
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .btn-convert:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-convert #editors .btn-convert:hover{
@@ -16531,16 +16144,12 @@ pulumi-convert #editors .btn-convert:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-convert #editors .btn-convert:active{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity))
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .btn-convert{
-  color:#fff
 }
 
 pulumi-convert #editors .btn-convert{
@@ -16623,10 +16232,6 @@ pulumi-convert #editors .editor .editor-heading h3{
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .editor-heading h3 .editor-step{
-  color:#fff
-}
-
 pulumi-convert #editors .editor .editor-heading h3 .editor-step{
   margin-left: auto;
   margin-right: auto;
@@ -16647,7 +16252,7 @@ pulumi-convert #editors .editor .editor-heading h3 .editor-step{
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 @media (min-width: 1280px){
@@ -16822,10 +16427,6 @@ pulumi-convert #editors .editor .tabs .actions .btn-download, pulumi-convert #ed
   line-height: 1.25rem;
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .tabs .actions .btn-download,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .tabs .actions .btn-copy{
-  color:#fff
-}
-
 pulumi-convert #editors .editor .tabs .actions .btn-download, pulumi-convert #editors .editor .tabs .actions .btn-copy{
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -16835,10 +16436,6 @@ pulumi-convert #editors .editor .tabs .actions .btn-download, pulumi-convert #ed
   text-align: center;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .tabs .actions .btn-download:hover,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .tabs .actions .btn-copy:hover{
-  color:#fff
 }
 
 pulumi-convert #editors .editor .tabs .actions .btn-download:hover, pulumi-convert #editors .editor .tabs .actions .btn-copy:hover{
@@ -16872,10 +16469,6 @@ pulumi-convert #editors .editor .tabs .actions .btn-download:hover, pulumi-conve
   background-color: rgba(95, 96, 101, var(--tw-bg-opacity));
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-convert #editors .editor .status-bar{
-  color:#fff
-}
-
 pulumi-convert #editors .editor .status-bar{
   position: relative;
   border-bottom-right-radius: 0.25rem;
@@ -16889,7 +16482,7 @@ pulumi-convert #editors .editor .status-bar{
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-convert #editors .editor .status-bar.error{
@@ -17080,15 +16673,11 @@ pulumi-filter-select pulumi-filter-select-option-group .toggle{
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-filter-select pulumi-filter-select-option-group .toggle:hover{
-  color:#fff
-}
-
 pulumi-filter-select pulumi-filter-select-option-group .toggle:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(19, 19, 20, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-filter-select pulumi-filter-select-option-group .options{
@@ -17115,17 +16704,9 @@ pulumi-filter-select pulumi-filter-select-option-group .options{
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-filter-select pulumi-filter-select-option-group:hover::part(toggle),body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-filter-select pulumi-filter-select-option-group[expanded]::part(toggle){
-  color:#fff
-}
-
 pulumi-filter-select pulumi-filter-select-option-group:hover::part(toggle), pulumi-filter-select pulumi-filter-select-option-group[expanded]::part(toggle){
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-filter-select pulumi-filter-select-option-group:hover .toggle,body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-filter-select pulumi-filter-select-option-group[expanded] .toggle{
-  color:#fff
 }
 
 pulumi-filter-select pulumi-filter-select-option-group:hover .toggle, pulumi-filter-select pulumi-filter-select-option-group[expanded] .toggle{
@@ -17218,13 +16799,9 @@ pulumi-install .command-text p{
   }
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-install .command-text p span{
-  color:#fff
-}
-
 pulumi-install .command-text p span{
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-install .copy-button button{
@@ -17238,15 +16815,11 @@ pulumi-install .copy-button button{
   color: rgba(0, 0, 0, var(--tw-text-opacity))
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-install .copy-button button:hover{
-  color:#fff
-}
-
 pulumi-install .copy-button button:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-install .copy-button button i{
@@ -17322,14 +16895,7 @@ pulumi-audio .error-callout{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-audio .error-callout{
-  color:#fff
-}
-
-pulumi-audio .error-callout{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -17337,11 +16903,7 @@ pulumi-audio .error-callout{
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-audio .error-callout:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-audio .error-callout:hover{
@@ -17350,7 +16912,7 @@ pulumi-audio .error-callout:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-audio .error-callout:active{
@@ -17397,14 +16959,7 @@ pulumi-audio .audio-container .audio-button{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.875rem;
-  line-height: 1.25rem
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-audio .audio-container .audio-button{
-  color:#fff
-}
-
-pulumi-audio .audio-container .audio-button{
+  line-height: 1.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
@@ -17412,11 +16967,7 @@ pulumi-audio .audio-container .audio-button{
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   text-align: center;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) ppulumi-audio .audio-container .audio-button:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-audio .audio-container .audio-button:hover{
@@ -17425,7 +16976,7 @@ pulumi-audio .audio-container .audio-button:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 124, 225, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 pulumi-audio .audio-container .audio-button:active{
@@ -17732,6 +17283,10 @@ main blockquote p{
   line-height: 1.625
 }
 
+.section-docs .footer-dots-container{
+  display: none
+}
+
 .link{
   --tw-text-opacity: 1;
   color: rgba(62, 73, 174, var(--tw-text-opacity))
@@ -17767,26 +17322,18 @@ main blockquote p{
   text-decoration: none
 }
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.tag.tag-blog.active{
-  color:#fff
-}
-
 .tag.tag-blog.active{
   --tw-border-opacity: 1;
   border-color: rgba(77, 91, 217, var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgba(77, 91, 217, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) p.tag.tag-blog.active:hover{
-  color:#fff
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .tag.tag-blog.active:hover{
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 .popup-overlay{
