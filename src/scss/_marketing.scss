@@ -1,10 +1,10 @@
-.section-docs {
-    .footer-dots-container {
-        @apply hidden;
-    }
-}
+@tailwind base;
+@tailwind components;
 
-body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-learn):not(.section-authors):not(.section-tags):not(.section-legal) {
+@import "colors";
+@import "mixins";
+
+body {
     @apply overflow-x-hidden;
 
     h1 {
@@ -41,12 +41,6 @@ body:not(.section-docs):not(.section-registry):not(.section-blog):not(.section-l
 
     p {
         @apply text-gray-700;
-
-        &.text-white {
-            // NB: Don't even try changing this to `@apply text-white`, unless you love
-            // debugging memory leaks.
-            color: $white !important;
-        }
     }
 
     .large-container {
