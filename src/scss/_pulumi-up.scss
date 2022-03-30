@@ -21,7 +21,7 @@ body.section-pulumi-up {
     h4,
     h5,
     h6 {
-        color: white !important;
+        color: white;
     }
 
     .white-background {
@@ -35,11 +35,13 @@ body.section-pulumi-up {
         h6,
         p:not(.pulumiup-card-top-date),
         a:not(.btn-primary) {
-            color: black !important;
+            color: black;
         }
     }
 
     .btn-pulumiup-card {
+        @apply px-3;
+
         background-color: #feda4a;
         border-radius: 5px;
     }
@@ -65,12 +67,12 @@ body.section-pulumi-up {
         a,
         p,
         .header-nav-item-drop-down {
-            color: white !important;
+            color: white;
         }
 
         .top-nav-banner-cta {
             --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity));
 
             .top-nav-banner-cta-text {
                 color: white !important;
@@ -79,12 +81,12 @@ body.section-pulumi-up {
 
         .header-nav-drop-down-menu ul {
             --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
         }
 
         .btn-primary:hover {
-            background-color: white !important;
-            color: black !important;
+            background-color: white  !important;
+            color: black  !important;
         }
     }
 
@@ -106,7 +108,7 @@ body.section-pulumi-up {
 
         justify-content: center;
         height: 40vh;
-        font-family: "Pathway Gothic One", sans-serif !important;
+        font-family: "Pathway Gothic One", sans-serif;
         font-size: 500%;
         font-weight: 600;
         line-height: 150%;
@@ -114,7 +116,7 @@ body.section-pulumi-up {
 
         h1,
         p {
-            color: #feda4a !important;
+            color: #feda4a;
         }
 
         .title-animation {
@@ -218,19 +220,17 @@ body.section-pulumi-up {
         p {
             @apply text-lg font-bold py-2 px-8 m-0;
 
-            color: black !important;
+            color: black;
             transform: skewX(45deg);
         }
     }
 
     .date-countdown-container {
-        //@apply absolute left-0 right-0;
-
         margin-bottom: -4rem;
     }
 
     .date-countdown p {
-        color: black !important;
+        color: black;
         text-shadow: none;
     }
 

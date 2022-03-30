@@ -46,6 +46,10 @@ export class EventSessionRegistrationModal {
                                 <i class="fa fa-times" onClick={this.handleCloseModal}></i>
                             </div>
                         </div>
+
+                        <div>
+                            Here is where the super great UI for registering will live.
+                        </div>
                     </div>
                 </div>
             </div>

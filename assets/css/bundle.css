@@ -13634,7 +13634,7 @@ body.section-pulumi-up .pulumi-up-stars{
 }
 
 body.section-pulumi-up h1,body.section-pulumi-up h2,body.section-pulumi-up h3,body.section-pulumi-up h4,body.section-pulumi-up h5,body.section-pulumi-up h6{
-  color:#fff !important
+  color:#fff
 }
 
 body.section-pulumi-up .white-background{
@@ -13643,10 +13643,12 @@ body.section-pulumi-up .white-background{
 }
 
 body.section-pulumi-up .white-background h1,body.section-pulumi-up .white-background h2,body.section-pulumi-up .white-background h3,body.section-pulumi-up .white-background h4,body.section-pulumi-up .white-background h5,body.section-pulumi-up .white-background h6,body.section-pulumi-up .white-background p:not(.pulumiup-card-top-date),body.section-pulumi-up .white-background a:not(.btn-primary){
-  color:#000 !important
+  color:#000
 }
 
 body.section-pulumi-up .btn-pulumiup-card{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   background-color:#feda4a;
   border-radius:5px
 }
@@ -13664,12 +13666,12 @@ body.section-pulumi-up main,body.section-pulumi-up .top-nav-bar,body.section-pul
 }
 
 body.section-pulumi-up main a,body.section-pulumi-up main p,body.section-pulumi-up main .header-nav-item-drop-down,body.section-pulumi-up .top-nav-bar a,body.section-pulumi-up .top-nav-bar p,body.section-pulumi-up .top-nav-bar .header-nav-item-drop-down,body.section-pulumi-up .header-container a,body.section-pulumi-up .header-container p,body.section-pulumi-up .header-container .header-nav-item-drop-down,body.section-pulumi-up .footer a,body.section-pulumi-up .footer p,body.section-pulumi-up .footer .header-nav-item-drop-down{
-  color:#fff !important
+  color:#fff
 }
 
 body.section-pulumi-up main .top-nav-banner-cta,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta,body.section-pulumi-up .header-container .top-nav-banner-cta,body.section-pulumi-up .footer .top-nav-banner-cta{
   --tw-bg-opacity: 1;
-  background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+  background-color:rgb(47 48 50/var(--tw-bg-opacity))
 }
 
 body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .header-container .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .footer .top-nav-banner-cta .top-nav-banner-cta-text{
@@ -13750,7 +13752,7 @@ body.section-pulumi-up .star-wars{
   text-align: justify;
   justify-content:center;
   height:40vh;
-  font-family:"Pathway Gothic One",sans-serif !important;
+  font-family:"Pathway Gothic One",sans-serif;
   font-size:500%;
   font-weight:600;
   line-height:150%;
@@ -13758,7 +13760,7 @@ body.section-pulumi-up .star-wars{
 }
 
 body.section-pulumi-up .star-wars h1,body.section-pulumi-up .star-wars p{
-  color:#feda4a !important
+  color:#feda4a
 }
 
 body.section-pulumi-up .star-wars .title-animation{
@@ -13886,7 +13888,7 @@ body.section-pulumi-up .pulumiup-overview-date-block p{
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
-  color:#000 !important;
+  color:#000;
   transform:skewX(45deg)
 }
 
@@ -13895,7 +13897,7 @@ body.section-pulumi-up .date-countdown-container{
 }
 
 body.section-pulumi-up .date-countdown p{
-  color:#000 !important;
+  color:#000;
   text-shadow:none
 }
 
