@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -13996,19 +14005,7 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
 .date-countdown{
   width: 100%;
   text-align: center;
-  font-family:"Vibur";
-  font-size:1.75rem;
-  color:#f6ba7e !important;
-  text-shadow:0 0 15px,0 0 2px,0 0 1em #d86131,0 0 .5em #d86131,0 0 .1em #d86131,0 10px 3px #000
-}
-
-@media (min-width: 1024px){
-  .date-countdown{
-    font-family:"Vibur";
-    font-size:2.25rem;
-    color:#f6ba7e !important;
-    text-shadow:0 0 15px,0 0 2px,0 0 1em #d86131,0 0 .5em #d86131,0 0 .1em #d86131,0 10px 3px #000
-  }
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 .neon-callout-box-orange, .neon-callout-box-blue, .neon-callout-box-green{

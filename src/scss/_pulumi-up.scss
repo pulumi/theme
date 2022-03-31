@@ -319,12 +319,7 @@ $orange900: theme("colors.orange.900");
 }
 
 .date-countdown {
-    @apply w-full text-center;
-    @include neon-sign($orange400, $orange700, $orange900, 1.75rem, "date-countdown", false);
-
-    @screen lg {
-        @include neon-sign($orange400, $orange700, $orange900, 2.25rem, "date-countdown", false);
-    }
+    @apply w-full text-center font-body;
 }
 
 %dialog-box {
