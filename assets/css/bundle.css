@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -13607,6 +13616,11 @@ body.section-pulumi-up{
   background:radial-gradient(circle at left, #1f0b20 0, black 100%)
 }
 
+body.section-pulumi-up.disable-scroll{
+  height:100%;
+  overflow:hidden
+}
+
 body.section-pulumi-up .pulumi-up-stars{
   position: absolute;
   top: 0px;
@@ -13620,7 +13634,23 @@ body.section-pulumi-up .pulumi-up-stars{
 }
 
 body.section-pulumi-up h1,body.section-pulumi-up h2,body.section-pulumi-up h3,body.section-pulumi-up h4,body.section-pulumi-up h5,body.section-pulumi-up h6{
-  color:#fff !important
+  color:#fff
+}
+
+body.section-pulumi-up .white-background{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity))
+}
+
+body.section-pulumi-up .white-background h1,body.section-pulumi-up .white-background h2,body.section-pulumi-up .white-background h3,body.section-pulumi-up .white-background h4,body.section-pulumi-up .white-background h5,body.section-pulumi-up .white-background h6,body.section-pulumi-up .white-background p:not(.pulumiup-card-top-date),body.section-pulumi-up .white-background a:not(.btn-primary){
+  color:#000
+}
+
+body.section-pulumi-up .btn-pulumiup-card{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color:#feda4a;
+  border-radius:5px
 }
 
 body.section-pulumi-up .header-container .logo-container .normal-logo{
@@ -13636,12 +13666,12 @@ body.section-pulumi-up main,body.section-pulumi-up .top-nav-bar,body.section-pul
 }
 
 body.section-pulumi-up main a,body.section-pulumi-up main p,body.section-pulumi-up main .header-nav-item-drop-down,body.section-pulumi-up .top-nav-bar a,body.section-pulumi-up .top-nav-bar p,body.section-pulumi-up .top-nav-bar .header-nav-item-drop-down,body.section-pulumi-up .header-container a,body.section-pulumi-up .header-container p,body.section-pulumi-up .header-container .header-nav-item-drop-down,body.section-pulumi-up .footer a,body.section-pulumi-up .footer p,body.section-pulumi-up .footer .header-nav-item-drop-down{
-  color:#fff !important
+  color:#fff
 }
 
 body.section-pulumi-up main .top-nav-banner-cta,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta,body.section-pulumi-up .header-container .top-nav-banner-cta,body.section-pulumi-up .footer .top-nav-banner-cta{
   --tw-bg-opacity: 1;
-  background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+  background-color:rgb(47 48 50/var(--tw-bg-opacity))
 }
 
 body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .top-nav-bar .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .header-container .top-nav-banner-cta .top-nav-banner-cta-text,body.section-pulumi-up .footer .top-nav-banner-cta .top-nav-banner-cta-text{
@@ -13651,11 +13681,6 @@ body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.se
 body.section-pulumi-up main .header-nav-drop-down-menu ul,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu ul,body.section-pulumi-up .header-container .header-nav-drop-down-menu ul,body.section-pulumi-up .footer .header-nav-drop-down-menu ul{
   --tw-bg-opacity: 1;
   background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
-}
-
-body.section-pulumi-up main .btn-primary:hover,body.section-pulumi-up .top-nav-bar .btn-primary:hover,body.section-pulumi-up .header-container .btn-primary:hover,body.section-pulumi-up .footer .btn-primary:hover{
-  background-color:#fff !important;
-  color:#000 !important
 }
 
 body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
@@ -13722,7 +13747,7 @@ body.section-pulumi-up .star-wars{
   text-align: justify;
   justify-content:center;
   height:40vh;
-  font-family:"Pathway Gothic One",sans-serif !important;
+  font-family:"Pathway Gothic One",sans-serif;
   font-size:500%;
   font-weight:600;
   line-height:150%;
@@ -13730,7 +13755,7 @@ body.section-pulumi-up .star-wars{
 }
 
 body.section-pulumi-up .star-wars h1,body.section-pulumi-up .star-wars p{
-  color:#feda4a !important
+  color:#feda4a
 }
 
 body.section-pulumi-up .star-wars .title-animation{
@@ -13839,6 +13864,47 @@ body.section-pulumi-up .crawl>.title h1{
     top:-6000px;
     transform:rotateX(25deg) translateZ(-2500px)
   }
+}
+
+body.section-pulumi-up .pulumiup-overview-date-block{
+  display: inline-block;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color:#feda4a;
+  transform:skewX(-45deg)
+}
+
+body.section-pulumi-up .pulumiup-overview-date-block p{
+  margin: 0px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color:#000;
+  transform:skewX(45deg)
+}
+
+body.section-pulumi-up .date-countdown-container{
+  margin-bottom:-4rem
+}
+
+body.section-pulumi-up .date-countdown p{
+  color:#000;
+  text-shadow:none
+}
+
+body.section-pulumi-up .why-attend div[class^=icon-],body.section-pulumi-up .why-attend div[class*=" icon-"]{
+  width:3rem;
+  height:3rem;
+  padding:.6rem
+}
+
+body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up .why-attend div[class*=" icon-"] svg{
+  width:2rem;
+  height:2rem
 }
 
 .neon-container{

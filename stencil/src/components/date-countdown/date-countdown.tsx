@@ -21,6 +21,9 @@ export class DateCountdown {
     textClass = "";
 
     @Prop()
+    containerClass = "";
+
+    @Prop()
     valueLabelClass = "";
 
     @Prop()
@@ -51,33 +54,25 @@ export class DateCountdown {
         return <span class={this.valueLabelClass}>{label}</span>;
     }
 
+    private renderCountdownPart(value: number, label: string) {
+        return <p class={this.textClass}>{ value }{this.renderValueLabel(label)}</p>
+    }
+
     private renderCountdown() {
         const { days, hours, minutes, seconds, remainingTimeInMS } = this.countdownData;
         return (
-            <p class={this.textClass}>
+            <div class={this.containerClass}>
                 {remainingTimeInMS > 0 ? (
-                    <span>
-                        <span>
-                            {days}
-                            {this.renderValueLabel("days")}{" "}
-                        </span>
-                        <span>
-                            {hours}
-                            {this.renderValueLabel("hours")}{" "}
-                        </span>
-                        <span>
-                            {minutes}
-                            {this.renderValueLabel("minutes")}{" "}
-                        </span>
-                        <span>
-                            {seconds}
-                            {this.renderValueLabel("seconds")}
-                        </span>
-                    </span>
+                    [
+                        this.renderCountdownPart(days, "Days"),
+                        this.renderCountdownPart(hours, "Hours"),
+                        this.renderCountdownPart(minutes, "Minutes"),
+                        this.renderCountdownPart(seconds, "Seconds"),
+                    ]
                 ) : (
-                    this.countdownOverText
+                    <p class={this.textClass}>{ this.countdownOverText }</p>
                 )}
-            </p>
+            </div>
         );
     }
 
