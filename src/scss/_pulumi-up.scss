@@ -1,5 +1,10 @@
 // 2022 PulumiUP styles.
 body.section-pulumi-up {
+    &.disable-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
+
     .pulumi-up-stars {
         @apply absolute w-full h-full top-0 left-0;
         z-index: -1;
@@ -16,7 +21,29 @@ body.section-pulumi-up {
     h4,
     h5,
     h6 {
-        color: white !important;
+        color: white;
+    }
+
+    .white-background {
+        @apply bg-white;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p:not(.pulumiup-card-top-date),
+        a:not(.btn-primary) {
+            color: black;
+        }
+    }
+
+    .btn-pulumiup-card {
+        @apply px-3;
+
+        background-color: #feda4a;
+        border-radius: 5px;
     }
 
     .header-container .logo-container {
@@ -40,12 +67,12 @@ body.section-pulumi-up {
         a,
         p,
         .header-nav-item-drop-down {
-            color: white !important;
+            color: white;
         }
 
         .top-nav-banner-cta {
             --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity));
 
             .top-nav-banner-cta-text {
                 color: white !important;
@@ -54,12 +81,7 @@ body.section-pulumi-up {
 
         .header-nav-drop-down-menu ul {
             --tw-bg-opacity: 1;
-            background-color: rgb(47 48 50 / var(--tw-bg-opacity)) !important;
-        }
-
-        .btn-primary:hover {
-            background-color: white !important;
-            color: black !important;
+            background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
         }
     }
 
@@ -81,7 +103,7 @@ body.section-pulumi-up {
 
         justify-content: center;
         height: 40vh;
-        font-family: "Pathway Gothic One", sans-serif !important;
+        font-family: "Pathway Gothic One", sans-serif;
         font-size: 500%;
         font-weight: 600;
         line-height: 150%;
@@ -89,7 +111,7 @@ body.section-pulumi-up {
 
         h1,
         p {
-            color: #feda4a !important;
+            color: #feda4a;
         }
 
         .title-animation {
@@ -181,6 +203,42 @@ body.section-pulumi-up {
         100% {
             top: -6000px;
             transform: rotateX(25deg) translateZ(-2500px);
+        }
+    }
+
+    .pulumiup-overview-date-block {
+        @apply inline-block px-6;
+
+        background-color: #feda4a;
+        transform: skewX(-45deg);
+
+        p {
+            @apply text-lg font-bold py-2 px-8 m-0;
+
+            color: black;
+            transform: skewX(45deg);
+        }
+    }
+
+    .date-countdown-container {
+        margin-bottom: -4rem;
+    }
+
+    .date-countdown p {
+        color: black;
+        text-shadow: none;
+    }
+
+    .why-attend {
+        div[class^="icon-"], div[class*=" icon-"] {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.6rem;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 }
