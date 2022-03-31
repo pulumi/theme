@@ -13683,11 +13683,6 @@ body.section-pulumi-up main .header-nav-drop-down-menu ul,body.section-pulumi-up
   background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
 }
 
-body.section-pulumi-up main .btn-primary:hover,body.section-pulumi-up .top-nav-bar .btn-primary:hover,body.section-pulumi-up .header-container .btn-primary:hover,body.section-pulumi-up .footer .btn-primary:hover{
-  background-color:#fff !important;
-  color:#000 !important
-}
-
 body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));

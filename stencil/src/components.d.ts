@@ -15,6 +15,7 @@ export namespace Components {
     interface EventSessionRegistrationModal {
         "buttonClass": string;
         "buttonText": string;
+        "eventSessions": string;
         "modalTitle": string;
     }
     interface PulumiApiDocFilterableNav {
@@ -367,6 +368,7 @@ declare namespace LocalJSX {
     interface EventSessionRegistrationModal {
         "buttonClass"?: string;
         "buttonText"?: string;
+        "eventSessions"?: string;
         "modalTitle"?: string;
     }
     interface PulumiApiDocFilterableNav {
