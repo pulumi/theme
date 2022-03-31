@@ -3719,9 +3719,7 @@ ul.glossary{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   max-width: 56rem;
-  text-align: center;
-  font-size:5.25rem;
-  line-height:5.5rem !important
+  text-align: center
 }
 
 .aws-dev-day-header{
