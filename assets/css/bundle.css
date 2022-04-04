@@ -3539,18 +3539,22 @@ ul.glossary{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(128, 90, 195, var(--tw-text-opacity));
   height:33px;
   padding:8px 16px;
   border:1px solid #805ac3;
-  border-radius:20px;
-  box-shadow:0px 3px 1px -2px rgba(0,0,0,.2),0px 2px 2px rgba(0,0,0,.14),0px 1px 5px rgba(0,0,0,.12)
+  border-radius:20px
 }
 
 .docs-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:hover,.docs-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:active{
   background:linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
+  color:#fff;
+  box-shadow:0px 3px 1px -2px rgba(0,0,0,.2),0px 2px 2px rgba(0,0,0,.14),0px 1px 5px rgba(0,0,0,.12);
   border-color:transparent;
-  border-radius:20px;
-  color:#fff
+  border-radius:20px
 }
 
 .dot-background-container{
