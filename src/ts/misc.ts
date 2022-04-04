@@ -75,13 +75,13 @@ function generateOnThisPage() {
     const observer = new IntersectionObserver(
         ([e]) => {
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
-            const docsLogoContainerEl = document.querySelector(".docs-pinned-logo");
+            const docsPinnedSearchContainerEl = document.querySelector(".docs-pinned");
             if (e.isIntersecting) {
-                $(docsLogoContainerEl).addClass("opacity-0");
-                $(docsLogoContainerEl).removeClass("opacity-100");
+                $(docsPinnedSearchContainerEl).addClass("hidden");
+                $(docsPinnedSearchContainerEl).removeClass("flex");
             } else {
-                $(docsLogoContainerEl).removeClass("opacity-0");
-                $(docsLogoContainerEl).addClass("opacity-100");
+                $(docsPinnedSearchContainerEl).removeClass("hidden");
+                $(docsPinnedSearchContainerEl).addClass("flex");
             }
         },
         { threshold: [1] },

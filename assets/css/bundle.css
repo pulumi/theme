@@ -3527,6 +3527,32 @@ ul.glossary{
   font-weight: 700
 }
 
+.docs-pinned-container{
+  width:315px
+}
+
+.docs-pinned-container .get-started-pinned-search-container{
+  width:136px
+}
+
+.docs-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:33px;
+  padding:8px 16px;
+  border:1px solid #805ac3;
+  border-radius:20px;
+  box-shadow:0px 3px 1px -2px rgba(0,0,0,.2),0px 2px 2px rgba(0,0,0,.14),0px 1px 5px rgba(0,0,0,.12)
+}
+
+.docs-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:hover,.docs-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:active{
+  background:linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
+  border-color:transparent;
+  border-radius:20px;
+  color:#fff
+}
+
 .dot-background-container{
   position: absolute;
   top: 0px;
