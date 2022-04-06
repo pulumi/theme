@@ -65,3 +65,40 @@
         top: 80px !important;
     }
 }
+
+.search-header {
+    @apply justify-center;
+
+    @screen md {
+        @apply justify-between;
+    }
+
+    @screen lg {
+        @apply mx-auto justify-start;
+    }
+
+    .docs-search-container {
+        @apply flex-grow;
+
+        @screen md {
+            @apply flex-grow-0 justify-start;
+        }
+
+        .docs-search-widget {
+            @apply w-full px-4;
+
+            @screen md {
+                width: 450px;
+            }
+
+            @screen lg {
+                width: 600px;
+            }
+
+            @screen xl {
+                @apply px-0;
+                width: 800px;
+            }
+        }
+    }
+}
