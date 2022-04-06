@@ -14246,6 +14246,61 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
   }
 }
 
+.search-header{
+  justify-content: center
+}
+
+@media (min-width: 768px){
+  .search-header{
+    justify-content: space-between
+  }
+}
+
+@media (min-width: 1024px){
+  .search-header{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start
+  }
+}
+
+.search-header .docs-search-container{
+  flex-grow: 1
+}
+
+@media (min-width: 768px){
+  .search-header .docs-search-container{
+    flex-grow: 0;
+    justify-content: flex-start
+  }
+}
+
+.search-header .docs-search-container .docs-search-widget{
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+@media (min-width: 768px){
+  .search-header .docs-search-container .docs-search-widget{
+    width:450px
+  }
+}
+
+@media (min-width: 1024px){
+  .search-header .docs-search-container .docs-search-widget{
+    width:600px
+  }
+}
+
+@media (min-width: 1280px){
+  .search-header .docs-search-container .docs-search-widget{
+    padding-left: 0px;
+    padding-right: 0px;
+    width:800px
+  }
+}
+
 nav.nav-section-sticky{
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
