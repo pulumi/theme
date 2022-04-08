@@ -6,7 +6,7 @@ export interface EventSessionInfo {
     description: string;
 }
 
-export type EventSessionRegistrationModalContent = "session-select" | "form" | "thank-you";
+export type EventSessionRegistrationModalContent = "session-select" | "form";
 export type SubmittedFormValues = Record<string, string>;
 
 @Component({
@@ -29,6 +29,9 @@ export class EventSessionRegistrationModal {
 
     @Prop()
     eventSessions: string;
+
+    @Prop()
+    redirectUrl = "/pulumi-up/thank-you/";
 
     private parsedEventSessions: EventSessionInfo[];
 
@@ -96,7 +99,7 @@ export class EventSessionRegistrationModal {
                 this.processingFormSubmissions = true;
 
                 if (this.selectedSessions.length === 0) {
-                    this.displayingContent = "thank-you";
+                    window.location.href = this.redirectUrl;
                 }
             }, 500);
         }
@@ -144,7 +147,7 @@ export class EventSessionRegistrationModal {
 
     private handleFormSubmissions() {
         if (this.selectedSessions.length === 0) {
-            this.displayingContent = "thank-you";
+            window.location.href = this.redirectUrl;
             return;
         }
 
@@ -246,15 +249,6 @@ export class EventSessionRegistrationModal {
         );
     }
 
-    private renderThankYou() {
-        return(
-            <h5>
-                Thank you for registering! You will receive a confirmation email shortly and then further
-                further instructions on how to join the session(s) as we get closer to the events.
-            </h5>
-        );
-    }
-
     private renderContent() {
         console.log("rendering content");
         switch (this.displayingContent) {
@@ -263,8 +257,6 @@ export class EventSessionRegistrationModal {
             case "form":
                 console.log("rendering form");
                 return this.renderForm(this.selectedSessions[0]);
-            case "thank-you":
-                return this.renderThankYou();
         }
     }
 
