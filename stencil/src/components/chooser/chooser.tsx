@@ -3,7 +3,7 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona } from "../../store/actions/preferences";
 
-export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic";
+export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "abcd" | "efgh";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "docker";
@@ -406,6 +406,18 @@ export class Chooser {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
+            preview: false,
+        },
+                {
+            key: "abcd",
+            name: "Abcd",
+            extension: "abcd",
+            preview: false,
+        },
+                {
+            key: "efgh",
+            name: "EFGH",
+            extension: "efgh",
             preview: false,
         },
     ];
