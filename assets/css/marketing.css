@@ -757,12 +757,16 @@ body .btn-secondary.disabled{
 
 body .btn-secondary:hover{
   --tw-bg-opacity: 1;
-  background-color: rgba(242, 239, 249, var(--tw-bg-opacity))
+  background-color: rgba(242, 239, 249, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(128, 90, 195, var(--tw-text-opacity))
 }
 
 body .btn-secondary:focus{
   --tw-bg-opacity: 1;
-  background-color: rgba(230, 222, 243, var(--tw-bg-opacity))
+  background-color: rgba(230, 222, 243, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(128, 90, 195, var(--tw-text-opacity))
 }
 
 body .bg-violet-600 .btn-secondary{
