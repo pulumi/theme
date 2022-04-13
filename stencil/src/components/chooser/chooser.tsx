@@ -368,31 +368,31 @@ export class Chooser {
     private supportedLanguages: SupportedLanguage[] = [
         {
             key: "typescript",
-            name: "TypeScript",
+            name: ".ts",
             extension: "ts",
             preview: false,
         },
         {
             key: "javascript",
-            name: "JavaScript",
+            name: ".js",
             extension: "js",
             preview: false,
         },
         {
             key: "python",
-            name: "Python",
+            name: ".py",
             extension: "py",
             preview: false,
         },
         {
             key: "go",
-            name: "Go",
+            name: ".go",
             extension: "go",
             preview: false,
         },
         {
             key: "csharp",
-            name: "C#",
+            name: ".cs",
             extension: "cs",
             preview: false,
         },
@@ -410,13 +410,13 @@ export class Chooser {
         },
                 {
             key: "abcd",
-            name: "Abcd",
+            name: ".abcd",
             extension: "abcd",
             preview: false,
         },
                 {
             key: "efgh",
-            name: "EFGH",
+            name: ".efg",
             extension: "efgh",
             preview: false,
         },
