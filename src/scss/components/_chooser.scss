@@ -6,13 +6,16 @@ pulumi-chooser {
         list-style-type: none !important;
 
         li {
-            @apply font-display p-0 m-0 border-b-2 transition border-gray-300 text-center w-full;
+            @apply font-display text-xs p-0 m-0 border-b-2 transition border-gray-300 text-center w-full;
             @include transition;
 
-            font-size: 0.8rem;
 
             &:hover {
                 @apply border-gray-500;
+            }
+
+            @screen md {
+                @apply text-base;
             }
 
             &.active {
