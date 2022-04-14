@@ -708,4 +708,48 @@
             top: -15rem;
         }
     }
+
+    &.developer-advocates-contact-section {
+        .circle-right {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 18rem;
+            height: 18rem;
+            right: 6rem;
+            top: 20rem;
+        }
+    
+        .circle-left {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 14rem;
+            height: 14rem;
+            left: 10rem;
+            top: 6rem;
+        }
+    }
+
+    &.developer-advocates-giveaway-section {
+        .circle-top {
+            @apply rounded-full absolute bg-purple-600;
+            width: 10rem;
+            height: 10rem;
+            right: -4.5rem;
+            top: 0.75rem;
+        }
+    
+        .circle-center {
+            @apply rounded-full absolute bg-salmon-600;
+            width: 7rem;
+            height: 7rem;
+            right: 27rem;
+            top: -3.5rem;
+        }
+    
+        .circle-bottom {
+            @apply rounded-full absolute bg-yellow-600;
+            width: 21.25rem;
+            height: 21.25rem;
+            right: 7.5rem;
+            bottom: -17rem;
+        }
+    }
 }

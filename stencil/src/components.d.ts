@@ -17,6 +17,7 @@ export namespace Components {
         "buttonText": string;
         "eventSessions": string;
         "modalTitle": string;
+        "redirectUrl": string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
@@ -370,6 +371,7 @@ declare namespace LocalJSX {
         "buttonText"?: string;
         "eventSessions"?: string;
         "modalTitle"?: string;
+        "redirectUrl"?: string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
