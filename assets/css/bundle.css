@@ -2459,6 +2459,197 @@ pre code{
   display: block
 }
 
+.developer-advocate-talks button.is-selected{
+  position: relative;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity))
+}
+
+.developer-advocate-talks button.is-selected::before{
+  content:"";
+  position:absolute;
+  top:100%;
+  width:100%;
+  left:0;
+  height:2px;
+  background:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
+}
+
+.developer-advocate-talks button:not(.is-selected){
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgba(95, 96, 101, var(--tw-text-opacity))
+}
+
+.developer-advocate-nav{
+  width:250px;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity))
+}
+
+.developer-advocate-nav:hover{
+  background-color:#000;
+  color:#fff
+}
+
+.developer-advocate-nav li{
+  margin-top: 0px;
+  margin-bottom: 0px
+}
+
+.developer-advocate-nav li a{
+  display: block;
+  width: 100%;
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity))
+}
+
+.developer-advocate-nav li a:hover{
+  font-weight:bold;
+  color:#000
+}
+
+.developer-advocate-nav li:not(.dropdown-item){
+  display: flex;
+  align-items: center
+}
+
+.developer-advocate-nav li:not(.dropdown-item) .dropdown-title{
+  padding-right: 2rem;
+  padding-left: 1rem
+}
+
+.developer-advocate-nav li:not(.dropdown-item):hover .dropdown-title{
+  background-color:#000;
+  color:#fff
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down{
+  position: relative;
+  cursor: pointer
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu{
+  position: absolute;
+  top: 0.5rem;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  min-width: max-content;
+  padding-top: 1.5rem
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul{
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a:hover{
+  opacity: 1
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down .dropdown-menu-caret{
+  position: absolute;
+  right: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  height: 0px;
+  width: 0px;
+  content:"";
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #000
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down:hover .dropdown-menu-caret{
+  transform:rotate(180deg);
+  border-top:5px solid #fff
+}
+
+.developer-advocate-nav li:not(.dropdown-item).header-nav-item-drop-down:hover .header-nav-drop-down-menu{
+  display: block
+}
+
+.developer-advocate-social{
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity))
+}
+
+.developer-advocate-social.twitter{
+  color:#08a0e9
+}
+
+.developer-advocate-social.linkedin{
+  color:#0274b3
+}
+
+.developer-advocates-giveaway .submitted-message{
+  text-align: center;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700
+}
+
+.developer-advocates-giveaway img{
+  width:100px
+}
+
+@media (min-width: 640px){
+  .developer-advocates-giveaway img{
+    width:150px
+  }
+}
+
+.developer-advocates-contact-us-container{
+  box-shadow:0px 6px 36px rgba(0,0,0,.1)
+}
+
+.developer-advocates-contact-us-container .developer-advocates-contact-us .submitted-message{
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700
+}
+
+.developer-advocates-contact-us-container .developer-advocates-contact-us .hs-lastname{
+  margin-top: 1rem
+}
+
+@media (min-width: 640px){
+  .developer-advocates-contact-us-container .developer-advocates-contact-us .hs-lastname{
+    margin-top: 0px
+  }
+}
+
+.developer-advocate-blog-posts img{
+  max-height:111px
+}
+
 .pulumi-event-list-container .scroll-container{
   width:110px
 }
@@ -15314,6 +15505,61 @@ nav.nav-section-sticky ul li>a:hover{
   height:12.75rem;
   left:-6rem;
   top:-15rem
+}
+
+.shape-background.developer-advocates-contact-section .circle-right{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:18rem;
+  height:18rem;
+  right:6rem;
+  top:20rem
+}
+
+.shape-background.developer-advocates-contact-section .circle-left{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:14rem;
+  height:14rem;
+  left:10rem;
+  top:6rem
+}
+
+.shape-background.developer-advocates-giveaway-section .circle-top{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(138, 51, 145, var(--tw-bg-opacity));
+  width:10rem;
+  height:10rem;
+  right:-4.5rem;
+  top:.75rem
+}
+
+.shape-background.developer-advocates-giveaway-section .circle-center{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(242, 110, 126, var(--tw-bg-opacity));
+  width:7rem;
+  height:7rem;
+  right:27rem;
+  top:-3.5rem
+}
+
+.shape-background.developer-advocates-giveaway-section .circle-bottom{
+  position: absolute;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 191, 42, var(--tw-bg-opacity));
+  width:21.25rem;
+  height:21.25rem;
+  right:7.5rem;
+  bottom:-17rem
 }
 
 .slot-machine{
