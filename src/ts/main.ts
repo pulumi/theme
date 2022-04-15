@@ -19,6 +19,7 @@ import "./search";
 import "./packages";
 import "./pricing-trial";
 import "./developer-advocates";
+import "./toc";
 
 // Initialize the Facet design system and components.
 initDesignSystem({
