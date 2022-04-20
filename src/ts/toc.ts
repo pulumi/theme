@@ -4,15 +4,19 @@ $(function () {
         "/docs/intro/": "intro-toc-header",
         "/docs/guides/": "user-guides-toc-header",
         "/docs/reference/": "reference-toc-header",
-        "/docs/troubleshooting/": "support-toc-header",
+        "/docs/troubleshooting/overview/": "support-toc-header",
+        "/docs/converters/": "converters-toc-header",
+
     }
 
     Object.keys(pathTocHeaderMap).map(
         key => {
+            const headerElement = document.getElementById(pathTocHeaderMap[key]);
+            headerElement.classList.remove("active");
             if (document.location.pathname === key) {
-                var container = document.getElementById('left-nav');
-                var scrollTo = document.getElementById(pathTocHeaderMap[key]);
-                container.scrollTop = scrollTo.offsetTop;
+                const container = document.getElementById('left-nav');
+                headerElement.classList.add("active");
+                container.scrollTop = headerElement.offsetTop - 100;
             }
         }
     )
