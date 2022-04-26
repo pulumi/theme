@@ -6,18 +6,17 @@ $(function () {
         "/docs/reference/": "reference-toc-header",
         "/docs/troubleshooting/overview/": "support-toc-header",
         "/docs/converters/": "converters-toc-header",
+    };
 
-    }
-
-    Object.keys(pathTocHeaderMap).map(
-        key => {
-            const headerElement = document.getElementById(pathTocHeaderMap[key]);
+    Object.keys(pathTocHeaderMap).map(key => {
+        const headerElement = document.getElementById(pathTocHeaderMap[key]);
+        if (headerElement) {
             headerElement.classList.remove("active");
             if (document.location.pathname === key) {
-                const container = document.getElementById('left-nav');
+                const container = document.getElementById("left-nav");
                 headerElement.classList.add("active");
                 container.scrollTop = headerElement.offsetTop - 100;
             }
         }
-    )
+    });
 });
