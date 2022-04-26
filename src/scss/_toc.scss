@@ -1,3 +1,24 @@
+$toc-header-spacing: 5px;
+
+@keyframes active-toc-header-background-color {
+    0% {
+        background-color: #dbdef7;
+    }
+    50% {
+        background-color: #dbdef7;
+    }
+    75% {
+        background-color: #dbdef7;
+    }
+    100% {
+        background-color: #edeffb;
+    }
+}
+
+#left-nav {
+    scroll-behavior: smooth;
+}
+
 .toc {
     @apply text-sm pb-8;
 
@@ -25,6 +46,31 @@
 
     ul {
         @apply list-none p-0;
+    }
+
+    .toc-header {
+        width: fit-content;
+        padding-right: $toc-header-spacing;
+        margin-left: -$toc-header-spacing;
+
+        a {
+            margin-left: $toc-header-spacing;
+        }
+
+        &.active {
+            animation: active-toc-header-background-color 4s ease-in-out;
+
+            a {
+                &::before {
+                    @apply bg-blue-800;
+                    content: "";
+                    position: absolute;
+                    width: 3px;
+                    height: 24px;
+                    left: 9px;
+                }
+            }
+        }
     }
 }
 

@@ -15681,6 +15681,28 @@ table td{
   transform:scale(1.03)
 }
 
+@keyframes active-toc-header-background-color{
+  0%{
+    background-color:#dbdef7
+  }
+
+  50%{
+    background-color:#dbdef7
+  }
+
+  75%{
+    background-color:#dbdef7
+  }
+
+  100%{
+    background-color:#edeffb
+  }
+}
+
+#left-nav{
+  scroll-behavior:smooth
+}
+
 .toc{
   padding-bottom: 2rem;
   font-size: 0.875rem;
@@ -15718,6 +15740,30 @@ table td{
 .toc ul{
   list-style-type: none;
   padding: 0px
+}
+
+.toc .toc-header{
+  width:fit-content;
+  padding-right:5px;
+  margin-left:-5px
+}
+
+.toc .toc-header a{
+  margin-left:5px
+}
+
+.toc .toc-header.active{
+  animation:active-toc-header-background-color 4s ease-in-out
+}
+
+.toc .toc-header.active a::before{
+  --tw-bg-opacity: 1;
+  background-color: rgba(46, 55, 130, var(--tw-bg-opacity));
+  content:"";
+  position:absolute;
+  width:3px;
+  height:24px;
+  left:9px
 }
 
 .sidenav-topic{
