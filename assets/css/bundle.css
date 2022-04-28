@@ -15753,7 +15753,7 @@ table td{
 }
 
 .toc .toc-header.active{
-  animation:active-toc-header-background-color 4s ease-in-out
+  animation:active-toc-header-background-color 4s ease-in
 }
 
 .toc .toc-header.active a::before{
