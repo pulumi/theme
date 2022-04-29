@@ -179,7 +179,7 @@
                 &:hover {
                     a,
                     .dropdown-title {
-                        @apply opacity-50;
+                        color: #7b61ff;
                     }
                 }
 
@@ -197,8 +197,9 @@
                             }
 
                             a {
+                                color: theme("colors.gray.800");
                                 &:hover {
-                                    @apply opacity-100;
+                                    color: #7b61ff;
                                 }
                             }
                         }
