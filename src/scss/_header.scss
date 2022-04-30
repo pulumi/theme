@@ -189,9 +189,21 @@
                     .header-nav-drop-down-menu {
                         @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
 
+                        
                         ul {
                             @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
-
+                            
+                            div {
+                                @apply px-3;
+                                .header-nav-drop-down-heading {
+                                    @apply font-medium;
+                                }
+                                .header-nav-drop-down-sub-heading {
+                                    @include gradient-border;
+                                    @apply text-sm;
+                                }
+                            }
+                            
                             li {
                                 @apply my-1;
                             }

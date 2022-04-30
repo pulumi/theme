@@ -3611,6 +3611,23 @@ ul.glossary{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
   }
 
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul div{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul div .header-nav-drop-down-heading{
+    font-weight: 500
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul div .header-nav-drop-down-sub-heading{
+    border-bottom:2px solid;
+    border-image-slice:1;
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+    font-size: 0.875rem;
+    line-height: 1.25rem
+  }
+
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li{
     margin-top: 0.25rem;
     margin-bottom: 0.25rem
