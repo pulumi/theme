@@ -193,22 +193,25 @@
                         ul {
                             @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
                             
-                            div {
-                                @apply px-3;
+                            div { 
+                                @apply px-2;
                                 .header-nav-drop-down-heading {
                                     @apply font-medium;
                                 }
                                 .header-nav-drop-down-sub-heading {
                                     @include gradient-border;
-                                    @apply text-sm;
+                                    @apply py-1 text-xs;
                                 }
                             }
                             
                             li {
-                                @apply my-1;
+                                @apply my-1 flex-col justify-start;
                             }
 
                             a {
+                                i {
+                                    color: theme("colors.gray.800");
+                                }
                                 color: theme("colors.gray.800");
                                 &:hover {
                                     color: $brand-violet;
