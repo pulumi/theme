@@ -3580,8 +3580,8 @@ ul.glossary{
     padding-left: 1rem
   }
 
-  .header-container .desktop-menu li:not(.header-dropdown-item):hover a, .header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
-    opacity: 0.5;
+  .header-container .desktop-menu li:not(.header-dropdown-item):hover a,.header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down{
@@ -3616,8 +3616,12 @@ ul.glossary{
     margin-bottom: 0.25rem
   }
 
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a{
+    color:#2f3032
+  }
+
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a:hover{
-    opacity: 1
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .dropdown-menu-caret{
