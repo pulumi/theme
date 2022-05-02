@@ -121,6 +121,7 @@ export namespace Components {
     }
     interface PulumiSlotMachine {
         "centerImages": string;
+        "imageClass": string;
         "leftImages": string;
         "rightImages": string;
     }
@@ -472,6 +473,7 @@ declare namespace LocalJSX {
     }
     interface PulumiSlotMachine {
         "centerImages"?: string;
+        "imageClass"?: string;
         "leftImages"?: string;
         "rightImages"?: string;
     }

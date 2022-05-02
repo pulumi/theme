@@ -100,6 +100,20 @@ export class Swiper {
             spaceBetween: this.spaceBetween,
         });
 
+        if ((this.direction === "horizontal") && this.loop) {
+            const sw = this.swiper;
+            this.swiper.once("reachEnd", (_swiper) => {
+                const slides = sw.slides;
+
+                for (let i = 0; i < slides.length; i ++) {
+                    const slidePosition = slides.length + i;
+                    const slide = slides[i];
+                    sw.addSlide(slidePosition, slide as HTMLElement);
+                    sw.removeSlide(0);
+                }
+            });
+        }
+
         if (this.autoplay) {
             this.startSwiper();
 

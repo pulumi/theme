@@ -1,5 +1,4 @@
 import { Component, h, Prop } from "@stencil/core";
-//import { Swiper } from "../swiper/swiper";
 import SwiperJS, { Autoplay } from "swiper";
 
 @Component({
@@ -8,6 +7,9 @@ import SwiperJS, { Autoplay } from "swiper";
     shadow: false,
 })
 export class SlotMachine {
+    @Prop()
+    imageClass: string;
+
     @Prop()
     leftImages: string;
 
@@ -20,10 +22,6 @@ export class SlotMachine {
     leftSwiper!: HTMLPulumiSwiperElement;
     centerSwiper!: HTMLPulumiSwiperElement;
     rightSwiper!: HTMLPulumiSwiperElement;
-
-    componentWillLoad() {
-        SwiperJS.use([Autoplay]);
-    }
 
     componentDidLoad() {
         this.runSlotMachine();
@@ -67,10 +65,12 @@ export class SlotMachine {
     }
 
     private renderImageList(images: string[]) {
+        const imgClass = this.imageClass || "";
+
         return images.map(image => {
             return (
                 <pulumi-swipeable>
-                    <img src={image} alt="" />
+                    <img class={imgClass} src={image} alt="" />
                 </pulumi-swipeable>
             );
         });
