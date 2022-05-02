@@ -1,5 +1,4 @@
 import { Component, h, Prop } from "@stencil/core";
-import SwiperJS, { Autoplay } from "swiper";
 
 @Component({
     tag: "pulumi-slot-machine",
