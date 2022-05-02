@@ -179,7 +179,7 @@
                 &:hover {
                     a,
                     .dropdown-title {
-                        color: $indigo;
+                        color: $brand-violet;
                     }
                 }
 
@@ -199,7 +199,7 @@
                             a {
                                 color: theme("colors.gray.800");
                                 &:hover {
-                                    color: $indigo;
+                                    color: $brand-violet;
                                 }
                             }
                         }

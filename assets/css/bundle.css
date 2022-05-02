@@ -3581,7 +3581,7 @@ ul.glossary{
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item):hover a,.header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
-    color:#7b61ff
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down{
@@ -3621,7 +3621,7 @@ ul.glossary{
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a:hover{
-    color:#7b61ff
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .dropdown-menu-caret{
