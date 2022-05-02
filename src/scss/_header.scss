@@ -205,6 +205,12 @@
                             }
                             
                             li {
+                                .list-title {
+                                    @apply text-base font-medium;
+                                }
+                                .list-sub-title {
+                                    @apply text-xs;
+                                }
                                 @apply my-1 flex-col justify-start;
                             }
 
