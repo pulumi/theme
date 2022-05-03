@@ -200,21 +200,24 @@
                                 }
                                 .header-nav-drop-down-sub-heading {
                                     @include gradient-border;
-                                    @apply py-1 text-xs;
+                                    @apply pt-1 pb-3 text-xs;
                                 }
                             }
                             
                             li {
+                                @apply px-2 py-2 flex-wrap;
+
                                 .list-title {
-                                    @apply text-base font-medium;
+                                    @apply text-base text-left w-full font-medium;
                                 }
+
                                 .list-sub-title {
-                                    @apply text-xs;
+                                    @apply text-xs text-left w-full;
                                 }
-                                @apply my-1 flex-col justify-start;
                             }
 
                             a {
+                                @apply px-0;
                                 i {
                                     color: theme("colors.gray.800");
                                 }

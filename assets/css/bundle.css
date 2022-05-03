@@ -3625,30 +3625,37 @@ ul.glossary{
     border-image-slice:1;
     border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
     padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.75rem;
     font-size: 0.75rem;
     line-height: 1rem
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li{
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-    flex-direction: column;
-    justify-content: flex-start
+    flex-wrap: wrap;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li .list-title{
+    width: 100%;
+    text-align: left;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 500
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li .list-sub-title{
+    width: 100%;
+    text-align: left;
     font-size: 0.75rem;
     line-height: 1rem
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a{
+    padding-left: 0px;
+    padding-right: 0px;
     color:#2f3032
   }
 
