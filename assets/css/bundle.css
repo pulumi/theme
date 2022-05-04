@@ -14056,6 +14056,10 @@ body.section-pulumi-up main .header-nav-drop-down-menu a,body.section-pulumi-up 
   color:#fff !important
 }
 
+body.section-pulumi-up main .header-nav-drop-down-menu a i,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a i,body.section-pulumi-up .header-container .header-nav-drop-down-menu a i,body.section-pulumi-up .footer .header-nav-drop-down-menu a i{
+  color:#fff !important
+}
+
 body.section-pulumi-up main .header-nav-drop-down-menu a:hover,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a:hover,body.section-pulumi-up .header-container .header-nav-drop-down-menu a:hover,body.section-pulumi-up .footer .header-nav-drop-down-menu a:hover{
   color:#805ac3 !important
 }

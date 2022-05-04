@@ -86,11 +86,14 @@ body.section-pulumi-up {
 
         .header-nav-drop-down-menu a {
             color: white !important;
+            i {
+                color: white !important;
+            }
         }
         .header-nav-drop-down-menu a:hover{
             color: $brand-violet !important;
         }
-        
+
         .list-sub-title {
             color: white !important;
         }
