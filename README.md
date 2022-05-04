@@ -68,7 +68,7 @@ Be sure to remove the `replace` line before you commit.
 
 ### Generating a Preview in the pulumi-hugo Repository
 
-When working with this repo, there are often changes to markup in the pulumi-hugo repo that are dependent on the changes being made here. You can generate a PR preview that picks up on the styling changees being worked on in this repo by running the following command with the commit sha of the changes you want to reference.
+When working with this repository, there are often changes to markup in the pulumi-hugo repository that are dependent on the changes being made here. You can generate a PR preview that picks up on the styling changees being worked on in this repository by running the following command in the root directory of the pulumi-hugo repository with the commit sha of the changes you want to reference.
 
 ```
 go get github.com/pulumi/theme@<COMMIT_HASH>
