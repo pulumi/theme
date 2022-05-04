@@ -3580,8 +3580,8 @@ ul.glossary{
     padding-left: 1rem
   }
 
-  .header-container .desktop-menu li:not(.header-dropdown-item):hover a, .header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
-    opacity: 0.5;
+  .header-container .desktop-menu li:not(.header-dropdown-item):hover a,.header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down{
@@ -3616,8 +3616,12 @@ ul.glossary{
     margin-bottom: 0.25rem
   }
 
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a{
+    color:#2f3032
+  }
+
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a:hover{
-    opacity: 1
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .dropdown-menu-caret{
@@ -13955,6 +13959,14 @@ body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.se
 body.section-pulumi-up main .header-nav-drop-down-menu ul,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu ul,body.section-pulumi-up .header-container .header-nav-drop-down-menu ul,body.section-pulumi-up .footer .header-nav-drop-down-menu ul{
   --tw-bg-opacity: 1;
   background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu a,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a,body.section-pulumi-up .header-container .header-nav-drop-down-menu a,body.section-pulumi-up .footer .header-nav-drop-down-menu a{
+  color:#fff !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu a:hover,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a:hover,body.section-pulumi-up .header-container .header-nav-drop-down-menu a:hover,body.section-pulumi-up .footer .header-nav-drop-down-menu a:hover{
+  color:#805ac3 !important
 }
 
 body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{

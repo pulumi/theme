@@ -179,7 +179,7 @@
                 &:hover {
                     a,
                     .dropdown-title {
-                        @apply opacity-50;
+                        color: $brand-violet;
                     }
                 }
 
@@ -188,7 +188,6 @@
 
                     .header-nav-drop-down-menu {
                         @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
-
                         ul {
                             @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
 
@@ -197,8 +196,9 @@
                             }
 
                             a {
+                                color: theme("colors.gray.800");
                                 &:hover {
-                                    @apply opacity-100;
+                                    color: $brand-violet;
                                 }
                             }
                         }
