@@ -179,7 +179,7 @@
                 &:hover {
                     a,
                     .dropdown-title {
-                        @apply opacity-50;
+                        color: $brand-violet;
                     }
                 }
 
@@ -187,21 +187,80 @@
                     @apply relative cursor-pointer;
 
                     .header-nav-drop-down-menu {
-                        @apply w-full absolute hidden min-w-max pt-6 top-0 z-10;
-
+                        @apply w-full absolute hidden pt-6 mt-2 top-0 z-20;
+                        min-width: fit-content;
                         ul {
-                            @apply bg-white text-left rounded shadow-xl py-2 whitespace-nowrap;
+                            @apply bg-white text-left rounded shadow-3xl p-5 whitespace-nowrap;
+                            min-width: fit-content;
+                            div { 
+                                .header-nav-drop-down-heading {
+                                    @apply font-medium;
+                                }
+                                .header-nav-drop-down-sub-heading {
+                                    @include gradient-border;
+                                    @apply pt-1 pb-4 pr-5 text-xs;
+                                }
+                                
+                            }
 
+                            .header-nav-one-col-drop-down {
+                                @apply pt-1;
+                            }
+
+                            .header-nav-two-col-drop-down {
+                                @apply flex flex-wrap w-full pt-2;
+                                li {
+                                    @apply pl-1 pr-2 py-2 flex-col w-1/2;
+                                }
+                            }
+                            
                             li {
-                                @apply my-1;
+                                @apply px-1 py-2 flex-col;
+                                flex: 50%;
+
+                                .list-title {
+                                    @apply px-0 text-base text-left w-full font-medium;
+                                }
+
+                                .list-sub-title {
+                                    @apply text-xs text-left w-full whitespace-normal;
+                                    padding-left: 30px;
+                                }
+
+                                &:hover {
+                                    @apply font-semibold;
+                                    a {
+                                        @apply font-semibold;
+                                        color: $brand-violet;
+                                        .list-sub-title {
+                                            color: theme("colors.gray.800");
+                                        }
+                                    }
+                                }
                             }
 
                             a {
-                                &:hover {
-                                    @apply opacity-100;
+                                @apply px-0;
+                                color: theme("colors.gray.800");
+                                i {
+                                    min-width: 1.5rem;
+                                    color: #4A5568;
                                 }
                             }
                         }
+                    }
+
+                    .product {
+                        min-width: 70ch;
+                        @apply -left-24;
+                        @screen xl {
+                            @apply left-0;
+                        }
+                    }
+
+                    .learn {
+                        @apply -right-48;
+                        min-width: 65ch;
                     }
 
                     .dropdown-menu-caret {

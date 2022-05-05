@@ -165,6 +165,9 @@ module.exports = {
                 body: ["Inter", ...defaultTheme.fontFamily.sans],
                 mono: ["Roboto Mono", ...defaultTheme.fontFamily.mono],
             },
+            boxShadow: {
+                '3xl': '0 35px 70px -20px rgba(0, 0, 0, 0.5)',
+              }
         },
         colors: {
             white,

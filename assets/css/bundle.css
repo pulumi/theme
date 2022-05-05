@@ -3580,8 +3580,8 @@ ul.glossary{
     padding-left: 1rem
   }
 
-  .header-container .desktop-menu li:not(.header-dropdown-item):hover a, .header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
-    opacity: 0.5;
+  .header-container .desktop-menu li:not(.header-dropdown-item):hover a,.header-container .desktop-menu li:not(.header-dropdown-item):hover .dropdown-title{
+    color:#805ac3
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down{
@@ -3592,11 +3592,12 @@ ul.glossary{
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu{
     position: absolute;
     top: 0px;
-    z-index: 10;
+    z-index: 20;
+    margin-top: 0.5rem;
     display: none;
     width: 100%;
-    min-width: max-content;
-    padding-top: 1.5rem
+    padding-top: 1.5rem;
+    min-width:fit-content
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul{
@@ -3604,20 +3605,114 @@ ul.glossary{
     border-radius: 0.25rem;
     --tw-bg-opacity: 1;
     background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    padding: 1.25rem;
+    text-align: left;
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    min-width:fit-content
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul div .header-nav-drop-down-heading{
+    font-weight: 500
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul div .header-nav-drop-down-sub-heading{
+    border-bottom:2px solid;
+    border-image-slice:1;
+    border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+    padding-top: 0.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1rem;
+    font-size: 0.75rem;
+    line-height: 1rem
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul .header-nav-one-col-drop-down{
+    padding-top: 0.25rem
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul .header-nav-two-col-drop-down{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 0.5rem
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul .header-nav-two-col-drop-down li{
+    width: 50%;
+    flex-direction: column;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    text-align: left;
-    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    padding-right: 0.5rem;
+    padding-left: 0.25rem
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li{
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem
+    flex-direction: column;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    flex:50%
   }
 
-  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a:hover{
-    opacity: 1
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li .list-title{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li .list-sub-title{
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding-left:30px
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li:hover{
+    font-weight: 600
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li:hover a{
+    font-weight: 600;
+    color:#805ac3
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul li:hover a .list-sub-title{
+    color:#2f3032
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a{
+    padding-left: 0px;
+    padding-right: 0px;
+    color:#2f3032
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .header-nav-drop-down-menu ul a i{
+    min-width:1.5rem;
+    color:#4a5568
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .product{
+    min-width:70ch;
+    left: -6rem
+  }
+
+  @media (min-width: 1280px){
+    .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .product{
+      left: 0px
+    }
+  }
+
+  .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .learn{
+    right: -12rem;
+    min-width:65ch
   }
 
   .header-container .desktop-menu li:not(.header-dropdown-item).header-nav-item-drop-down .dropdown-menu-caret{
@@ -13955,6 +14050,22 @@ body.section-pulumi-up main .top-nav-banner-cta .top-nav-banner-cta-text,body.se
 body.section-pulumi-up main .header-nav-drop-down-menu ul,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu ul,body.section-pulumi-up .header-container .header-nav-drop-down-menu ul,body.section-pulumi-up .footer .header-nav-drop-down-menu ul{
   --tw-bg-opacity: 1;
   background-color:rgb(47 48 50/var(--tw-bg-opacity)) !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu a,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a,body.section-pulumi-up .header-container .header-nav-drop-down-menu a,body.section-pulumi-up .footer .header-nav-drop-down-menu a{
+  color:#fff !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu a i,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a i,body.section-pulumi-up .header-container .header-nav-drop-down-menu a i,body.section-pulumi-up .footer .header-nav-drop-down-menu a i{
+  color:#fff !important
+}
+
+body.section-pulumi-up main .header-nav-drop-down-menu a:hover,body.section-pulumi-up .top-nav-bar .header-nav-drop-down-menu a:hover,body.section-pulumi-up .header-container .header-nav-drop-down-menu a:hover,body.section-pulumi-up .footer .header-nav-drop-down-menu a:hover{
+  color:#805ac3 !important
+}
+
+body.section-pulumi-up main .list-sub-title,body.section-pulumi-up .top-nav-bar .list-sub-title,body.section-pulumi-up .header-container .list-sub-title,body.section-pulumi-up .footer .list-sub-title{
+  color:#fff !important
 }
 
 body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
@@ -44873,6 +44984,11 @@ main blockquote p{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-3xl{
+  --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .group:hover .group-hover\:shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -44910,6 +45026,11 @@ main blockquote p{
 
 .group:hover .group-hover\:shadow-none{
   --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.group:hover .group-hover\:shadow-3xl{
+  --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -44953,6 +45074,11 @@ main blockquote p{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus-within\:shadow-3xl:focus-within{
+  --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .hover\:shadow-sm:hover{
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -44993,6 +45119,11 @@ main blockquote p{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hover\:shadow-3xl:hover{
+  --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .focus\:shadow-sm:focus{
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -45030,6 +45161,11 @@ main blockquote p{
 
 .focus\:shadow-none:focus{
   --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:shadow-3xl:focus{
+  --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -75560,6 +75696,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .sm\:group-hover\:shadow-sm{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -75597,6 +75738,11 @@ main blockquote p{
 
   .group:hover .sm\:group-hover\:shadow-none{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .sm\:group-hover\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -75640,6 +75786,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:focus-within\:shadow-3xl:focus-within{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .sm\:hover\:shadow-sm:hover{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -75680,6 +75831,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:hover\:shadow-3xl:hover{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .sm\:focus\:shadow-sm:focus{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -75717,6 +75873,11 @@ main blockquote p{
 
   .sm\:focus\:shadow-none:focus{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:focus\:shadow-3xl:focus{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -106239,6 +106400,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .md\:group-hover\:shadow-sm{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -106276,6 +106442,11 @@ main blockquote p{
 
   .group:hover .md\:group-hover\:shadow-none{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .md\:group-hover\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -106319,6 +106490,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:focus-within\:shadow-3xl:focus-within{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .md\:hover\:shadow-sm:hover{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -106359,6 +106535,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:hover\:shadow-3xl:hover{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .md\:focus\:shadow-sm:focus{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -106396,6 +106577,11 @@ main blockquote p{
 
   .md\:focus\:shadow-none:focus{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:focus\:shadow-3xl:focus{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -136918,6 +137104,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .lg\:group-hover\:shadow-sm{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -136955,6 +137146,11 @@ main blockquote p{
 
   .group:hover .lg\:group-hover\:shadow-none{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .lg\:group-hover\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -136998,6 +137194,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:focus-within\:shadow-3xl:focus-within{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .lg\:hover\:shadow-sm:hover{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -137038,6 +137239,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:hover\:shadow-3xl:hover{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .lg\:focus\:shadow-sm:focus{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -137075,6 +137281,11 @@ main blockquote p{
 
   .lg\:focus\:shadow-none:focus{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:focus\:shadow-3xl:focus{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -167597,6 +167808,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .xl\:group-hover\:shadow-sm{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -167634,6 +167850,11 @@ main blockquote p{
 
   .group:hover .xl\:group-hover\:shadow-none{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .xl\:group-hover\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -167677,6 +167898,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:focus-within\:shadow-3xl:focus-within{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xl\:hover\:shadow-sm:hover{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -167717,6 +167943,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:hover\:shadow-3xl:hover{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xl\:focus\:shadow-sm:focus{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -167754,6 +167985,11 @@ main blockquote p{
 
   .xl\:focus\:shadow-none:focus{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:focus\:shadow-3xl:focus{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -198276,6 +198512,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xxl\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .group:hover .xxl\:group-hover\:shadow-sm{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -198313,6 +198554,11 @@ main blockquote p{
 
   .group:hover .xxl\:group-hover\:shadow-none{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .group:hover .xxl\:group-hover\:shadow-3xl{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
@@ -198356,6 +198602,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xxl\:focus-within\:shadow-3xl:focus-within{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xxl\:hover\:shadow-sm:hover{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -198396,6 +198647,11 @@ main blockquote p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xxl\:hover\:shadow-3xl:hover{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xxl\:focus\:shadow-sm:focus{
     --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -198433,6 +198689,11 @@ main blockquote p{
 
   .xxl\:focus\:shadow-none:focus{
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xxl\:focus\:shadow-3xl:focus{
+    --tw-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.5);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
