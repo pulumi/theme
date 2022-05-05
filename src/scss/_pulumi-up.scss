@@ -83,6 +83,20 @@ body.section-pulumi-up {
             --tw-bg-opacity: 1;
             background-color: rgb(47 48 50 / var(--tw-bg-opacity))  !important;
         }
+
+        .header-nav-drop-down-menu a {
+            color: white !important;
+            i {
+                color: white !important;
+            }
+        }
+        .header-nav-drop-down-menu a:hover{
+            color: $brand-violet !important;
+        }
+
+        .list-sub-title {
+            color: white !important;
+        }
     }
 
     .top-nav-bar,
