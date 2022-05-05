@@ -3805,8 +3805,16 @@ ul.glossary{
 }
 
 .header-container .mobile-menu ul .mobile-menu-subitem a{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
   --tw-text-opacity: 1;
   color: rgba(95, 96, 101, var(--tw-text-opacity))
+}
+
+.header-container .mobile-menu ul .mobile-menu-subitem a i{
+  min-width:2rem;
+  color:#4a5568
 }
 
 .header-container .mobile-menu-toggle:checked+.mobile-menu-icon+.mobile-menu{

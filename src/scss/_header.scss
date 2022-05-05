@@ -330,7 +330,12 @@
                 @apply ml-6 mt-4 text-base;
 
                 a {
-                    @apply text-gray-700;
+                    @apply text-lg font-medium text-gray-700;
+
+                    i {
+                        min-width: 2rem;
+                        color: #4A5568;
+                    }
                 }
             }
         }
