@@ -38,7 +38,7 @@ $ hugo mod get github.com/pulumi/theme@release
 
     ```
     $ make ensure
-    $ make start
+    $ make serve
     ```
 
     Once the development server is running, any changes you make to CSS, Sass, TypeScript, or [Stencil.js](https://stenciljs.com/) source code will be compiled into `assets/css` and `assets/js` bundles, respectively.
