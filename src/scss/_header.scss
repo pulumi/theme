@@ -303,39 +303,106 @@
     .mobile-menu {
         // The 'pb-16' is used to pad the bottom of the container so
         // the CTA button does not get cut off.
-        @apply hidden w-full h-screen overflow-y-auto pb-16;
-
+        @apply hidden w-full h-screen pb-16;
+        
         @screen lg {
             @apply hidden;
         }
-
+        
         ul {
-            @apply m-4;
+            @apply m-4 overflow-y-auto;
+            height: calc(100vh - 296px);
+            div {
+                &:not(:first-of-type) {
+                    @apply mt-4;
+                }
+            }
+
+            hr {
+                margin-top: 16px;
+            }
 
             li {
                 a {
                     @apply block;
+                    margin-left: 1.1rem;
                 }
             }
-
+            
             .mobile-menu-item {
+                @apply text-xl font-display text-gray-800;
+                @apply mt-4;
+            }
+
+            .mobile-menu-heading {
                 @apply text-xl font-display text-gray-800;
 
                 &:not(:first-of-type) {
                     @apply mt-6;
                 }
             }
-
-            .mobile-menu-subitem {
-                @apply ml-6 mt-4 text-base;
+            
+            [class*="mobile-menu-subitems-"] {
+                @apply mt-4 text-base hidden;
 
                 a {
-                    @apply text-lg font-medium text-gray-700;
-
+                    @apply text-lg font-medium text-gray-700 mt-4;
+                    color: theme("colors.gray.800");
                     i {
                         min-width: 2rem;
                         color: #4A5568;
                     }
+                }
+            }
+
+            .dropdown-menu-caret {
+                @apply w-0 h-0 m-1 relative left-2 top-3;
+                content: "";
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid black;
+                @apply opacity-50;
+
+            }
+
+            .invisible-checkbox {
+                opacity: 0%;
+            }
+
+            #cloudeng-mobile-menu:checked ~ {
+                .mobile-menu-subitems-cloudeng {
+                    @apply block;
+                }
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+                .dropdown-menu-caret {
+                    transform: rotate(180deg);
+                }
+            }
+
+            #product-mobile-menu:checked ~ {
+                .mobile-menu-subitems-product {
+                    @apply block;
+                }
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+                .dropdown-menu-caret {
+                    transform: rotate(180deg);
+                }
+            }
+
+            #learn-mobile-menu:checked ~ {
+                .mobile-menu-subitems-learn {
+                    @apply block;
+                }
+    
+                .mobile-menu-heading {
+                    color: $brand-violet;
+                }
+                .dropdown-menu-caret {
+                    transform: rotate(180deg);
                 }
             }
         }
@@ -344,6 +411,13 @@
     .mobile-menu-toggle:checked + .mobile-menu-icon + .mobile-menu {
         @apply block;
 
+        @screen lg {
+            @apply hidden;
+        }
+    }
+    
+    .mobile-menu-footer {
+        @apply block w-full h-screen overflow-y-auto;
         @screen lg {
             @apply hidden;
         }
@@ -360,6 +434,8 @@
             @apply cursor-pointer;
         }
     }
+
+    
 }
 
 .registry-hero, .docs-hero {
