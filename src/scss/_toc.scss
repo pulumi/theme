@@ -44,6 +44,7 @@ $toc-header-spacing: 5px;
 
         &.active {
             background-color: #dbdef7;
+            transition: background-color 2.5s;
 
             a {
                 &::before {

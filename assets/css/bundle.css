@@ -15855,7 +15855,8 @@ table td{
 }
 
 .toc .toc-header.active{
-  background-color:#dbdef7
+  background-color:#dbdef7;
+  transition:background-color 2.5s
 }
 
 .toc .toc-header.active a::before{
