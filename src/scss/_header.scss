@@ -44,10 +44,10 @@
     // The nav bar will be pinned on mobile but not on desktop.
     &.registry,
     &.docs {
-        @apply sticky z-50 bg-gray-850 -top-px;
+        @apply sticky z-auto bg-gray-850 -top-px;
 
         @screen md {
-            @apply relative z-auto;
+            @apply relative;
         }
 
         &.is-pinned {
@@ -399,6 +399,7 @@
 
             border: 1px solid theme("colors.violet.600");
             border-radius: 20px;
+            width: max-content;
 
             &:hover,
             &:active {

@@ -3295,7 +3295,7 @@ ul.glossary{
 .top-nav-bar.registry, .top-nav-bar.docs{
   position: sticky;
   top: -1px;
-  z-index: 50;
+  z-index: auto;
   --tw-bg-opacity: 1;
   background-color: rgba(43, 43, 44, var(--tw-bg-opacity));
 }
@@ -3303,7 +3303,6 @@ ul.glossary{
 @media (min-width: 768px){
   .top-nav-bar.registry, .top-nav-bar.docs{
     position: relative;
-    z-index: auto;
   }
 }
 
@@ -3828,6 +3827,10 @@ ul.glossary{
   justify-content: center;
 }
 
+.registry-hero .dot-overlay,.docs-hero .dot-overlay{
+  top:0px
+}
+
 .registry-hero .dot-overlay, .docs-hero .dot-overlay{
   position: absolute;
   height: 100%;
@@ -3888,7 +3891,8 @@ ul.glossary{
   height:33px;
   padding:8px 16px;
   border:1px solid #805ac3;
-  border-radius:20px
+  border-radius:20px;
+  width:max-content
 }
 
 .header-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:hover,.header-pinned-container .get-started-pinned-search-container .get-started-pinned-search-button:active{
