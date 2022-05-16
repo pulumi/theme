@@ -360,9 +360,8 @@
 .registry-hero, .docs-hero {
     @apply w-full flex relative flex-col justify-center;
 
-    // height: 100px;
-
     .dot-overlay {
+        top: 0px;
         @apply w-full h-full absolute;
         z-index: -1;
         background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551991695115) 100%);
