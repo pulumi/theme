@@ -1,20 +1,5 @@
 $toc-header-spacing: 5px;
 
-@keyframes active-toc-header-background-color {
-    0% {
-        background-color: #dbdef7;
-    }
-    50% {
-        background-color: #dbdef7;
-    }
-    75% {
-        background-color: #dbdef7;
-    }
-    100% {
-        background-color: #edeffb;
-    }
-}
-
 #left-nav {
     scroll-behavior: smooth;
 }
@@ -58,7 +43,8 @@ $toc-header-spacing: 5px;
         }
 
         &.active {
-            animation: active-toc-header-background-color 4s ease-in-out;
+            background-color: #dbdef7;
+            transition: background-color 2.5s;
 
             a {
                 &::before {
