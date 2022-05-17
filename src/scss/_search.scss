@@ -18,17 +18,10 @@
 
     @include transition;
 
-    &.docs {
+    &.docs, &.registry {
         border-color: map-get($blue, 300) !important;
         &:focus {
             border-color: map-get($blue, 600) !important;
-        }
-    }
-
-    &.registry {
-        border-color: map-get($violet, 300) !important;
-        &:focus {
-            border-color: map-get($violet, 600) !important;
         }
     }
 
@@ -53,7 +46,7 @@
         .st-ui-result {
             .st-ui-type-heading {
                 font-size: 0.75rem !important; /* text-xs */
-                color: #4387c7 !important; /* text-blue-600 */
+                color: $brand-blue !important; /* text-blue-600 */
                 margin-bottom: 4px !important;
             }
             .st-ui-type-detail {
@@ -70,7 +63,7 @@
     }
 
     .st-query-present, .st-query-not-present {
-        span.st-ui-type-heading {
+        span.st-ui-type-heading, .st-ui-pagination-link {
             color: $brand-blue !important;
         }
     }
