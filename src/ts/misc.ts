@@ -75,13 +75,30 @@ function generateOnThisPage() {
     const observer = new IntersectionObserver(
         ([e]) => {
             e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
-            const docsPinnedSearchContainerEl = document.querySelector(".docs-pinned");
+            const pinnedSearchContainerEl = document.querySelector(".header-pinned");
+            const dotOverlay = document.querySelector(".hide-on-pinned");
+            const heroTitle = document.querySelector(".header-hero-title");
+
             if (e.isIntersecting) {
-                $(docsPinnedSearchContainerEl).addClass("hidden");
-                $(docsPinnedSearchContainerEl).removeClass("flex");
+                $(pinnedSearchContainerEl).addClass("hidden");
+                $(pinnedSearchContainerEl).removeClass("flex");
+
+                $(dotOverlay).removeClass("hidden");
+                $(dotOverlay).addClass("flex");
+
+                $(heroTitle).removeClass("hidden");
+                $(heroTitle).addClass("flex");
+
             } else {
-                $(docsPinnedSearchContainerEl).removeClass("hidden");
-                $(docsPinnedSearchContainerEl).addClass("flex");
+                $(pinnedSearchContainerEl).removeClass("hidden");
+                $(pinnedSearchContainerEl).addClass("flex");
+
+                $(dotOverlay).addClass("hidden");
+                $(dotOverlay).removeClass("flex");
+
+                $(heroTitle).addClass("hidden");
+                $(heroTitle).removeClass("flex");
+
             }
         },
         { threshold: [1] },
