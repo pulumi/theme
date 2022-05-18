@@ -44,10 +44,10 @@
     // The nav bar will be pinned on mobile but not on desktop.
     &.registry,
     &.docs {
-        @apply sticky z-50 bg-gray-850 -top-px;
+        @apply sticky z-auto bg-gray-850 -top-px;
 
         @screen md {
-            @apply relative z-auto;
+            @apply relative;
         }
 
         &.is-pinned {
@@ -117,7 +117,7 @@
 }
 
 .header-container {
-    @apply z-50 bg-white py-6;
+    @apply z-40 bg-white py-6;
     top: -1px;
 
     @screen lg {
@@ -357,20 +357,19 @@
     }
 }
 
-.registry-hero {
+.registry-hero, .docs-hero {
     @apply w-full flex relative flex-col justify-center;
 
-    height: 100px;
-
     .dot-overlay {
+        top: 0px;
         @apply w-full h-full absolute;
         z-index: -1;
         background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.5004551991695115) 100%);
     }
 
-    .registry-hero-title {
+    .header-hero-title {
         @screen md {
-            @apply flex items-center;
+            @apply items-center;
         }
 
         .title-icon,
@@ -388,7 +387,7 @@
     }
 }
 
-.docs-pinned-container {
+.header-pinned-container {
     width: 315px;
     .get-started-pinned-search-container {
         width: 136px;
@@ -400,6 +399,7 @@
 
             border: 1px solid theme("colors.violet.600");
             border-radius: 20px;
+            width: max-content;
 
             &:hover,
             &:active {

@@ -90,9 +90,9 @@ $(".section-registry .no-results .reset").on("click", event => {
 document.addEventListener("DOMContentLoaded", function () {
     const logoNavMenuButton = $(".logo-nav-button");
     const bgMask = $(".logo-nav-bg-mask");
+    const logoNavMenu = $("#logo-nav-menu");
 
     function toggleMenu() {
-        const logoNavMenu = $("#logo-nav-menu");
         logoNavMenu.toggleClass("hidden");
         const navMenuVisible = logoNavMenu.is(":visible");
         logoNavMenuButton.attr("aria-expanded", `${navMenuVisible}`);
@@ -101,5 +101,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     logoNavMenuButton.on("click", toggleMenu);
+    // This handles closing the menu when selecting outside for Registry.
     bgMask.on("click", toggleMenu);
+
+    // This handles closing the menu when selecting outside for non-Registry.
+    $(document).on("click", function (event) {
+        if ($(event.target).closest(logoNavMenuButton).length === 0 &&
+            $(event.target).closest(logoNavMenu).length === 0 &&
+            logoNavMenu.is(":visible")) {
+            toggleMenu();
+        }
+    });
+
+    // Close the menu when the page is scrolled past point where the
+    // practitioner nav is replaced with the sticky search nav.
+    $(document).on("scroll", function () {
+        const PRACTITIONER_NAV_HEIGHT = 53;
+        const scrollY = window.scrollY;
+        if (scrollY > PRACTITIONER_NAV_HEIGHT && logoNavMenu.is(":visible")) {
+            toggleMenu();
+        }
+    });
 });

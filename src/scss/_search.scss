@@ -4,8 +4,8 @@
 .st-default-search-input {
     display: block !important;
     width: 100% !important;
-    font-size: 0.875rem !important;
-    padding: 0.75rem !important;
+    font-size: 1rem !important;
+    padding: 1rem !important;
     padding-left: 2.5rem !important;
     border-radius: 0.25rem !important;
     border-color: map-get($gray, 400) !important;
@@ -18,13 +18,10 @@
 
     @include transition;
 
-    &:focus:not(.registry) {
-        border-color: map-get($blue, 600) !important;
-    }
-
-    &.registry {
+    &.docs, &.registry {
+        border-color: map-get($blue, 300) !important;
         &:focus {
-            border-color: map-get($violet, 600) !important;
+            border-color: map-get($blue, 600) !important;
         }
     }
 
@@ -49,7 +46,7 @@
         .st-ui-result {
             .st-ui-type-heading {
                 font-size: 0.75rem !important; /* text-xs */
-                color: #4387c7 !important; /* text-blue-600 */
+                color: $brand-blue !important; /* text-blue-600 */
                 margin-bottom: 4px !important;
             }
             .st-ui-type-detail {
@@ -64,6 +61,12 @@
     @screen lg {
         top: 80px !important;
     }
+
+    .st-query-present, .st-query-not-present {
+        span.st-ui-type-heading, .st-ui-pagination-link {
+            color: $brand-blue !important;
+        }
+    }
 }
 
 .search-header {
@@ -77,14 +80,14 @@
         @apply mx-auto justify-start;
     }
 
-    .docs-search-container {
+    .search-container {
         @apply flex-grow;
 
         @screen md {
             @apply flex-grow-0 justify-start;
         }
 
-        .docs-search-widget {
+        .search-widget {
             @apply w-full px-4;
 
             @screen md {
