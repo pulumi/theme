@@ -4,7 +4,7 @@ $(function () {
         "/docs/intro/": "intro-toc-header",
         "/docs/guides/": "user-guides-toc-header",
         "/docs/reference/": "reference-toc-header",
-        "/docs/troubleshooting/overview/": "support-toc-header",
+        "/docs/support/": "support-toc-header",
         "/docs/converters/": "converters-toc-header",
     };
 
