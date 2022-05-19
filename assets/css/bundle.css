@@ -14169,6 +14169,18 @@ body.section-pulumi-up main .list-sub-title,body.section-pulumi-up .top-nav-bar 
   color:#fff !important
 }
 
+body.section-pulumi-up main .mobile-menu-heading,body.section-pulumi-up .top-nav-bar .mobile-menu-heading,body.section-pulumi-up .header-container .mobile-menu-heading,body.section-pulumi-up .footer .mobile-menu-heading{
+  color:#fff !important
+}
+
+body.section-pulumi-up main [class*=mobile-menu-subitems-] a,body.section-pulumi-up .top-nav-bar [class*=mobile-menu-subitems-] a,body.section-pulumi-up .header-container [class*=mobile-menu-subitems-] a,body.section-pulumi-up .footer [class*=mobile-menu-subitems-] a{
+  color:#fff !important
+}
+
+body.section-pulumi-up main [class*=mobile-menu-subitems-] a i,body.section-pulumi-up .top-nav-bar [class*=mobile-menu-subitems-] a i,body.section-pulumi-up .header-container [class*=mobile-menu-subitems-] a i,body.section-pulumi-up .footer [class*=mobile-menu-subitems-] a i{
+  color:#fff !important
+}
+
 body.section-pulumi-up .top-nav-bar, body.section-pulumi-up .header-container{
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
