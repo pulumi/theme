@@ -19,4 +19,19 @@
             }
         });
     }
+
+    $("#product-menu-label").click(function() {
+        $("#mobile-dropdown").scroll();
+        $("#mobile-dropdown").animate({
+            scrollTop: $("#product-mobile-menu").position().top - 115
+        }, 300);
+    });
+
+    $("#learn-menu-label").click(function() {
+        $("#mobile-dropdown").scroll();
+        $("#mobile-dropdown").animate({
+            scrollTop: $("#learn-mobile-menu").position().top
+        }, 300);
+    });
+
 })(document, jQuery);
