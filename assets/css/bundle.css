@@ -4107,6 +4107,13 @@ ul.glossary{
   text-align: center
 }
 
+@media (min-width: 1024px){
+  .page-hero .page-hero-title h1{
+    font-size:5.25rem;
+    line-height:5.5rem !important
+  }
+}
+
 .aws-dev-day-header{
   background:url("/images/webinar/aws-dev-day/bg-dev-day.jpeg");
   background-size:cover;
