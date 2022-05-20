@@ -18032,6 +18032,10 @@ main blockquote p{
   background-color:rgba(255,255,255,.7)
 }
 
+.blog-list-description{
+  min-height:178px
+}
+
 .sr-only{
   position: absolute;
   width: 1px;
