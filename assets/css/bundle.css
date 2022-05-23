@@ -4109,8 +4109,8 @@ ul.glossary{
 
 @media (min-width: 1024px){
   .page-hero .page-hero-title h1{
-    font-size:5.25rem;
-    line-height:5.5rem !important
+    font-size:4.5rem;
+    line-height:1.375 !important
   }
 }
 
@@ -12952,6 +12952,10 @@ ul.glossary{
 
 .icon-code-window-blue svg rect{
   fill:#4d5bd9
+}
+
+.learn-h2{
+  font-size:3rem
 }
 
 dl.resources-properties, dl.package-details, dl.tabular{
