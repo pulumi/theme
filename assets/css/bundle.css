@@ -14593,6 +14593,13 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
   }
 }
 
+.section-blog .st-default-search-input{
+  font-size:.875rem !important;
+  padding:.75rem !important;
+  padding-left:2.5rem !important;
+  border-radius:.25rem !important
+}
+
 .st-default-autocomplete{
   z-index:40 !important;
   top:auto !important;
