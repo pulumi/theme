@@ -112,6 +112,10 @@
 
         h1 {
             @apply text-center max-w-4xl my-10;
+            @screen lg {
+                font-size: 4.5rem;
+                line-height: 1.375 !important;
+            }
         }
     }
 }
