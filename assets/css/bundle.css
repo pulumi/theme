@@ -3764,7 +3764,7 @@ ul.glossary{
 .header-container .mobile-menu ul{
   margin: 1rem;
   overflow-y: auto;
-  height:calc(100vh - 240px)
+  height:calc(100vh - 305px)
 }
 
 .header-container .mobile-menu ul div:not(:first-of-type){
@@ -3892,6 +3892,21 @@ ul.glossary{
   height: 100vh;
   width: 100%;
   overflow-y: auto
+}
+
+.header-container .mobile-menu-footer .get-started{
+  display: flex;
+  height: 4rem;
+  flex-direction: column;
+  align-items: center
+}
+
+.header-container .mobile-menu-footer .get-started a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center
 }
 
 @media (min-width: 1024px){
