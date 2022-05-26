@@ -312,13 +312,16 @@
         ul {
             @apply m-4 overflow-y-auto;
             height: calc(100vh - 305px);
+
             div {
+                @apply flex flex-wrap;
                 &:not(:first-of-type) {
                     @apply mt-4;
                 }
             }
 
             hr {
+                flex-basis: 100%;
                 margin-top: 16px;
             }
 
@@ -331,6 +334,9 @@
             
             .mobile-menu-item {
                 @apply text-2xl font-display text-gray-800 mt-4;
+                a {
+                    @apply ml-3.5;
+                }
             }
 
             .mobile-menu-heading {
@@ -342,8 +348,8 @@
             }
             
             [class*="mobile-menu-subitems-"] {
-                @apply mt-4 text-base hidden;
-
+                @apply mt-2 text-base hidden;
+                flex-basis: 100%;
                 a {
                     @apply text-xl font-medium text-gray-700 mt-4;
                     color: theme("colors.gray.800");
@@ -355,7 +361,7 @@
             }
 
             .dropdown-menu-caret {
-                @apply w-0 h-0 m-1 relative left-2 top-3;
+                @apply block w-0 h-0 m-1 relative left-2 top-3;
                 content: "";
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;

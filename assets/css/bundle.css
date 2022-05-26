@@ -3767,11 +3767,17 @@ ul.glossary{
   height:calc(100vh - 305px)
 }
 
+.header-container .mobile-menu ul div{
+  display: flex;
+  flex-wrap: wrap
+}
+
 .header-container .mobile-menu ul div:not(:first-of-type){
   margin-top: 1rem
 }
 
 .header-container .mobile-menu ul hr{
+  flex-basis:100%;
   margin-top:16px
 }
 
@@ -3789,6 +3795,10 @@ ul.glossary{
   color: rgba(47, 48, 50, var(--tw-text-opacity))
 }
 
+.header-container .mobile-menu ul .mobile-menu-item a{
+  margin-left: 0.875rem
+}
+
 .header-container .mobile-menu ul .mobile-menu-heading{
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.5rem;
@@ -3802,10 +3812,11 @@ ul.glossary{
 }
 
 .header-container .mobile-menu ul [class*=mobile-menu-subitems-]{
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: none;
   font-size: 1rem;
-  line-height: 1.5rem
+  line-height: 1.5rem;
+  flex-basis:100%
 }
 
 .header-container .mobile-menu ul [class*=mobile-menu-subitems-] a{
@@ -3828,6 +3839,7 @@ ul.glossary{
   top: 0.75rem;
   left: 0.5rem;
   margin: 0.25rem;
+  display: block;
   height: 0px;
   width: 0px;
   content:"";
