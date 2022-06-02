@@ -13100,19 +13100,21 @@ dl.resources-properties dt.property-required .property-indicator:after,dl.packag
   content:""
 }
 
-dl.resources-properties dt.property-replacement .property-indicator,dl.package-details dt.property-replacement .property-indicator,dl.tabular dt.property-replacement .property-indicator{
-  display:inline-flex;
-  flex-direction:row-reverse;
-  justify-content:space-between
-}
-
-dl.resources-properties dt.property-replacement .property-indicator img,dl.package-details dt.property-replacement .property-indicator img,dl.tabular dt.property-replacement .property-indicator img{
-  display:inline
+dl.resources-properties dt.property-replacement .property-indicator, dl.package-details dt.property-replacement .property-indicator, dl.tabular dt.property-replacement .property-indicator{
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 
 dl.resources-properties dt.property-replacement .property-indicator img, dl.package-details dt.property-replacement .property-indicator img, dl.tabular dt.property-replacement .property-indicator img{
   margin-right: 0.25rem;
   margin-left: 0.25rem;
+  display: inline;
+}
+
+dl.resources-properties dt.property-replacement .property-indicator img,dl.package-details dt.property-replacement .property-indicator img,dl.tabular dt.property-replacement .property-indicator img{
+  height:18px;
+  width:18px;
 }
 
 dl.resources-properties dt.property-replacement.property-required:after, dl.package-details dt.property-replacement.property-required:after, dl.tabular dt.property-replacement.property-required:after{

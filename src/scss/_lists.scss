@@ -87,11 +87,12 @@ dl {
 
             &.property-replacement {
                 .property-indicator {
-                    @apply inline-flex flex-row-reverse justify-between;
+                    @apply inline-flex flex-row-reverse items-center;
 
                     img {
-                        display: inline;
                         @apply mr-1 ml-1 inline;
+                        height: 18px;
+                        width: 18px;
                     }
                 }
 
