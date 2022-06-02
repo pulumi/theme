@@ -85,6 +85,24 @@ dl {
                 }
             }
 
+            &.property-replacement {
+                .property-indicator {
+                    @apply inline-flex flex-row-reverse justify-between;
+
+                    img {
+                        display: inline;
+                        @apply mr-1 ml-1 inline;
+                    }
+                }
+
+                &.property-required {
+                    &:after {
+                        @apply text-red-500;
+                        @include fa-glyph("\f069");
+                    }
+                }
+            }
+
             &.property-deprecated {
                 ~ dd {
                     .property-message {
