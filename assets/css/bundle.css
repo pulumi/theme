@@ -2105,6 +2105,21 @@ pre code{
   border-style: none
 }
 
+div.highlight.line-numbers pre.chroma code{
+  counter-reset:line-numbering
+}
+
+div.highlight.line-numbers pre.chroma code span.line::before{
+  margin-right: 1rem;
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+  --tw-text-opacity: 1;
+  color: rgba(142, 143, 151, var(--tw-text-opacity));
+  counter-increment:line-numbering;
+  content:counter(line-numbering)
+}
+
 .code-max-h{
   position: relative
 }
