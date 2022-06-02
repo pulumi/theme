@@ -3845,8 +3845,7 @@ ul.glossary{
   content:"";
   border-left:5px solid transparent;
   border-right:5px solid transparent;
-  border-top:5px solid #000;
-  opacity: 0.5
+  border-top:5px solid #000
 }
 
 .header-container .mobile-menu ul .invisible-checkbox{
@@ -3862,6 +3861,7 @@ ul.glossary{
 }
 
 .header-container .mobile-menu ul #cloudeng-mobile-menu:checked~.dropdown-menu-caret{
+  opacity: 0.5;
   transform:rotate(180deg)
 }
 
@@ -3874,6 +3874,7 @@ ul.glossary{
 }
 
 .header-container .mobile-menu ul #product-mobile-menu:checked~.dropdown-menu-caret{
+  opacity: 0.5;
   transform:rotate(180deg)
 }
 
@@ -3886,6 +3887,7 @@ ul.glossary{
 }
 
 .header-container .mobile-menu ul #learn-mobile-menu:checked~.dropdown-menu-caret{
+  opacity: 0.5;
   transform:rotate(180deg)
 }
 
