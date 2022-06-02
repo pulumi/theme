@@ -13117,19 +13117,6 @@ dl.resources-properties dt.property-replacement .property-indicator img,dl.packa
   width:18px;
 }
 
-dl.resources-properties dt.property-replacement.property-required:after, dl.package-details dt.property-replacement.property-required:after, dl.tabular dt.property-replacement.property-required:after{
-  --tw-text-opacity: 1;
-  color: rgba(245, 101, 101, var(--tw-text-opacity));
-}
-
-dl.resources-properties dt.property-replacement.property-required:after,dl.package-details dt.property-replacement.property-required:after,dl.tabular dt.property-replacement.property-required:after{
-  font-family:"Font Awesome 5 Free";
-}
-
-dl.resources-properties dt.property-replacement.property-required:after:after,dl.package-details dt.property-replacement.property-required:after:after,dl.tabular dt.property-replacement.property-required:after:after{
-  content:""
-}
-
 dl.resources-properties dt.property-deprecated~dd .property-message, dl.package-details dt.property-deprecated~dd .property-message, dl.tabular dt.property-deprecated~dd .property-message{
   margin-top: 1rem;
   margin-bottom: 1rem;

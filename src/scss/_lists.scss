@@ -95,13 +95,6 @@ dl {
                         width: 18px;
                     }
                 }
-
-                &.property-required {
-                    &:after {
-                        @apply text-red-500;
-                        @include fa-glyph("\f069");
-                    }
-                }
             }
 
             &.property-deprecated {
