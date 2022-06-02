@@ -62,13 +62,9 @@ div.highlight.line-numbers {
         code {
             counter-reset: line-numbering;
             span.line::before {
-                color: theme("colors.gray.600");
-                content: counter(line-numbering);
+                @apply text-gray-600 text-right inline-block mr-4 w-4;
                 counter-increment: line-numbering;
-                display: inline-block;
-                margin-right: 10px;
-                text-align: right;
-                width: 1.5em;
+                content: counter(line-numbering);
             }
         }
     }
