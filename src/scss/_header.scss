@@ -366,8 +366,6 @@
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
                 border-top: 5px solid black;
-                @apply opacity-50;
-
             }
 
             .invisible-checkbox {
@@ -382,6 +380,7 @@
                     color: $brand-violet;
                 }
                 .dropdown-menu-caret {
+                    @apply opacity-50;
                     transform: rotate(180deg);
                 }
             }
@@ -394,6 +393,7 @@
                     color: $brand-violet;
                 }
                 .dropdown-menu-caret {
+                    @apply opacity-50;
                     transform: rotate(180deg);
                 }
             }
@@ -406,7 +406,9 @@
                 .mobile-menu-heading {
                     color: $brand-violet;
                 }
+
                 .dropdown-menu-caret {
+                    @apply opacity-50;
                     transform: rotate(180deg);
                 }
             }
