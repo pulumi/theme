@@ -1,4 +1,5 @@
 @import "pygments";
+@import "colors";
 
 code {
     @apply bg-gray-100 rounded py-1 px-2 text-sm break-words;
@@ -54,6 +55,19 @@ pre {
     // For code samples that contain tabs (e.g., Go), limit them to four spaces, to make
     // better use of horizontal space.
     tab-size: 4;
+}
+
+div.highlight.line-numbers {
+    pre.chroma {
+        code {
+            counter-reset: line-numbering;
+            span.line::before {
+                @apply text-gray-600 text-right inline-block mr-4 w-4;
+                counter-increment: line-numbering;
+                content: counter(line-numbering);
+            }
+        }
+    }
 }
 
 .code-max-h {
