@@ -13100,19 +13100,13 @@ dl.resources-properties dt.property-required .property-indicator:after,dl.packag
   content:""
 }
 
-dl.resources-properties dt.property-replacement .property-indicator, dl.package-details dt.property-replacement .property-indicator, dl.tabular dt.property-replacement .property-indicator{
-  display: inline-flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-dl.resources-properties dt.property-replacement .property-indicator img, dl.package-details dt.property-replacement .property-indicator img, dl.tabular dt.property-replacement .property-indicator img{
+dl.resources-properties dt.property-replacement .property-indicator-replacement img, dl.package-details dt.property-replacement .property-indicator-replacement img, dl.tabular dt.property-replacement .property-indicator-replacement img{
   margin-right: 0.25rem;
   margin-left: 0.25rem;
   display: inline;
 }
 
-dl.resources-properties dt.property-replacement .property-indicator img,dl.package-details dt.property-replacement .property-indicator img,dl.tabular dt.property-replacement .property-indicator img{
+dl.resources-properties dt.property-replacement .property-indicator-replacement img,dl.package-details dt.property-replacement .property-indicator-replacement img,dl.tabular dt.property-replacement .property-indicator-replacement img{
   height:18px;
   width:18px;
 }
@@ -13136,6 +13130,21 @@ dl.resources-properties dt.property-deprecated~dd .property-message, dl.package-
 dl.resources-properties dt.property-deprecated~dd .property-message code, dl.package-details dt.property-deprecated~dd .property-message code, dl.tabular dt.property-deprecated~dd .property-message code{
   --tw-bg-opacity: 1;
   background-color: rgba(253, 230, 196, var(--tw-bg-opacity));
+}
+
+dl.resources-properties dt .multi-property-container, dl.package-details dt .multi-property-container, dl.tabular dt .multi-property-container{
+  display: inline-flex;
+  align-items: center;
+}
+
+dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container{
+  margin-left: 3.5rem;
+}
+
+@media (min-width: 640px){
+  dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container{
+    margin-left: 0px;
+  }
 }
 
 dl.resources-properties dt .property-type, dl.package-details dt .property-type, dl.tabular dt .property-type{
