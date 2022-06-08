@@ -146,8 +146,17 @@ function generateOnThisPage() {
     });
 
     // Wrap "required" asterisks in tooltips.
-    $("dl.resources-properties dt.property-required")
+    $("dl.resources-properties dt.property-required.property-replacement")
+        .removeAttr("title")
+        .find(".property-indicator")
+        .replaceWith(' <div class="multi-property-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>" + "</pulumi-tooltip>" + ' <div class="replacement-container"> ' + "<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>" + "</div>" + "</div>");
+    $("dl.resources-properties dt.property-required:not(.property-replacement)")
         .removeAttr("title")
         .find(".property-indicator")
         .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator"></span>' + '    <span slot="content">This property is required.</span>' + "</pulumi-tooltip>");
+
+    $("dl.resources-properties dt.property-replacement:not(.property-required)")
+        .removeAttr("title")
+        .find(".property-indicator")
+        .replaceWith("<pulumi-tooltip>" + '    <span class="property-indicator-replacement">' + ' <img src="/icons/replacement-property.svg"/>' + '</span>' + '    <span slot="content">Changes to this property will trigger replacement.</span>' + "</pulumi-tooltip>");
 })(jQuery);

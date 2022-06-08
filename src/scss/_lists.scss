@@ -85,6 +85,16 @@ dl {
                 }
             }
 
+            &.property-replacement {
+                .property-indicator-replacement {
+                    img {
+                        @apply mr-1 ml-1 inline;
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+
             &.property-deprecated {
                 ~ dd {
                     .property-message {
@@ -93,6 +103,18 @@ dl {
                         code {
                             @apply bg-orange-200;
                         }
+                    }
+                }
+            }
+
+            .multi-property-container {
+                @apply inline-flex items-center;
+
+                .replacement-container {
+                    @apply ml-14;
+
+                    @screen sm {
+                        @apply ml-0;
                     }
                 }
             }
