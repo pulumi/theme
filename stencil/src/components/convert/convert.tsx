@@ -434,6 +434,14 @@ export class Convert {
         return classes.filter(c => c && c !== "").join(" ");
     }
 
+    // A helper function that returns a consistent label for click-tracking events.
+    private trackEventLabel(source: string): string {
+        if (!this.from || !this.selectedOutputLanguage) {
+            return "";
+        }
+        return ["convert", this.from, source, this.selectedOutputLanguage.key].join("-");
+    }
+
     // Render the editor's "window" bar.
     private renderWindowBar() {
         return (
@@ -450,7 +458,12 @@ export class Convert {
     // Render an individual editor tab.
     private renderTab(item: any, activeItem: any, label: string, title: string, handler: Function): HTMLLIElement {
         return (
-            <li onClick={handler.bind(this, item)} class={this.combineClasses("tab", item === activeItem ? "active" : "")} title={title}>
+            <li
+                onClick={handler.bind(this, item)}
+                data-track={this.trackEventLabel("tab")}
+                class={this.combineClasses("tab", item === activeItem ? "active" : "")}
+                title={title}
+            >
                 <span class="label">{label}</span>
                 <span class="indicator"></span>
             </li>
@@ -464,6 +477,7 @@ export class Convert {
         const button = (
             <button
                 onClick={this.convert.bind(this)}
+                data-track={this.trackEventLabel("button")}
                 class={this.combineClasses("btn-convert", this.converting ? "converting" : "")}
                 title={title}
                 disabled={!this.convertible || this.converting}
@@ -606,13 +620,13 @@ export class Convert {
                                 )}
                                 <li class="actions">
                                     <pulumi-tooltip>
-                                        <button onClick={this.copyToClipboard.bind(this)} class="btn-copy">
+                                        <button onClick={this.copyToClipboard.bind(this)} data-track={this.trackEventLabel("copy")} class="btn-copy">
                                             <i></i>
                                         </button>
                                         <span slot="content">Copy to clipboard</span>
                                     </pulumi-tooltip>
                                     <pulumi-tooltip>
-                                        <button onClick={this.downloadZip.bind(this)} class="btn-download">
+                                        <button onClick={this.downloadZip.bind(this)} data-track={this.trackEventLabel("download")} class="btn-download">
                                             <i></i>
                                         </button>
                                         <span slot="content">Download as .zip</span>
