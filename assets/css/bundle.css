@@ -13807,7 +13807,7 @@ dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span{
 }
 
 .edition p,.edition span,.trialed-editions p,.trialed-editions span,.ready-cta p,.ready-cta span{
-  color:#2f3032 !important
+  color:#404041 !important
 }
 
 .ready-cta.gradient{
@@ -14620,14 +14620,14 @@ body.section-pulumi-up .why-attend div[class^=icon-] svg,body.section-pulumi-up 
   padding:1rem !important;
   padding-left:2.5rem !important;
   border-radius:.25rem !important;
-  border-color:#d8d9df !important;
+  border-color:#b0b0b0 !important;
   font-family:"Inter" !important;
   background:none !important;
   transition:all 120ms linear
 }
 
 .st-default-search-input::placeholder{
-  color:#8e8f97 !important
+  color:#5a5a5a !important
 }
 
 .st-default-search-input.docs,.st-default-search-input.registry{
