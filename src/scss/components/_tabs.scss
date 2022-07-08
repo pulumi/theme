@@ -3,7 +3,11 @@ pulumi-tabs {
     // The tab list.
     &::part(tabs) {
         // If we don't to this, we'll get a flash of unstyled content.
-        @apply list-none p-0 mb-2 justify-center;
+        @apply list-none p-0 mb-2 overflow-scroll;
+
+        @screen md {
+            @apply justify-center;
+        }
     }
 
     // An individual tab.
