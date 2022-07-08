@@ -4,8 +4,8 @@ import { Component, Element, Event, EventEmitter, h, State } from "@stencil/core
     tag: "pulumi-tabs",
     shadow: true,
 
-    // Tabs have default structural styles, like horizontally aligned tabs and anchor
-    // links with pointer cursors.
+    // Tabs have default structural styles, like block layout, horizontally aligned tabs,
+    // and pointer cursors.
     styles: `
         :host {
             display: block;
@@ -14,7 +14,6 @@ import { Component, Element, Event, EventEmitter, h, State } from "@stencil/core
             display: flex;
             width: 100%;
             align-items: center;
-            justify-content: flex-start;
             margin: 0;
             padding: 0;
             width: auto;
@@ -23,6 +22,8 @@ import { Component, Element, Event, EventEmitter, h, State } from "@stencil/core
         li a {
             cursor: pointer;
             display: inline-flex;
+            text-align: center;
+            white-space: nowrap;
         }
     `
 })

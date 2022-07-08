@@ -17796,8 +17796,14 @@ pulumi-tertiary-nav ul li:not(.active):hover>a{
 pulumi-tabs::part(tabs){
   margin-bottom: 0.5rem;
   list-style-type: none;
-  justify-content: center;
+  overflow: scroll;
   padding: 0px
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(tabs){
+    justify-content: center
+  }
 }
 
 pulumi-tabs::part(tab){
