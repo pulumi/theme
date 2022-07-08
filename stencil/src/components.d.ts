@@ -142,6 +142,12 @@ export namespace Components {
         "startSwiper": () => Promise<void>;
         "stopSwiper": () => Promise<void>;
     }
+    interface PulumiTab {
+        "active": boolean;
+        "label": string;
+    }
+    interface PulumiTabs {
+    }
     interface PulumiTertiaryNav {
         "items": string;
         "selection": any;
@@ -310,6 +316,18 @@ declare global {
         prototype: HTMLPulumiSwiperElement;
         new (): HTMLPulumiSwiperElement;
     };
+    interface HTMLPulumiTabElement extends Components.PulumiTab, HTMLStencilElement {
+    }
+    var HTMLPulumiTabElement: {
+        prototype: HTMLPulumiTabElement;
+        new (): HTMLPulumiTabElement;
+    };
+    interface HTMLPulumiTabsElement extends Components.PulumiTabs, HTMLStencilElement {
+    }
+    var HTMLPulumiTabsElement: {
+        prototype: HTMLPulumiTabsElement;
+        new (): HTMLPulumiTabsElement;
+    };
     interface HTMLPulumiTertiaryNavElement extends Components.PulumiTertiaryNav, HTMLStencilElement {
     }
     var HTMLPulumiTertiaryNavElement: {
@@ -360,6 +378,8 @@ declare global {
         "pulumi-slot-machine": HTMLPulumiSlotMachineElement;
         "pulumi-swipeable": HTMLPulumiSwipeableElement;
         "pulumi-swiper": HTMLPulumiSwiperElement;
+        "pulumi-tab": HTMLPulumiTabElement;
+        "pulumi-tabs": HTMLPulumiTabsElement;
         "pulumi-tertiary-nav": HTMLPulumiTertiaryNavElement;
         "pulumi-tooltip": HTMLPulumiTooltipElement;
         "pulumi-top-button": HTMLPulumiTopButtonElement;
@@ -492,6 +512,13 @@ declare namespace LocalJSX {
         "spaceBetween"?: number;
         "speed"?: number;
     }
+    interface PulumiTab {
+        "active"?: boolean;
+        "label"?: string;
+    }
+    interface PulumiTabs {
+        "onTabSelect"?: (event: CustomEvent<any[]>) => void;
+    }
     interface PulumiTertiaryNav {
         "items"?: string;
         "selection"?: any;
@@ -532,6 +559,8 @@ declare namespace LocalJSX {
         "pulumi-slot-machine": PulumiSlotMachine;
         "pulumi-swipeable": PulumiSwipeable;
         "pulumi-swiper": PulumiSwiper;
+        "pulumi-tab": PulumiTab;
+        "pulumi-tabs": PulumiTabs;
         "pulumi-tertiary-nav": PulumiTertiaryNav;
         "pulumi-tooltip": PulumiTooltip;
         "pulumi-top-button": PulumiTopButton;
@@ -567,6 +596,8 @@ declare module "@stencil/core" {
             "pulumi-slot-machine": LocalJSX.PulumiSlotMachine & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
             "pulumi-swipeable": LocalJSX.PulumiSwipeable & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;
             "pulumi-swiper": LocalJSX.PulumiSwiper & JSXBase.HTMLAttributes<HTMLPulumiSwiperElement>;
+            "pulumi-tab": LocalJSX.PulumiTab & JSXBase.HTMLAttributes<HTMLPulumiTabElement>;
+            "pulumi-tabs": LocalJSX.PulumiTabs & JSXBase.HTMLAttributes<HTMLPulumiTabsElement>;
             "pulumi-tertiary-nav": LocalJSX.PulumiTertiaryNav & JSXBase.HTMLAttributes<HTMLPulumiTertiaryNavElement>;
             "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
             "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
