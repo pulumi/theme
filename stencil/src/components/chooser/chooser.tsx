@@ -373,6 +373,12 @@ export class Chooser {
             preview: false,
         },
         {
+            key: "javascript",
+            name: "JavaScript",
+            extension: "js",
+            preview: false,
+        },
+        {
             key: "python",
             name: "Python",
             extension: "py",
