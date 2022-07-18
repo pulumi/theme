@@ -17793,6 +17793,54 @@ pulumi-tertiary-nav ul li:not(.active):hover>a{
   color: rgba(0, 0, 0, var(--tw-text-opacity))
 }
 
+pulumi-tabs::part(tabs){
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  overflow: scroll;
+  padding: 0px
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(tabs){
+    justify-content: center
+  }
+}
+
+pulumi-tabs::part(tab){
+  background-color: transparent;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-bottom:2px solid transparent
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(tab){
+    font-size: 1.125rem;
+    line-height: 1.75rem
+  }
+}
+
+pulumi-tabs::part(active-tab){
+  border-bottom:2px solid;
+  border-image-slice:1;
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
+}
+
+pulumi-tabs::part(anchor){
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(anchor){
+    padding-left: 2rem;
+    padding-right: 2rem
+  }
+}
+
 h1, h2, h3, h4, h5, h6{
   margin-bottom: 0.5rem;
   font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
