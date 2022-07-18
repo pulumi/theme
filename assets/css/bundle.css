@@ -1,5 +1,14 @@
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 @import url(https://unpkg.com/swiper@6.5.6/swiper-bundle.min.css);
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/scss/main.scss (2) ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -17791,6 +17800,54 @@ pulumi-tertiary-nav ul li:not(.active):hover{
 pulumi-tertiary-nav ul li:not(.active):hover>a{
   --tw-text-opacity: 1;
   color: rgba(0, 0, 0, var(--tw-text-opacity))
+}
+
+pulumi-tabs::part(tabs){
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  overflow: scroll;
+  padding: 0px
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(tabs){
+    justify-content: center
+  }
+}
+
+pulumi-tabs::part(tab){
+  background-color: transparent;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-bottom:2px solid transparent
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(tab){
+    font-size: 1.125rem;
+    line-height: 1.75rem
+  }
+}
+
+pulumi-tabs::part(active-tab){
+  border-bottom:2px solid;
+  border-image-slice:1;
+  border-image-source:linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%)
+}
+
+pulumi-tabs::part(anchor){
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}
+
+@media (min-width: 768px){
+  pulumi-tabs::part(anchor){
+    padding-left: 2rem;
+    padding-right: 2rem
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
