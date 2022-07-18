@@ -19,9 +19,15 @@ import { Component, Element, Event, EventEmitter, h, State } from "@stencil/core
             width: auto;
             list-style-type: none;
         }
+        li {
+            display: flex;
+            justify-content: center;
+        }
         li a {
             cursor: pointer;
-            display: inline-flex;
+            display: flex;
+            justify-content: center;
+            flex: 1;
             text-align: center;
             white-space: nowrap;
         }
