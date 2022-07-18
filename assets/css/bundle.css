@@ -17795,30 +17795,27 @@ pulumi-tertiary-nav ul li:not(.active):hover>a{
 
 pulumi-tabs::part(tabs){
   margin-bottom: 0.5rem;
+  display: flex;
   list-style-type: none;
   overflow: scroll;
   padding: 0px
 }
 
-@media (min-width: 768px){
-  pulumi-tabs::part(tabs){
+pulumi-tabs::part(tab){
+  flex: 1 1 auto;
+  background-color: transparent;
+  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-bottom:2px solid #e5e5e9
+}
+
+@media (min-width: 640px){
+  pulumi-tabs[justify=center]::part(tabs){
     justify-content: center
   }
 }
 
-pulumi-tabs::part(tab){
-  background-color: transparent;
-  font-family: Gilroy, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-bottom:2px solid transparent
-}
-
-@media (min-width: 768px){
-  pulumi-tabs::part(tab){
-    font-size: 1.125rem;
-    line-height: 1.75rem
-  }
+pulumi-tabs[justify=center]::part(tab){
+  flex: none
 }
 
 pulumi-tabs::part(active-tab){
