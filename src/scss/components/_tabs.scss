@@ -3,20 +3,24 @@ pulumi-tabs {
     // The tab list.
     &::part(tabs) {
         // If we don't to this, we'll get a flash of unstyled content.
-        @apply list-none p-0 mb-2 overflow-scroll;
-
-        @screen md {
-            @apply justify-center;
-        }
+        @apply list-none p-0 mb-2 overflow-scroll flex;
     }
 
     // An individual tab.
     &::part(tab) {
-        @apply font-display text-base bg-transparent;
-        border-bottom: 2px solid transparent;
+        @apply font-display bg-transparent flex-auto;
+        border-bottom: 2px solid theme("colors.gray.300");
+    }
 
-        @screen md {
-            @apply text-lg;
+    &[justify="center"] {
+        &::part(tabs) {
+            @screen sm {
+                @apply justify-center;
+            }
+        }
+
+        &::part(tab) {
+            @apply flex-none;
         }
     }
 
