@@ -158,6 +158,7 @@ const green = {
 
 module.exports = {
     purge: false,
+    important: true,
     theme: {
         extend: {
             fontFamily: {
