@@ -96,6 +96,15 @@
             @include gradient-button;
             @apply py-4 px-12 text-lg;
         }
+
+        .home-hero-btn-secondary {
+            @include gradient-button;
+            @apply py-4 px-12 text-lg;
+            @apply bg-white border-2 border-blue-500 text-blue-600;
+            &:hover {
+                @apply bg-blue-500 text-white;
+            }
+        }
     }
 }
 
