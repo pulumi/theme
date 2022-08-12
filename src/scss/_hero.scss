@@ -96,6 +96,10 @@
             @include gradient-button;
             @apply py-4 px-12 text-lg;
         }
+
+        .home-hero-btn-secondary {
+            @apply py-4 px-12 text-lg;
+        }
     }
 }
 
