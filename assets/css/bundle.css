@@ -4493,6 +4493,22 @@ ul.glossary{
   padding-left: 0px
 }
 
+.hs-form .hs-fieldtype-booleancheckbox ul{
+  list-style-type: none;
+  padding-left: 0px
+}
+
+.hs-form .hs-form-booleancheckbox label{
+  cursor:pointer
+}
+
+.hs-form .hs-form-booleancheckbox-display .hs-input{
+  margin-right: 0.75rem;
+  display: inline-block;
+  width:auto !important;
+  margin-top:4px
+}
+
 /*!
  * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

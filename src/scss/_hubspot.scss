@@ -134,4 +134,19 @@
     .legal-consent-container ul {
         @apply list-none pl-0;
     }
+
+    .hs-fieldtype-booleancheckbox ul {
+        @apply list-none pl-0;
+    }
+
+    .hs-form-booleancheckbox label {
+        cursor: pointer;
+    }
+
+    .hs-form-booleancheckbox-display .hs-input {
+        @apply inline-block mr-3;
+
+        width: auto !important;
+        margin-top: 4px;
+    }
 }
