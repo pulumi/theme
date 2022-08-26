@@ -12998,7 +12998,7 @@ ul.glossary{
   font-size:3rem
 }
 
-dl.resources-properties, dl.package-details, dl.tabular{
+dl.resources-properties, dl.package-details, dl.tabular, body.section-docs dl{
   margin-top: 1rem;
   margin-bottom: 2rem;
   display: flex;
@@ -13019,29 +13019,29 @@ dl.resources-properties, dl.package-details, dl.tabular{
 }
 
 @media (min-width: 1024px){
-  dl.resources-properties, dl.package-details, dl.tabular{
+  dl.resources-properties, dl.package-details, dl.tabular, body.section-docs dl{
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  dl.resources-properties dt, dl.package-details dt, dl.tabular dt{
+  dl.resources-properties dt, dl.package-details dt, dl.tabular dt, body.section-docs dl dt{
     width: 33.333333%;
   }
 
-  dl.resources-properties dd, dl.package-details dd, dl.tabular dd{
+  dl.resources-properties dd, dl.package-details dd, dl.tabular dd, body.section-docs dl dd{
     width: 66.666667%;
   }
 
-  dl.resources-properties.tabular-5-col dt, dl.package-details.tabular-5-col dt, dl.tabular.tabular-5-col dt{
+  dl.resources-properties.tabular-5-col dt, dl.package-details.tabular-5-col dt, dl.tabular.tabular-5-col dt, body.section-docs dl.tabular-5-col dt{
     width: 40%;
   }
 
-  dl.resources-properties.tabular-5-col dd, dl.package-details.tabular-5-col dd, dl.tabular.tabular-5-col dd{
+  dl.resources-properties.tabular-5-col dd, dl.package-details.tabular-5-col dd, dl.tabular.tabular-5-col dd, body.section-docs dl.tabular-5-col dd{
     width: 60%;
   }
 }
 
-dl.resources-properties dt, dl.package-details dt, dl.tabular dt{
+dl.resources-properties dt, dl.package-details dt, dl.tabular dt, body.section-docs dl dt{
   border-radius: 0px;
   --tw-border-opacity: 1;
   border-color: rgba(216, 217, 223, var(--tw-border-opacity));
@@ -13053,96 +13053,96 @@ dl.resources-properties dt, dl.package-details dt, dl.tabular dt{
 }
 
 @media (min-width: 1024px){
-  dl.resources-properties dt, dl.package-details dt, dl.tabular dt{
+  dl.resources-properties dt, dl.package-details dt, dl.tabular dt, body.section-docs dl dt{
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
 }
 
-dl.resources-properties dd, dl.package-details dd, dl.tabular dd{
+dl.resources-properties dd, dl.package-details dd, dl.tabular dd, body.section-docs dl dd{
   border-radius: 0px;
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
 
-dl.resources-properties dd p, dl.package-details dd p, dl.tabular dd p{
+dl.resources-properties dd p, dl.package-details dd p, dl.tabular dd p, body.section-docs dl dd p{
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-dl.resources-properties dd p:not(:first-child), dl.package-details dd p:not(:first-child), dl.tabular dd p:not(:first-child){
+dl.resources-properties dd p:not(:first-child), dl.package-details dd p:not(:first-child), dl.tabular dd p:not(:first-child), body.section-docs dl dd p:not(:first-child){
   margin-top: 1rem;
 }
 
 @media (min-width: 1024px){
-  dl.resources-properties dd, dl.package-details dd, dl.tabular dd{
+  dl.resources-properties dd, dl.package-details dd, dl.tabular dd, body.section-docs dl dd{
     border-top-right-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
   }
 }
 
-dl.resources-properties dt, dl.resources-properties dd, dl.package-details dt, dl.package-details dd, dl.tabular dt, dl.tabular dd{
+dl.resources-properties dt, dl.resources-properties dd, dl.package-details dt, dl.package-details dd, dl.tabular dt, dl.tabular dd, body.section-docs dl dt, body.section-docs dl dd{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-dl.resources-properties dt:not(:first-of-type), dl.resources-properties dd:not(:first-of-type), dl.package-details dt:not(:first-of-type), dl.package-details dd:not(:first-of-type), dl.tabular dt:not(:first-of-type), dl.tabular dd:not(:first-of-type){
+dl.resources-properties dt:not(:first-of-type), dl.resources-properties dd:not(:first-of-type), dl.package-details dt:not(:first-of-type), dl.package-details dd:not(:first-of-type), dl.tabular dt:not(:first-of-type), dl.tabular dd:not(:first-of-type), body.section-docs dl dt:not(:first-of-type), body.section-docs dl dd:not(:first-of-type){
   border-top-width: 1px;
 }
 
 @media (min-width: 1024px){
-  dl.resources-properties dt:not(:first-of-type), dl.resources-properties dd:not(:first-of-type), dl.package-details dt:not(:first-of-type), dl.package-details dd:not(:first-of-type), dl.tabular dt:not(:first-of-type), dl.tabular dd:not(:first-of-type){
+  dl.resources-properties dt:not(:first-of-type), dl.resources-properties dd:not(:first-of-type), dl.package-details dt:not(:first-of-type), dl.package-details dd:not(:first-of-type), dl.tabular dt:not(:first-of-type), dl.tabular dd:not(:first-of-type), body.section-docs dl dt:not(:first-of-type), body.section-docs dl dd:not(:first-of-type){
     --tw-border-opacity: 1;
     border-color: rgba(242, 242, 244, var(--tw-border-opacity));
   }
 }
 
-dl.resources-properties dt a, dl.resources-properties dd a, dl.package-details dt a, dl.package-details dd a, dl.tabular dt a, dl.tabular dd a{
+dl.resources-properties dt a, dl.resources-properties dd a, dl.package-details dt a, dl.package-details dd a, dl.tabular dt a, dl.tabular dd a, body.section-docs dl dt a, body.section-docs dl dd a{
   --tw-text-opacity: 1;
   color: rgba(77, 91, 217, var(--tw-text-opacity));
 }
 
-dl.resources-properties dt, dl.package-details dt, dl.tabular dt{
+dl.resources-properties dt, dl.package-details dt, dl.tabular dt, body.section-docs dl dt{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-dl.resources-properties dt.property-required .property-indicator, dl.resources-properties dt.property-deprecated .property-indicator, dl.package-details dt.property-required .property-indicator, dl.package-details dt.property-deprecated .property-indicator, dl.tabular dt.property-required .property-indicator, dl.tabular dt.property-deprecated .property-indicator{
+dl.resources-properties dt.property-required .property-indicator, dl.resources-properties dt.property-deprecated .property-indicator, dl.package-details dt.property-required .property-indicator, dl.package-details dt.property-deprecated .property-indicator, dl.tabular dt.property-required .property-indicator, dl.tabular dt.property-deprecated .property-indicator, body.section-docs dl dt.property-required .property-indicator, body.section-docs dl dt.property-deprecated .property-indicator{
   margin-left: 0.25rem;
   cursor: pointer;
 }
 
-dl.resources-properties dt.property-required .property-indicator,dl.resources-properties dt.property-deprecated .property-indicator,dl.package-details dt.property-required .property-indicator,dl.package-details dt.property-deprecated .property-indicator,dl.tabular dt.property-required .property-indicator,dl.tabular dt.property-deprecated .property-indicator{
+dl.resources-properties dt.property-required .property-indicator,dl.resources-properties dt.property-deprecated .property-indicator,dl.package-details dt.property-required .property-indicator,dl.package-details dt.property-deprecated .property-indicator,dl.tabular dt.property-required .property-indicator,dl.tabular dt.property-deprecated .property-indicator,body.section-docs dl dt.property-required .property-indicator,body.section-docs dl dt.property-deprecated .property-indicator{
   font-size:.6em;
 }
 
-dl.resources-properties dt.property-required .property-indicator, dl.package-details dt.property-required .property-indicator, dl.tabular dt.property-required .property-indicator{
+dl.resources-properties dt.property-required .property-indicator, dl.package-details dt.property-required .property-indicator, dl.tabular dt.property-required .property-indicator, body.section-docs dl dt.property-required .property-indicator{
   --tw-text-opacity: 1;
   color: rgba(245, 101, 101, var(--tw-text-opacity));
 }
 
-dl.resources-properties dt.property-required .property-indicator,dl.package-details dt.property-required .property-indicator,dl.tabular dt.property-required .property-indicator{
+dl.resources-properties dt.property-required .property-indicator,dl.package-details dt.property-required .property-indicator,dl.tabular dt.property-required .property-indicator,body.section-docs dl dt.property-required .property-indicator{
   font-family:"Font Awesome 5 Free";
 }
 
-dl.resources-properties dt.property-required .property-indicator:after,dl.package-details dt.property-required .property-indicator:after,dl.tabular dt.property-required .property-indicator:after{
+dl.resources-properties dt.property-required .property-indicator:after,dl.package-details dt.property-required .property-indicator:after,dl.tabular dt.property-required .property-indicator:after,body.section-docs dl dt.property-required .property-indicator:after{
   content:""
 }
 
-dl.resources-properties dt.property-replacement .property-indicator-replacement img, dl.package-details dt.property-replacement .property-indicator-replacement img, dl.tabular dt.property-replacement .property-indicator-replacement img{
+dl.resources-properties dt.property-replacement .property-indicator-replacement img, dl.package-details dt.property-replacement .property-indicator-replacement img, dl.tabular dt.property-replacement .property-indicator-replacement img, body.section-docs dl dt.property-replacement .property-indicator-replacement img{
   margin-right: 0.25rem;
   margin-left: 0.25rem;
   display: inline;
 }
 
-dl.resources-properties dt.property-replacement .property-indicator-replacement img,dl.package-details dt.property-replacement .property-indicator-replacement img,dl.tabular dt.property-replacement .property-indicator-replacement img{
+dl.resources-properties dt.property-replacement .property-indicator-replacement img,dl.package-details dt.property-replacement .property-indicator-replacement img,dl.tabular dt.property-replacement .property-indicator-replacement img,body.section-docs dl dt.property-replacement .property-indicator-replacement img{
   height:18px;
   width:18px;
 }
 
-dl.resources-properties dt.property-deprecated~dd .property-message, dl.package-details dt.property-deprecated~dd .property-message, dl.tabular dt.property-deprecated~dd .property-message{
+dl.resources-properties dt.property-deprecated~dd .property-message, dl.package-details dt.property-deprecated~dd .property-message, dl.tabular dt.property-deprecated~dd .property-message, body.section-docs dl dt.property-deprecated~dd .property-message{
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.25rem;
@@ -13158,27 +13158,27 @@ dl.resources-properties dt.property-deprecated~dd .property-message, dl.package-
   color: rgba(225, 125, 71, var(--tw-text-opacity));
 }
 
-dl.resources-properties dt.property-deprecated~dd .property-message code, dl.package-details dt.property-deprecated~dd .property-message code, dl.tabular dt.property-deprecated~dd .property-message code{
+dl.resources-properties dt.property-deprecated~dd .property-message code, dl.package-details dt.property-deprecated~dd .property-message code, dl.tabular dt.property-deprecated~dd .property-message code, body.section-docs dl dt.property-deprecated~dd .property-message code{
   --tw-bg-opacity: 1;
   background-color: rgba(253, 230, 196, var(--tw-bg-opacity));
 }
 
-dl.resources-properties dt .multi-property-container, dl.package-details dt .multi-property-container, dl.tabular dt .multi-property-container{
+dl.resources-properties dt .multi-property-container, dl.package-details dt .multi-property-container, dl.tabular dt .multi-property-container, body.section-docs dl dt .multi-property-container{
   display: inline-flex;
   align-items: center;
 }
 
-dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container{
+dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container, body.section-docs dl dt .multi-property-container .replacement-container{
   margin-left: 3.5rem;
 }
 
 @media (min-width: 640px){
-  dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container{
+  dl.resources-properties dt .multi-property-container .replacement-container, dl.package-details dt .multi-property-container .replacement-container, dl.tabular dt .multi-property-container .replacement-container, body.section-docs dl dt .multi-property-container .replacement-container{
     margin-left: 0px;
   }
 }
 
-dl.resources-properties dt .property-type, dl.package-details dt .property-type, dl.tabular dt .property-type{
+dl.resources-properties dt .property-type, dl.package-details dt .property-type, dl.tabular dt .property-type, body.section-docs dl dt .property-type{
   margin-top: 0.5rem;
   display: block;
   font-family: Roboto Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -13187,12 +13187,12 @@ dl.resources-properties dt .property-type, dl.package-details dt .property-type,
   font-weight: 400;
 }
 
-dl.resources-properties dt .property-type a, dl.package-details dt .property-type a, dl.tabular dt .property-type a{
+dl.resources-properties dt .property-type a, dl.package-details dt .property-type a, dl.tabular dt .property-type a, body.section-docs dl dt .property-type a{
   --tw-text-opacity: 1;
   color: rgba(77, 91, 217, var(--tw-text-opacity));
 }
 
-dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span{
+dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span, body.section-docs dl dt span{
   vertical-align: middle;
 }
 
