@@ -53,16 +53,6 @@
 .home-page-hero {
     @apply relative w-full;
 
-    // TODO: header + body should equal 100vh
-    height: 100%;
-
-    @screen lg {
-        // 145px is the combined height of nav and header
-        height: calc(50vh - 145px);
-        min-height: 400px;
-        max-height: 600px;
-    }
-
     .dot-overlay {
         @apply w-full h-full absolute top-0 left-0 pointer-events-none;
         background: linear-gradient(175deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0.5004551991695115) 50%, rgba(255, 255, 255, 1) 95%);
@@ -70,7 +60,7 @@
     }
 
     .home-page-hero-content {
-        @apply flex flex-col items-center justify-center pt-24 pb-40;
+        @apply flex flex-col items-start justify-center pt-12;
         z-index: 100;
 
         @screen lg {
@@ -83,10 +73,11 @@
         }
 
         h1 {
-            @apply text-center;
-            font-size: 2.375rem !important;
+            @apply text-center mx-auto;
+            //font-size: 2.375rem !important;
 
             @screen lg {
+                @apply text-left mx-0;
                 line-height: 5.5rem !important;
                 font-size: 5.25rem !important;
             }
