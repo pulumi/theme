@@ -13328,25 +13328,6 @@ dl.resources-properties dt span, dl.package-details dt span, dl.tabular dt span,
   display: none
 }
 
-.all-packages .maintainer{
-  width:calc(100% - 4rem)
-}
-
-@media(max-width: 475px){
-  .all-packages .maintainer{
-    position: relative;
-    justify-content: flex-start
-  }
-}
-
-@media(max-width: 475px){
-  .all-packages .spacer{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    height: 0px
-  }
-}
-
 .all-packages .package-tags{
   display: inline-flex;
   list-style-type: none;
