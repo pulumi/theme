@@ -9,20 +9,6 @@
         }
     }
 
-    .maintainer {
-        width: calc(100% - 4rem);
-
-        @media (max-width: 475px) {
-            @apply relative justify-start;
-        }
-    }
-
-    .spacer {
-        @media (max-width: 475px) {
-            @apply h-0 mt-6 mb-6;
-        }
-    }
-
     .package-tags {
         @apply inline-flex flex-wrap list-none p-0;
 
