@@ -8,7 +8,7 @@
 {{ $js := resources.Get "js/bundle.js" | fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
 
-{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "authors" "tags" "legal" }}
+{{ $nonMarketingSections := slice "docs" "registry" "blog" "learn" "templates" "authors" "tags" "legal" }}
 {{ if in $nonMarketingSections .Section }}
 {{ else }}
     {{ $marketingCss := resources.Get "css/marketing.css" | fingerprint }}
