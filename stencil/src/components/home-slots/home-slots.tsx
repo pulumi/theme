@@ -44,14 +44,14 @@ export class HomeSlots {
     }
 
     private startRotators() {
-        this.columnOneRotator = setInterval(() => this.incrementColumnOne(), 200);
+        this.columnOneRotator = setInterval(() => this.incrementColumnOne(), 400);
 
         setTimeout(() => {
-            this.columnTwoRotator = setInterval(() => this.incrementColumnTwo(), 200);
+            this.columnTwoRotator = setInterval(() => this.incrementColumnTwo(), 400);
         }, 500);
 
         setTimeout(() => {
-            this.columnThreeRotator = setInterval(() => this.incrementColumnThree(), 200);
+            this.columnThreeRotator = setInterval(() => this.incrementColumnThree(), 400);
         }, 1000);
 
         setTimeout(() => this.stopRotators(), 3000);
@@ -62,7 +62,7 @@ export class HomeSlots {
         setTimeout(() => clearInterval(this.columnTwoRotator), 500);
         setTimeout(() => clearInterval(this.columnThreeRotator), 1000);
 
-        setTimeout(() => this.startRotators(), 5000);
+        setTimeout(() => this.startRotators(), 10000);
     }
 
     private incrementColumnOne() {
