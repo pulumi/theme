@@ -170,6 +170,12 @@ export namespace Components {
         "selectClass"?: string;
         "sessions": string;
     }
+    interface SlotMachineResult {
+        "centerItems": string;
+        "imageClass": string;
+        "leftItems": string;
+        "rightItems": string;
+    }
 }
 declare global {
     interface HTMLEventSessionRegistrationModalElement extends Components.EventSessionRegistrationModal, HTMLStencilElement {
@@ -364,6 +370,12 @@ declare global {
         prototype: HTMLPulumiWebinarFormSelectElement;
         new (): HTMLPulumiWebinarFormSelectElement;
     };
+    interface HTMLSlotMachineResultElement extends Components.SlotMachineResult, HTMLStencilElement {
+    }
+    var HTMLSlotMachineResultElement: {
+        prototype: HTMLSlotMachineResultElement;
+        new (): HTMLSlotMachineResultElement;
+    };
     interface HTMLElementTagNameMap {
         "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
         "home-slots": HTMLHomeSlotsElement;
@@ -397,6 +409,7 @@ declare global {
         "pulumi-tooltip": HTMLPulumiTooltipElement;
         "pulumi-top-button": HTMLPulumiTopButtonElement;
         "pulumi-webinar-form-select": HTMLPulumiWebinarFormSelectElement;
+        "slot-machine-result": HTMLSlotMachineResultElement;
     }
 }
 declare namespace LocalJSX {
@@ -552,6 +565,12 @@ declare namespace LocalJSX {
         "selectClass"?: string;
         "sessions"?: string;
     }
+    interface SlotMachineResult {
+        "centerItems"?: string;
+        "imageClass"?: string;
+        "leftItems"?: string;
+        "rightItems"?: string;
+    }
     interface IntrinsicElements {
         "event-session-registration-modal": EventSessionRegistrationModal;
         "home-slots": HomeSlots;
@@ -585,6 +604,7 @@ declare namespace LocalJSX {
         "pulumi-tooltip": PulumiTooltip;
         "pulumi-top-button": PulumiTopButton;
         "pulumi-webinar-form-select": PulumiWebinarFormSelect;
+        "slot-machine-result": SlotMachineResult;
     }
 }
 export { LocalJSX as JSX };
@@ -623,6 +643,7 @@ declare module "@stencil/core" {
             "pulumi-tooltip": LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;
             "pulumi-top-button": LocalJSX.PulumiTopButton & JSXBase.HTMLAttributes<HTMLPulumiTopButtonElement>;
             "pulumi-webinar-form-select": LocalJSX.PulumiWebinarFormSelect & JSXBase.HTMLAttributes<HTMLPulumiWebinarFormSelectElement>;
+            "slot-machine-result": LocalJSX.SlotMachineResult & JSXBase.HTMLAttributes<HTMLSlotMachineResultElement>;
         }
     }
 }
