@@ -19,6 +19,12 @@ export namespace Components {
         "modalTitle": string;
         "redirectUrl": string;
     }
+    interface HomeSlots {
+        "centerItems": string;
+        "imageClass": string;
+        "leftItems": string;
+        "rightItems": string;
+    }
     interface PulumiApiDocFilterableNav {
         "baseDirectory": string;
         "packageName": string;
@@ -171,6 +177,12 @@ declare global {
     var HTMLEventSessionRegistrationModalElement: {
         prototype: HTMLEventSessionRegistrationModalElement;
         new (): HTMLEventSessionRegistrationModalElement;
+    };
+    interface HTMLHomeSlotsElement extends Components.HomeSlots, HTMLStencilElement {
+    }
+    var HTMLHomeSlotsElement: {
+        prototype: HTMLHomeSlotsElement;
+        new (): HTMLHomeSlotsElement;
     };
     interface HTMLPulumiApiDocFilterableNavElement extends Components.PulumiApiDocFilterableNav, HTMLStencilElement {
     }
@@ -354,6 +366,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "event-session-registration-modal": HTMLEventSessionRegistrationModalElement;
+        "home-slots": HTMLHomeSlotsElement;
         "pulumi-api-doc-filterable-nav": HTMLPulumiApiDocFilterableNavElement;
         "pulumi-api-doc-nav-node": HTMLPulumiApiDocNavNodeElement;
         "pulumi-api-doc-nav-tree": HTMLPulumiApiDocNavTreeElement;
@@ -393,6 +406,12 @@ declare namespace LocalJSX {
         "eventSessions"?: string;
         "modalTitle"?: string;
         "redirectUrl"?: string;
+    }
+    interface HomeSlots {
+        "centerItems"?: string;
+        "imageClass"?: string;
+        "leftItems"?: string;
+        "rightItems"?: string;
     }
     interface PulumiApiDocFilterableNav {
         "baseDirectory"?: string;
@@ -535,6 +554,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "event-session-registration-modal": EventSessionRegistrationModal;
+        "home-slots": HomeSlots;
         "pulumi-api-doc-filterable-nav": PulumiApiDocFilterableNav;
         "pulumi-api-doc-nav-node": PulumiApiDocNavNode;
         "pulumi-api-doc-nav-tree": PulumiApiDocNavTree;
@@ -572,6 +592,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "event-session-registration-modal": LocalJSX.EventSessionRegistrationModal & JSXBase.HTMLAttributes<HTMLEventSessionRegistrationModalElement>;
+            "home-slots": LocalJSX.HomeSlots & JSXBase.HTMLAttributes<HTMLHomeSlotsElement>;
             "pulumi-api-doc-filterable-nav": LocalJSX.PulumiApiDocFilterableNav & JSXBase.HTMLAttributes<HTMLPulumiApiDocFilterableNavElement>;
             "pulumi-api-doc-nav-node": LocalJSX.PulumiApiDocNavNode & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavNodeElement>;
             "pulumi-api-doc-nav-tree": LocalJSX.PulumiApiDocNavTree & JSXBase.HTMLAttributes<HTMLPulumiApiDocNavTreeElement>;
