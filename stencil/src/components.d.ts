@@ -171,10 +171,7 @@ export namespace Components {
         "sessions": string;
     }
     interface SlotMachineResult {
-        "centerItems": string;
         "imageClass": string;
-        "leftItems": string;
-        "rightItems": string;
     }
 }
 declare global {
@@ -566,10 +563,7 @@ declare namespace LocalJSX {
         "sessions"?: string;
     }
     interface SlotMachineResult {
-        "centerItems"?: string;
         "imageClass"?: string;
-        "leftItems"?: string;
-        "rightItems"?: string;
     }
     interface IntrinsicElements {
         "event-session-registration-modal": EventSessionRegistrationModal;

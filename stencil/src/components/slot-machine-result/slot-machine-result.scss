@@ -1,12 +1,14 @@
 slot-machine-result {
-  .slot-container {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
 
-    .item-container {
+  .slot-container {
+
+    .margin-container {
       width: 25%;
+      text-align: center;
+    }
+
+    .logo-container {
+      width: 14%;
       text-align: center;
 
       img {
@@ -15,9 +17,45 @@ slot-machine-result {
     }
 
     .separator-container {
-      width: 12.5%;
+      width: 4%;
       text-align: center;
+      vertical-align: middle;
     }
+
+    .code-container {
+      flex-grow: 1;
+      height: 60vh;
+
+      img {
+        animation: fadeIn 500ms;
+        height:0;
+        min-height:100%;
+        object-fit: contain;
+      }
+    }
+
+    .code-row {
+      display: flex;
+      flex-grow: 1;
+      flex-flow: row nowrap;
+      align-items: center;
+      height: 60vh;
+      width: 100%;
+      margin-bottom: 1%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .description {
+      text-align: center;
+      margin: 1% 25%;
+      border: thin solid black;
+    }
+
   }
 
   @keyframes fadeIn {
