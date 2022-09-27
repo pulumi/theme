@@ -22,6 +22,7 @@ export class PulumiApiDocNavTree {
     }
 
     render() {
+        console.log("hellohellohello");
         return <pulumi-tree-view>{this.getNodes()}</pulumi-tree-view>;
     }
 }
