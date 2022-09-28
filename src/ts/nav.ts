@@ -20,17 +20,17 @@
         });
     }
 
-    $("#product-menu-label").click(function() {
+    $("#why-pulumi-menu-label").click(function() {
         $("#mobile-dropdown").scroll();
         $("#mobile-dropdown").animate({
-            scrollTop: $("#product-mobile-menu").position().top - 115
+            scrollTop: $("#why-pulumi-mobile-menu").position().top - 115
         }, 300);
     });
 
     $("#learn-menu-label").click(function() {
         $("#mobile-dropdown").scroll();
         $("#mobile-dropdown").animate({
-            scrollTop: $("#learn-mobile-menu").position().top
+            scrollTop: $("#learn-mobile-menu").position().top - 115
         }, 300);
     });
 

@@ -355,7 +355,7 @@
                     color: theme("colors.gray.800");
                     i {
                         min-width: 2rem;
-                        color: #4A5568;
+                        color: theme("colors.gray.700");
                     }
                 }
             }
@@ -372,8 +372,8 @@
                 opacity: 0%;
             }
 
-            #cloudeng-mobile-menu:checked ~ {
-                .mobile-menu-subitems-cloudeng {
+            #why-pulumi-mobile-menu:checked ~ {
+                .mobile-menu-subitems-why-pulumi {
                     @apply block;
                 }
                 .mobile-menu-heading {
