@@ -25,8 +25,6 @@
         let whyPulumiOpened = false;
         let learnOpened = false;
 
-        
-
         $("#why-pulumi-menu-label").click(function() {
             $("#mobile-dropdown").scroll();
             if (whyPulumiOpened) {
