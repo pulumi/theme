@@ -1,4 +1,5 @@
 import { Component, Listen, State, h } from "@stencil/core";
+import { resources } from "./resources"
 
 // Scroll to top button.
 @Component({
@@ -20,8 +21,11 @@ export class TopButton {
     }
 
     render() {
-        let buttonClass = `btn-scroll-top fas fa-chevron-up ${this.visible}`;
-        return <a class={buttonClass} title="Scroll to top" href="#"></a>;
+        // let buttonClass = `btn-scroll-top fas fa-chevron-up ${this.visible}`;
+        // return <a class={buttonClass} title="Scroll to top" href="#"></a>;
+        return Object.keys(resources).map(r => {
+            return <a>{r}</a>
+        })
     }
 
     setVisibility() {

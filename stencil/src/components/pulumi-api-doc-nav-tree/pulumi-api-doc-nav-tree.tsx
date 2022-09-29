@@ -14,10 +14,10 @@ export class PulumiApiDocNavTree {
     baseDirectory: string;
 
     getNodes(nodes: APINavNode[] = this.nodes) {
-        return nodes?.map(_ => {
-            // const nodeHref = `${this.baseDirectory}${node.link}`;
-            return <div>helloworld</div>
-            // return <pulumi-api-doc-nav-node node={node} isExpanded={node.isExpanded} href={nodeHref}></pulumi-api-doc-nav-node>;
+        return nodes?.map(node => {
+            const nodeHref = `${this.baseDirectory}${node.link}`;
+
+            return <pulumi-api-doc-nav-node node={node} isExpanded={node.isExpanded} href={nodeHref}></pulumi-api-doc-nav-node>;
         });
     }
 
