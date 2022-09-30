@@ -61,12 +61,14 @@ export class TopButton {
             return resources[r]
         });
         console.log("related", related)
+
         return related[0].map(t => {
             console.log(t)
             const module = getModuleFromType(t.type)
             const res = getObjFromType(t.type)
-            return <div><span class="link-container"><a href={`../../${module.toLowerCase()}/${res.toLowerCase()}`}>{`${module}/${res}`}</a></span></div>
+            return <li class="h2"><a href={`../../${module.toLowerCase()}/${res.toLowerCase()}`}>{`${module}/${res}`}</a></li>
         });
+
     }
 
     setVisibility() {
