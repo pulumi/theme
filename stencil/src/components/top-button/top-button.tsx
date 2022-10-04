@@ -67,7 +67,7 @@ export class TopButton {
             const module = getModuleFromType(t.type)
             const res = getObjFromType(t.type)
             return <li class="h2"><a href={`../../${module.toLowerCase()}/${res.toLowerCase()}`}>{`${module}/${res}`}</a></li>
-        });
+        }).slice(0,5);
 
     }
 
