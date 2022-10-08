@@ -1,8 +1,4 @@
-import { Component, Host, Prop, State, h } from "@stencil/core";
-
-// type apps = { [ app: string ]: string };
-// type cloudApps = { [cloud: string]: apps };
-// type languageCloudApps = { [language: string]: cloudApps };
+import {Component, h, Host, Prop, State} from "@stencil/core";
 
 @Component({
     tag: "slot-machine-result",
@@ -15,34 +11,35 @@ export class SlotMachineResult {
     // Note: this ordering was computed using the `slots.lp` A-Prolog program. See that file for further details.
     private order: string[] = [
         "typescript,kubernetes,nginx",
+        "yaml,aws,eks",
+        "java,azure,aks",
+        "go,gcp,gke",
+        "csharp,kubernetes,helm",
+        "go,aws,eks",
+        "typescript,gcp,gke",
+        "csharp,azure,aks",
+        "go,kubernetes,nginx",
+        "yaml,gcp,gke",
+        "go,azure,aks",
+        "typescript,kubernetes,helm",
+        "csharp,gcp,gke",
+        "python,kubernetes,helm",
+        "yaml,azure,aks",
         "python,kubernetes,nginx",
-        // "python,aws,eks",
-        // "go,kubernetes,helm",
-        // "yaml,aws,eks",
-        // "csharp,kubernetes,nginx",
-        // "java,aws,eks",
-        // "yaml,kubernetes,nginx",
-        // "csharp,aws,eks",
-        // "python,kubernetes,helm",
-        // "typescript,gcp,gke",
-        // "go,aws,eks",
-        // "csharp,gcp,gke",
-        // "typescript,kubernetes,helm",
-        // "go,azure,aks",
-        // "yaml,gcp,gke",
-        // "typescript,aws,eks",
-        // "python,kubernetes,nginx",
-        // "yaml,azure,aks",
-        // "java,gcp,gke",
-        // "csharp,azure,aks",
-        // "go,gcp,gke",
-        // "typescript,azure,aks",
-        // "python,gcp,gke",
-        // "go,kubernetes,nginx",
-        // "java,azure,aks",
-        // "csharp,kubernetes,helm",
-        // "python,azure,aks",
-        // "java,kubernetes,nginx",
+        "java,gcp,gke",
+        "yaml,kubernetes,nginx",
+        "java,aws,eks",
+        "typescript,azure,aks",
+        "csharp,kubernetes,nginx",
+        "typescript,aws,eks",
+        "python,gcp,gke",
+        "java,kubernetes,nginx",
+        "python,aws,eks",
+        "java,kubernetes,helm",
+        "csharp,aws,eks",
+        "yaml,kubernetes,helm",
+        "python,azure,aks",
+        "go,kubernetes,helm",
     ];
 
     private counter: number = 0;
@@ -71,8 +68,6 @@ export class SlotMachineResult {
         "nginx",
     ];
 
-    // private todoImage: string = "/images/slot-machine/code/todo.svg";
-
     private descriptionLookup: { [k: string]: string } = {
         "csharp": "C#",
         "go": "Go",
@@ -95,99 +90,11 @@ export class SlotMachineResult {
         return `${this.descriptionLookup[language]} + ${this.descriptionLookup[cloud]} + ${this.descriptionLookup[app]}`;
     }
 
-    // private codeLookup: languageCloudApps = {
-    //     csharp: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/csharp-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage,
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             helm: "/images/slot-machine/code/csharp-kubernetes-helm.svg",
-    //             nginx: "/images/slot-machine/code/csharp-kubernetes-nginx.svg",
-    //         },
-    //     },
-    //     go: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/go-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage,
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             helm: "/images/slot-machine/code/go-kubernetes-helm.svg",
-    //             nginx: "/images/slot-machine/code/go-kubernetes-nginx.svg",
-    //         },
-    //     },
-    //     java: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/java-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage,
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             nginx: this.todoImage,
-    //         },
-    //     },
-    //     python: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/python-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             helm: "/images/slot-machine/code/python-kubernetes-helm.svg",
-    //             nginx: "/images/slot-machine/code/python-kubernetes-nginx.svg",
-    //         },
-    //     },
-    //     typescript: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/typescript-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage,
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             helm: "/images/slot-machine/code/typescript-kubernetes-helm.svg",
-    //             nginx: "/images/slot-machine/code/typescript-kubernetes-nginx.svg",
-    //         },
-    //     },
-    //     yaml: {
-    //         aws: {
-    //             eks: "/images/slot-machine/code/yaml-aws-eks.svg",
-    //         },
-    //         azure: {
-    //             aks: this.todoImage,
-    //         },
-    //         gcp: {
-    //             gke: this.todoImage,
-    //         },
-    //         kubernetes: {
-    //             nginx: "/images/slot-machine/code/yaml-kubernetes-nginx.svg",
-    //         },
-    //     },
-    // };
-
     @Prop()
     imageClass: string = "";
+
+    @Prop()
+    csvKeys: string = "";
 
     @State()
     columnLeftOptions: string[] = this.languages;
@@ -234,19 +141,15 @@ export class SlotMachineResult {
     @State()
     selectedCode: string = "typescript-kubernetes-nginx";
 
+    keys: string[] = [];
+
     componentDidLoad() {
+        this.keys = this.csvKeys.split(",");
         this.startRotators();
     }
 
     private codeForSelection(): string {
         return `${this.selectedLangugage}-${this.selectedCloud}-${this.selectedApp}`;
-        // const clouds = this.codeLookup[this.selectedLangugage];
-        // const apps = clouds ? clouds[this.selectedCloud] : undefined;
-        // const code = apps ? apps[this.selectedApp] : undefined;
-        // if (code === undefined) {
-        //     return "/images/slot-machine/code/csharp-aws-eks.svg";
-        // }
-        // return code;
     }
 
     // setNextSelection iterates through the shuffled list and sets the selected variables to the chosen combination.
@@ -362,17 +265,14 @@ export class SlotMachineResult {
         return newItems;
     }
 
+    private createCodeSlot(key: string, hide: boolean): any {
+        return <div hidden={hide}><slot name={key}/></div>;
+    }
+
     render() {
         const logoLeft = `/images/slot-machine/language/${this.activeLanguage}.svg`;
         let logoMiddle = `/images/slot-machine/cloud/${this.activeCloud}.svg`;
         let logoRight = `/images/slot-machine/app/${this.activeApp}.svg`;
-
-        // TODO: All of the slots must be present, but hidden unless selected. Programmatically add divs for each
-        //       example, and then unset the hidden attribute on selected example.
-        let hide = false;
-        if (this.activeCode === "typescript-kubernetes-nginx") {
-            hide = true;
-        }
 
         return (
             <Host>
@@ -402,8 +302,7 @@ export class SlotMachineResult {
                         <div class="description">{this.activeDescription}</div>
                         <div class="code-row">
                             <div class="code-container">
-                                <div hidden={!hide}><slot name="typescript-kubernetes-nginx"/></div>
-                                <div hidden={hide}><slot name="python-kubernetes-nginx"/></div>
+                                {this.keys.map(k => this.createCodeSlot(k, this.activeCode !== k))}
                             </div>
                         </div>
                     </div>

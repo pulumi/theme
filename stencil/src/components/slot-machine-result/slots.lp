@@ -37,11 +37,11 @@ right(gke).
 valid(L,aws,eks) :- left(L).
 valid(L,azure,aks) :- left(L).
 valid(L,gcp,gke) :- left(L).
-valid(csharp,kubernetes,helm).
-valid(go,kubernetes,helm).
-valid(python,kubernetes,helm).
-valid(typescript,kubernetes,helm).
+valid(L,kubernetes,helm) :- left(L).
 valid(L,kubernetes,nginx) :- left(L).
+sequence(typescript,kubernetes,nginx,1).
+sequence(yaml,aws,eks,2).
+sequence(java,azure,aks,3).
 
 % --- End Section 2---
 

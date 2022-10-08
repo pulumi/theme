@@ -171,6 +171,7 @@ export namespace Components {
         "sessions": string;
     }
     interface SlotMachineResult {
+        "csvKeys": string;
         "imageClass": string;
     }
 }
@@ -563,6 +564,7 @@ declare namespace LocalJSX {
         "sessions"?: string;
     }
     interface SlotMachineResult {
+        "csvKeys"?: string;
         "imageClass"?: string;
     }
     interface IntrinsicElements {
