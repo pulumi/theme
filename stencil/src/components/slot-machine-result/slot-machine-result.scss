@@ -23,25 +23,18 @@ slot-machine-result {
     }
 
     .code-container {
-      flex-grow: 1;
-      height: 60vh;
-
-      img {
-        animation: fadeIn 500ms;
-        height:0;
-        min-height:100%;
-        object-fit: contain;
-      }
+      white-space: nowrap;
     }
 
     .code-row {
-      display: flex;
-      flex-grow: 1;
-      flex-flow: row nowrap;
-      align-items: center;
-      height: 60vh;
-      width: 100%;
-      margin-bottom: 1%;
+      //display: flex;
+      //flex-grow: 1;
+      //flex-flow: row nowrap;
+      white-space: nowrap;
+      //height: 60vh;
+      width: 50%;
+      margin-left: 25%;
+      //margin-bottom: 1%;
     }
 
     .row {
