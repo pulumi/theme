@@ -112,6 +112,7 @@ export namespace Components {
         "class"?: string;
         "formId": string;
         "goToWebinarKey"?: string;
+        "salesforceCampaignId": string;
     }
     interface PulumiInstall {
         "os"?: OSKey;
@@ -496,6 +497,7 @@ declare namespace LocalJSX {
         "class"?: string;
         "formId"?: string;
         "goToWebinarKey"?: string;
+        "salesforceCampaignId"?: string;
     }
     interface PulumiInstall {
         "os"?: OSKey;
