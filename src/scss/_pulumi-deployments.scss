@@ -55,4 +55,11 @@ div.pulumi-deployments {
         align-items: center;
         margin-top: 12px;
     }
+
+    ul li label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 24px 0;
+    }
 }
