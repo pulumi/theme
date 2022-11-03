@@ -277,6 +277,7 @@ export class SlotMachineResult {
         return (
             <Host>
                 <div>
+                    <br/>
                     <div class="slot-container">
                         <div class="row">
                             <div class="margin-container"></div>
