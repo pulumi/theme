@@ -19,6 +19,7 @@ div.pulumi-deployments {
         margin: 4px 200px 0px 200px;
         line-height: 1.25;
         margin-top: 4px;
+        width: 450px !important;
     }
 
     p {
@@ -28,6 +29,7 @@ div.pulumi-deployments {
         margin-bottom: 0;
         margin-top: 0;
         opacity: .5;
+        width: 450px !important;
     }
 
     input:not([type="submit"]),
@@ -37,7 +39,7 @@ div.pulumi-deployments {
         border-radius: 0.25rem;
         border-width: 1px;
         padding: 0.5rem;
-        width: 450px;
+        width: 450px !important;
         margin: 0.5rem 200px 12px 200px;
         display: flex;
         justify-content: center;
@@ -53,9 +55,5 @@ div.pulumi-deployments {
         justify-content: center;
         align-items: center;
         margin-top: 12px;
-    }
-
-    ul li label span {
-        display: inline !important;
     }
 }
