@@ -26,13 +26,12 @@ div.pulumi-deployments {
         font-size: .75rem;
         font-weight: 400;
         line-height: 1rem;
-        margin-bottom: 0;
-        margin-top: 0;
         opacity: .5;
+        margin: 0 200px 0px 200px;
         width: 450px !important;
     }
 
-    input:not([type="submit"]),
+    input:not([type="submit"]):not([type="checkbox"]),
     textarea {
         background-color: #fff;
         border-color: #e5e5df;
