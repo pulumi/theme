@@ -1,9 +1,11 @@
 div.pulumi-deployments {
     box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0 10px 15px -3pxrgba(0,0,0,.1),0 4px 6px -2pxrgba(0,0,0,.05)
     padding: 2.5rem;
     background-color: #fff;
-    border-color: #e5e5df;
+    border: 1px solid #e5e5df;
     border-radius: 0.5rem;
+    text-align: center;
 
     label {
         font-size: .875rem;
@@ -16,6 +18,7 @@ div.pulumi-deployments {
         opacity: .5;
         width: 450px;
         line-height: 1.25;
+        margin-top: 4px;
     }
 
     p {
@@ -27,16 +30,30 @@ div.pulumi-deployments {
         opacity: .5;
     }
 
-    input:not([type="submit"]) {
+    input:not([type="submit"]),
+    textarea {
         background-color: #fff;
         border-color: #e5e5df;
         border-radius: 0.25rem;
         border-width: 1px;
         padding: 0.5rem;
         margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     input[type="submit"] {
         margin-top: 8px;
+    }
+
+    div.actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul li label span {
+        display: inline;
     }
 }
