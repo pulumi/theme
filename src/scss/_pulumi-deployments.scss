@@ -1,9 +1,14 @@
 div.pulumi-deployments {
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    padding: 2.5rem;
+    background-color: #fff;
+    border-color: #e5e5df;
+    border-radius: 0.5rem;
+
     label {
         font-size: .875rem;
         font-weight: 400;
         line-height: 1.25rem;
-        margin-bottom: 0.5rem;
     }
 
     legend {
@@ -28,5 +33,10 @@ div.pulumi-deployments {
         border-radius: 0.25rem;
         border-width: 1px;
         padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    input([type="submit"]) {
+        margin-top: 8px;
     }
 }
