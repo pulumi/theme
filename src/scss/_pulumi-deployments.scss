@@ -16,7 +16,7 @@ div.pulumi-deployments {
     legend {
         font-size: .75rem;
         opacity: .5;
-        width: 450px;
+        margin: 4px 200px 0px 200px;
         line-height: 1.25;
         margin-top: 4px;
     }
@@ -37,7 +37,8 @@ div.pulumi-deployments {
         border-radius: 0.25rem;
         border-width: 1px;
         padding: 0.5rem;
-        margin-top: 0.5rem;
+        width: 450px;
+        margin: 0.5rem 200px 12px 200px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -51,9 +52,10 @@ div.pulumi-deployments {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 12px;
     }
 
     ul li label span {
-        display: inline;
+        display: inline !important;
     }
 }
