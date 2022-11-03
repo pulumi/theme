@@ -1,5 +1,4 @@
 div.pulumi-deployments {
-    background-color: red;
     label {
         font-size: .875rem;
         font-weight: 400;
@@ -9,6 +8,9 @@ div.pulumi-deployments {
 
     legend {
         font-size: .75rem;
+        opacity: .5;
+        width: 450px;
+        line-height: 1.25;
     }
 
     p {
@@ -20,7 +22,7 @@ div.pulumi-deployments {
         opacity: .5;
     }
 
-    input {
+    input:not([type="submit"]) {
         background-color: #fff;
         border-color: #e5e5df;
         border-radius: 0.25rem;
