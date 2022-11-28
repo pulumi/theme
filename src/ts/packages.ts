@@ -85,7 +85,40 @@ $(".section-registry .no-results .reset").on("click", event => {
     event.stopPropagation();
     const fs = $("pulumi-filter-select").get(0) as any;
     fs.reset();
+
+    const search = $("pulumi-registry-list-search").get(0) as any;
+    search.reset();
 });
+
+$(".section-registry").on("packageSearch", event => {
+    const filterText = event.detail as any;
+    const packages = $(".all-packages").find(".package");
+
+    if (filterText) {
+        const downcasedFilterText = filterText.trim().toLowerCase();
+        $(packages).addClass("hidden");
+
+        $(packages).each((i, package) => {
+            const el = $(package).find("[data-title]");
+
+            const packageTitle = el.attr("data-title");
+            const downcasedPackageTitle = packageTitle.toLowerCase();
+
+            const packageIsAMatch = downcasedPackageTitle.includes(downcasedFilterText);
+
+            if (packageIsAMatch) {
+                $(package).removeClass("hidden");
+            }
+        });
+    } else {
+        $(packages).removeClass("hidden");
+    }
+
+    // Update the count-badge value.
+    const allCount = $(".all-packages .package:not(.hidden)").length;
+    $(".all-count").text(allCount);
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const logoNavMenuButton = $(".logo-nav-button");
