@@ -1,0 +1,49 @@
+    @import "../../../../src/scss/colors";
+
+    .input-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 550px;
+
+        .clear-container {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+
+        .clear-filter-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 18px;
+            width: 18px;
+            font-size: xx-small;
+            background: map-get($gray, 300);
+            color: map-get($gray, 500);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            padding: 0px;
+        }
+
+        .registry-filter-input {
+            font-family: "Inter";
+            font-size: 14px;
+            height: 20px;
+            width: 95%;
+            border-radius: 4px;
+            border: 2px solid $black;
+            padding: 6px;
+            margin-top: 0;
+            box-sizing: content-box;
+
+            &:focus {
+                outline-color: $brand-blue;
+            }
+        }
+    }
