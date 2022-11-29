@@ -22,6 +22,7 @@
             align-items: center;
             height: 100%;
             padding-left: 12px;
+            color: map-get($gray, 400);
         }
 
         .clear-filter-button {
@@ -54,5 +55,10 @@
             &:focus {
                 outline-color: $brand-blue;
             }
+        }
+
+        .registry-filter-input::placeholder {
+              font-style: italic;
+              color: map-get($gray, 500);
         }
     }

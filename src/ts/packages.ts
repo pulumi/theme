@@ -5,6 +5,7 @@ const filterByTextAndTags = (filters, filterText) => {
     const AWS_STRING: string = "aws";
     const GOOGLE_CLOUD_STRING: string = "gcp";
     const GCP_STRING: string = "google cloud";
+    const GOOGLE_STRING: string = "google";
 
     const packages = $(".all-packages").find(".package");
 
@@ -35,8 +36,8 @@ const filterByTextAndTags = (filters, filterText) => {
 
             if (downcasedFilterText === AMAZON_STRING || downcasedFilterText === AWS_STRING){
                 packageIsAMatch = downcasedPackageTitle.includes(AMAZON_STRING) || downcasedPackageTitle.includes(AWS_STRING);
-            } else if (downcasedFilterText === GOOGLE_CLOUD_STRING|| downcasedFilterText === GCP_STRING){
-                packageIsAMatch = downcasedPackageTitle.includes(GOOGLE_CLOUD_STRING) || downcasedPackageTitle.includes(GCP_STRING);
+            } else if (downcasedFilterText === GOOGLE_CLOUD_STRING || downcasedFilterText === GCP_STRING || downcasedFilterText === GOOGLE_STRING){
+                packageIsAMatch = downcasedPackageTitle.includes(GOOGLE_CLOUD_STRING) || downcasedPackageTitle.includes(GCP_STRING) || downcasedPackageTitle.includes(GOOGLE_STRING);
             } else {
                 packageIsAMatch = downcasedPackageTitle.includes(downcasedFilterText);
             }
