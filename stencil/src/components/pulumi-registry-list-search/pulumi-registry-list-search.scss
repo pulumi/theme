@@ -10,10 +10,18 @@
             position: absolute;
             display: flex;
             align-items: center;
-            margin-right: 20px;
+            margin-right: 6px;
             top: 0;
             right: 0;
             height: 100%;
+        }
+
+        .search-icon {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding-left: 12px;
         }
 
         .clear-filter-button {
@@ -34,13 +42,14 @@
         .registry-filter-input {
             font-family: "Inter";
             font-size: 14px;
-            height: 20px;
-            width: 95%;
+            height: 36px;
+            width: 100%;
             border-radius: 4px;
             border: 2px solid $black;
             padding: 6px;
+            // Accomodate the absolutely positioned filter icon.
+            padding-left: 40px;
             margin-top: 0;
-            box-sizing: content-box;
 
             &:focus {
                 outline-color: $brand-blue;

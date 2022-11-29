@@ -4,7 +4,7 @@ import { debounce } from "lodash";
 @Component({
     tag: "pulumi-registry-list-search",
     styleUrl: "pulumi-registry-list-search.scss",
-    shadow: true,
+    shadow: false,
 })
 export class PulumiRegistryListSearch {
     @Event({ composed: true, bubbles: true })
@@ -45,16 +45,17 @@ export class PulumiRegistryListSearch {
     render() {
         return (
             <div class="input-container">
+                <i class="search-icon fas fa-filter"></i>
                 <input
                     class="registry-filter-input"
-                    placeholder="Filter"
+                    placeholder="Filter by package name..."
                     onInput={(event: KeyboardEvent) => this.onChange(event.target as HTMLInputElement)}
                     value={this.filterContent}
                 ></input>
                 {this.filterContent && (
                     <div class="clear-container">
                         <button onClick={this.onClearFilter.bind(this)} class="clear-filter-button">
-                            X
+                            <i class="fas fa-times"></i>
                         </button>
                     </div>
                 )}
