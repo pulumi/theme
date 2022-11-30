@@ -128,3 +128,22 @@
         }
     }
 }
+
+.packages {
+    .featured-packages .featured-package,
+    .all-packages .package {
+        a:hover {
+            .title {
+                @apply text-blue-600 underline;
+            }
+        }
+    }
+
+    .featured-package .content-container {
+        box-shadow: 0px 4px 4px rgba(230, 222, 243, 0.25);
+    }
+
+    .package .content-container {
+        box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
+    }
+}
