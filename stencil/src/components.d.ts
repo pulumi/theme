@@ -124,6 +124,8 @@ export namespace Components {
         "labelText": string;
         "selectClass"?: string;
     }
+    interface PulumiRegistryListSearch {
+    }
     interface PulumiRoot {
     }
     interface PulumiSlotMachine {
@@ -305,6 +307,12 @@ declare global {
         prototype: HTMLPulumiMultiSelectFormElement;
         new (): HTMLPulumiMultiSelectFormElement;
     };
+    interface HTMLPulumiRegistryListSearchElement extends Components.PulumiRegistryListSearch, HTMLStencilElement {
+    }
+    var HTMLPulumiRegistryListSearchElement: {
+        prototype: HTMLPulumiRegistryListSearchElement;
+        new (): HTMLPulumiRegistryListSearchElement;
+    };
     interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {
     }
     var HTMLPulumiRootElement: {
@@ -388,6 +396,7 @@ declare global {
         "pulumi-hubspot-form": HTMLPulumiHubspotFormElement;
         "pulumi-install": HTMLPulumiInstallElement;
         "pulumi-multi-select-form": HTMLPulumiMultiSelectFormElement;
+        "pulumi-registry-list-search": HTMLPulumiRegistryListSearchElement;
         "pulumi-root": HTMLPulumiRootElement;
         "pulumi-slot-machine": HTMLPulumiSlotMachineElement;
         "pulumi-swipeable": HTMLPulumiSwipeableElement;
@@ -509,6 +518,9 @@ declare namespace LocalJSX {
         "labelText"?: string;
         "selectClass"?: string;
     }
+    interface PulumiRegistryListSearch {
+        "onPackageSearch"?: (event: CustomEvent<string>) => void;
+    }
     interface PulumiRoot {
         "onRendered"?: (event: CustomEvent<any>) => void;
     }
@@ -577,6 +589,7 @@ declare namespace LocalJSX {
         "pulumi-hubspot-form": PulumiHubspotForm;
         "pulumi-install": PulumiInstall;
         "pulumi-multi-select-form": PulumiMultiSelectForm;
+        "pulumi-registry-list-search": PulumiRegistryListSearch;
         "pulumi-root": PulumiRoot;
         "pulumi-slot-machine": PulumiSlotMachine;
         "pulumi-swipeable": PulumiSwipeable;
@@ -615,6 +628,7 @@ declare module "@stencil/core" {
             "pulumi-hubspot-form": LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
             "pulumi-install": LocalJSX.PulumiInstall & JSXBase.HTMLAttributes<HTMLPulumiInstallElement>;
             "pulumi-multi-select-form": LocalJSX.PulumiMultiSelectForm & JSXBase.HTMLAttributes<HTMLPulumiMultiSelectFormElement>;
+            "pulumi-registry-list-search": LocalJSX.PulumiRegistryListSearch & JSXBase.HTMLAttributes<HTMLPulumiRegistryListSearchElement>;
             "pulumi-root": LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
             "pulumi-slot-machine": LocalJSX.PulumiSlotMachine & JSXBase.HTMLAttributes<HTMLPulumiSlotMachineElement>;
             "pulumi-swipeable": LocalJSX.PulumiSwipeable & JSXBase.HTMLAttributes<HTMLPulumiSwipeableElement>;
