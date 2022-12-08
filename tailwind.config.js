@@ -157,7 +157,7 @@ const green = {
 };
 
 module.exports = {
-    purge: false,
+    content: ["./assets/js/*.js", "./src/ts/*.ts", "./stencil/src/**/*.tsx", "./stencil/src/*.{html, ts}", "./node_modules/@pulumi/facet/**/*.{ts,js}"],
     theme: {
         extend: {
             fontFamily: {
