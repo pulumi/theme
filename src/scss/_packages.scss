@@ -148,3 +148,40 @@
         box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
     }
 }
+
+.package-card {
+    box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
+    width: 346px;
+}
+
+.package-card-compact {
+    border-color: map-get($gray, 300);
+    box-shadow: 0px 4px 4px rgba(220, 220, 220, 0.25);
+    width: 346px;
+    @media (min-width: 768px) {
+        width: 320px;
+        top: 160px;
+        position: absolute;
+    }
+    @media (min-width: 1024px) {
+        width: 320px;
+        top: 138px;
+        position: absolute;
+    }
+
+    .caret-container {
+        color: map-get($gray, 400);
+    }
+
+    .package-header {
+        font-size: 12px;
+        color: map-get($gray, 600);
+    }
+}
+
+.package-card-compact-expanded {
+    border-color: map-get($gray, 300);
+    .caret-container {
+        color: map-get($gray, 300);
+    }
+}
