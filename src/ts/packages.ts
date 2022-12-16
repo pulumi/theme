@@ -229,12 +229,13 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 115) {
+        // 80 is the scroll position where the search bar starts
+        // to overlap the header.
+        if ($(window).scrollTop() > 80) {
             $(".package-card").css("margin-top","55px");
         } else {
             $(".package-card").css("margin-top","0px");
         }
-        console.log($(window).scrollTop())
     });
 
 })(document, jQuery);
