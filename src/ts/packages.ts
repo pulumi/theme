@@ -227,4 +227,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         expanded = !expanded
     })
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 115) {
+            $(".package-card").css("margin-top","55px");
+        } else {
+            $(".package-card").css("margin-top","0px");
+        }
+        console.log($(window).scrollTop())
+    });
+
 })(document, jQuery);
