@@ -4,7 +4,6 @@ import { Component, Prop, State, h } from "@stencil/core";
 // Scroll to top button.
 @Component({
     tag: "pulumi-resource-links",
-    styleUrl: "resource-links.scss",
     shadow: false,
 })
 export class ResourceLinks {
@@ -49,7 +48,7 @@ export class ResourceLinks {
         return (
             <div class="container">
                 <hr class="mr-5"/>
-                <div class="heading mt-2">Related Resources</div>
+                <div class="heading">Related Resources</div>
                     {
                         this.related.map((typ: string) => {
                             // Parse out the module and resource from the related resource.
@@ -58,7 +57,7 @@ export class ResourceLinks {
                             const parts = typ.split("/");
                             let module = parts.slice(0, parts.length-1).join("/");
                             const resource = parts[parts.length-1];
-                            const rellink = `/registry/packages/${pkg}/api-docs/${module}/${resource.toLowerCase()}/`;
+                            const rellink = `/registry/packages/${pkg}/api-docs/${module.toLowerCase()}/${resource.toLowerCase()}/`;
                             return <div class="links"><a href={rellink}>{`${module}`}.{`${resource}`}</a></div>
                         })
                     }
