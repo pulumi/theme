@@ -48,7 +48,8 @@ export class ResourceLinks {
         const pkg = this.packageName.toLowerCase();
         return (
             <div class="container">
-                <div class="heading">Related Resources</div>
+                <hr class="mr-5"/>
+                <div class="heading mt-2">Related Resources</div>
                     {
                         this.related.map((typ: string) => {
                             // Parse out the module and resource from the related resource.
