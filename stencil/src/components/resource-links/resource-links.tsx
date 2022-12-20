@@ -30,13 +30,13 @@ export class ResourceLinks {
                 const pkg = this.packageName.toLowerCase();
                 const module = this.moduleName.toLowerCase();
                 const typ = this.resourceName.toLowerCase();
-                
+
                 // Look up related links for this resource.
                 this.related = relatedResources[pkg] ? relatedResources[pkg][module] ? relatedResources[pkg][module][typ] : undefined : undefined;
 
             }
         })
-        .catch(err => console.error(err))
+        .catch(err => console.error(err));
     }
 
     render() {
