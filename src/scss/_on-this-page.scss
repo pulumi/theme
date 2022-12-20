@@ -2,8 +2,10 @@
     @apply pt-1 pb-2 hidden;
 
     h4 {
-        @apply font-semibold font-body text-sm cursor-pointer;
-        color: map-get($gray, 700);
+        @apply text-blue-800 font-semibold font-body text-sm cursor-pointer;
+        .contents-heading {
+            color: map-get($gray, 700);
+        }
     }
 
     ul {
