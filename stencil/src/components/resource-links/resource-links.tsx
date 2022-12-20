@@ -22,7 +22,7 @@ export class ResourceLinks {
 
     componentWillLoad() {
         // Fetch JSON file containing resource link information.
-        fetch("https://www.pulumi.com/uploads/related-resources/2022-12-15.json")
+        fetch("https://www.pulumi.com/uploads/related-resources/2022-12-19.json")
         .then(resp => resp.json())
         .then((response) => {
             this.relatedResources = response;
@@ -41,7 +41,7 @@ export class ResourceLinks {
         const typ = this.resourceName.toLowerCase();
         
         // Look up related links for this resource.
-        const related = this.relatedResources[pkg][module][typ];
+        const related = this.relatedResources[pkg] ? this.relatedResources[pkg][module] ? this.relatedResources[pkg][module][typ] : undefined : undefined;
 
         if (!related) {
             return <div></div>
