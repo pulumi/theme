@@ -58,8 +58,7 @@
     }
 }
 
-$base-ch-width-xxl: 24ch;
-$base-ch-width-xl: 18ch;
+$base-ch-width-xl: 24ch;
 $base-ch-width-l: 12ch;
 
 .nav-tree-item a {
@@ -83,14 +82,14 @@ $base-ch-width-l: 12ch;
     }
     @media (min-width: 1280px) {
         &.depth-0 {
-            max-width: $base-ch-width-xxl;
+            max-width: $base-ch-width-xl;
         }
         &.depth-1 {
-            max-width: $base-ch-width-xxl - 2;
+            max-width: $base-ch-width-xl - 2;
         }
 
         &.depth-2 {
-            max-width: $base-ch-width-xxl - 4;
+            max-width: $base-ch-width-xl - 4;
         }
     }
 
