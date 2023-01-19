@@ -1,5 +1,7 @@
 # theme
 
+**This repo is no longer in use and has been moved to [pulumi-hugo](https://github.com/pulumi/pulumi-hugo/tree/master/themes/default/theme)**
+
 A [Hugo module](https://gohugo.io/hugo-modules/) for managing the JavaScript and CSS code used on Pulumi websites.
 
 ## Using this module
